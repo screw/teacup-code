@@ -27,7 +27,7 @@
 ## @package flowcache
 # Functions to cache flows of experiments 
 #
-# $Id: flowcache.py 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 import os
 import config

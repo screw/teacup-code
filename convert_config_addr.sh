@@ -27,7 +27,7 @@
 #
 # covert config for physical testbed to config for VMs
 #
-# $Id: convert_config_addr.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 if [ $# -ne 2 ] ; then
 	echo "Usage: $0 <config_file> <ip_map_file>"

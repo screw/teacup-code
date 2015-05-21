@@ -1,7 +1,7 @@
 # Three tcp flows between 3 pairs of hosts with staggered start, tcp congestion 
 # algorithms are varied 
 #
-# $Id: $
+# $Id$
 
 import sys
 import datetime

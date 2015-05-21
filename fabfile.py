@@ -27,7 +27,7 @@
 ## @package fabfile
 # fabfile
 #
-# $Id: fabfile.py 1325 2015-05-08 03:00:31Z szander $
+# $Id$
 
 import os
 import imp

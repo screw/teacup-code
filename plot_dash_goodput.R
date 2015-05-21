@@ -26,7 +26,7 @@
 #
 # Plot DASH-like client goodput over time 
 #
-# $Id: plot_dash_goodput.R 1280 2015-04-28 01:20:24Z szander $
+# $Id$
 
 # Evironment parameters that control the script (alphabetical order):
 # ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an

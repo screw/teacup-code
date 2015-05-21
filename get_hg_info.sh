@@ -27,6 +27,6 @@
 #
 # extract mercurial version info  
 #
-# $Id: $
+# $Id$
 
 hg log -r tip | egrep "changeset|date" 

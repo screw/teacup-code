@@ -27,7 +27,7 @@
 ## @package hostmac
 # Functions to determine the MACs of the control interface
 #
-# $Id: hostmac.py 1302 2015-05-01 07:47:33Z szander $
+# $Id$
 
 import re
 import socket

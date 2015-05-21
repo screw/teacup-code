@@ -1,7 +1,7 @@
 #
 # List of traffic generators
 #
-# $Id: $
+# $Id$
 
 # Each entry is a 3-tuple. the first value of the tuple must be a float and is the
 # time relative to the start of the experiment when tasks are excuted. If two tasks

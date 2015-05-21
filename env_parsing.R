@@ -28,7 +28,7 @@
 # (common variables only, variables used only by a particular script
 #  should be defined in that script)
 #
-# $Id: env_parsing.R 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 
 # y-axis label

@@ -2,7 +2,7 @@
 # List of router queues/pipes
 #
 #
-# $Id: $
+# $Id$
 
 # Each entry is a tuple. The first value is the queue number and the second value
 # is a comma separated list of parameters (see routersetup.py:init_pipe()).

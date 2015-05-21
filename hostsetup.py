@@ -27,7 +27,7 @@
 ## @package hostsetup
 # Host setup fucntions
 #
-# $Id: hostsetup.py 1344 2015-05-20 07:17:25Z szander $
+# $Id$
 
 import sys
 import time

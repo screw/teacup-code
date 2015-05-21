@@ -1,6 +1,6 @@
 # Simple experiment with two tcp flows with two hosts and one
 # router with pxe booting
-# $Id: $
+# $Id$
 
 import sys
 import datetime

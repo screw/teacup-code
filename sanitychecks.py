@@ -27,7 +27,7 @@
 ## @package sanitychecks
 # Sanity checks
 #
-# $Id: sanitychecks.py 1335 2015-05-15 02:33:17Z szander $
+# $Id$
 
 import sys
 import os

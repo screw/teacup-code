@@ -27,7 +27,7 @@
 ## @package loggers
 # Logger start/stop methods
 #
-# $Id: loggers.py 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 import re
 import time

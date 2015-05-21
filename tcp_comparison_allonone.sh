@@ -27,7 +27,7 @@
 #
 # like tcp_comparison.sh but plot all types on one page
 #
-# $Id: tcp_comparison_allonone.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 if [ $# -lt 2 -o $# -gt 3 ] ; then
         echo "Usage: $0 <prefix> <out_prefix> [<sort_key>]"

@@ -27,7 +27,7 @@
 ## @package runbg
 # Command to run background processes
 #
-# $Id: runbg.py 1268 2015-04-22 07:04:19Z szander $
+# $Id$
 
 import time
 import bgproc

@@ -27,7 +27,7 @@
 ## @package filefinder
 # Functions to find files (used by analysis functions) 
 #
-# $Id: filefinder.py 1287 2015-04-29 05:27:00Z szander $
+# $Id$
 
 import os
 import config

@@ -27,7 +27,7 @@
 #
 # script to kill iperf client 
 #
-# $Id: kill_iperf.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 PID=$1
 

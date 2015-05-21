@@ -28,7 +28,7 @@
 # compare different TCP CC algos (assumes no more than 4 TCPs)
 # one page per type (cwnd, spprtt, tcprtt, throughout)
 #
-# $Id: tcp_comparison.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 if [ $# -ne 2 ] ; then
 	echo "Usage: $0 <prefix> <out_prefix>"

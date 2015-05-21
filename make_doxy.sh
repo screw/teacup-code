@@ -27,7 +27,7 @@
 #
 # generate doxygen documentation (requires doxygen installation) 
 #
-# $Id: make_doxy.sh 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 
 TEACUP_VERSION=`cat VERSION | head -1`

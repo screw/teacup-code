@@ -28,7 +28,7 @@
 # script to start a series of experiemnts
 # usage: run.sh [<fabfile>]
 #
-# $Id: run_resume.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 PREFIX=`date +"%Y%m%d-%H%M%S"`_experiment
 

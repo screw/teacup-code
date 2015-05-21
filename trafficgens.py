@@ -27,7 +27,7 @@
 ## @package trafficgens
 # Traffic generators
 #
-# $Id: trafficgens.py 1314 2015-05-05 06:50:00Z szander $
+# $Id$
 
 import time
 import random

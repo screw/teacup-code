@@ -27,7 +27,7 @@
 ## @package experiment
 # Run a single experiment
 #
-# $Id: experiment.py 1335 2015-05-15 02:33:17Z szander $
+# $Id$
 
 import time
 import datetime

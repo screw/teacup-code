@@ -27,7 +27,7 @@
 ## @package backupconfig
 # Backup config files for each experiment 
 #
-# $Id: backupconfig.py 1268 2015-04-22 07:04:19Z szander $
+# $Id$
 
 import os
 import shutil

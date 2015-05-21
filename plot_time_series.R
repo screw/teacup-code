@@ -26,7 +26,7 @@
 #
 # Plot throughput RTT, CWN, TCP parameter over time 
 #
-# $Id: plot_time_series.R 1322 2015-05-07 05:23:16Z szander $
+# $Id$
 
 # Evironment parameters that control the script (alphabetical order):
 # AGGR:   '0' means plot data as is, i.e. values over time

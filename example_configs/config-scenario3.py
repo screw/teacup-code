@@ -1,7 +1,7 @@
 # Simple configuration for experiments with two hosts and one
 # router with pxe booting and power control
 #
-# $Id: $
+# $Id$
 
 import sys
 import datetime

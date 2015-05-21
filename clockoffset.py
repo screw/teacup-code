@@ -37,7 +37,7 @@
 # the idea assuming the ICMP frames are delivered at close to
 # identical times on each TEACUP switch port.
 #
-# $Id: clockoffset.py 1334 2015-05-15 02:28:42Z szander $
+# $Id$
 
 import os
 import socket

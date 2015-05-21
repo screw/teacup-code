@@ -28,7 +28,7 @@
 # log tcp info using the web10g tools
 # this script is outdated, it has been replaced by the C program web10g-logger
 #
-# $Id: web10g_logger.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 if [ $# -lt 2 -o $# -gt 3 ] ; then
         echo "Usage: $0 <interval> <log_file> [<exclude>]"

@@ -28,7 +28,7 @@
 # generate a tar file for the source code
 # usage: make_tar.sh
 #
-# $Id: make_tar.sh 1156 2015-03-30 00:08:37Z szander $
+# $Id$
 
 if [ ! -e VERSION ] ; then
 	echo "Error: this script needs to be executed in the source directory"

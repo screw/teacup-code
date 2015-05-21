@@ -2,7 +2,7 @@
 # Testbed hosts configuration
 #
 #
-# $Id: $
+# $Id$
 
 # Host lists
 TPCONF_router = ['newtcprt3', ]

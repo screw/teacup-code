@@ -28,7 +28,7 @@
 ## @package analysecmpexp
 # Analyse experiment data -- functions for comparing metrics across experiments
 #
-# $Id: analysecmpexp.py 1325 2015-05-08 03:00:31Z szander $
+# $Id$
 
 import os
 import errno

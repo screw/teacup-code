@@ -32,6 +32,7 @@
 #
 # SPATH="./"
 # SPATH="/home/user/experiments"
+# $Id$
 SPATH=`pwd`
 
 echo Identifying all experiment logfiles under $SPATH

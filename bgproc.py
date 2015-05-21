@@ -27,7 +27,7 @@
 ## @package bgproc
 # Functions to manage background processes list
 #
-# $Id: bgproc.py 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 import os
 import threading

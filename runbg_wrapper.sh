@@ -27,7 +27,7 @@
 #
 # wrapper script to start a command after some time on the remote host
 #
-# $Id: runbg_wrapper.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 if [ $# -lt 2 ] ; then
         echo "Usage: $0 <wait_time> <command> [<command_param1> ... <command_paramN>]"

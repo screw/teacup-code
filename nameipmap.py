@@ -27,7 +27,7 @@
 ## @package nameipmap
 # Collect host name IP mappings at time of experiment 
 #
-# $Id: nameipmap.py 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 import os
 import re

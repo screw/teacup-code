@@ -1,7 +1,7 @@
 # Simple experiment with two tcp flows with two hosts and one
 # router
 #
-# $Id: $
+# $Id$
 
 import sys
 import datetime

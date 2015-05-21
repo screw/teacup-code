@@ -1,7 +1,7 @@
 # Two dash-like video streaming flows, each between a client and  
 # the common server 
 #
-# $Id: $
+# $Id$
 
 import sys
 import datetime

@@ -28,7 +28,7 @@
 ## @package sourcefilter 
 # Flow filtering for analysis 
 #
-# $Id: sourcefilter.py 1269 2015-04-23 05:35:55Z szander $
+# $Id$
 
 from fabric.api import abort
 

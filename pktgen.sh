@@ -27,6 +27,6 @@
 #
 # pktgen wrapper script 
 #
-# $Id: pktgen.sh 1236 2015-04-14 07:51:18Z szander $
+# $Id$
 
 cd /root/pktgen/ && ./pktgen.py $@

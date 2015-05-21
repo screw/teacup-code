@@ -27,7 +27,7 @@
 ## @package routersetup
 # Router setup
 #
-# $Id: routersetup.py 1268 2015-04-22 07:04:19Z szander $
+# $Id$
 
 import config
 from fabric.api import task, hosts, run, execute, abort, env, settings

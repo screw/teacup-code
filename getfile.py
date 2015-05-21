@@ -27,7 +27,7 @@
 ## @package getfile
 # Get log/dump file from remote
 #
-# $Id: getfile.py 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 import os
 from fabric.api import get, local, run, abort, env, puts

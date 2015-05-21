@@ -26,7 +26,7 @@
 #
 # Plot metrics for different parameter combinations 
 #
-# $Id: plot_cmp_experiments.R 1302 2015-05-01 07:47:33Z szander $
+# $Id$
 
 # Evironment parameters that control the script (alphabetical order):
 # AGGR:   '0' means plot data as is, i.e. values over time

@@ -27,7 +27,7 @@
 ## @package hostint
 # Functions to determine the network interface based on an IP address
 #
-# $Id: hostint.py 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 import socket
 import config

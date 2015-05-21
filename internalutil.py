@@ -28,7 +28,7 @@
 ## @package internalutil 
 # Internal utility functions
 #
-# $Id: internalutil.py 1257 2015-04-20 08:20:40Z szander $
+# $Id$
 
 import os
 import errno

@@ -1,7 +1,7 @@
 # Two tcp flows between two host pairs, both flows go through same 
 # bottleneck but delay is different 
 #
-# $Id: $
+# $Id$
 
 import sys
 import datetime

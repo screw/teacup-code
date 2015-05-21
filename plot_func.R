@@ -26,7 +26,7 @@
 #
 # Plot functions included by other scripts
 #
-# $Id: plot_func.R 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 #library(gplots)
 

@@ -27,7 +27,7 @@
 # Plot contour of distrbutions, looks like a bubble graph but technically
 # a bubble graph is different 
 #
-# $Id: plot_contour.R 1324 2015-05-08 01:42:40Z szander $
+# $Id$
 
 # Evironment parameters that control the script (alphabetical order):
 # ADD_RAND:  '0' default 

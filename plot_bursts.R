@@ -26,7 +26,7 @@
 #
 # Plot burst graphs 
 #
-# $Id: plot_bursts.R 1267 2015-04-22 03:12:27Z szander $
+# $Id$
 
 # Evironment parameters that control the script (alphabetical order):
 # AGGR:   '0' means plot data as is, i.e. values over time

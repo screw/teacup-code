@@ -26,7 +26,7 @@
 #
 # Point thinning function 
 #
-# $Id: point_thinning.R 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 # distance for point thinning
 tmp = Sys.getenv("PTHIN_DIST_FAC")

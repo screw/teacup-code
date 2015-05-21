@@ -28,7 +28,7 @@
 ## @package plot
 # Plotting functions
 #
-# $Id: plot.py 1328 2015-05-12 06:54:24Z szander $
+# $Id$
 
 import os
 import errno

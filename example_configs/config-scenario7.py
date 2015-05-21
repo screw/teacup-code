@@ -1,7 +1,7 @@
 # Incast scenario, one querier and 10 responders, varying response  
 # size 
 #
-# $Id: $
+# $Id$
 
 import sys
 import datetime

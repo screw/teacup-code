@@ -28,7 +28,7 @@
 # combine multiple pdf graphs on a single page
 # requires the pdfjam package
 #
-# $Id: combine_graphs.sh 958 2015-02-12 04:52:49Z szander $
+# $Id$
 
 usage() {
 	echo "Usage: $0 -c <combine> -o <out_file> <file1.pdf> ... <fileN.pdf>"

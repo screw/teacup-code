@@ -29,4 +29,4 @@
 #
 # $Id: $
 
-hg log -r tip --template "{latesttag}.{latesttagdistance}"
+hg log -r tip | egrep "changeset|date" 

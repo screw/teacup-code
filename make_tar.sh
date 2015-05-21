@@ -48,6 +48,6 @@ cat teacup-${VERSION}/VERSION | head -1 > teacup-${VERSION}/VERSION.tmp && mv te
 tar -H gnu -cvzf $NAME --hard-dereference \
         teacup-${VERSION}/*.py teacup-${VERSION}/INSTALL teacup-${VERSION}/TODO teacup-${VERSION}/README \
         teacup-${VERSION}/AUTHORS teacup-${VERSION}/COPYING teacup-${VERSION}/VERSION teacup-${VERSION}/ChangeLog \
-        teacup-${VERSION}/*.in teacup-${VERSION}/*.R teacup-${VERSION}/*.sh teacup-${VERSION}/config*.py \
-        teacup-${VERSION}/newtcp_vm_addrmap.txt teacup-${VERSION}/example_configs teacup-${VERSION}/ACKNOWLEDGMENTS 
+        teacup-${VERSION}/*.in teacup-${VERSION}/*.R teacup-${VERSION}/*.sh teacup-${VERSION}/tools \
+        teacup-${VERSION}/example_configs teacup-${VERSION}/ACKNOWLEDGMENTS 
 rm -rf teacup-${VERSION}/

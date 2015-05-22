@@ -27,7 +27,7 @@
 ## @package hosttype
 # Functions to determine the type of host
 #
-# $Id: hosttype.py 1300 2015-05-01 01:36:50Z szander $
+# $Id:$
 
 from fabric.api import task, warn, local, run, execute, abort, hosts, hide
 

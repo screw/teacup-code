@@ -2,7 +2,7 @@
 # router with pxe booting and power control and broadcast ping
 # to measure clock offsets
 #
-# $Id: $
+# $Id:$
 
 import sys
 import datetime

@@ -115,7 +115,7 @@ def get_clock_offsets(exp_list='experiments_completed.txt',
                          capture=True)
 
 	bc_addr = ''
-        router = ''
+        router_name = ''
 
         if len(var_file) > 0:
             # new approach without using config.py

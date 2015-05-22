@@ -37,7 +37,7 @@ import datetime
 import re
 import imp
 from fabric.api import task, warn, put, puts, get, local, run, execute, \
-    settings, abort, hosts, env, runs_once, parallel, hide
+    settings, abort, env, runs_once, parallel, hide
 
 import config
 from internalutil import _list, mkdir_p, valid_dir

@@ -43,8 +43,8 @@ from internalutil import _list, mkdir_p, valid_dir
 from clockoffset import DATA_CORRECTED_FILE_EXT
 from filefinder import get_testid_file_list
 from sourcefilter import SourceFilter
-from analyseutil import get_out_dir, get_out_name, filter_min_values, \
-    select_bursts, merge_data_files, get_address_pair_analysis
+from analyseutil import get_out_dir, get_out_name, \
+    merge_data_files, get_address_pair_analysis
 from analyse import _extract_rtt, _extract_cwnd, _extract_tcp_rtt, \
     _extract_dash_goodput, _extract_tcp_stat, _extract_incast, \
     _extract_pktsizes, _extract_incast_iqtimes, _extract_incast_restimes, \

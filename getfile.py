@@ -37,6 +37,7 @@ from hosttype import get_type_cached
 ## Get MD5 hash for file
 #  @param file_name Name of the file to compute MD5 over
 #  @param for_local If '0' run on remote host, fi '1' run on local host
+#  @return MD5 hash
 def _get_md5val(file_name='', for_local='0'):
     "Get MD5 hash for file depending on OS"
 
@@ -51,10 +52,11 @@ def _get_md5val(file_name='', for_local='0'):
         md5_command = ''
 
     if for_local == '1':
-        local(md5_command, capture=True)
+        md5_hash = local(md5_command, capture=True)
     else:
-        run(md5_command, pty=False, shell=False)
+        md5_hash = run(md5_command, pty=False, shell=False)
 
+    return md5_hash
 
 ## Collect log file
 #  @param file_name Name of the log file

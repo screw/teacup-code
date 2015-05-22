@@ -12,6 +12,8 @@ Version 1.0 (20th May 2015)
 - Removed bogus warning that could appear during clockoffset computation
 - Modified init_toplogy for FreeBSD, so we get our default route back after
   reconfiguring the test interface and static route
+- Fixed bug in Windows host setup introduced in version 0.9.3
+- Code cleanup and little fixes
 
 Version 0.9.3 (6th May 2015)
 ----------------------------

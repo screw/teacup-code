@@ -305,7 +305,7 @@ def check_config():
         for name in names:
             if name[0:2] != 'V_':
                 abort(
-                    'Variable name does not start with V_ for parameter \'%k\' in '
+                    'Variable name does not start with V_ for parameter \'%s\' in '
                     'TPCONF_parameter_list' %
                     k)
             if name in vnames_defined:

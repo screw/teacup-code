@@ -485,8 +485,8 @@ def power_cycle():
 
     # check if user name and password defined
     try:
-       x = config.TPCONF_power_admin_name
-       x = config.TPCONF_power_admin_pw
+        x = config.TPCONF_power_admin_name
+        x = config.TPCONF_power_admin_pw
     except AttributeError:
         abort('TPCONF_power_admin_name  and TPCONF_power_admin_pw must be set')
 

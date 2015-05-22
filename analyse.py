@@ -32,7 +32,6 @@
 
 import os
 import errno
-import time
 import datetime
 import re
 import socket
@@ -48,9 +47,8 @@ from filefinder import get_testid_file_list
 from flowcache import append_flow_cache, lookup_flow_cache
 from sourcefilter import SourceFilter
 from analyseutil import get_out_dir, get_out_name, filter_min_values, \
-    select_bursts, merge_data_files, get_address_pair_analysis
-from plot import plot_time_series, plot_dash_goodput, plot_incast_ACK_series, \
-    sort_by_flowkeys
+    select_bursts, get_address_pair_analysis
+from plot import plot_time_series, plot_dash_goodput, plot_incast_ACK_series
 
 
 ## Extract DASH goodput data from httperf log files
@@ -1782,7 +1780,6 @@ def extract_incast(test_id='', out_dir='', replot_only='0', source_filter='',
 #  @return Map of flow names to file names, map of file names to group IDs
 def get_slowest_response_time(out_files, out_groups, mode=0):
 
-    ofile_ext = '.rtimes'
     slowest = {}
     earliest = {}
     latest = {}
@@ -2915,8 +2912,6 @@ def _extract_incast_restimes(test_id='', out_dir='', replot_only='0', source_fil
 
     ifile_ext = '.dmp.gz'
     ofile_ext = '.restimes'
-
-    abort_extract = False
 
     already_done = {}
     out_files = {}

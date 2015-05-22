@@ -153,7 +153,7 @@ except ImportError:
     pass
 
 try:
-    pass # initialsetup is not public
+    from initialsetup import initial_setup_host
 except ImportError:
     pass
 
@@ -395,4 +395,3 @@ def run_experiment_multiple(test_id='', resume='0', *nargs, **kwargs):
         if resume == '0' or not _experiment_done(test_id):
             #print('run', test_id, _nargs, _kwargs)
             execute(run_experiment, test_id, test_id, *_nargs, **_kwargs)
-            do_init_os = '0'

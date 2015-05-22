@@ -27,7 +27,7 @@
 ## @package hosttype
 # Functions to determine the type of host
 #
-# $Id:$
+# $Id$
 
 from fabric.api import task, warn, local, run, execute, abort, hosts, hide
 

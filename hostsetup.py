@@ -935,8 +935,7 @@ def init_host():
         # level
         run('netsh int tcp set heuristics disabled', pty=False)
 
-        if interfaces == '':
-            interfaces = get_netint_cached(env.host_string, int_no=-1)
+        interfaces = get_netint_cached(env.host_string, int_no=-1)
 
         for interface in interfaces:
             # stop and restart interface to make the changes

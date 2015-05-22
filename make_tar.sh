@@ -45,7 +45,7 @@ cp -rd --preserve=all * teacup-${VERSION}/
 cat teacup-${VERSION}/VERSION | head -1 > teacup-${VERSION}/VERSION.tmp && mv teacup-${VERSION}/VERSION.tmp teacup-${VERSION}/VERSION
 ./get_hg_info.sh >> teacup-${VERSION}/VERSION
 # substitute Id tags
-hg kwexpand || echo "MUST commit changes first" ; rm -rf teacup-${VERSION}/ ; exit -1
+hg kwexpand || { echo "MUST commit changes first" ; rm -rf teacup-${VERSION}/ ; exit 1 ; }
 # tar everything
 tar -H gnu -cvzf $NAME --hard-dereference \
         teacup-${VERSION}/*.py teacup-${VERSION}/INSTALL teacup-${VERSION}/TODO teacup-${VERSION}/README \

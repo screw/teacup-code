@@ -30,7 +30,10 @@
 #
 # $Id$
 
-PREFIX=`date +"%Y%m%d-%H%M%S"`_experiment
+# old default test ID prefix (version < 1.0)
+#PREFIX=`date +"%Y%m%d-%H%M%S"`_experiment
+# new default test ID prefix
+PREFIX=exp_`date +"%Y%m%d-%H%M%S"`
 
 # optionally we can specify the fabfile
 if [ "$1" != "" ] ; then

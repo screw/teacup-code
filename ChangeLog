@@ -1,4 +1,4 @@
-Version 1.0 (20th May 2015)
+Version 1.0 (26th May 2015)
 ---------------------------
 - Fixed time series plot so that if we have more than 12 flows (more than one
   pdf) the start time for each graph is the experiment start time
@@ -14,6 +14,7 @@ Version 1.0 (20th May 2015)
   reconfiguring the test interface and static route
 - Fixed bug in Windows host setup introduced in version 0.9.3
 - Code cleanup and little fixes
+- Changed default experiment ID prefix to: 'exp_' + now.strftime("%Y%m%d-%H%M%S")
 
 Version 0.9.3 (6th May 2015)
 ----------------------------

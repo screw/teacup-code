@@ -30,9 +30,10 @@
 # of each experiment (by prefix) and extracting uname information
 # for each machine participating in each experiment.
 #
+# $Id$
+#
 # SPATH="./"
 # SPATH="/home/user/experiments"
-# $Id$
 SPATH=`pwd`
 
 echo Identifying all experiment logfiles under $SPATH
@@ -42,7 +43,8 @@ echo Identifying all experiment logfiles under $SPATH
 # directories, or a subset of experiments under one directory)
 
 # logfiles=`find ${SPATH} -type f -name "20*.log" | sort -u`
-logfiles=`find ${SPATH} -type f -name "????????-??????_experiment.log" | sort -u`
+#logfiles=`find ${SPATH} -type f -name "????????-??????_experiment.log" | sort -u`
+logfiles=`find ${SPATH} -type f -name "exp_????????-??????.log" | sort -u`
 
 for lfile in $logfiles
 {

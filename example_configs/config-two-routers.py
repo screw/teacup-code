@@ -131,7 +131,10 @@ TPCONF_max_time_diff = 1
 # Experiment name prefix used if not set on the command line
 # The command line setting will overrule this config setting
 now = datetime.datetime.today()
-TPCONF_test_id = now.strftime("%Y%m%d-%H%M%S") + '_experiment'
+# old default test ID prefix (version < 1.0)
+#TPCONF_test_id = now.strftime("%Y%m%d-%H%M%S") + '_experiment'
+# new default test ID prefix
+TPCONF_test_id = 'exp_' + now.strftime("%Y%m%d-%H%M%S")
 
 # Directory to store log files on remote host
 TPCONF_remote_dir = '/tmp/'

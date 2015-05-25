@@ -103,7 +103,8 @@ def get_first_experiment_path(experiments):
 #                   we only want experiments where <var> had the specific value
 #  @return match string to match test IDs, match string to extract test ID prefix
 def build_match_strings(test_id='', variables='',
-                         test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_'):
+                        #test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_'):
+                        test_id_prefix='exp_[0-9]{8}\-[0-9]{6}_'):
 
     match_str = ''
     var_dict = {}
@@ -420,7 +421,8 @@ def analyse_cmpexp(exp_list='experiments_completed.txt', res_dir='', out_dir='',
                    pdf_dir='', stime='0.0', etime='0.0', ts_correct='1', smoothed='1',
                    link_len='0', plot_params='', plot_script='', stat_index='',
                    dupacks='0', cum_ackseq='1', merge_data='0', sburst='1',
-                   eburst='0', test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_',
+                   #eburst='0', test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_',
+                   eburst='0', test_id_prefix='exp_[0-9]{8}\-[0-9]{6}_',
                    slowest_only='0', res_time_mode='0', query_host=''):
     "Compare metrics for different experiments"
 
@@ -738,7 +740,8 @@ def analyse_2d_density(exp_list='experiments_completed.txt', res_dir='', out_dir
                    pdf_dir='', ts_correct='1', smoothed='1', link_len='0',
                    plot_params='', plot_script='', xstat_index='', ystat_index='',
                    dupacks='0', cum_ackseq='1', merge_data='0',
-                   sburst='1', eburst='0', test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_',
+                   #sburst='1', eburst='0', test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_',
+                   sburst='1', eburst='0', test_id_prefix='exp_[0-9]{8}\-[0-9]{6}_',
                    slowest_only='0', query_host=''):
     "2d density / ellipse plot for different experiments"
 

@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #         Grenville Armitage (garmitage@swin.edu.au)
 #
 # Redistribution and use in source and binary forms, with or without
@@ -48,7 +48,7 @@ from subprocess import *
 from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, hosts, env, runs_once, parallel
 import config
-from internalutil import _list, mkdir_p
+from internalutil import mkdir_p
 from filefinder import get_testid_file_list
 
 ## Create safe place to dump output from stderr of various shell processes
@@ -232,8 +232,8 @@ def get_clock_offsets(exp_list='experiments_completed.txt',
         #print(diffs)
 
         if out_dir == '' or out_dir[0] != '/':
-              dir_name = os.path.dirname(tcpdump_files[0])
-              out_dir = dir_name + '/' + out_dir
+            dir_name = os.path.dirname(tcpdump_files[0])
+            out_dir = dir_name + '/' + out_dir
         mkdir_p(out_dir)
         out_name = out_dir + test_id + CLOCK_OFFSET_FILE_EXT
 

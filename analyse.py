@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #         Grenville Armitage (garmitage@swin.edu.au)
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,15 +34,13 @@ import os
 import errno
 import datetime
 import re
-import socket
 import imp
 from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, hosts, env, runs_once, parallel, hide
 
 import config
-from internalutil import _list, mkdir_p, valid_dir
-from hostint import get_address_pair
-from clockoffset import adjust_timestamps, DATA_CORRECTED_FILE_EXT
+from internalutil import _list
+from clockoffset import adjust_timestamps
 from filefinder import get_testid_file_list
 from flowcache import append_flow_cache, lookup_flow_cache
 from sourcefilter import SourceFilter
@@ -1382,8 +1380,8 @@ def _extract_pktsizes(test_id='', out_dir='', replot_only='0', source_filter='',
                     delete_list.append(name)
   
             for d in delete_list:
-                    del out_groups[out_files[d]]
-                    del out_files[d]
+                del out_groups[out_files[d]]
+                del out_files[d]
 
             name = test_id 
             out_files[name] = out_size1
@@ -1978,7 +1976,7 @@ def analyse_incast(test_id='', out_dir='', replot_only='0', source_filter='',
 def extract_dupACKs_bursts(acks_file='', burst_sep=0):
 
     # New filenames (source file + ".0" or ".1,.2,....N" for bursts)
-    new_fnames = [];
+    new_fnames = []
 
     # Internal variables
     burstN = 1

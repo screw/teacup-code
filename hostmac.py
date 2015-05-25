@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -148,21 +148,21 @@ def get_netmac(internal_int='0'):
 @task
 def _get_netmac(host=''):
 
-        htype = get_type_cached(env.host_string)
+    htype = get_type_cached(env.host_string)
 
-        # resolve to ip if name
-        host = socket.gethostbyname(host)
+    # resolve to ip if name
+    host = socket.gethostbyname(host)
 
-        # populate arp table
-        run('ping -c 1 %s' % host)
+    # populate arp table
+    run('ping -c 1 %s' % host)
 
-        # get mac address
-        if htype == 'FreeBSD':
-            mac = run("arp %s | cut -d' ' -f 4 | head -1" % host)
-        elif htype == 'Linux':
-            mac = run("arp -a %s | cut -d' ' -f 4 | head -1" % host)
-        else:
-            abort("Can't determine MAC address for OS %s" % htype)
+    # get mac address
+    if htype == 'FreeBSD':
+        mac = run("arp %s | cut -d' ' -f 4 | head -1" % host)
+    elif htype == 'Linux':
+        mac = run("arp -a %s | cut -d' ' -f 4 | head -1" % host)
+    else:
+        abort("Can't determine MAC address for OS %s" % htype)
 
-	return mac
+    return mac
 

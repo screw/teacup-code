@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #         Grenville Armitage (garmitage@swin.edu.au)
 #
 # Redistribution and use in source and binary forms, with or without
@@ -38,7 +38,7 @@ from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, hosts, env, runs_once, parallel, hide
 
 import config
-from internalutil import _list, mkdir_p, valid_dir
+from internalutil import mkdir_p, valid_dir
 
 
 #############################################################################

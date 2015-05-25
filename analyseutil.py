@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #         Grenville Armitage (garmitage@swin.edu.au)
 #
 # Redistribution and use in source and binary forms, with or without
@@ -40,7 +40,7 @@ from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, env, runs_once, parallel, hide
 
 import config
-from internalutil import _list, mkdir_p, valid_dir
+from internalutil import mkdir_p
 from hostint import get_address_pair
 from filefinder import get_testid_file_list
 
@@ -149,7 +149,7 @@ def filter_min_values(files={}, groups={}, min_values='3'):
 def extract_bursts(data_file='', burst_sep=0.0, normalize=0):
 
     # New filenames (source file + ".0" or ".1,.2,....N" for bursts)
-    new_fnames = [];
+    new_fnames = []
 
     # Internal variables
     burstN = 1

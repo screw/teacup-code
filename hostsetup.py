@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -32,8 +32,6 @@
 import sys
 import time
 import re
-import csv
-import socket
 import os
 import subprocess
 import string
@@ -129,7 +127,7 @@ def init_topology_switch(switch='', port_prefix='', port_offset = ''):
     host_string = env.host_string
     env.host_string = switch
 
-    # create translation table
+    # create translation table to all nodigits from string 
     all = string.maketrans('','')
     nodigs = all.translate(all, string.digits)
     # get port number and vlan id
@@ -301,7 +299,7 @@ def init_topology_host():
 
         fname = env.host_string + '_test_if_config'
         with open(fname, 'w') as f:
-             f.write(test_if_config)
+            f.write(test_if_config)
 
         #interface = 'enp2s0'
         interface = 'eth1'
@@ -783,9 +781,9 @@ def init_os(file_prefix='', os_list='', force_reboot='0', do_power_cycle='0',
             kern = run('uname -r')
 
         if htype == target_os and kern == target_kern:
-                puts(
-                'Host %s running OS %s %s' %
-                (env.host_string, target_os, target_kern))
+            puts(
+            'Host %s running OS %s %s' %
+            (env.host_string, target_os, target_kern))
         else:
             abort(
                 'Error switching %s to OS %s %s' %
@@ -968,8 +966,8 @@ def init_ecn(ecn='0'):
     elif htype == 'Linux':
         run('sysctl net.ipv4.tcp_ecn=%s' % ecn)
     elif htype == 'Darwin':
-       run('sysctl -w net.inet.tcp.ecn_initiate_out=%s' % ecn)
-       run('sysctl -w net.inet.tcp.ecn_negotiate_in=%s' % ecn)
+        run('sysctl -w net.inet.tcp.ecn_initiate_out=%s' % ecn)
+        run('sysctl -w net.inet.tcp.ecn_negotiate_in=%s' % ecn)
     elif htype == 'CYGWIN':
         if ecn == '1':
             run('netsh int tcp set global ecncapability=enabled', pty=False)

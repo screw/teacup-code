@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -469,8 +469,8 @@ def check_connectivity():
                 # add the other subnet(s) router is connected to the
                 # reachable list
                 for x_ip in config.TPCONF_host_internal_ip[r]:
-                   if x_ip != r_ip and x_ip not in reachable:
-                       reachable.append(x_ip) 
+                    if x_ip != r_ip and x_ip not in reachable:
+                        reachable.append(x_ip) 
 
                 break # continue with next router
 

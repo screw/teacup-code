@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -215,8 +215,10 @@ for (i in c(1:length(data))) {
 if (no_nominal == FALSE) {
 	lnames = append("Nominal", lnames)
 }
+#legend("topleft", ncol=1, inset=linset, legend=lnames, pch=pchs, col=cols, pt.bg=cols, 
+#       pt.cex=cexs, cex=0.6, border=NA, bty="o", bg="white", box.col="white")
 legend("topleft", ncol=1, inset=linset, legend=lnames, pch=pchs, col=cols, pt.bg=cols, 
-       pt.cex=cexs, cex=0.6, border=NA, bty="o", bg="white", box.col="white")
+       pt.cex=cexs, cex=0.45, border=NA, bty="o", bg="white", box.col="white")
 
 box()
 

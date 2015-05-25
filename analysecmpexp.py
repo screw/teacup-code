@@ -1,7 +1,7 @@
 # Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 # Swinburne University of Technology. All rights reserved.
 #
-# Author: Sebastian Zander (szander@swin.edu.au)
+# Author: Sebastian Zander (sebastian.zander@gmx.de)
 #         Grenville Armitage (garmitage@swin.edu.au)
 #
 # Redistribution and use in source and binary forms, with or without
@@ -39,12 +39,11 @@ from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, hosts, env, runs_once, parallel, hide
 
 import config
-from internalutil import _list, mkdir_p, valid_dir
+from internalutil import mkdir_p, valid_dir
 from clockoffset import DATA_CORRECTED_FILE_EXT
 from filefinder import get_testid_file_list
 from sourcefilter import SourceFilter
-from analyseutil import get_out_dir, get_out_name, \
-    merge_data_files, get_address_pair_analysis
+from analyseutil import merge_data_files
 from analyse import _extract_rtt, _extract_cwnd, _extract_tcp_rtt, \
     _extract_dash_goodput, _extract_tcp_stat, _extract_incast, \
     _extract_pktsizes, _extract_incast_iqtimes, _extract_incast_restimes, \
@@ -873,7 +872,7 @@ def analyse_2d_density(exp_list='experiments_completed.txt', res_dir='', out_dir
                 groups.append(levels[level])
             else:
                 for i in range(len(source_filter.split(';'))):
-                   groups.append(levels[level])
+                    groups.append(levels[level])
 
     fil_experiments = _experiments
 

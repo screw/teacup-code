@@ -25,7 +25,7 @@
 # SUCH DAMAGE.
 #
 ## @package version
-# Print version number and svn revision info
+# Print version number and revision info
 #
 # $Id$
 
@@ -46,16 +46,16 @@ def get_version():
     with open(config.TPCONF_script_path + '/VERSION', 'r') as f:
         ver_info  = f.readlines() 
 
-    # if no svn revision info in VERSION, then possibly this is a checked out
-    # copy. try and get svn revision info from svn. 
-    if ver_info[1].find('XXXX') > -1:
-        if os.path.exists(config.TPCONF_script_path + '/.svn/'):
+    # if no hg revision info in VERSION, then possibly this is a checked out
+    # copy. try and get hg revision info. 
+    if ver_info[1].find('NN:MMMMMMMMMMMM') > -1:
+        if os.path.exists(config.TPCONF_script_path + '/.hg/'):
             curr_dir = os.getcwd()
             os.chdir(config.TPCONF_script_path)
             with hide('commands'):
-                svn_info = local('./get_svn_info.sh', capture=True)
+                rev_info = local('./get_hg_info.sh', capture=True)
             os.chdir(curr_dir)
-            ver_info = [ver_info[0] + svn_info + '\n']
+            ver_info = [ver_info[0] + rev_info + '\n']
   
     sys.stdout.writelines(ver_info)
     sys.stdout.write('Copyright (c) 2013-2015 Centre for Advanced Internet Architectures\n') 

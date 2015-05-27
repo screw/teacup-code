@@ -15,6 +15,9 @@ Version 1.0 (26th May 2015)
 - Fixed bug in Windows host setup introduced in version 0.9.3
 - Code cleanup and little fixes
 - Changed default experiment ID prefix to: 'exp_' + now.strftime("%Y%m%d-%H%M%S")
+  If you want to analyse experiment data with the old experiment ID prefix in 
+  file names with analyse_cmpexp or analyse_2d_density, you must specify 
+  test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_' as parameter.
 
 Version 0.9.3 (6th May 2015)
 ----------------------------

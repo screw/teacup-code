@@ -22,15 +22,15 @@ It ONLY discusses the most commonly used config options.
 
 For more details on how to setup experiments and the design of TEACUP
 please refer to the technical report: 
-http://caia.swin.edu.au/reports/150414A/CAIA-TR-150414A.pdf 
+http://caia.swin.edu.au/reports/150529A/CAIA-TR-150529A.pdf 
 
 For more details on how to analyse the data collected during experiments
 please refer to the technical report:
-http://caia.swin.edu.au/reports/150414B/CAIA-TR-150414B.pdf
+http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf
 
 There also is a technical report that provides a command reference for
 all tasks TEACUP provides:
-http://caia.swin.edu.au/reports/150414C/CAIA-TR-150414C.pdf
+http://caia.swin.edu.au/reports/150529C/CAIA-TR-150529C.pdf
 
 
 TEACUP TESTBED
@@ -268,7 +268,7 @@ TEACUP supports the following traffic generators:
 - VoIP-like (fixed packet sizes and interval) (nttcp)
 
 Available traffic generators and their parameters are described in:
-http://caia.swin.edu.au/reports/150414A/CAIA-TR-150414A.pdf
+http://caia.swin.edu.au/reports/150529A/CAIA-TR-150529A.pdf
 
 6. Experiment variables
 
@@ -359,7 +359,7 @@ the variables are set to fixed values based on TPCONF_variable_defaults.
 TPCONF_parameter_list specifies the variable parameters.
 
 TPCONF_variable_defaults and TPCONF_parameter_list are explained in detail in:
-http://caia.swin.edu.au/reports/150414A/CAIA-TR-150414A.pdf
+http://caia.swin.edu.au/reports/150529A/CAIA-TR-150529A.pdf
 
 7. Example with two variables
 
@@ -448,7 +448,7 @@ ANALYSIS OF EXPERIMENT DATA
 ---------------------------
 
 TEACUP has a number of tasks for the analysis of experiment results. These are described 
-in: http://caia.swin.edu.au/reports/150414B/CAIA-TR-150414B.pdf
+in: http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf
 
 Currently analysis functions exist for:
 - Plotting throughput including all header bytes (from tcpdump data)
@@ -493,8 +493,8 @@ lnames="CDG;Newreno"
 
 More examples and a detailed description of the analysis tasks and their parameters 
 is in:
-http://caia.swin.edu.au/reports/150414B/CAIA-TR-150414B.pdf
-http://caia.swin.edu.au/reports/150414C/CAIA-TR-150414C.pdf
+http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf
+http://caia.swin.edu.au/reports/150529C/CAIA-TR-150529C.pdf
 
 
 UTILITY FUNCTIONS

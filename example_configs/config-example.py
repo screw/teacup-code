@@ -159,7 +159,7 @@ TPCONF_bc_ping_enable = '1'
 # Specify rate of pings in packets/second
 TPCONF_bc_ping_rate = 1
 # Specify multicast address to use (must be broadcast or multicast address)
-# If this is not specified, byt deafult the ping will be send to the subnet
+# If this is not specified, by default the ping will be send to the subnet
 # broadcast address.
 TPCONF_bc_ping_address = '224.0.1.199'
 
@@ -167,6 +167,12 @@ TPCONF_bc_ping_address = '224.0.1.199'
 # supported value is currently 1ms). This is used for web10g on Linux as well
 # as the EStats logger on Windows. The default value is 10ms.
 TPCONF_web10g_poll_interval = 10 
+
+# Specify type of TCP logger used on Linux. The value can be 'web10g', 
+# 'ttprobe' or 'both', where 'both' means both web10g and ttprobe are used. 
+# The value can only be set to 'ttprobe' or 'both' if ttprobe is installed
+# (see http://caia.swin.edu.au/tools/teacup/downloads.html)  
+TPCONF_linux_tcp_logger = 'web10g'
 
 # List of router queues/pipes
 

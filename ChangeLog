@@ -1,3 +1,9 @@
+Version 1.1 (XXX)
+-----------------
+- Fixed error in comment (TCP send buffer setup related)
+- Turn off socket receive buffer tuning by default on FreeBSD now (was already
+  off by default on Linux)
+
 Version 1.0 (26th May 2015)
 ---------------------------
 - Fixed time series plot so that if we have more than 12 flows (more than one

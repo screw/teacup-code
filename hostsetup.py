@@ -860,6 +860,9 @@ def init_host():
         # record the number of reassembly queue overflows
         run('sysctl net.inet.tcp.reass.overflows')
 
+        # disable auto-tuning of receive buffer
+        run('sysctl net.inet.tcp.recvbuf_auto=0')
+
         # disable tso
         run('sysctl net.inet.tcp.tso=0')
 

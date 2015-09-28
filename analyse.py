@@ -48,6 +48,297 @@ from analyseutil import get_out_dir, get_out_name, filter_min_values, \
     select_bursts, get_address_pair_analysis
 from plot import plot_time_series, plot_dash_goodput, plot_incast_ACK_series
 
+import gzip
+import socket
+import csv
+from ctypes import *
+
+
+# structure for ttprobe binary format
+class TTprobe(Structure):
+    _fields_ = [
+            ('tv_sec', c_uint64),
+            ('tv_usec', c_uint64),
+            ('src_addr', c_uint8 * 16),
+            ('dst_addr', c_uint8 * 16),
+            ('src_port', c_uint16),
+            ('dst_port', c_uint16),
+            ('length', c_uint16),
+            ('snd_nxt', c_uint32),
+            ('snd_una', c_uint32),
+            ('snd_wnd', c_uint32),
+            ('rcv_wnd', c_uint32),
+            ('snd_cwnd', c_uint32),
+            ('ssthresh', c_uint32),
+            ('srtt', c_uint32),
+            ('mss_cache', c_uint32),
+            ('sock_state', c_uint8),
+            ('direction', c_uint8),
+            ('addr_family', c_uint8),
+            ]
+
+## Guess ttprobe file format
+#  @param file_name ttprobe File name to be checked
+#  @return ttprobe file format i.e. 'ttprobe' or 'binary'
+def guess_ttprobe_file_format(ttprobe_file=''):
+
+    puts('Gussing ttprobe file format: %s' % ttprobe_file)
+    try:
+        with gzip.open(ttprobe_file, 'rb') as f:
+            tmp = f.read(20)
+    except IOError:
+        print('Cannot open file %s' % ttprobe_file)
+    for i in range(0, 19):
+        if ord(tmp[i]) < 32 or ord(tmp[i]) > 127:
+            return 'binary'
+    if tmp[0] == 'i' or tmp[0] == 'o':
+        return 'ttprobe'
+    else:
+        return ''
+
+
+## Convert array of u8 to IPv4 or IPv6 address format
+#  @param ip IP address to be converted (array of u8)
+#  @param addr_family Family type of the address i.e. IPv4
+#         or IPv6
+#  @return A string contains a formated IP address
+def arraytoIP(ip, addr_family):
+    if addr_family == 2:
+        return '%s.%s.%s.%s' % (ip[0], ip[1], ip[2], ip[3])
+    elif addr_family == 10:
+        return '%02X%02X:%02X%02X:%02X%02X:%02X%02X:%02X%02X:%02X%02X:%02X%02X:%02X%02X:' % (
+            ip[1], ip[0],
+            ip[2], ip[3],
+            ip[4], ip[5],
+            ip[6], ip[7],
+            ip[8], ip[9],
+            ip[10], ip[11],
+            ip[12], ip[13],
+            ip[14], ip[15],
+            )
+
+
+## Get unique TCP flows from ttprobe file
+#  @param ttprobe_file ttprobe file name
+#  @return A list of flows
+def get_ttprobe_flows(ttprobe_file=''):
+    # guss ttprobe file format
+    ttprobe_format = guess_ttprobe_file_format(ttprobe_file)
+    if ttprobe_format == 'binary':
+        x = TTprobe()
+        # the idea of using set data stracture is to get a unique flow without need
+        # for duplication checking
+        flows_set = set()
+        try:
+            with gzip.open(ttprobe_file, 'rb') as f:
+                while f.readinto(x) == sizeof(x):
+                    flow = '%s,%s,%s,%s' % (arraytoIP(x.src_addr, x.addr_family),
+                        socket.ntohs(x.src_port),
+                        arraytoIP(x.dst_addr, x.addr_family),
+                        socket.ntohs(x.dst_port)
+                        )
+                    flows_set.add(flow)
+        except IOError:
+            print('Cannot open file %s' % ttprobe_file)
+        # convert set to list and then sort it
+        flows = list(flows_set)
+        flows.sort()
+        return flows
+
+    elif ttprobe_format == 'ttprobe':
+        flows_set = set()
+        try:
+            with gzip.open(ttprobe_file, 'rb') as f:
+                ttprobe_cvs_reader = csv.reader(f, delimiter=',')
+                for row in ttprobe_cvs_reader:
+                    flow = '%s,%s,%s,%s' % (row[2], row[3], row[4], row[5])
+                    flows_set.add(flow)
+        except IOError:
+            print('Cannot open file %s' % ttprobe_file)
+        # convert set to list and then sort it
+        flows = list(flows_set)
+        flows.sort()
+        return flows
+
+
+## extract fileds from tprobe file
+#  @param ttprobe_file ttprobe file name
+#  @param attributes Fields to be extracted
+#  @param rflow Flows to be filtered on
+#  @param out the output file
+def extract_ttprobe_fileds_data(ttprobe_file, attributes, rflow, io_filter, out):
+
+    puts('Extracting fields (%s) from ttprobe file %s' % (attributes, ttprobe_file))
+    fields = attributes.split(',')
+    ttprobe_format = guess_ttprobe_file_format(ttprobe_file)
+    if ttprobe_format == 'binary':
+        x = TTprobe()
+        try:
+            with gzip.open(ttprobe_file, 'rb') as f:
+                with open(out, 'w') as fout:
+                    while f.readinto(x) == sizeof(x):
+                        # ignore the values when TCP socket state is SYN_SENT (==2)
+                        if x.sock_state == 2:
+                            continue
+                        if chr(x.direction) in io_filter:
+                            flow = '%s,%s,%s,%s' % (arraytoIP(x.src_addr, x.addr_family),
+                                socket.ntohs(x.src_port),
+                                arraytoIP(x.dst_addr, x.addr_family),
+                                socket.ntohs(x.dst_port)
+                                )
+                            if rflow == flow:
+                                fval = ''
+                                fout.write('%u.%06u' % (x.tv_sec, x.tv_usec))
+                                for field in fields:
+                                    if field == '1':
+                                        fval = x.direction
+                                    if field == '8':
+                                        fval = x.mss_cache
+                                    if field == '9':
+                                        fval = x.srtt / 1000.0
+                                    if field == '10':
+                                        fval = x.snd_cwnd * x.mss_cache
+                                    elif field == '11':
+                                        fval = x.ssthresh
+                                    elif field == '12':
+                                        fval = x.snd_wnd * x.mss_cache
+                                    elif field == '13':
+                                        fval = x.rcv_wnd * x.mss_cache
+                                    elif field == '14':
+                                        fval = x.sock_state
+                                    elif field == '15':
+                                        fval = x.snd_una
+                                    elif field == '16':
+                                        fval = x.snd_nxt
+                                    elif field == '17':
+                                        fval = x.length
+                                    fout.write(',' + str(fval))
+                                fout.write('\n')
+
+        except IOError:
+            print('Cannot open file %s' % ttprobe_file)
+
+        return 0
+
+    elif ttprobe_format == 'ttprobe':
+        try:
+            with gzip.open(ttprobe_file, 'rb') as f:
+                with open(out, 'w') as fout:
+                    ttprobe_cvs_reader = csv.reader(f, delimiter=',')
+                    for row in ttprobe_cvs_reader:
+                        # ignore the values when TCP socket state is SYN_SENT (==2)
+                        if row[13] == '2':
+                            continue
+                        if row[0] in io_filter:
+                            flow = '%s,%s,%s,%s' % (row[2], row[3], row[4], row[5])
+                            if rflow == flow:
+                                fout.write(row[1])
+                                for field in fields:
+                                    # if field is srtt, then convert to second
+                                    if int(field) == 9:
+                                        fout.write(',%s' % (int(row[int(field) - 1]) / 1000.0))
+                                    else:
+                                        fout.write(',' + row[int(field) - 1])
+                                fout.write('\n')
+                fout.close()
+        except IOError:
+            print('Cannot open file %s' % ttprobe_file)
+        return 0
+
+
+## Extract data from ttprobe files
+#  @param test_id Test ID prefix of experiment to analyse
+#  @param out_dir Output directory for results
+#  @param replot_only Don't extract data again, just redo the plot
+#  @param source_filter Filter on specific sources
+#  @param attributes Comma-separated list of attributes to extract from ttprobe file,
+#                    start index is 1
+#                    (refer to ttprobe documentation for column description)
+#  @param out_file_ext Extension for the output file containing the extracted data
+#  @param post_proc Name of function used for post-processing the extracted data
+#  @param ts_correct '0' use timestamps as they are (default)
+#                    '1' correct timestamps based on clock offsets estimated
+#                        from broadcast pings
+#  @param io_filter  'i' only use statistics from incoming packets
+#                    'o' only use statistics from outgoing packets
+#                    'io' use statistics from incooming and outgoing packets
+#  @return Map of flow names to interim data file names and
+#          map of file names and group IDs
+def extract_ttprobe(test_id='', out_dir='', replot_only='0', source_filter='',
+                   attributes='', out_file_ext='', post_proc=None,
+                   ts_correct='1', io_filter='i'):
+
+    if io_filter != 'i' and io_filter != 'o' and io_filter != 'io':
+        abort('Invalid parameter value for io_filter')
+
+    out_files = {}
+    out_groups = {}
+
+    test_id_arr = test_id.split(';')
+
+    # Initialise source filter data structure
+    sfil = SourceFilter(source_filter)
+
+    group = 1
+    for test_id in test_id_arr:
+
+        # second process ttprobe files
+        ttprobe_files = get_testid_file_list('', test_id,
+                                            'ttprobe.log.gz', '', no_abort=True)
+
+        for ttprobe_file in ttprobe_files:
+            # get ttprobe file format
+            #ttprobe_file_format = guess_ttprobe_file_format(ttprobe_file)
+            # get input directory name and create result directory if necessary
+            out_dirname = get_out_dir(ttprobe_file, out_dir)
+
+            # unique flows
+            flows = lookup_flow_cache(ttprobe_file)
+            if flows is None:
+                flows = get_ttprobe_flows(ttprobe_file)
+                append_flow_cache(ttprobe_file, flows)
+
+            for flow in flows:
+
+                src, src_port, dst, dst_port = flow.split(',')
+
+                # get external aNd internal addresses
+                src, src_internal = get_address_pair_analysis(test_id, src, do_abort='0')
+                dst, dst_internal = get_address_pair_analysis(test_id, dst, do_abort='0')
+
+                if src == '' or dst == '':
+                    continue
+
+                flow_name = flow.replace(',', '_')
+                # test id plus flow name
+                if len(test_id_arr) > 1:
+                    long_flow_name = test_id + '_' + flow_name
+                else:
+                    long_flow_name = flow_name
+                out = out_dirname + test_id + '_' + flow_name + '_ttprobe.' + out_file_ext
+                if replot_only == '0' or not os.path.isfile(out):
+                    extract_ttprobe_fileds_data(ttprobe_file, attributes, flow, io_filter, out)
+
+                    if post_proc is not None:
+                        post_proc(ttprobe_file, out)
+
+                if sfil.is_in(flow_name):
+                    if ts_correct == '1':
+                        host = local(
+                            'echo %s | sed "s/.*_\([a-z0-9\.]*\)_ttprobe.log.gz/\\1/"' %
+                            (ttprobe_file),
+                            capture=True)
+                        out = adjust_timestamps(test_id, out, host, ',', out_dir)
+
+                    out_files[long_flow_name] = out
+                    out_groups[out] = group
+
+        group += 1
+
+    return (out_files, out_groups)
+
+
+
 
 ## Extract DASH goodput data from httperf log files
 ## The extracted files have an extension of .dashgp. The format is CSV with the
@@ -829,8 +1120,33 @@ def _extract_cwnd(test_id='', out_dir='', replot_only='0', source_filter='',
                                'cwnd',
                                ts_correct=ts_correct)
 
-    all_files = dict(files1.items() + files2.items())
-    all_groups = dict(groups1.items() + groups2.items())
+    (files3,
+     groups3) = extract_ttprobe(test_id,
+                               out_dir,
+                               replot_only,
+                               source_filter,
+                               '10',
+                               'cwnd',
+                               ts_correct=ts_correct,
+                               io_filter=io_filter)
+
+    # to deal with two Linux loggers for smae experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
+    inters = list(set(files2).intersection(files3))
+    if inters is not None:
+        try:
+            logger = os.environ['LINUX_TCP_LOGGER']
+        except:
+            logger = ''
+        for i in inters:
+            if logger == 'ttprobe':
+                del files2[i]
+            elif logger == 'web10g':
+                del files3[i]
+            else:
+                files2[i + 'web10g'] = files2.pop(i)
+
+    all_files = dict(files1.items() + files2.items() + files3.items())
+    all_groups = dict(groups1.items() + groups2.items() + groups3.items())
 
     return (test_id_arr, all_files, all_groups)
 
@@ -987,8 +1303,33 @@ def _extract_tcp_rtt(test_id='', out_dir='', replot_only='0', source_filter='',
                                'tcp_rtt',
                                ts_correct=ts_correct)
 
-    all_files = dict(files1.items() + files2.items())
-    all_groups = dict(groups1.items() + groups2.items())
+    (files3,
+     groups3) = extract_ttprobe(test_id,
+                               out_dir,
+                               replot_only,
+                               source_filter,
+                               '9',
+                               'tcp_rtt',
+                               ts_correct=ts_correct,
+                               io_filter=io_filter)
+
+    # to deal with two Linux loggers for smae experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
+    inters = list(set(files2).intersection(files3))
+    if inters is not None:
+        try:
+            logger = os.environ['LINUX_TCP_LOGGER']
+        except:
+            logger = ''
+        for i in inters:
+            if logger == 'ttprobe':
+                del files2[i]
+            elif logger == 'web10g':
+                del files3[i]
+            else:
+                files2[i + 'web10g'] = files2.pop(i)
+
+    all_files = dict(files1.items() + files2.items() + files3.items())
+    all_groups = dict(groups1.items() + groups2.items() + groups3.items())
 
     return (test_id_arr, all_files, all_groups)
 
@@ -1075,7 +1416,7 @@ def analyse_tcp_rtt(test_id='', out_dir='', replot_only='0', source_filter='',
     puts('\n[MAIN] COMPLETED plotting TCP RTTs %s \n' % out_name)
 
 
-## Extract some TCP statistic (based on siftr/web10g output)
+## Extract some TCP statistic (based on siftr/web10g/ttprobe output)
 ## The extracted files have an extension of .tcpstat_<num>, where <num> is the index
 ## of the statistic. The format is CSV with the columns:
 ## 1. Timestamp RTT measured (seconds.microseconds)
@@ -1092,6 +1433,9 @@ def analyse_tcp_rtt(test_id='', out_dir='', replot_only='0', source_filter='',
 #                      (default = 26, CWND)
 #                      example: analyse_tcp_stat(siftr_index=17,web10_index=23,...)
 #                      would plot smoothed RTT estimates.
+#  @param ttprobe_index Integer number of the column in ttprobe log files
+#                     (note if you have ttprobe, sitfr and web10g logs, you must also
+#                     specify sitfr_index and web10g_index) (default = 10, CWND)
 #  @param ts_correct '0' use timestamps as they are (default)
 #                    '1' correct timestamps based on clock offsets estimated
 #                        from broadcast pings
@@ -1102,8 +1446,8 @@ def analyse_tcp_rtt(test_id='', out_dir='', replot_only='0', source_filter='',
 #  @return Test ID list, map of flow names to interim data file names and 
 #          map of file names and group IDs
 def _extract_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
-                     siftr_index='9', web10g_index='26', ts_correct='1',
-                     io_filter='o'):
+                     siftr_index='9', web10g_index='26', ttprobe_index='10',
+                      ts_correct='1', io_filter='o'):
     "Extract TCP Statistic"
 
     test_id_arr = test_id.split(';')
@@ -1132,28 +1476,54 @@ def _extract_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
                                'tcpstat_' + web10g_index,
                                ts_correct=ts_correct)
 
-    all_files = dict(files1.items() + files2.items())
-    all_groups = dict(groups1.items() + groups2.items())
+    (files3,
+     groups3) = extract_ttprobe(test_id,
+                               out_dir,
+                               replot_only,
+                               source_filter,
+                               ttprobe_index,
+                               'tcpstat_' + ttprobe_index,
+                               ts_correct=ts_correct,
+                               io_filter=io_filter)
+
+    # to deal with two Linux loggers for smae experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
+    inters = list(set(files2).intersection(files3))
+    if inters is not None:
+        try:
+            logger = os.environ['LINUX_TCP_LOGGER']
+        except:
+            logger = ''
+        for i in inters:
+            if logger == 'ttprobe':
+                del files2[i]
+            elif logger == 'web10g':
+                del files3[i]
+            else:
+                files2[i + 'web10g'] = files2.pop(i)
+
+    all_files = dict(files1.items() + files2.items() + files3.items())
+    all_groups = dict(groups1.items() + groups2.items() + groups3.items())
 
     return (test_id_arr, all_files, all_groups)
 
 
-## Extract some TCP statistic (based on siftr/web10g output)
+## Extract some TCP statistic (based on siftr/web10g/ttprobe output)
 ## SEE _extract_tcp_stat
 @task
 def extract_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
-                     siftr_index='9', web10g_index='26', ts_correct='1',
-                     io_filter='o'):
+                     siftr_index='9', web10g_index='26', ttprobe_index='10',
+                     ts_correct='1', io_filter='o'):
     "Extract TCP Statistic"
 
     _extract_tcp_stat(test_id, out_dir, replot_only, source_filter,
-                      siftr_index, web10g_index, ts_correct, io_filter)
+                      siftr_index, web10g_index, ttprobe_index,
+                      ts_correct, io_filter)
 
     # done
     puts('\n[MAIN] COMPLETED extracting TCP Statistic %s \n' % test_id)
 
 
-## Plot some TCP statistic (based on siftr/web10g output)
+## Plot some TCP statistic (based on siftr/web10g/ttprobe output)
 #  @param test_id Test ID prefix of experiment to analyse
 #  @param out_dir Output directory for results
 #  @param replot_only Don't extract data again, just redo the plot
@@ -1171,6 +1541,9 @@ def extract_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
 #                      (default = 26, CWND)
 #		       example: analyse_tcp_stat(siftr_index=17,web10_index=23,...)
 #                      would plot smoothed RTT estimates.
+#  @param ttprobe_index Integer number of the column in ttprobe log files
+#                     (note if you have ttprobe, sitfr and web10g logs, you must also
+#                     specify sitfr_index and web10g_index) (default = 10, CWND)
 #  @param ylabel Label for y-axis in plot
 #  @param yscaler Scaler for y-axis values (must be a floating point number)
 #  @param ymin Minimum value on y-axis
@@ -1193,6 +1566,7 @@ def extract_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
 @task
 def analyse_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
                      min_values='3', omit_const='0', siftr_index='9', web10g_index='26',
+                     ttprobe_index='10',
                      ylabel='', yscaler='1.0', ymin='0', ymax='0', lnames='',
                      stime='0.0', etime='0.0', out_name='', pdf_dir='', ts_correct='1',
                      io_filter='o', plot_params='', plot_script=''):
@@ -1201,14 +1575,14 @@ def analyse_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
     (test_id_arr,
      out_files,
      out_groups) =_extract_tcp_stat(test_id, out_dir, replot_only, source_filter,
-                      siftr_index, web10g_index, ts_correct, io_filter)
+                      siftr_index, web10g_index, ttprobe_index, ts_correct, io_filter)
 
     if len(out_files) > 0:
         (out_files, out_groups) = filter_min_values(out_files, out_groups, min_values)
         out_name = get_out_name(test_id_arr, out_name)
         plot_time_series(out_name, out_files, ylabel, 2, float(yscaler), 'pdf',
                          out_name + '_tcpstat_' +
-                         siftr_index + '_' + web10g_index,
+                         siftr_index + '_' + web10g_index + '_' + ttprobe_index,
                          pdf_dir=pdf_dir, sep=",", omit_const=omit_const,
                          ymin=float(ymin), ymax=float(ymax), lnames=lnames, stime=stime,
                          etime=etime, groups=out_groups, plot_params=plot_params,

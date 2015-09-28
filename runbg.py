@@ -117,7 +117,15 @@ def stop_processes(local_dir='.'):
     # first: stop processes and tcp loggers
     for k, v in sorted(bgproc.get_proc_list_items()):
         if v.pid != '0':
-            execute(stop_process, v.pid, hosts=[v.host])  # kill process
+            # call stop_tcp_logger to flush new_tcp_probe kernel buffer and stop its process
+            # otherwise just stop_process  (e.g. if web10g is used)
+            if k.find('tcploggerprobe') > -1:
+                puts('calling stop_tcp_logger')
+                execute(stop_tcp_logger, local_dir=local_dir, hosts=[v.host])
+                execute(stop_process, v.pid, hosts=[v.host])  # kill process
+
+            else:
+                execute(stop_process, v.pid, hosts=[v.host])  # kill process
         else:
             # handle siftr and dummynet logger
             if k.find('tcplogger') > -1:
@@ -126,12 +134,12 @@ def stop_processes(local_dir='.'):
     # second: get log files
     for k, v in sorted(bgproc.get_proc_list_items()):
         if v.pid != '0' and v.log != '':
-            execute(
-                getfile,
-                file_name=v.log,
-                local_dir=local_dir,
-                hosts=[
-                    v.host])  # get log file
+            if k.find('tcploggerprobe') < 0:
+                execute(
+                    getfile,
+                    file_name=v.log,
+                    local_dir=local_dir,
+                    hosts=[v.host])  # get log file
 
     # finally clear process list
     bgproc.clear_proc_list()

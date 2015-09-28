@@ -383,7 +383,16 @@ def check_host():
             run('which tcpdump')
             #run('which web10g-listconns')
             #run('which web10g-readvars')
-            run('which web10g-logger')
+            #updated for ttprobe support
+            try:
+                linux_tcp_logger = config.TPCONF_linux_tcp_logger
+            except AttributeError:
+                linux_tcp_logger = 'web10g'
+            if linux_tcp_logger == 'ttprobe' or linux_tcp_logger == 'both':
+                #checking the availability of ttprobe.ko kernel module
+                run('ls /lib/modules/$(uname -r)/extra/ttprobe.ko')
+            if linux_tcp_logger == 'web10g' or linux_tcp_logger == 'both':
+                run('which web10g-logger')
         elif htype == 'CYGWIN':
             run('which WinDump', pty=False)
             run('which win-estats-logger', pty=False)
@@ -542,6 +551,11 @@ def kill_old_processes():
             run('killall tcpdump', pty=False)
         elif htype == 'Linux':
             run('killall tcpdump', pty=False)
+            # updated for ttprobe support
+            # Kill ttprobe user space process and unload kernel module
+            # run('pkill -f "cat /proc/net/ttprobe"')
+            with settings(warn_only=True):
+                run('rmmod ttprobe')
             #run('killall web10g_logger.sh')
             run('killall web10g-logger')
         elif htype == 'Darwin':

@@ -546,6 +546,38 @@ def stop_tcpdump(file_prefix='', remote_dir='', local_dir='.'):
     bgproc.remove_proc(env.host_string, 'tcpdump', '0')
 
 
+## Start CPU load logger
+#  @param file_prefix Prefix for file name
+#  @param remote_dir Directrory on remote where file is created
+#  @param local_dir Directory for .start file
+@parallel
+def start_cpu_logger(file_prefix='', remote_dir='', local_dir='.'):
+    "Start CPU loade logger"
+
+    # log cpu load
+    logfile = remote_dir + file_prefix + '_' + \
+            env.host_string.replace(":", "_") + "_cpuload.log"
+
+    host = env.host_string.split(':')[0]
+
+    # resolve to IP to make sure we filter on right address
+    host_ip = socket.gethostbyname(host)
+    if host_ip == '':
+        host_ip = host
+        #top -b -d 0.1 | grep Cpu
+
+    #pid = runbg(' top -b -d 0.5 ' , out_file=logfile)
+    #pid = runbg(' vmstat 1 100000 -n ' , out_file=logfile)
+    pid = runbg(' sar 1 ', out_file=logfile)
+    bgproc.register_proc_later(
+           env.host_string,
+           local_dir,
+           'cpuloadlogger',
+           '00',
+           pid,
+           logfile)
+
+
 ## Start TCP logger
 #  @param file_prefix Prefix for file name
 #  @param remote_dir Directrory on remote where file is created
@@ -599,75 +631,124 @@ def start_tcp_logger(file_prefix='', remote_dir='', local_dir='.'):
             logfile)
 
     elif htype == 'Linux':
-        # set default sample interval to roughly 10ms
-        sample_interval = 0.01
-
-	try:
-            sample_interval = float(config.TPCONF_web10g_poll_interval) / 1000.0
+        try:
+            linux_tcp_logger = config.TPCONF_linux_tcp_logger
         except AttributeError:
-            pass
+            linux_tcp_logger = 'web10g'
+        if linux_tcp_logger == 'ttprobe' or linux_tcp_logger == 'both':
+            ttprobe_output_mode = config.TPCONF_ttprobe_output_mode
+            ttprobe_direction = config.TPCONF_ttprobe_direction
 
-        # with new web10g we use the provided web10g-logger which needs interval
-        # in milliseconds, so convert here
-        with settings(warn_only=True):
-            out = run('web10g-logger -h | grep "poll interval given in seconds"')
-            if out == '':
-                sample_interval *= 1000
+            if ttprobe_output_mode == 'binary':
+                ttprobe_output_mode = '1'
+            else:
+                ttprobe_output_mode = '0'
 
-        # turn off logging and remove kernel module
-        with settings(warn_only=True):
-            run('echo 0 > /proc/sys/net/ipv4/tcp_estats') # version 2.0.8+
-            run('rmmod tcp_estats_nl')
+            if ttprobe_direction == 'o':
+                ttprobe_direction = '0'
+            elif ttprobe_direction == 'i':
+                ttprobe_direction = '1'
+            else:
+                ttprobe_direction = '2'
 
-        # start kernel module
-        run('modprobe tcp_estats_nl')
+            # ttprobe - start_tcp_logger code
+            with settings(warn_only=True):
+                run('rmmod ttprobe')
 
-        # for new web10g (version 2.08 and higher) we need to turn it on, note
-        # that /proc/sys/net/ipv4/tcp_estats is not just 0/1 but we need to
-        # specify a bit mask to turn on/off different features.
-        # we turn on all features to be compatible to previous version
-        # (see /usr/src/<linux>/include/net/tcp_estats.h for bit flags,
-        #  the TCP_ESTATS_TABLEMASK_* constants)
-        with settings(warn_only=True):
-            run('echo 95 > /proc/sys/net/ipv4/tcp_estats')
+            # start new_tcp_probe kernel module
+            run('modprobe ttprobe port=0 full=1 bufsize=16384 omode=%s direction=%s' %
+            (ttprobe_output_mode, ttprobe_direction))
 
-        # OLD:
-        # check userland code is there
-        #run('which web10g-listconns')
-        #run('which web10g-readvars')
-        # make sure script is there
-        #put(config.TPCONF_script_path + '/web10g_logger.sh', '/usr/bin')
-        #run('chmod a+x /usr/bin/web10g_logger.sh')
+            logfile = remote_dir + file_prefix + '_' + \
+                env.host_string.replace(":", "_") + "_ttprobe.log"
 
-        # check userland code is there
-        run('which web10g-logger')
+            host = env.host_string.split(':')[0]
 
-        logfile = remote_dir + file_prefix + '_' + \
-            env.host_string.replace(":", "_") + "_web10g.log"
-        host = env.host_string.split(':')[0]
+            # resolve to IP to make sure we filter on right address
+            host_ip = socket.gethostbyname(host)
+            if host_ip == '':
+                host_ip = host
 
-        # OLD:
-        #pid = runbg('web10g_logger.sh %f %s %s' % (sample_interval, logfile, host))
-        # run with high priority
-        #run('renice -n -20 -p %s' % pid)
+            pid = runbg('cat /proc/net/ttprobe', out_file=logfile)
+            #pid = runbg('cat /proc/kmsg', out_file=logfile)
 
-        # resolve to IP to make sure we filter on right address
-        host_ip = socket.gethostbyname(host) 
-        if host_ip == '':
-            host_ip = host
+            bgproc.register_proc_later(
+                env.host_string,
+                local_dir,
+                'tcploggerprobe',
+                '00',
+                pid,
+                logfile)
 
-        pid = runbg(
-            'web10g-logger -e %s -i %f' %
-            (host_ip, sample_interval), out_file=logfile)
+        if linux_tcp_logger == 'web10g' or linux_tcp_logger == 'both':
+            # set default sample interval to roughly 10ms
+            sample_interval = 0.01
+            try:
+                sample_interval = float(config.TPCONF_web10g_poll_interval) / 1000.0
+            except AttributeError:
+                pass
 
-        #bgproc.register_proc(env.host_string, 'tcplogger', '00', pid, logfile)
-        bgproc.register_proc_later(
-            env.host_string,
-            local_dir,
-            'tcplogger',
-            '00',
-            pid,
-            logfile)
+            # with new web10g we use the provided web10g-logger which needs interval
+            # in milliseconds, so convert here
+            with settings(warn_only=True):
+                out = run('web10g-logger -h | grep "poll interval given in seconds"')
+                if out == '':
+                    sample_interval *= 1000
+
+            # turn off logging and remove kernel module
+            with settings(warn_only=True):
+                run('echo 0 > /proc/sys/net/ipv4/tcp_estats') # version 2.0.8+
+                run('rmmod tcp_estats_nl')
+
+            # start kernel module
+            run('modprobe tcp_estats_nl')
+
+            # for new web10g (version 2.08 and higher) we need to turn it on, note
+            # that /proc/sys/net/ipv4/tcp_estats is not just 0/1 but we need to
+            # specify a bit mask to turn on/off different features.
+            # we turn on all features to be compatible to previous version
+            # (see /usr/src/<linux>/include/net/tcp_estats.h for bit flags,
+            #  the TCP_ESTATS_TABLEMASK_* constants)
+            with settings(warn_only=True):
+                run('echo 95 > /proc/sys/net/ipv4/tcp_estats')
+
+            # OLD:
+            # check userland code is there
+            #run('which web10g-listconns')
+            #run('which web10g-readvars')
+            # make sure script is there
+            #put(config.TPCONF_script_path + '/web10g_logger.sh', '/usr/bin')
+            #run('chmod a+x /usr/bin/web10g_logger.sh')
+
+            # check userland code is there
+            run('which web10g-logger')
+
+            logfile = remote_dir + file_prefix + '_' + \
+                env.host_string.replace(":", "_") + "_web10g.log"
+            host = env.host_string.split(':')[0]
+
+            # OLD:
+            #pid = runbg('web10g_logger.sh %f %s %s' % (sample_interval, logfile, host))
+            # run with high priority
+            #run('renice -n -20 -p %s' % pid)
+
+            # resolve to IP to make sure we filter on right address
+            host_ip = socket.gethostbyname(host) 
+            if host_ip == '':
+                host_ip = host
+
+            pid = runbg(
+                'web10g-logger -e %s -i %f' %
+                (host_ip, sample_interval), out_file=logfile)
+
+            #bgproc.register_proc(env.host_string, 'tcplogger', '00', pid, logfile)
+            bgproc.register_proc_later(
+                env.host_string,
+                local_dir,
+                'tcplogger',
+                '00',
+                pid,
+                logfile)
 
     elif htype == 'Darwin':
         # start dtrace based logging tool
@@ -754,10 +835,34 @@ def stop_tcp_logger(file_prefix='', remote_dir='', local_dir='.'):
             env.host_string.replace(':', '_') + '_siftr.log'
 
     elif htype == 'Linux':
-        #run('killall web100_logger')
-        run('killall web100-logger')
-        logfile = file_prefix + '_' + \
-            env.host_string.replace(':', '_') + '_web10g.log'
+        # In fact, stop_tcp_logger is called just when Linux
+        # and ttprobe are used (not with web10g)
+        # but we check linux_tcp_logger type just in case
+        # run('killall web100-logger')
+
+        try:
+            linux_tcp_logger = config.TPCONF_linux_tcp_logger
+        except AttributeError:
+            linux_tcp_logger = 'web10g'
+
+        if linux_tcp_logger == 'ttprobe' or linux_tcp_logger == 'both':
+            # flush ttprobe module buffer
+            run('echo flush > /proc/net/ttprobe')
+            time.sleep(0.5)
+            run('echo finish > /proc/net/ttprobe')
+            #run('pkill -f "cat /proc/net/ttprobe"')
+            run('rmmod ttprobe')
+            logfile = file_prefix + '_' + \
+                env.host_string.replace(':', '_') + '_ttprobe.log'
+        # complete other tasks and exit from this function because ttprobe has differnt bgproce
+        # name
+        if file_prefix != '' or remote_dir != '':
+            file_name = logfile
+        else:
+            file_name = bgproc.get_proc_log(env.host_string, 'tcploggerprobe', '00')
+        getfile(file_name, local_dir)
+        bgproc.remove_proc(env.host_string, 'tcploggerprobe', '00')
+        return
 
     elif htype == 'Darwin':
         pass
@@ -818,6 +923,14 @@ def start_loggers(file_prefix='', remote_dir='', local_dir='.'):
             snap_len = 65535
     except AttributeError:
         pass
+
+    # start CPU loggers
+    #execute(
+    #    start_cpu_logger,
+    #    file_prefix,
+    #    remote_dir,
+    #    local_dir,
+    #    hosts=config.TPCONF_hosts)
 
     # start tcpdumps on testbed interfaces
     execute(

@@ -3,6 +3,12 @@ Version 1.1 (XXX)
 - Fixed error in comment (TCP send buffer setup related)
 - Turn off socket receive buffer tuning by default on FreeBSD now (was already
   off by default on Linux)
+- Added ttprobe logger support, called ttprobe. Logger can be 
+  changed by adding TPCONF_linux_tcp_logger = <logger> to config.py
+  where logger can be 'web10g' , 'ttprobe' or 'both'. If 'both' is
+  used during the experiment, we can select which logger will be used
+  by setting LINUX_TCP_LOGGER environment variable to the desired logger
+  name.   
 
 Version 1.0 (26th May 2015)
 ---------------------------

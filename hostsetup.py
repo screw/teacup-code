@@ -897,8 +897,8 @@ def init_host():
         # tcp recv buffer max (min 4kB, default 87kB, max 6MB; this is standard
         # on kernel 3.7)
         run('sysctl net.ipv4.tcp_rmem=\'4096 87380 6291456\'')
-        # tcp send buffer max (min 4kB, default 32kB, max 6MB; doubled default
-        # otherwise standard on kernel 3.7)
+        # tcp send buffer max (min 4kB, default 64kB, max 4MB; 4x the default
+        # otherwise standard values from kernel 3.7)
         run('sysctl net.ipv4.tcp_wmem=\'4096 65535 4194304\'')
 
     elif htype == 'Darwin':

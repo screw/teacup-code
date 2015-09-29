@@ -6,10 +6,11 @@ $Id$
 ACKNOWLEDGMENTS
 ---------------
 
-TEACUP v0.9 was developed as part of a project funded by Cisco 
-Systems and titled "Study in TCP Congestion Control Performance In 
-A Data Centre". This is a collaborative effort between CAIA and 
-Fred Baker of Cisco Systems.
+TEACUP versions prior to 1.0 were developed as part of a project 
+funded by Cisco Systems and titled "Study in TCP Congestion Control 
+Performance In A Data Centre". This was a collaborative effort between 
+Swinburne University of Technology's Centre for Advanced Internet 
+Architectures and Fred Baker of Cisco Systems.
 
 
 INTRODUCTION

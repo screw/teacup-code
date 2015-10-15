@@ -424,6 +424,49 @@ if (aggrs[2] != "" && aggrs[2] != "0") {
 }
 
 #
+# Filter time windows
+#
+
+xtime_max = 0
+ytime_max = 0
+
+# normalise x and y times and determine x and y max
+
+for (i in c(1:length(xdata))) {
+	xdata[[i]][,1] = xdata[[i]][,1] - xdata[[i]][1,1]
+
+	if (max(xdata[[i]][,1]) > xtime_max) {
+		xtime_max = max(xdata[[i]][,1])
+	}
+}
+
+for (i in c(1:length(ydata))) {
+        ydata[[i]][,1] = ydata[[i]][,1] - ydata[[i]][1,1]
+
+        if (max(ydata[[i]][,1]) > ytime_max) {
+                ytime_max = max(ydata[[i]][,1])
+        }
+}
+
+# plot only specific time window
+if (stime < 0 || stime > xtime_max || stime > ytime_max) {
+        stime = 0.0
+}
+if (etime <= 0 || etime > xtime_max || etime > ytime_max) {
+        etime = max(c(xtime_max,ytime_max))
+}
+
+# filter out data out of time window 
+if (stime > 0.0 || etime < max(c(xtime_max,ytime_max))) {
+        for (i in c(1:length(xdata))) {
+                xdata[[i]] = xdata[[i]][xdata[[i]][,1] >= stime & xdata[[i]][,1] <= etime,]
+        }
+	for (i in c(1:length(ydata))) {
+                ydata[[i]] = ydata[[i]][ydata[[i]][,1] >= stime & ydata[[i]][,1] <= etime,]
+        }
+}
+
+#
 # Remove outliers
 #
 

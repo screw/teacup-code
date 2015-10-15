@@ -9,6 +9,8 @@ Version 1.1 (XXX)
   used during the experiment, we can select which logger will be used
   by setting LINUX_TCP_LOGGER environment variable to the desired logger
   name.   
+- Added stime and etime parameters for analyse_2d_density method, so we can
+  plot data for specific time windows 
 
 Version 1.0 (26th May 2015)
 ---------------------------

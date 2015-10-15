@@ -703,6 +703,10 @@ def analyse_cmpexp(exp_list='experiments_completed.txt', res_dir='', out_dir='',
 #                  the variables are the variable names used in the file names
 #  @param pdf_dir Output directory for pdf files (graphs), if not specified it
 #                 is the same as out_dir
+#  @param stime Start time of time window to analyse
+#               (by default 0.0 = start of experiment)
+#  @param etime End time of time window to analyse (by default 0.0 = end of
+#               experiment)
 #  @param ts_correct '0' use timestamps as they are (default)
 #                    '1' correct timestamps based on clock offsets estimated
 #                        from broadcast pings
@@ -738,8 +742,8 @@ def analyse_2d_density(exp_list='experiments_completed.txt', res_dir='', out_dir
                    source_filter='', min_values='3', xmetric='throughput',
                    ymetric='tcprtt', variables='', out_name='', xmin='0', xmax='0',
                    ymin='0', ymax='0', lnames='', group_by='aqm', replot_only='0',
-                   pdf_dir='', ts_correct='1', smoothed='1', link_len='0',
-                   plot_params='', plot_script='', xstat_index='', ystat_index='',
+                   pdf_dir='', stime='0.0', etime='0.0', ts_correct='1', smoothed='1', 
+                   link_len='0', plot_params='', plot_script='', xstat_index='', ystat_index='',
                    dupacks='0', cum_ackseq='1', merge_data='0',
                    #sburst='1', eburst='0', test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_',
                    sburst='1', eburst='0', test_id_prefix='exp_[0-9]{8}\-[0-9]{6}_',
@@ -975,8 +979,8 @@ def analyse_2d_density(exp_list='experiments_completed.txt', res_dir='', out_dir
 
     plot_2d_density(title, x_files, y_files, x_axis_params[1], y_axis_params[1], yindexes,
                     yscalers, 'pdf', oprefix, pdf_dir, x_axis_params[4], y_axis_params[4],
-                    aggr_flags, diff_flags, xmin, xmax, ymin, ymax, groups, leg_names,
-                    plot_params, plot_script)
+                    aggr_flags, diff_flags, xmin, xmax, ymin, ymax, stime, etime, 
+                    groups, leg_names, plot_params, plot_script)
 
     # done
     puts('\n[MAIN] COMPLETED analyse_2d_density %s \n' % test_id_pfx)

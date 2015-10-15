@@ -695,6 +695,10 @@ def plot_cmpexp(title='', file_names=[], xlabs=[], ylab='', yindex=2, yscaler=1.
 #  @param xmax Maximum value on x-axis
 #  @param ymin Minimum value on y-axis
 #  @param ymax Maximum value on y-axis
+#  @param stime Start time of plot window in seconds
+#               (by default 0.0 = start of experiment)
+#  @param etime End time of plot window in seconds
+#               (by default 0.0 = end of experiment)
 #  @param groups List of group numbers
 #  @param leg_names List of legend names
 #  @param plot_params Parameters passed to plot function via environment variables
@@ -702,7 +706,7 @@ def plot_cmpexp(title='', file_names=[], xlabs=[], ylab='', yindex=2, yscaler=1.
 #                    (default is config.TPCONF_script_path/plot_bursts.R)
 def plot_2d_density(title='', x_files=[], y_files=[], xlab='', ylab='', yindexes=[], yscalers=[],
                 otype='', oprefix='', pdf_dir='', xsep=' ', ysep=' ' , aggrs=[], diffs=[], 
-                xmin=0, xmax=0, ymin=0, ymax=0, groups=[], leg_names=[],
+                xmin=0, xmax=0, ymin=0, ymax=0, stime='0.0', etime='0.0', groups=[], leg_names=[],
                 plot_params='', plot_script=''):
 
     if plot_script == '':
@@ -760,12 +764,13 @@ def plot_2d_density(title='', x_files=[], y_files=[], xlab='', ylab='', yindexes
     #local('which R')
     local('TITLE="%s" XFNAMES="%s" YFNAMES="%s", LNAMES="%s" XLAB="%s" YLAB="%s" YINDEXES="%s" '
           'YSCALERS="%s" XSEP="%s" YSEP="%s" OTYPE="%s" OPREFIX="%s" ODIR="%s" AGGRS="%s" '
-          'DIFFS="%s" XMIN="%s" XMAX="%s" YMIN="%s" YMAX="%s" GROUPS="%s" %s '
+          'DIFFS="%s" XMIN="%s" XMAX="%s" YMIN="%s" YMAX="%s" STIME="%s" ETIME="%s" GROUPS="%s" %s '
           '%s %s%s_plot_contour.Rout' %
           (title, ','.join(x_files), ','.join(y_files), ','.join(leg_names),
            xlab, ylab, ','.join(yindexes), ','.join(yscalers),
            xsep, ysep, 'pdf', oprefix, pdf_dir, ','.join(aggrs),
-           ','.join(diffs), xmin, xmax, ymin, ymax, ','.join([str(x) for x in groups]),
+           ','.join(diffs), xmin, xmax, ymin, ymax, stime, etime, 
+	   ','.join([str(x) for x in groups]),
            plot_params, plot_script, pdf_dir, oprefix))
 
     if config.TPCONF_debug_level == 0:

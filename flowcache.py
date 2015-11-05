@@ -63,8 +63,13 @@ def read_flow_cache():
 def append_flow_cache(fname, flows):
 
     if fname not in flow_cache:
-        with open(CACHE_FILE_NAME, 'a') as f:
-            f.write('%s %s\n' % (fname, ';'.join(flows)))
+        try:
+            with open(CACHE_FILE_NAME, 'a') as f:
+                f.write('%s %s\n' % (fname, ';'.join(flows)))
+        except:
+            # if we can't write to the file then bad luck, user needs to fix permission,
+            # but ensure we don't crash
+            pass
 
 
 ## Perform cache lookup. If we have entry for file name return list of flows that can be

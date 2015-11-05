@@ -45,6 +45,7 @@ import csv
 import tempfile
 import imp
 from subprocess import *
+import tempfile
 from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, hosts, env, runs_once, parallel
 import config
@@ -61,7 +62,7 @@ CLOCK_OFFSET_FILE_EXT = '_clock_offsets.txt'
 DATA_CORRECTED_FILE_EXT = '.tscorr'
 
 ## Temporary unzipped config
-TMP_CONF_FILE = '___oldconfig.py'
+TMP_CONF_FILE = tempfile.mktemp(suffix='_oldconfig.py', dir='/tmp/')
 
 
 ## Get file with time offsets for each experiment host (TASK)

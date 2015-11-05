@@ -11,6 +11,11 @@ Version 1.1 (XXX)
   name.   
 - Added stime and etime parameters for analyse_2d_density method, so we can
   plot data for specific time windows 
+- Some changes to allow running analysis functions in a directory without
+  write access: 
+  - oldconfig.py files are now created in /tmp
+  - don't crash when trying to write to a cache file that is read-only
+- Detect location of experiment files based on uname file
 
 Version 1.0 (26th May 2015)
 ---------------------------

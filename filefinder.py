@@ -62,8 +62,13 @@ def read_dir_cache():
 def append_dir_cache(test_id, directory):
 
     if test_id not in dir_cache:
-        with open(CACHE_FILE_NAME, 'a') as f:
-            f.write('%s %s\n' % (test_id, directory))
+        try:
+            with open(CACHE_FILE_NAME, 'a') as f:
+                f.write('%s %s\n' % (test_id, directory))
+        except:
+            # if we can't write to the file then bad luck, user needs to fix permission,
+            # but ensure we don't crash
+            pass
 
 
 ## Perform cache lookup, if we have entry for test id return directory. Otherwise
@@ -114,9 +119,23 @@ def get_testid_file_list(file_list_fname='', test_id='', file_ext='', pipe_cmd='
 
     file_list = []
 
+    if pipe_cmd != '':
+        pipe_cmd = ' | ' + pipe_cmd
+
     # if search dir is not specified try to find it in cache
     if search_dir == '.':
         search_dir = lookup_dir_cache(test_id)
+
+        # if not in cache try to locate the directory based on the uname file
+        if search_dir == '.':
+            _files = _list(
+                local(
+                    'find -L %s -name "%s*uname.log*" -print | sed -e "s/^\.\///"%s' %
+                    (search_dir, test_id, pipe_cmd),
+                    capture=True))
+            if len(_files) > 0:
+                search_dir = os.path.dirname(_files[0])
+                append_dir_cache(test_id, search_dir)
 
     if file_list_fname == '':
         # read from test_id list specified, this always overrules list in file if
@@ -127,9 +146,6 @@ def get_testid_file_list(file_list_fname='', test_id='', file_ext='', pipe_cmd='
         if len(test_id_arr) == 0 or test_id_arr[0] == '':
             abort('Must specify test_id parameter')
 
-        if pipe_cmd != '':
-            pipe_cmd = ' | ' + pipe_cmd
-
         for test_id in test_id_arr:
             _files = _list(
                 local(
@@ -139,9 +155,6 @@ def get_testid_file_list(file_list_fname='', test_id='', file_ext='', pipe_cmd='
 
             _files = filter_duplicates(_files)
  
-            if search_dir == '.' and len(_files) > 0:
-                append_dir_cache(test_id, os.path.dirname(_files[0]))
-
             file_list += _files
     else:
         # read list of test ids from file 
@@ -159,9 +172,6 @@ def get_testid_file_list(file_list_fname='', test_id='', file_ext='', pipe_cmd='
                         capture=True))
 
                 _files = filter_duplicates(_files)
-
-                if search_dir == '.' and len(_files) > 0:
-                    append_dir_cache(test_id, os.path.dirname(_files[0]))
 
                 file_list += _files
 

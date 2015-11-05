@@ -36,6 +36,7 @@ import time
 import datetime
 import re
 import imp
+import tempfile
 from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, env, runs_once, parallel, hide
 
@@ -366,7 +367,7 @@ def get_address_pair_analysis(test_id, host, do_abort='1'):
     global host_list_cache
     internal = ''
     external = ''
-    TMP_CONF_FILE = '___oldconfig.py'
+    TMP_CONF_FILE = tempfile.mktemp(suffix='_oldconfig.py', dir='/tmp/')
 
     # XXX the whole old config access should be moved into separate module as 
     # similar code is also in clockoffset

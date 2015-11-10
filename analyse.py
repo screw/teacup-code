@@ -1069,7 +1069,7 @@ def extract_web10g(test_id='', out_dir='', replot_only='0', source_filter='',
 #  @param siftr_file Data extracted from siftr log
 #  @param out_file File name for post processed data
 def post_proc_siftr_cwnd(siftr_file, out_file):
-    tmp_file = local('mktemp "tmp.XXXXXXXXXX"', capture=True)
+    tmp_file = local('mktemp "/tmp/tmp.XXXXXXXXXX"', capture=True)
     local(
         'cat %s | sed -e "1,2d\" > %s && mv %s %s' %
         (out_file, tmp_file, tmp_file, out_file))
@@ -1235,7 +1235,7 @@ def post_proc_siftr_rtt(siftr_file, out_file):
         capture=True)
     scaler = str(float(hz) * float(tcp_rtt_scale) / 1000)
     # XXX hmm maybe do the following in python
-    tmp_file = local('mktemp "tmp.XXXXXXXXXX"', capture=True)
+    tmp_file = local('mktemp "/tmp/tmp.XXXXXXXXXX"', capture=True)
     local('cat %s | awk -v scaler=%s \'BEGIN { FS = "," } ; '
           '{ printf("%%s,%%.0f,%%s\\n", $1, $2/scaler, $3) }\' > %s && mv %s %s' %
           (out_file, scaler, tmp_file, tmp_file, out_file))

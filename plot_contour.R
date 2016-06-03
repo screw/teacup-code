@@ -30,75 +30,75 @@
 # $Id$
 
 # Evironment parameters that control the script (alphabetical order):
-# ADD_RAND:  '0' default 
+# TC_ADD_RAND:  '0' default 
 #            '1' add randomness unif(-0.5, 0.5) to values, looks better with
 #                discrete values
-# AGGRS:   comma-separated list with two entries (first for x-axis, second for y-axis) 
+# TC_AGGRS:   comma-separated list with two entries (first for x-axis, second for y-axis) 
 #         '0' means plot data as is, i.e. values over time
 #         '1' means data is aggregated over time intervals, more specifically
 #         the data (specified by YINDEXES) is summed over the time intervals (used 
 #         to determine throughput over time windows based on packet lengths)  
 #         (in the future could use other values to signal different aggregations)
-# AGGR_WIN_SIZE: size of the aggregation window in seconds (default is 1 second)
-# AGGR_INT_FACTOR: factor for oversampling / overlapping windows (default is 4
+# TC_AGGR_WIN_SIZE: size of the aggregation window in seconds (default is 1 second)
+# TC_AGGR_INT_FACTOR: factor for oversampling / overlapping windows (default is 4
 #                  meaning we get 4 times the number of samples compared to non-
 #                  overlapping windows) 
-# BINS:    number of bins for density estimation
-# DIFFS:   convert cummulative data into non-cummulative data. list with two
+# TC_BINS:    number of bins for density estimation
+# TC_DIFFS:   convert cummulative data into non-cummulative data. list with two
 #          0/1 entries (first for x-axis, second for y-axis)
 #          '0' means use data as is
 #          '1' means use differemce of consecutive data values
-# ELLIPSE: '0' by default will plot the actual 2d density distributions
+# TC_ELLIPSE: '0' by default will plot the actual 2d density distributions
 #          '1' will plot data ellipses
-# XFNAMES: comma-separated list of x-axis file names (each file contains one date series,
+# TC_XFNAMES: comma-separated list of x-axis file names (each file contains one date series,
 #         e.g. data for one flow). The format of each file is CSV-style, but the
 #         separator does not have to be a comma (can be set with SEP[0]). The first
 #         column contains the timestamps. The second, third etc. columns contain
 #         data, but only one of these columns will be plotted (which is set with 
 #         YINDEXES[0]). 
-# YFNAMES: comma-separated list of y-axis file names (each file contains one date series,
+# TC_YFNAMES: comma-separated list of y-axis file names (each file contains one date series,
 #         e.g. data for one flow). The format of each file is CSV-style, but the
 #         separator does not have to be a comma (can be set with SEP[1]). The first
 #         column contains the timestamps. The second, third etc. columns contain
 #         data, but only one of these columns will be plotted (which is set with 
 #         YINDEXES[1]). YFNAMES must have the same length as XFNAMES. 
-# GROUPS: comma-separated list of group IDs (integer numbers). This list must  
+# TC_GROUPS: comma-separated list of group IDs (integer numbers). This list must  
 #         have the same length as XFNAMES and YFNAMES. The data is grouped using colour
 #         as per the specified group numbers. 
-# LNAMES: comma-separated list of legend names. this list has the same length
+# TC_LNAMES: comma-separated list of legend names. this list has the same length
 #         as XFNAMES, YFNAMES and GROUPS and each entry corresponds to data from 
 #         a XFNAMES/YFNAMES pair. legend names must be character strings that do
 #         not contain commas.
-# MEDIAN: '0' by default don't plot median
+# TC_MEDIAN: '0' by default don't plot median
 #         '1' plot median for each group
-# NO_LEGEND: '0' plot legend (default)
+# TC_NO_LEGEND: '0' plot legend (default)
 #            '1' don't plot legend
-# OTYPE:  type of output file (can be 'pdf', 'eps', 'png', 'fig')
-# OPREFIX: the prefix (first part) of the graph file name
-# ODIR:   directory where output files, e.g. pdf files are placed
-# OUTLIER_QUANT: omit any values in the quantiles less than OUTLIER_QUANT and
+# TC_OTYPE:  type of output file (can be 'pdf', 'eps', 'png', 'fig')
+# TC_OPREFIX: the prefix (first part) of the graph file name
+# TC_ODIR:   directory where output files, e.g. pdf files are placed
+# TC_OUTLIER_QUANT: omit any values in the quantiles less than OUTLIER_QUANT and
 #                larger than 1 - OUTLIER_QUANT
-# SCATTER: '0' by default points are not plotted
+# TC_SCATTER: '0' by default points are not plotted
 #          '1' plot points (scatter plot) as well as the density or ellipse
-# XSEP:   column separators used in the x-axis data files for XFNAMES data. 
-# YSEP:   column separators used in the y-axis data files for YFNAMES data. 
-# TITLE:  character string that is plotted over the graph
-# XMIN:   minimum value on x-axis (for zooming in), default is 0
-# XMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+# TC_XSEP:   column separators used in the x-axis data files for XFNAMES data. 
+# TC_YSEP:   column separators used in the y-axis data files for YFNAMES data. 
+# TC_TITLE:  character string that is plotted over the graph
+# TC_XMIN:   minimum value on x-axis (for zooming in), default is 0
+# TC_XMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
 #         maximum value is determined from the data
-# YMIN:   minimum value on y-axis (for zooming in), default is 0 
-# YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+# TC_YMIN:   minimum value on y-axis (for zooming in), default is 0 
+# TC_YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
 #         maximum value is determined from the data
-# YMAX_INC: YMAX_INC controls the space for the legend. It assumes the legend is 
+# TC_YMAX_INC: YMAX_INC controls the space for the legend. It assumes the legend is 
 #           plotted at the top (default). The actual y-axis maximum for the plot 
 #           will be y_max*(1+YMAX_INC), where y_max is the maximum based on the data
 #           or the specified YMAX 
-# XLAB:   X-axis label character string
-# YLAB:   y-axis label character string
-# YINDEXES: comma-separated list of indexes of data column in data files. The list
+# TC_XLAB:   X-axis label character string
+# TC_YLAB:   y-axis label character string
+# TC_YINDEXES: comma-separated list of indexes of data column in data files. The list
 #           must have exactly two entries, one index for x-axis data files and one
 #           for y-axis data files  
-# YSCALERS: comma-separated list of factors which are multiplied with each data value 
+# TC_YSCALERS: comma-separated list of factors which are multiplied with each data value 
 #           before plotting. Again, must have length two, first factor for x-axis and
 #           second factor for y-axis.
 
@@ -115,10 +115,10 @@ print(base_dir)
 source(paste(base_dir, "env_parsing.R", sep="/"), verbose=F)
 
 # x-axis label
-xlab = Sys.getenv("XLAB")
+xlab = Sys.getenv("TC_XLAB")
 
 # input data
-tmp = Sys.getenv("XFNAMES")
+tmp = Sys.getenv("TC_XFNAMES")
 if (tmp != "") {
         xfnames = strsplit(tmp, ",", fixed=T)[[1]]
 } else {
@@ -127,7 +127,7 @@ if (tmp != "") {
 print(xfnames)
 
 # input data
-tmp = Sys.getenv("YFNAMES")
+tmp = Sys.getenv("TC_YFNAMES")
 if (tmp != "") {
         yfnames = strsplit(tmp, ",", fixed=T)[[1]]
 } else {
@@ -136,20 +136,20 @@ if (tmp != "") {
 print(yfnames)
 
 # separators in data file
-xsep = Sys.getenv("XSEP")
+xsep = Sys.getenv("TC_XSEP")
 print(xsep)
-ysep = Sys.getenv("YSEP")
+ysep = Sys.getenv("TC_YSEP")
 print(ysep)
 
 # min x value
-xmin_user = Sys.getenv("XMIN")
+xmin_user = Sys.getenv("TC_XMIN")
 if (xmin_user == "") {
         xmin_user = 0
 } else {
         xmin_user = as.numeric(xmin_user)
 }
 # max y value
-xmax_user = Sys.getenv("XMAX")
+xmax_user = Sys.getenv("TC_XMAX")
 if (xmax_user == "") {
         xmax_user = 0
 } else {
@@ -157,7 +157,7 @@ if (xmax_user == "") {
 }
 
 # bins
-bins = Sys.getenv("BINS")
+bins = Sys.getenv("TC_BINS")
 if (bins == "") {
         bins = 4 
 } else {
@@ -166,7 +166,7 @@ if (bins == "") {
 
 
 # index of data to plot on y-axis
-tmp = Sys.getenv("YINDEXES")
+tmp = Sys.getenv("TC_YINDEXES")
 if (tmp != "") {
         yindexes = as.numeric(strsplit(tmp, ",", fixed=T)[[1]])
 } else {
@@ -175,7 +175,7 @@ if (tmp != "") {
 print(yindexes)
 
 # scaler for y values
-tmp = Sys.getenv("YSCALERS")
+tmp = Sys.getenv("TC_YSCALERS")
 if (tmp != "") {
         yscalers = as.numeric(strsplit(tmp, ",", fixed=T)[[1]])
 } else {
@@ -184,7 +184,7 @@ if (tmp != "") {
 print(yscalers)
 
 # specify group # for each file
-tmp = Sys.getenv("GROUPS")
+tmp = Sys.getenv("TC_GROUPS")
 if (tmp != "") {
         groups = as.numeric(as.character(strsplit(tmp, ",", fixed=T)[[1]]))
 } else {
@@ -193,7 +193,7 @@ if (tmp != "") {
 print(groups)
 
 # aggregation function
-tmp = Sys.getenv("AGGRS")
+tmp = Sys.getenv("TC_AGGRS")
 if (tmp != "") {
         aggrs = strsplit(tmp, ",", fixed=T)[[1]]
 } else {
@@ -202,7 +202,7 @@ if (tmp != "") {
 print(aggrs)
 
 # non-cummulative conversion
-tmp = Sys.getenv("DIFFS")
+tmp = Sys.getenv("TC_DIFFS")
 if (tmp != "") {
         diffs = strsplit(tmp, ",", fixed=T)[[1]]
 } else {
@@ -211,20 +211,20 @@ if (tmp != "") {
 print(diffs)
 
 # window size in seconds for aggregation
-tmp = Sys.getenv("AGGR_WIN_SIZE")
+tmp = Sys.getenv("TC_AGGR_WIN_SIZE")
 aggr_win_size = 1.0 
 if (tmp != "") {
 	aggr_win_size = as.numeric(tmp)
 }
 # interpolation factor for aggregation
-tmp = Sys.getenv("AGGR_INT_FACTOR")
+tmp = Sys.getenv("TC_AGGR_INT_FACTOR")
 aggr_int_factor = 4 
 if (tmp != "") {
         aggr_int_factor = as.numeric(tmp)
 }
 
 # don't plot lowest/highest x quantiles
-outlier_quant = Sys.getenv("OUTLIER_QUANT")
+outlier_quant = Sys.getenv("TC_OUTLIER_QUANT")
 if (outlier_quant == "") {
         outlier_quant = 0
 } else {
@@ -232,19 +232,19 @@ if (outlier_quant == "") {
 }
 
 # add randomness
-add_rand = Sys.getenv("ADD_RAND")
+add_rand = Sys.getenv("TC_ADD_RAND")
 
 # ellipse plot
-ellipse = Sys.getenv("ELLIPSE")
+ellipse = Sys.getenv("TC_ELLIPSE")
 
 # plot median
-plot_median = Sys.getenv("MEDIAN")
+plot_median = Sys.getenv("TC_MEDIAN")
 
 # plot points (scatter plot)
-plot_scatter = Sys.getenv("SCATTER")
+plot_scatter = Sys.getenv("TC_SCATTER")
 
 # control if legend is plotted
-no_legend = Sys.getenv("NO_LEGEND")
+no_legend = Sys.getenv("TC_NO_LEGEND")
 
 # maxmimum number of points for one group
 # (with too many points the point mapping takes forever)

@@ -32,26 +32,26 @@
 
 
 # y-axis label
-ylab = Sys.getenv("YLAB")
+ylab = Sys.getenv("TC_YLAB")
 # separator in data file
-sep = Sys.getenv("SEP")
+sep = Sys.getenv("TC_SEP")
 if (sep == "") {
         sep = " "
 }
 # output file prefix
-oprefix = Sys.getenv("OPREFIX")
+oprefix = Sys.getenv("TC_OPREFIX")
 # output type (e.g. pdf)
-otype = Sys.getenv("OTYPE")
+otype = Sys.getenv("TC_OTYPE")
 if (otype == "") {
         otype = "svg"
 }
 # output directory
-odir = Sys.getenv("ODIR")
+odir = Sys.getenv("TC_ODIR")
 if (odir != "") {
         oprefix = paste(odir, oprefix, sep="")
 }
 # input data
-tmp = Sys.getenv("FNAMES")
+tmp = Sys.getenv("TC_FNAMES")
 if (tmp != "") {
         fnames = strsplit(tmp, ",", fixed=T)[[1]]
 } else {
@@ -59,7 +59,7 @@ if (tmp != "") {
 }
 print(fnames)
 # legend names
-tmp = Sys.getenv("LNAMES")
+tmp = Sys.getenv("TC_LNAMES")
 if (tmp != "") {
         lnames = strsplit(tmp, ",", fixed=T)[[1]]
 } else {
@@ -67,41 +67,41 @@ if (tmp != "") {
 }
 print(lnames)
 # plot title 
-title = Sys.getenv("TITLE")
+title = Sys.getenv("TC_TITLE")
 # min y value
-ymin_user = Sys.getenv("YMIN")
+ymin_user = Sys.getenv("TC_YMIN")
 if (ymin_user == "") {
         ymin_user = 0
 } else {
         ymin_user = as.numeric(ymin_user)
 } 
 # max y value
-ymax_user = Sys.getenv("YMAX")
+ymax_user = Sys.getenv("TC_YMAX")
 if (ymax_user == "") {
         ymax_user = 0
 } else {
         ymax_user = as.numeric(ymax_user)
 } 
 # yaxis max increase for legend space
-ymax_inc = Sys.getenv("YMAX_INC")
+ymax_inc = Sys.getenv("TC_YMAX_INC")
 if (ymax_inc == "") {
         ymax_inc = 0.09
 } else {
         ymax_inc = as.numeric(ymax_inc)
 }
 # start/end time of plot
-tmp = Sys.getenv("STIME")
+tmp = Sys.getenv("TC_STIME")
 stime = 0
 if (tmp != "") {
         stime = as.numeric(tmp)
 }
-tmp = Sys.getenv("ETIME")
+tmp = Sys.getenv("TC_ETIME")
 etime = 0
 if (tmp != "") {
         etime = as.numeric(tmp)
 }
 # size of points in plot
-tmp = Sys.getenv("POINT_SIZE")
+tmp = Sys.getenv("TC_POINT_SIZE")
 plot_point_size = 0.5
 if (tmp != "") { 
         plot_point_size = as.numeric(tmp)

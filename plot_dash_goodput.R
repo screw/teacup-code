@@ -29,38 +29,38 @@
 # $Id$
 
 # Evironment parameters that control the script (alphabetical order):
-# ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
+# TC_ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
 #         experiment a determined from the data
-# FNAMES: comma-separated list of file names (each file contains one date series,
+# TC_FNAMES: comma-separated list of file names (each file contains one date series,
 #         e.g. data for one flow). The format of each file is CSV-style, but the
 #         separator does not have to be a comma (can be set with SEP). The first
 #         column contains the timestamps. The second, third etc. columns contain
 #         data, but only one of these columns will be plotted (which is set with 
 #         YINDEX). 
-# LNAMES: comma-separated list of legend names. this list has the same length
+# TC_LNAMES: comma-separated list of legend names. this list has the same length
 #         as FNAMES and each entry corresponds to data in file name with the
 #         same index in FNAMES. legend names must be character strings that do
 #         not contain commas.
-# NO_NOMINAL: '0' or unset means a line for nominal throughput is plotted
+# TC_NO_NOMINAL: '0' or unset means a line for nominal throughput is plotted
 #             '1' means line for nominal throughput is NOT plotted
-# OTYPE:  type of output file (can be 'pdf', 'eps', 'png', 'fig')
-# OPREFIX: the prefix (first part) of the graph file name
-# ODIR:   directory where output files, e.g. pdf files are placed
-# POINT_SIZE: controls the size of points. POINT_SIZE does not specify an
+# TC_OTYPE:  type of output file (can be 'pdf', 'eps', 'png', 'fig')
+# TC_OPREFIX: the prefix (first part) of the graph file name
+# TC_ODIR:   directory where output files, e.g. pdf files are placed
+# TC_POINT_SIZE: controls the size of points. POINT_SIZE does not specify an
 #             absolute point size, it is a scaling factor that is multiplied with
 #             the actual default point size (default is 1.0). 
-# SEP:    column separator used in data file (default is single space)
-# STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
+# TC_SEP:    column separator used in data file (default is single space)
+# TC_STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
 #         of an experiment
-# TITLE:  character string that is plotted over the graph
-# YMIN:   minimum value on y-axis (for zooming in), default is 0 
-# YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+# TC_TITLE:  character string that is plotted over the graph
+# TC_YMIN:   minimum value on y-axis (for zooming in), default is 0 
+# TC_YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
 #         maximum value is determined from the data
-# YMAX_INC: YMAX_INC controls the space for the legend. It assumes the legend is 
+# TC_YMAX_INC: YMAX_INC controls the space for the legend. It assumes the legend is 
 #           plotted at the top (default). The actual y-axis maximum for the plot 
 #           will be y_max*(1+YMAX_INC), where y_max is the maximum based on the data
 #           or the specified YMAX 
-# YLAB:   y-axis label character string
+# TC_YLAB:   y-axis label character string
 
 
 # our current dir
@@ -73,7 +73,7 @@ print(base_dir)
 source(paste(base_dir, "env_parsing.R", sep="/"), verbose=F)
 
 # don't plot line with nominal/set throughput
-tmp = Sys.getenv("NO_NOMINAL")
+tmp = Sys.getenv("TC_NO_NOMINAL")
 no_nominal = FALSE
 if (tmp != "" && tmp != "0") {
 	no_nominal = TRUE

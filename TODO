@@ -1,5 +1,7 @@
 BUGS
 
+- On Linux tcpdump is not in path by default
+
 - using analyse_cmpexp with NICER_XLABS=1 and omit_const_xlab_vars=0 causes
   the x-labels to be printed way too low. however, if you use NICER_XLABS=1
   you should also use omit_const_xlab_vars=1 to get nice plots

@@ -29,14 +29,14 @@
 # $Id$
 
 # distance for point thinning
-tmp = Sys.getenv("PTHIN_DIST_FAC")
+tmp = Sys.getenv("TC_PTHIN_DIST_FAC")
 pthin_dist_fac = 0
 if (tmp != "") {
         pthin_dist_fac = as.numeric(tmp)
 }
 
 # distance for point thinning
-tmp = Sys.getenv("PTHIN_DIST")
+tmp = Sys.getenv("TC_PTHIN_DIST")
 pthin_dist = 0
 if (tmp != "") {
         pthin_dist = as.numeric(tmp)

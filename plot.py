@@ -309,51 +309,51 @@ def plot_time_series(title='', files={}, ylab='', yindex=2, yscaler=1.0, otype='
 
     # interface between this code and the plot function are environment variables
     # the following variables are passed to plot function:
-    # TITLE:  character string that is plotted over the graph
-    # FNAMES: comma-separated list of file names (each file contains one date series,
+    # TC_TITLE:  character string that is plotted over the graph
+    # TC_FNAMES: comma-separated list of file names (each file contains one date series,
     #         e.g. data for one flow). The format of each file is CSV-style, but the
     #         separator does not have to be a comma (can be set with SEP). The first
     #         column contains the timestamps. The second, third etc. columns contain
     #         data, but only one of these columns will be plotted (set with YINDEX). 
-    # LNAMES: comma-separated list of legend names. this list has the same length
+    # TC_LNAMES: comma-separated list of legend names. this list has the same length
     #         as FNAMES and each entry corresponds to data in file name with the
     #         same index in FNAMES
-    # YLAB:   y-axis label character string
-    # YINDEX: index of data column in file to plot on y-axis (file can have more than
+    # TC_YLAB:   y-axis label character string
+    # TC_YINDEX: index of data column in file to plot on y-axis (file can have more than
     #         one data column)
-    # YSCALER: factor which is multiplied with each data value before plotting
-    # SEP:    column separator used in data file
-    # OTYPE:  type of output graph (default is 'pdf')
-    # OPREFIX: the prefix (first part) of the graph file name
-    # ODIR:   directory where output files, e.g. pdfs are placed
-    # AGGR:   set to '1' means data is aggregated over time intervals, more specifically
+    # TC_YSCALER: factor which is multiplied with each data value before plotting
+    # TC_SEP:    column separator used in data file
+    # TC_OTYPE:  type of output graph (default is 'pdf')
+    # TC_OPREFIX: the prefix (first part) of the graph file name
+    # TC_ODIR:   directory where output files, e.g. pdfs are placed
+    # TC_AGGR:   set to '1' means data is aggregated over time intervals, more specifically
     #         the data is summed over the time intervals (used to determine throughput
     #         over time windows based on packet lengths)  
     #         set to '0' means plot data as is 
-    # OMIT_CONST: '0' don't omit anything,
+    # TC_OMIT_CONST: '0' don't omit anything,
     #             '1' omit any data series from plot that are 100% constant 
-    # YMIN:   minimum value on y-axis (for zooming in), default is 0 
-    # YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+    # TC_YMIN:   minimum value on y-axis (for zooming in), default is 0 
+    # TC_YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
     #         maximum value is determined from the data
-    # STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
+    # TC_STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
     #         of an experiment
-    # ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
+    # TC_ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
     #         experiment a determined from the data
-    # GROUPS: comma-separated list of group IDs (integer numbers). This list has  
+    # TC_GROUPS: comma-separated list of group IDs (integer numbers). This list has  
     #         the same length as FNAMES. If data from different experiments is plotted,
     #         each experiment will be assigned a different number and these are passed
     #         via GROUPS. This allows the plotting function to determine which data
     #         series are (or are not) from the same experiment, so that results 
     #         from different experiments, that started at different times, can be 
     #         plotted in the same graph.
-    # BOXPL:  '0' plot each point on time axis
+    # TC_BOXPL:  '0' plot each point on time axis
     #         '1' plot a boxplot over all data points from all data seres for each 
     #         distinct timestamp (instead of a point for each a data series) 
 
     #local('which R')
-    local('TITLE="%s" FNAMES="%s" LNAMES="%s" YLAB="%s" YINDEX="%d" YSCALER="%f" '
-          'SEP="%s" OTYPE="%s" OPREFIX="%s" ODIR="%s" AGGR="%s" OMIT_CONST="%s" '
-          'YMIN="%s" YMAX="%s" STIME="%s" ETIME="%s" GROUPS="%s" BOXPL="%s" %s '
+    local('TC_TITLE="%s" TC_FNAMES="%s" TC_LNAMES="%s" TC_YLAB="%s" TC_YINDEX="%d" TC_YSCALER="%f" '
+          'TC_SEP="%s" TC_OTYPE="%s" TC_OPREFIX="%s" TC_ODIR="%s" TC_AGGR="%s" TC_OMIT_CONST="%s" '
+          'TC_YMIN="%s" TC_YMAX="%s" TC_STIME="%s" TC_ETIME="%s" TC_GROUPS="%s" TC_BOXPL="%s" %s '
           '%s %s%s_plot_time_series.Rout' %
           (title, ','.join(file_names), ','.join(leg_names), ylab, yindex, yscaler,
            sep, otype, oprefix, pdf_dir, aggr, omit_const, ymin, ymax, stime, etime,
@@ -426,31 +426,31 @@ def plot_dash_goodput(title='', files={}, groups={}, ylab='', otype='', oprefix=
 
     # interface between this code and the plot function are environment variables
     # the following variables are passed to plot function:
-    # TITLE:  character string that is plotted over the graph
-    # FNAMES: comma-separated list of file names (each file contains one date series,
+    # TC_TITLE:  character string that is plotted over the graph
+    # TC_FNAMES: comma-separated list of file names (each file contains one date series,
     #         e.g. data for one flow). The format of each file is CSV-style, but the
     #         separator does not have to be a comma (can be set with SEP). The first
     #         column contains the timestamps. The second, third etc. columns contain
     #         data, but only one of these columns will be plotted (set with YINDEX). 
-    # LNAMES: comma-separated list of legend names. this list has the same length
+    # TC_LNAMES: comma-separated list of legend names. this list has the same length
     #         as FNAMES and each entry corresponds to data in file name with the
     #         same index in FNAMES
-    # YLAB:   y-axis label character string
-    # SEP:    column separator used in data file
-    # OTYPE:  type of output graph (default is 'pdf')
-    # OPREFIX: the prefix (first part) of the graph file name
-    # ODIR:   directory where output files, e.g. pdfs are placed
-    # YMIN:   minimum value on y-axis (for zooming in), default is 0 
-    # YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+    # TC_YLAB:   y-axis label character string
+    # TC_SEP:    column separator used in data file
+    # TC_OTYPE:  type of output graph (default is 'pdf')
+    # TC_OPREFIX: the prefix (first part) of the graph file name
+    # TC_ODIR:   directory where output files, e.g. pdfs are placed
+    # TC_YMIN:   minimum value on y-axis (for zooming in), default is 0 
+    # TC_YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
     #         maximum value is determined from the data
-    # STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
+    # TC_STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
     #         of an experiment
-    # ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
+    # TC_ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
     #         experiment a determined from the data
 
     #local('which R')
-    local('TITLE="%s" FNAMES="%s" LNAMES="%s" YLAB="%s" SEP="%s" OTYPE="%s" '
-          'OPREFIX="%s" ODIR="%s" YMIN="%s" YMAX="%s" STIME="%s" ETIME="%s" %s '
+    local('TC_TITLE="%s" TC_FNAMES="%s" TC_LNAMES="%s" TC_YLAB="%s" TC_SEP="%s" TC_OTYPE="%s" '
+          'TC_OPREFIX="%s" TC_ODIR="%s" TC_YMIN="%s" TC_YMAX="%s" TC_STIME="%s" TC_ETIME="%s" %s '
           '%s %s%s_plot_dash_goodput.Rout' %
           (title, ','.join(file_names), ','.join(leg_names), ylab, sep, otype, oprefix,
            pdf_dir, ymin, ymax, stime, etime, plot_params, plot_script,
@@ -572,10 +572,10 @@ def plot_incast_ACK_series(title='', files={}, ylab='', yindex=2, yscaler=1.0, o
 
     # for a description of parameters see plot_time_series above
     #local('which R')
-    local('TITLE="%s" FNAMES="%s" LNAMES="%s" YLAB="%s" YINDEX="%d" YSCALER="%f" '
-          'SEP="%s" OTYPE="%s" OPREFIX="%s" ODIR="%s" AGGR="%s" OMIT_CONST="%s" '
-          'YMIN="%s" YMAX="%s" STIME="%s" ETIME="%s" GROUPS="%s" %s '
-          'BURST_SEP=1 '
+    local('TC_TITLE="%s" TC_FNAMES="%s" TC_LNAMES="%s" TC_YLAB="%s" TC_YINDEX="%d" TC_YSCALER="%f" '
+          'TC_SEP="%s" TC_OTYPE="%s" TC_OPREFIX="%s" TC_ODIR="%s" TC_AGGR="%s" TC_OMIT_CONST="%s" '
+          'TC_YMIN="%s" TC_YMAX="%s" TC_STIME="%s" TC_ETIME="%s" TC_GROUPS="%s" %s '
+          'TC_BURST_SEP=1 '
           '%s %s%s_plot_bursts.Rout' %
           (title, ','.join(file_names), ','.join(leg_names), ylab, yindex, yscaler,
            sep, otype, oprefix, pdf_dir, aggr, omit_const, ymin, ymax, stime, etime,
@@ -625,45 +625,45 @@ def plot_cmpexp(title='', file_names=[], xlabs=[], ylab='', yindex=2, yscaler=1.
 
     # interface between this code and the plot function are environment variables
     # the following variables are passed to plot function:
-    # TITLE:  character string that is plotted over the graph
-    # FNAMES: comma-separated list of file names (each file contains one date series,
+    # TC_TITLE:  character string that is plotted over the graph
+    # TC_FNAMES: comma-separated list of file names (each file contains one date series,
     #         e.g. data for one flow). The format of each file is CSV-style, but the
     #         separator does not have to be a comma (can be set with SEP). The first
     #         column contains the timestamps. The second, third etc. columns contain
     #         data, but only one of these columns will be plotted (set with YINDEX). 
-    # LNAMES: comma-separated list of legend names. this list has the same length
+    # TC_LNAMES: comma-separated list of legend names. this list has the same length
     #         as FNAMES and each entry corresponds to data in file name with the
     #         same index in FNAMES
-    # XLABS:  comma-separated list of labels for the x-axis ticks, one for each parameter
+    # TC_XLABS:  comma-separated list of labels for the x-axis ticks, one for each parameter
     #         combination that is plotted 
-    # YLAB:   y-axis label character string
-    # YINDEX: index of data column in file to plot on y-axis (file can have more than
+    # TC_YLAB:   y-axis label character string
+    # TC_YINDEX: index of data column in file to plot on y-axis (file can have more than
     #         one data column)
-    # YSCALER: factor which is multiplied with each data value before plotting
-    # SEP:    column separator used in data file
-    # OTYPE:  type of output graph (default is 'pdf')
-    # OPREFIX: the prefix (first part) of the graph file name
-    # ODIR:   directory where output files, e.g. pdfs are placed
-    # AGGR:   set to '1' means data is aggregated over time intervals, more specifically
+    # TC_YSCALER: factor which is multiplied with each data value before plotting
+    # TC_SEP:    column separator used in data file
+    # TC_OTYPE:  type of output graph (default is 'pdf')
+    # TC_OPREFIX: the prefix (first part) of the graph file name
+    # TC_ODIR:   directory where output files, e.g. pdfs are placed
+    # TC_AGGR:   set to '1' means data is aggregated over time intervals, more specifically
     #         the data is summed over the time intervals (used to determine throughput
     #         over time windows based on packet lengths)  
     #         set to '0' means plot data as is 
-    # OMIT_CONST: '0' don't omit anything,
+    # TC_OMIT_CONST: '0' don't omit anything,
     #             '1' omit any data series from plot that are 100% constant 
-    # PTYPE:  the type of plot identified by name, it can be 'box', 'mean' or 'median' 
+    # TC_PTYPE:  the type of plot identified by name, it can be 'box', 'mean' or 'median' 
     #         for the default R script
-    # YMIN:   minimum value on y-axis (for zooming in), default is 0 
-    # YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+    # TC_YMIN:   minimum value on y-axis (for zooming in), default is 0 
+    # TC_YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
     #         maximum value is determined from the data
-    # STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
+    # TC_STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
     #         of an experiment
-    # ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
+    # TC_ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
     #         experiment a determined from the data
 
     #local('which R')
-    local('TITLE="%s" FNAMES="%s" LNAMES="%s" XLABS="%s" YLAB="%s" YINDEX="%d" '
-          'YSCALER="%f" SEP="%s" OTYPE="%s" OPREFIX="%s" ODIR="%s" AGGR="%s" DIFF="%s" '
-          'OMIT_CONST="%s" PTYPE="%s" YMIN="%s" YMAX="%s" STIME="%s" ETIME="%s" %s '
+    local('TC_TITLE="%s" TC_FNAMES="%s" TC_LNAMES="%s" TC_XLABS="%s" TC_YLAB="%s" TC_YINDEX="%d" '
+          'TC_YSCALER="%f" TC_SEP="%s" TC_OTYPE="%s" TC_OPREFIX="%s" TC_ODIR="%s" TC_AGGR="%s" TC_DIFF="%s" '
+          'TC_OMIT_CONST="%s" TC_PTYPE="%s" TC_YMIN="%s" TC_YMAX="%s" TC_STIME="%s" TC_ETIME="%s" %s '
           '%s %s%s_plot_cmp_experiments.Rout' %
           (title, ','.join(file_names), ','.join(leg_names), ','.join(xlabs), ylab,
            yindex, yscaler, sep, otype, oprefix, pdf_dir, aggr, diff,
@@ -714,57 +714,57 @@ def plot_2d_density(title='', x_files=[], y_files=[], xlab='', ylab='', yindexes
 
     # interface between this code and the plot function are environment variables
     # the following variables are passed to plot function:
-    # TITLE:  character string that is plotted over the graph
-    # XFNAMES: comma-separated list of x-axis file names (each file contains one date series,
+    # TC_TITLE:  character string that is plotted over the graph
+    # TC_XFNAMES: comma-separated list of x-axis file names (each file contains one date series,
     #         e.g. data for one flow). The format of each file is CSV-style, but the
     #         separator does not have to be a comma (can be set with SEP). The first
     #         column contains the timestamps. The second, third etc. columns contain
     #         data, but only one of these columns will be plotted (set with YINDEX). 
-    # YFNAMES: comma-separated list of y-axis file names (each file contains one date series,
+    # TC_YFNAMES: comma-separated list of y-axis file names (each file contains one date series,
     #         e.g. data for one flow). The format of each file is CSV-style, but the
     #         separator does not have to be a comma (can be set with SEP). The first
     #         column contains the timestamps. The second, third etc. columns contain
     #         data, but only one of these columns will be plotted (set with YINDEX).
-    # LNAMES: comma-separated list of legend names. this list has the same length
+    # TC_LNAMES: comma-separated list of legend names. this list has the same length
     #         as FNAMES and each entry corresponds to data in file name with the
     #         same index in FNAMES
-    # XLAB:   x-axis label character string 
-    # YLAB:   y-axis label character string
-    # YINDEXES: comma-separated list of indexes of data column in data files. The list
+    # TC_XLAB:   x-axis label character string 
+    # TC_YLAB:   y-axis label character string
+    # TC_YINDEXES: comma-separated list of indexes of data column in data files. The list
     #           must have exactly two entries, one index for x-axis data files and one
     #           for y-axis data files
-    # YSCALERS: comma-separated list of factors which are multiplied with each data value 
+    # TC_YSCALERS: comma-separated list of factors which are multiplied with each data value 
     #           before plotting. Again, must have length two, first factor for x-axis and
     #           second factor for y-axis.
-    # XSEP:    column separator used for x-axis data files
-    # YSEP:    column separator used for y-axis data files
-    # OTYPE:  type of output graph (default is 'pdf')
-    # OPREFIX: the prefix (first part) of the graph file name
-    # ODIR:   directory where output files, e.g. pdfs are placed
-    # AGGRS:   comma-separated list with two entries (first for x-axis, second for y-axis) 
+    # TC_XSEP:    column separator used for x-axis data files
+    # TC_YSEP:    column separator used for y-axis data files
+    # TC_OTYPE:  type of output graph (default is 'pdf')
+    # TC_OPREFIX: the prefix (first part) of the graph file name
+    # TC_ODIR:   directory where output files, e.g. pdfs are placed
+    # TC_AGGRS:   comma-separated list with two entries (first for x-axis, second for y-axis) 
     #         '0' means plot data as is, i.e. values over time
     #         '1' means data is aggregated over time intervals, more specifically
     #         the data (specified by YINDEXES) is summed over the time intervals (used 
     #         to determine throughput over time windows based on packet lengths)  
     #         (in the future could use other values to signal different aggregations)
-    # DIFFS:   convert cummulative data into non-cummulative data. list with two
+    # TC_DIFFS:   convert cummulative data into non-cummulative data. list with two
     #          0/1 entries (first for x-axis, second for y-axis)
     #          '0' means use data as is
     #          '1' means use differemce of consecutive data values
-    # XMIN:   minimum value on x-axis (for zooming in), default is 0 
-    # XMAX:   maximum value on x-axis (for zooming in), default is 0 meaning the 
+    # TC_XMIN:   minimum value on x-axis (for zooming in), default is 0 
+    # TC_XMAX:   maximum value on x-axis (for zooming in), default is 0 meaning the 
     #         maximum value is determined from the data
-    # YMIN:   minimum value on y-axis (for zooming in), default is 0 
-    # YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+    # TC_YMIN:   minimum value on y-axis (for zooming in), default is 0 
+    # TC_YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
     #         maximum value is determined from the data
-    # GROUPS: comma-separated list of group IDs (integer numbers). This list must  
+    # TC_GROUPS: comma-separated list of group IDs (integer numbers). This list must  
     #         have the same length as XFNAMES and YFNAMES. The data is grouped using colour
     #         as per the specified group numbers. 
 
     #local('which R')
-    local('TITLE="%s" XFNAMES="%s" YFNAMES="%s", LNAMES="%s" XLAB="%s" YLAB="%s" YINDEXES="%s" '
-          'YSCALERS="%s" XSEP="%s" YSEP="%s" OTYPE="%s" OPREFIX="%s" ODIR="%s" AGGRS="%s" '
-          'DIFFS="%s" XMIN="%s" XMAX="%s" YMIN="%s" YMAX="%s" STIME="%s" ETIME="%s" GROUPS="%s" %s '
+    local('TC_TITLE="%s" TC_XFNAMES="%s" TC_YFNAMES="%s", TC_LNAMES="%s" TC_XLAB="%s" TC_YLAB="%s" TC_YINDEXES="%s" '
+          'TC_YSCALERS="%s" TC_XSEP="%s" TC_YSEP="%s" TC_OTYPE="%s" TC_OPREFIX="%s" TC_ODIR="%s" TC_AGGRS="%s" '
+          'TC_DIFFS="%s" TC_XMIN="%s" TC_XMAX="%s" TC_YMIN="%s" TC_YMAX="%s" TC_STIME="%s" TC_ETIME="%s" TC_GROUPS="%s" %s '
           '%s %s%s_plot_contour.Rout' %
           (title, ','.join(x_files), ','.join(y_files), ','.join(leg_names),
            xlab, ylab, ','.join(yindexes), ','.join(yscalers),

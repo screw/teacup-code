@@ -29,63 +29,63 @@
 # $Id$
 
 # Evironment parameters that control the script (alphabetical order):
-# AGGR:   '0' means plot data as is, i.e. values over time
+# TC_AGGR:   '0' means plot data as is, i.e. values over time
 #         '1' means data is aggregated over time intervals, more specifically
 #         the data (specified by YINDEX) is summed over the time intervals (used 
 #         to determine throughput over time windows based on packet lengths)  
 #         (in the future could use other values to signal different aggregations)
-# AGGR_WIN_SIZE: size of the aggregation window in seconds (default is 1 second)
-# AGGR_INT_FACTOR: factor for oversampling / overlapping windows (default is 4
+# TC_AGGR_WIN_SIZE: size of the aggregation window in seconds (default is 1 second)
+# TC_AGGR_INT_FACTOR: factor for oversampling / overlapping windows (default is 4
 #                  meaning we get 4 times the number of samples compared to non-
 #                  overlapping windows) 
-# BOXPL:  '0' plot each point on time axis (x-axis)
+# TC_BOXPL:  '0' plot each point on time axis (x-axis)
 #         '1' plot a boxplot over all data points from all data seres for each 
 #         distinct timestamp (instead of a point for each a data series) 
-# ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
+# TC_ETIME:  end time on x-axis (for zooming in), default is 0.0 meaning the end of an
 #         experiment a determined from the data
-# FNAMES: comma-separated list of file names (each file contains one date series,
+# TC_FNAMES: comma-separated list of file names (each file contains one date series,
 #         e.g. data for one flow). The format of each file is CSV-style, but the
 #         separator does not have to be a comma (can be set with SEP). The first
 #         column contains the timestamps. The second, third etc. columns contain
 #         data, but only one of these columns will be plotted (which is set with 
 #         YINDEX). 
-# GROUPS: comma-separated list of group IDs (integer numbers). This list must  
+# TC_GROUPS: comma-separated list of group IDs (integer numbers). This list must  
 #         have the same length as FNAMES. If data from different experiments is plotted,
 #         each experiment will be assigned a different number and these are passed
 #         via GROUPS. This allows the plotting function to determine which data
 #         series are (or are not) from the same experiment, so that results 
 #         from different experiments, that started at different times, can be 
 #         plotted in the same graph.
-# LNAMES: comma-separated list of legend names. this list has the same length
+# TC_LNAMES: comma-separated list of legend names. this list has the same length
 #         as FNAMES and each entry corresponds to data in file name with the
 #         same index in FNAMES. legend names must be character strings that do
 #         not contain commas.
-# OTYPE:  type of output file (can be 'pdf', 'eps', 'png', 'fig')
-# OPREFIX: the prefix (first part) of the graph file name
-# ODIR:   directory where output files, e.g. pdf files are placed
-# OMIT_CONST: '0' don't omit anything,
+# TC_OTYPE:  type of output file (can be 'pdf', 'eps', 'png', 'fig')
+# TC_OPREFIX: the prefix (first part) of the graph file name
+# TC_ODIR:   directory where output files, e.g. pdf files are placed
+# TC_OMIT_CONST: '0' don't omit anything,
 #             '1' omit any data series from plot that are 100% constant 
-# POINT_SIZE: controls the size of points. POINT_SIZE does not specify an
+# TC_POINT_SIZE: controls the size of points. POINT_SIZE does not specify an
 #             absolute point size, it is a scaling factor that is multiplied with
 #             the actual default point size (default is 1.0). 
-# SEP:    column separator used in data file (default is single space)
-# STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
+# TC_SEP:    column separator used in data file (default is single space)
+# TC_STIME:  start time on x-axis (for zooming in), default is 0.0 meaning the start 
 #         of an experiment
-# TITLE:  character string that is plotted over the graph
-# YMIN:   minimum value on y-axis (for zooming in), default is 0 
-# YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
+# TC_TITLE:  character string that is plotted over the graph
+# TC_YMIN:   minimum value on y-axis (for zooming in), default is 0 
+# TC_YMAX:   maximum value on y-axis (for zooming in), default is 0 meaning the 
 #         maximum value is determined from the data
-# YMAX_INC: YMAX_INC controls the space for the legend. It assumes the legend is 
+# TC_YMAX_INC: YMAX_INC controls the space for the legend. It assumes the legend is 
 #           plotted at the top (default). The actual y-axis maximum for the plot 
 #           will be y_max*(1+YMAX_INC), where y_max is the maximum based on the data
 #           or the specified YMAX 
-# YLAB:   y-axis label character string
-# YINDEX: index of data column in file to plot on y-axis (since file can have more 
+# TC_YLAB:   y-axis label character string
+# TC_YINDEX: index of data column in file to plot on y-axis (since file can have more 
 #         than one data column)
-# YSCALER: factor which is multiplied with each data value before plotting
-# FILTER_FLOWS: if set to '1', filter flows out that is not in the time window specified by
+# TC_YSCALER: factor which is multiplied with each data value before plotting
+# TC_FILTER_FLOWS: if set to '1', filter flows out that is not in the time window specified by
 #         stime and etime; if set to '0' don't filter out any flows
-# SORT_FLOWS_BY_START_TIME: if set to '1' wil sort flows by start time
+# TC_SORT_FLOWS_BY_START_TIME: if set to '1' wil sort flows by start time
 
 # our current dir
 argv = commandArgs(trailingOnly = F)
@@ -97,58 +97,58 @@ print(base_dir)
 source(paste(base_dir, "env_parsing.R", sep="/"), verbose=F)
 
 # index of data to plot on y-axis
-yindex = Sys.getenv("YINDEX")
+yindex = Sys.getenv("TC_YINDEX")
 if (yindex == "") {
         yindex = 2 
 } else {
         yindex = as.numeric(yindex) 
 } 
 # scaler for y values
-yscaler = Sys.getenv("YSCALER")
+yscaler = Sys.getenv("TC_YSCALER")
 if (yscaler == "") {
 	yscaler = 1.0
 } else {
 	yscaler = as.numeric(yscaler)
 } 
 # specify group # for each file
-tmp = Sys.getenv("GROUPS")
+tmp = Sys.getenv("TC_GROUPS")
 if (tmp != "") {
         groups = as.numeric(as.character(strsplit(tmp, ",", fixed=T)[[1]]))
 } else {
         groups = c(1)
 }
 # aggregation function
-aggr = Sys.getenv("AGGR")
+aggr = Sys.getenv("TC_AGGR")
 # change to non-cummulative
-diff = Sys.getenv("DIFF")
+diff = Sys.getenv("TC_DIFF")
 # boxplot per time point
-boxpl = Sys.getenv("BOXPL")
+boxpl = Sys.getenv("TC_BOXPL")
 # omit any series with constant value
-omit_const = Sys.getenv("OMIT_CONST")
+omit_const = Sys.getenv("TC_OMIT_CONST")
 if (omit_const == "" || omit_const == "0") {
 	omit_const = FALSE
 } else {
 	omit_const = TRUE 
 }
 # window size in seconds for aggregation
-tmp = Sys.getenv("AGGR_WIN_SIZE")
+tmp = Sys.getenv("TC_AGGR_WIN_SIZE")
 aggr_win_size = 1.0 
 if (tmp != "") {
 	aggr_win_size = as.numeric(tmp)
 }
 # interpolation factor for aggregation
-tmp = Sys.getenv("AGGR_INT_FACTOR")
+tmp = Sys.getenv("TC_AGGR_INT_FACTOR")
 aggr_int_factor = 4 
 if (tmp != "") {
         aggr_int_factor = as.numeric(tmp)
 }
-tmp = Sys.getenv("FILTER_FLOWS")
+tmp = Sys.getenv("TC_FILTER_FLOWS")
 if (tmp == "" || tmp == "0") {
         do_filter = FALSE
 } else {
         do_filter = TRUE
 }
-tmp = Sys.getenv("SORT_FLOWS_BY_START_TIME")
+tmp = Sys.getenv("TC_SORT_FLOWS_BY_START_TIME")
 if (tmp == "" || tmp == "0") {
         sort_by_time = FALSE
 } else {

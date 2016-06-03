@@ -16,6 +16,9 @@ Version 1.1 (XXX)
   - oldconfig.py files are now created in /tmp
   - don't crash when trying to write to a cache file that is read-only
 - Detect location of experiment files based on uname file
+- Prepended a TC_ to all evironment variables used to communicate the
+  plotting parameters. This should avoid clashes with existing variables
+  such as bash's GROUPS (GROUPS cannot be overriden without prior unset).
 
 Version 1.0 (26th May 2015)
 ---------------------------

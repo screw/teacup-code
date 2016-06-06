@@ -21,6 +21,8 @@ This README is for TEACUP Version 1.0.
 This README provides a brief overview on how to setup experiments.
 It ONLY discusses the most commonly used config options.
 
+Documentation:
+
 Running experiments: For more details on how to setup experiments and
 the design of TEACUP please refer to this technical report: 
 http://caia.swin.edu.au/reports/150529A/CAIA-TR-150529A.pdf 
@@ -32,6 +34,16 @@ http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf
 The following technical report provides a command reference for
 all tasks TEACUP provides:
 http://caia.swin.edu.au/reports/150529C/CAIA-TR-150529C.pdf
+
+Licensing:
+
+- Any 3rd party software tools provided under ./tools are covered by
+the specific copyright and license terms contained within each tool's
+tarball. It is our current belief that these tools allow redistribution
+in this manner.
+
+- All remaining files (including those under ./example_configs) are
+covered by ./COPYING and ./ACKNOWLEDGEMENTS.
 
 
 TEACUP TESTBED

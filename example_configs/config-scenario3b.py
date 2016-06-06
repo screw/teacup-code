@@ -103,7 +103,7 @@ TPCONF_power_ctrl_type = 'SLP-SPP1008'
 
 # Maximum allowed time difference between machines in seconds
 # otherwise experiment will abort cause synchronisation problems
-TPCONF_max_time_diff = 1
+TPCONF_max_time_diff = 2
 
 # Experiment name prefix used if not set on the command line
 # The command line setting will overrule this config setting

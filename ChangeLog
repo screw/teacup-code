@@ -19,6 +19,9 @@ Version 1.1 (XXX)
 - Prepended a TC_ to all evironment variables used to communicate the
   plotting parameters. This should avoid clashes with existing variables
   such as bash's GROUPS (GROUPS cannot be overriden without prior unset).
+- TPCONF_max_time_diff = 2 in all example configs to allow for higher
+  time difference (VMs)
+- broadcast ping enabled in all example configs now
 
 Version 1.0 (26th May 2015)
 ---------------------------

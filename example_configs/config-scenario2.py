@@ -89,9 +89,19 @@ TPCONF_os_partition = {
 # Experiment settings
 #
 
+# Time offset measurement options
+# Enable broadcast ping on external/control interfaces
+TPCONF_bc_ping_enable = '1'
+# Specify rate of pings in packets/second
+TPCONF_bc_ping_rate = 1
+# Specify multicast address to use (must be broadcast or multicast address)
+# If this is not specified, by default the ping will be send to the subnet
+# broadcast address.
+TPCONF_bc_ping_address = '224.0.1.199'
+
 # Maximum allowed time difference between machines in seconds
 # otherwise experiment will abort cause synchronisation problems
-TPCONF_max_time_diff = 1
+TPCONF_max_time_diff = 2
 
 # Experiment name prefix used if not set on the command line
 # The command line setting will overrule this config setting

@@ -62,6 +62,10 @@ def read_flow_cache():
 #  @param flows List of flows (5-tuples)
 def append_flow_cache(fname, flows):
 
+    # do not create entries with empty flow list
+    if len(flows) == 0:
+        return
+
     if fname not in flow_cache:
         try:
             with open(CACHE_FILE_NAME, 'a') as f:

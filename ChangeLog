@@ -22,6 +22,8 @@ Version 1.1 (XXX)
 - TPCONF_max_time_diff = 2 in all example configs to allow for higher
   time difference (VMs)
 - broadcast ping enabled in all example configs now
+- Prevent adding empty entries in flow cache (could happen if analysis
+  was run with tcpdump not in path)
 
 Version 1.0 (26th May 2015)
 ---------------------------

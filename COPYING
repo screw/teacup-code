@@ -1,3 +1,12 @@
+Any 3rd party software tools provided under ./tools are covered by
+the specific copyright and license terms contained within each tool's
+tarball. It is our current belief that these tools allow redistribution
+in this manner.
+
+All other files (including those under ./example_configs) are
+covered by the following notice:
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
 Swinburne University of Technology. All rights reserved.
 
@@ -24,4 +33,5 @@ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
 LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 SUCH DAMAGE.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

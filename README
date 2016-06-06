@@ -21,15 +21,15 @@ This README is for TEACUP Version 1.0.
 This README provides a brief overview on how to setup experiments.
 It ONLY discusses the most commonly used config options.
 
-For more details on how to setup experiments and the design of TEACUP
-please refer to the technical report: 
+Running experiments: For more details on how to setup experiments and
+the design of TEACUP please refer to this technical report: 
 http://caia.swin.edu.au/reports/150529A/CAIA-TR-150529A.pdf 
 
-For more details on how to analyse the data collected during experiments
-please refer to the technical report:
+Analysing experiments: For more details on how to analyse the data collected
+during experiments please refer to this technical report:
 http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf
 
-There also is a technical report that provides a command reference for
+The following technical report provides a command reference for
 all tasks TEACUP provides:
 http://caia.swin.edu.au/reports/150529C/CAIA-TR-150529C.pdf
 
@@ -64,8 +64,10 @@ CAIA-TR-150210C.pdf is very useful but optional.
 CONFIG FILE
 -----------
 
-Copy config.py.example to config.pt in your experiment directory and modify
-it. The following discusses the most important options.
+Copy config.py.example to config.py in your experiment directory and modify
+it. The following sections discuss the most important options. Please see
+http://caia.swin.edu.au/reports/150529A/CAIA-TR-150529A.pdf for more
+in-depth discussion.
 
 1. Fabric configuration
 
@@ -88,7 +90,7 @@ authorisation is set up properly,
 All settings start with the TPCONF_ prefix and are Python variables (and 
 must adhere to the Python syntax).
 
-TPCONF_script_path = '/home/<user>/src/teacup-0.9'
+TPCONF_script_path = '/home/<user>/src/teacup-1.0'
 sys.path.append(TPCONF_script_path)
 
 The path were the TEACUP scripts are located. This is appended to the Python 

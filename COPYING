@@ -3,8 +3,17 @@ the specific copyright and license terms contained within each tool's
 tarball. It is our current belief that these tools allow redistribution
 in this manner.
 
-All other files (including those under ./example_configs) are
-covered by the following notice:
+TEACUP documentation under ./docs is derived from documentation
+source originally released on June 9th 2016 under a Creative Commons
+Attribution-ShareAlike 4.0 International License ("CC BY-SA 4.0",
+http://creativecommons.org/licenses/by-sa/4.0) by the Centre for Advanced
+Internet Architectures, Swinburne University of Technology. See
+http://caia.swin.edu.au/tools/teacup/downloads/teacup-docs-1.0-CC-BY-SA-9jun16.zip
+Per the terms of CC BY-SA 4.0, derived documentation under ./docs is also
+licensed under CC BY-SA 4.0.
+
+Other files (including those under ./example_configs) are
+covered by the following one or more notice(s):
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,

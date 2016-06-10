@@ -1,0 +1,12 @@
+
+TEACUP documentation in this directory is derived from LyX source code, 
+pdf images and pptx source originally released on June 9th 2016 under a
+Creative Commons Attribution-ShareAlike 4.0 International License ("CC BY-SA 4.0",
+http://creativecommons.org/licenses/by-sa/4.0) by the Centre for Advanced
+Internet Architectures, Swinburne University of Technology. See
+http://caia.swin.edu.au/tools/teacup/downloads/teacup-docs-1.0-CC-BY-SA-9jun16.zip
+and ./COPYING-original.txt
+
+Per the terms of CC BY-SA 4.0, our derived documentation is also
+licensed under CC BY-SA 4.0.
+

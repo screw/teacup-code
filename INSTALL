@@ -3,7 +3,7 @@ TEACUP (TCP Experiment Automation Controlled Using Python) INSTALL
 
 $Id$
 
-ACKNOWLEDGMENTS
+ACKNOWLEDGEMENTS
 ---------------
 
 TEACUP versions prior to 1.0 were developed as part of a project
@@ -35,10 +35,16 @@ toolkit and TEACUP. To run the analysis functions and produce graphs
 you also need to install R. The tool pdfjam is needed for some shell
 scripts provided to combine multiple pdf graphs on one page. To plot
 RTT graphs based on tcpdump files the SPP tool must be installed.
+
 TEACUP also uses a number of tools that are usually installed by default 
 on a FreeBSD or Linux system, such as ping, kill and dd. We strongly 
 recommend to run Linux or FreeBSD on the control host, as so far TEACUP 
 has only been tested on FreeBSD or Linux.
+
+TEACUP post v1.0 contains experimental animated playback functionality,
+which requires additional packages installed on the control host as
+described under ./animate/INSTALL-teaplot (and documented in
+./docs/teaplot-docs.tex)
 
 On the experimental hosts you need to install several tools for traffic 
 generation: a modified iperf, a modified httperf and a modified nttcp. 

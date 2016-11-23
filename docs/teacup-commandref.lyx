@@ -431,8 +431,8 @@ any
 \begin_inset Tabular
 <lyxtabular version="3" rows="20" columns="3">
 <features rotate="0" islongtable="true" longtabularalignment="center">
-<column alignment="center" valignment="top" width="3.5cm">
-<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="4.5cm">
+<column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="10.5cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
@@ -468,7 +468,7 @@ Explanation
 \begin_inset Text
 
 \begin_layout Plain Layout
-ADD_RAND
+TC_ADD_RAND
 \end_layout
 
 \end_inset
@@ -498,7 +498,7 @@ For analyse_2d_density: if set to `0' do not add randomness, if set to `1'
 \begin_inset Text
 
 \begin_layout Plain Layout
-AGGR_INT_FACTOR
+TC_AGGR_INT_FACTOR
 \end_layout
 
 \end_inset
@@ -519,7 +519,7 @@ AGGR_INT_FACTOR
 Interpolation factor for throughput calculation windows (must be an integer
  equal or larger than 1).
  If set to an integer greater than 1, time windows actually overlap with
- the gap between windows being AGGR_WIN_SIZE
+ the gap between windows being TC_AGGR_WIN_SIZE
 \begin_inset space ~
 \end_inset
 
@@ -527,7 +527,7 @@ Interpolation factor for throughput calculation windows (must be an integer
 \begin_inset space ~
 \end_inset
 
-AGGR_INT_FACTOR seconds.
+TC_AGGR_INT_FACTOR seconds.
  This meas we get interpolated points.
 \end_layout
 
@@ -539,7 +539,7 @@ AGGR_INT_FACTOR seconds.
 \begin_inset Text
 
 \begin_layout Plain Layout
-AGGR_WIN_SIZE
+TC_AGGR_WIN_SIZE
 \end_layout
 
 \end_inset
@@ -569,7 +569,7 @@ Time window size in seconds (can be fractional value) over which a single
 \begin_inset Text
 
 \begin_layout Plain Layout
-BINS
+TC_BINS
 \end_layout
 
 \end_inset
@@ -598,7 +598,7 @@ Number of bins for 2D density estimation for analyse_2d_density.
 \begin_inset Text
 
 \begin_layout Plain Layout
-DIFF
+TC_DIFF
 \end_layout
 
 \end_inset
@@ -630,7 +630,7 @@ If set to `0' use data as is.
 \begin_inset Text
 
 \begin_layout Plain Layout
-ELLIPSE
+TC_ELLIPSE
 \end_layout
 
 \end_inset
@@ -660,7 +660,7 @@ For analyse_2d_density: if set to `0' plot 2d density.
 \begin_inset Text
 
 \begin_layout Plain Layout
-FILTER_FLOWS
+TC_FILTER_FLOWS
 \end_layout
 
 \end_inset
@@ -692,7 +692,7 @@ If set to `1' flows not active in the (stime,etime) intervall defined by
 \begin_inset Text
 
 \begin_layout Plain Layout
-MEDIAN
+TC_MEDIAN
 \end_layout
 
 \end_inset
@@ -723,7 +723,7 @@ For analyse_2d_density: if set to `0' don't plot median.
 \begin_inset Text
 
 \begin_layout Plain Layout
-NICER_XLABS
+TC_NICER_XLABS
 \end_layout
 
 \end_inset
@@ -755,7 +755,7 @@ The boolean variable changes how x-axis labels are plotted for analyse_cmpexp.
 \begin_inset Text
 
 \begin_layout Plain Layout
-NO_BARS
+TC_NO_BARS
 \end_layout
 
 \end_inset
@@ -786,7 +786,7 @@ Only applicable to analyse_cmpexp.
 \begin_inset Text
 
 \begin_layout Plain Layout
-NO_LEGEND
+TC_NO_LEGEND
 \end_layout
 
 \end_inset
@@ -816,7 +816,7 @@ If set to `0' plot legend for analyse_2d_density.
 \begin_inset Text
 
 \begin_layout Plain Layout
-NO_NOMINAL
+TC_NO_NOMINAL
 \end_layout
 
 \end_inset
@@ -846,7 +846,7 @@ If set to `1' analyse_dash_goodput will not plot the nominal goodput line.
 \begin_inset Text
 
 \begin_layout Plain Layout
-OUTLIER_QUANT
+TC_OUTLIER_QUANT
 \end_layout
 
 \end_inset
@@ -865,10 +865,11 @@ OUTLIER_QUANT
 
 \begin_layout Plain Layout
 Remove outliers before plotting with analyse_cmpexp.
- Any points in the lowest OUTLIER_QUANT and highest OUTLIER_QUANT quantiles
- are removed from the plot.
- For example, specifying OUTLIER_QUANT=0.01 will remove all data points that
- fall in the <0.01 quantile and all data points that fall in the >0.99 quantile.
+ Any points in the lowest TC_OUTLIER_QUANT and highest TC_OUTLIER_QUANT
+ quantiles are removed from the plot.
+ For example, specifying TC_OUTLIER_QUANT=0.01 will remove all data points
+ that fall in the <0.01 quantile and all data points that fall in the >0.99
+ quantile.
  Only for analyse_cmpexp and analyse_2d_density.
 \end_layout
 
@@ -880,7 +881,7 @@ Remove outliers before plotting with analyse_cmpexp.
 \begin_inset Text
 
 \begin_layout Plain Layout
-POINT_SIZE
+TC_POINT_SIZE
 \end_layout
 
 \end_inset
@@ -898,12 +899,12 @@ POINT_SIZE
 \begin_inset Text
 
 \begin_layout Plain Layout
-The point size in graphs can be controlled with a variable POINT_SIZE.
- Note that POINT_SIZE does not specify an absolute point size, but it is
- a scaling factor that is multiplied with the actual default point size.
- Hence, if POINT_SIZE is set to 1.0 the size of points will be the default
- size, if POINT_SIZE is set to 0.5 the size of points will be half the default
- size and so on.
+The point size in graphs can be controlled with a variable TC_POINT_SIZE.
+ Note that TC_POINT_SIZE does not specify an absolute point size, but it
+ is a scaling factor that is multiplied with the actual default point size.
+ Hence, if TC_POINT_SIZE is set to 1.0 the size of points will be the default
+ size, if TC_POINT_SIZE is set to 0.5 the size of points will be half the
+ default size and so on.
 \end_layout
 
 \end_inset
@@ -914,7 +915,7 @@ The point size in graphs can be controlled with a variable POINT_SIZE.
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTHIN_DIST
+TC_PTHIN_DIST
 \end_layout
 
 \end_inset
@@ -932,13 +933,13 @@ PTHIN_DIST
 \begin_inset Text
 
 \begin_layout Plain Layout
-With PTHIN_DIST one can set the minimum (Euclidean) distance between plotted
- data points.
+With TC_PTHIN_DIST one can set the minimum (Euclidean) distance between
+ plotted data points.
  Any data points within the minimum distance are not plotted.
- For example, PTHIN_DIST=0.25 means the minimum distance between two plotted
+ For example, TC_PTHIN_DIST=0.25 means the minimum distance between two plotted
  points is 0.25 and any data points in-between are not plotted.
  By default point thinning is disabled.
- Use only PTHIN_DIST or PTHIN_DIST_FAC.
+ Use only TC_PTHIN_DIST or TC_PTHIN_DIST_FAC.
 \end_layout
 
 \end_inset
@@ -949,7 +950,7 @@ With PTHIN_DIST one can set the minimum (Euclidean) distance between plotted
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTHIN_DIST_FAC
+TC_PTHIN_DIST_FAC
 \end_layout
 
 \end_inset
@@ -967,14 +968,14 @@ PTHIN_DIST_FAC
 \begin_inset Text
 
 \begin_layout Plain Layout
-PTHIN_DIST_FAC controls the minimum distance of points in x-direction and
- y-direction separately, relative to the x-range and y-range plotted.
+TC_PTHIN_DIST_FAC controls the minimum distance of points in x-direction
+ and y-direction separately, relative to the x-range and y-range plotted.
  A point is plotted if either the distance in x-direction is larger or equal
- PTHIN_DIST_FAC*<xrange> or the distance in y-direction is larger or equal
- PTHIN_DIST_FAC*<yrange>, where <xrange> and <yrange> are given by the data
- to plot and the settings applied by the user through specifying ymin, ymax,
- stime, etime.
- Use only PTHIN_DIST or PTHIN_DIST_FAC.
+ TC_PTHIN_DIST_FAC*<xrange> or the distance in y-direction is larger or
+ equal TC_PTHIN_DIST_FAC*<yrange>, where <xrange> and <yrange> are given
+ by the data to plot and the settings applied by the user through specifying
+ ymin, ymax, stime, etime.
+ Use only TC_PTHIN_DIST or TC_PTHIN_DIST_FAC.
 \end_layout
 
 \end_inset
@@ -985,7 +986,7 @@ PTHIN_DIST_FAC controls the minimum distance of points in x-direction and
 \begin_inset Text
 
 \begin_layout Plain Layout
-SCATTER
+TC_SCATTER
 \end_layout
 
 \end_inset
@@ -1015,7 +1016,7 @@ For analyse_2d_density: if set to `0' don't add scatter plot, if set to
 \begin_inset Text
 
 \begin_layout Plain Layout
-SORT_FLOWS_BY_ START_TIME
+TC_SORT_FLOWS_BY_ START_TIME
 \end_layout
 
 \end_inset
@@ -1047,7 +1048,7 @@ By default is set to `0' flows will be sorted using the default sorting
 \begin_inset Text
 
 \begin_layout Plain Layout
-YMAX_INC
+TC_YMAX_INC
 \end_layout
 
 \end_inset
@@ -1065,10 +1066,10 @@ YMAX_INC
 \begin_inset Text
 
 \begin_layout Plain Layout
-The variable YMAX_INC controls the space for the legend.
+The variable TC_YMAX_INC controls the space for the legend.
  It assumes the legend is plotted at the top, which is the default.
  The actual y-axis maximum for the plot will be 
-\begin_inset Formula $y_{\mathrm{max}}\left(1+\mathrm{YMAX\_INC}\right)$
+\begin_inset Formula $y_{\mathrm{max}}\left(1+\mathrm{TC\_YMAX\_INC}\right)$
 \end_inset
 
 , where 

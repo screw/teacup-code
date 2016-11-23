@@ -4667,10 +4667,10 @@ Space for the legend
 \end_layout
 
 \begin_layout Standard
-The variable YMAX_INC controls the space for the legend.
+The variable TC_YMAX_INC controls the space for the legend.
  It assumes the legend is plotted at the top, which is the default.
  The actual y-axis maximum for the plot is 
-\begin_inset Formula $y_{\mathrm{max}}\left(1+\mathrm{YMAX\_INC}\right)$
+\begin_inset Formula $y_{\mathrm{max}}\left(1+\mathrm{TC\_YMAX\_INC}\right)$
 \end_inset
 
 , where 
@@ -4686,8 +4686,8 @@ Smoothing the throughput calculations
 
 \begin_layout Standard
 Throughput always needs to be computed over some time interval.
- The variables AGGR_WIN_SIZE and AGGR_INT_FACTOR allow you to specify the
- window size and interpolation for throughput plots (including comparison
+ The variables TC_AGGR_WIN_SIZE and TC_AGGR_INT_FACTOR allow you to specify
+ the window size and interpolation for throughput plots (including comparison
  plots for throughput using the task described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4701,9 +4701,9 @@ reference "sub:plot-metric-comparison"
 \end_layout
 
 \begin_layout Standard
-AGGR_WIN_SIZE is specified in seconds, with fractional values allowed.
- Setting AGGR_INT_FACTOR to 1 means no interpolation, whereas setting it
- to an integer value 
+TC_AGGR_WIN_SIZE is specified in seconds, with fractional values allowed.
+ Setting TC_AGGR_INT_FACTOR to 1 means no interpolation, whereas setting
+ it to an integer value 
 \begin_inset Formula $n$
 \end_inset
 
@@ -4717,8 +4717,8 @@ AGGR_WIN_SIZE is specified in seconds, with fractional values allowed.
 
  points are interpolated points).
  Effectively the interpolation creates overlapping time windows, with the
- gaps between windows being AGGR_WIN_SIZE/AGGR_INT_FACTOR seconds.
- By default AGGR_WIN_SIZE=1 and AGGR_INT_FACTOR=4.
+ gaps between windows being TC_AGGR_WIN_SIZE/TC_AGGR_INT_FACTOR seconds.
+ By default TC_AGGR_WIN_SIZE=1 and TC_AGGR_INT_FACTOR=4.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4738,17 +4738,17 @@ point thinning
 \begin_inset Quotes erd
 \end_inset
 
-, which can be controlled with the variable PTHIN_DIST or PTHIN_DIST_FAC.
+, which can be controlled with the variable TC_PTHIN_DIST or TC_PTHIN_DIST_FAC.
  
 \end_layout
 
 \begin_layout Standard
-Using PTHIN_DIST one can set the minimum (Euclidean) distance between plotted
- data points.
+Using TC_PTHIN_DIST one can set the minimum (Euclidean) distance between
+ plotted data points.
  Any data points within the minimum distance are not plotted.
- For example, PTHIN_DIST=0.25 means the minimum (Euclidean) distance between
+ For example, TC_PTHIN_DIST=0.25 means the minimum (Euclidean) distance between
  two plotted points is 0.25 and any data points in-between are not plotted.
- By default PTHIN_DIST=0, which means point thinning is disabled.
+ By default TC_PTHIN_DIST=0, which means point thinning is disabled.
 \end_layout
 
 \begin_layout Standard
@@ -4762,14 +4762,14 @@ Using the absolute Euclidean distance is problematic if the scales of x-axis
 \end_layout
 
 \begin_layout Standard
-Since version 0.8 TEACUP also allows to specify the variable PTHIN_DIST_FAC
+Since version 0.8 TEACUP also allows to specify the variable TC_PTHIN_DIST_FAC
  which controls the minimum distance of points in x-dimension and y-dimension
  separately, relative to the x-range and y-range plotted.
  A point is plotted if either the distance in x-dimension is larger or equal
- PTHIN_DIST_FAC*<xrange> or the distance in y-dimension is larger or equal
- PTHIN_DIST_FAC*<yrange>, where <xrange> and <yrange> are given by the data
- to plot and the settings applied by the user through specifying ymin, ymax,
- stime, and etime.
+ TC_PTHIN_DIST_FAC*<xrange> or the distance in y-dimension is larger or
+ equal TC_PTHIN_DIST_FAC*<yrange>, where <xrange> and <yrange> are given
+ by the data to plot and the settings applied by the user through specifying
+ ymin, ymax, stime, and etime.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4777,13 +4777,13 @@ Size of plotted points
 \end_layout
 
 \begin_layout Standard
-The point size in graphs can be controlled with a variable POINT_SIZE.
- Note that POINT_SIZE does not specify an absolute point size, but it is
- a scaling factor that is multiplied with the actual default point size.
- Hence, if POINT_SIZE is set to 1.0 the size of points will be the default
- size, if POINT_SIZE is set to 0.5 the size of points will be half the default
- size and so on.
- By default POINT_SIZE is 0.5.
+The point size in graphs can be controlled with a variable TC_POINT_SIZE.
+ Note that TC_POINT_SIZE does not specify an absolute point size, but it
+ is a scaling factor that is multiplied with the actual default point size.
+ Hence, if TC_POINT_SIZE is set to 1.0 the size of points will be the default
+ size, if TC_POINT_SIZE is set to 0.5 the size of points will be half the
+ default size and so on.
+ By default TC_POINT_SIZE is 0.5.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4813,11 +4813,11 @@ source_filter
 \family default
 \size default
 .
- If FILTER_FLOWS is set to 1, TEACUP will filter out all flows for which
+ If TC_FILTER_FLOWS is set to 1, TEACUP will filter out all flows for which
  there is no data in the time interval specified by the user.
- FILTER_FLOWS only works for the tasks that plot time series, such as analyse_rt
-t, analyse_cwnd, analyse_throughput, with the exception that it does not
- work for analyse_dash_goodput.
+ TC_FILTER_FLOWS only works for the tasks that plot time series, such as
+ analyse_rtt, analyse_cwnd, analyse_throughput, with the exception that
+ it does not work for analyse_dash_goodput.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4827,8 +4827,8 @@ Sorting flows by start time
 \begin_layout Standard
 By default, for time series plots TEACUP sorts flows by the 5-tuple or in
  the order of specified source filters.
- If SORT_FLOWS_BY_START_TIME is set to 1, the default order is ignored and
- flows are sorted in the order of their start times.
+ If TC_SORT_FLOWS_BY_START_TIME is set to 1, the default order is ignored
+ and flows are sorted in the order of their start times.
  Ordering flows by their start times can be useful in some situations, for
  example, if more than 12 flows are plotted as series of PDF files.
  The variable works for all time series plots (except analyse_dash_goodput).
@@ -4874,14 +4874,14 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \family typewriter
 \size footnotesize
-> AGGR_WIN_SIZE=2 AGGR_INT_FACTOR=8 PTHIN_DIST=0.25 fab analyse_throughput:
- test_id=20131206-102931_dash_2000_tcp_newreno
+> TC_AGGR_WIN_SIZE=2 TC_AGGR_INT_FACTOR=8 TC_PTHIN_DIST=0.25 fab analyse_throughp
+ut: test_id=20131206-102931_dash_2000_tcp_newreno
 \end_layout
 
 \end_inset
@@ -6539,9 +6539,9 @@ Plot nominal goodput
 By default analyse_dash_goodput will also plot the nominal goodput, i.e.
  goodput according to the DASH rate specified in the traffic generation
  configuration.
- The NO_NOMINAL environment variable can be used to tell plot_dash_goodput
+ The TC_NO_NOMINAL environment variable can be used to tell plot_dash_goodput
  to not plot this.
- If NO_NOMINAL=1 the nominal goodput will not be plotted.
+ If TC_NO_NOMINAL=1 the nominal goodput will not be plotted.
  Note that the task can only plot a maximum of 11 data series in a single
  graph.
 \end_layout
@@ -7606,8 +7606,8 @@ ymin
 .
  Packet loss is computed from the raw data by computing the percentage of
  lost packets for each time window.
- The environment variables AGGR_WINDOW_SIZE and AGGR_INT_FACTOR can be used
- to control the window size and oversampling.
+ The environment variables TC_AGGR_WINDOW_SIZE and TC_AGGR_INT_FACTOR can
+ be used to control the window size and oversampling.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8333,18 +8333,19 @@ The plotting can be further controlled by task-specific environment variables.
 \end_layout
 
 \begin_layout Standard
-The variable OUTLIER_QUANT removes any points in the lowest OUTLIER_QUANT
- and highest OUTLIER_QUANT quantiles.
- For example, specifying OUTLIER_QUANT=0.01 will remove all data points that
- fall in the <0.01 quantile and all data points that fall in the >0.99 quantile.
+The variable TC_OUTLIER_QUANT removes any points in the lowest TC_OUTLIER_QUANT
+ and highest TC_OUTLIER_QUANT quantiles.
+ For example, specifying TC_OUTLIER_QUANT=0.01 will remove all data points
+ that fall in the <0.01 quantile and all data points that fall in the >0.99
+ quantile.
  
 \end_layout
 
 \begin_layout Standard
-Setting NICER_XLABS=1 will modify the plotting of x-axis labels so that
+Setting TC_NICER_XLABS=1 will modify the plotting of x-axis labels so that
  variable names are plotted once (on the left side) and only the variable
  values will be plotted at each tick.
- The environment variables YMAX_INC, AGGR_WIN_SIZE, and AGGR_INT_FACTOR
+ The environment variables TC_YMAX_INC, TC_AGGR_WIN_SIZE, and TC_AGGR_INT_FACTOR
  can also be used and work as explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -8356,14 +8357,14 @@ reference "sub:plot-env-vars"
 \end_layout
 
 \begin_layout Standard
-The variable DIFF=1 can be set to convert cumulative data into non-cumulative
+The variable TC_DIFF=1 can be set to convert cumulative data into non-cumulative
  data.
  Effectively the data vector of non-cumulative values is generated by taking
  the differences of subsequent values of the original cumulative data vector.
 \end_layout
 
 \begin_layout Standard
-The variable NO_BARS=1 can be set to plot points instead of the default
+The variable TC_NO_BARS=1 can be set to plot points instead of the default
  bars when 
 \family typewriter
 \size footnotesize
@@ -8823,47 +8824,49 @@ The plotting can be further controlled by task-specific environment variables.
 \end_layout
 
 \begin_layout Standard
-The variable OUTLIER_QUANT removes any points in the lowest OUTLIER_QUANT
- and highest OUTLIER_QUANT quantiles.
- For example, specifying OUTLIER_QUANT=0.01 will remove all data points that
- fall in the <0.01 quantile and all data points that fall in the >0.99 quantile.
+The variable TC_OUTLIER_QUANT removes any points in the lowest TC_OUTLIER_QUANT
+ and highest TC_OUTLIER_QUANT quantiles.
+ For example, specifying TC_OUTLIER_QUANT=0.01 will remove all data points
+ that fall in the <0.01 quantile and all data points that fall in the >0.99
+ quantile.
 \end_layout
 
 \begin_layout Standard
-The variable ELLIPSE controls whether a 2D density plot or a ellipse plot
- will be created.
- By default 2D density plots are created (ELLIPSE=0).
- To create ellipse plots instead set ELLIPSE=1.
+The variable TC_ELLIPSE controls whether a 2D density plot or a ellipse
+ plot will be created.
+ By default 2D density plots are created (TC_ELLIPSE=0).
+ To create ellipse plots instead set TC_ELLIPSE=1.
  For 2D density plots the PDF files have a `2d_density_plot.pdf' extension
  whereas for ellipse plots the PDF files have a `ellipse_plot.pdf' extension.
 \end_layout
 
 \begin_layout Standard
-The variable BINS can be used to set the number of bins for the 2D density
- estimation (only effective if ELLIPSE=0).
+The variable TC_BINS can be used to set the number of bins for the 2D density
+ estimation (only effective if TC_ELLIPSE=0).
  By default the number of bins is set to 4.
- The variable ADD_RAND can be used to add randomness to the data (noise
+ The variable TC_ADD_RAND can be used to add randomness to the data (noise
  is drawn from a uniform distribution within the interval of (-0.5, 0.5)).
  By default no randomness is added.
- If 2D density should be plotted (ELLIPSE=0) and the data consists of discrete
- values, the resulting graphs can look better with added randomness (ADD_RAND=1).
+ If 2D density should be plotted (TC_ELLIPSE=0) and the data consists of
+ discrete values, the resulting graphs can look better with added randomness
+ (TC_ADD_RAND=1).
 \end_layout
 
 \begin_layout Standard
-The variable MEDIAN can be set to 1 to plot the median for each group.
+The variable TC_MEDIAN can be set to 1 to plot the median for each group.
  By default the task does not plot the median.
- The variable NO_LEGEND can be set to 1 to suppress the legend, which by
- default is shown to the right of the graph.
+ The variable TC_NO_LEGEND can be set to 1 to suppress the legend, which
+ by default is shown to the right of the graph.
 \end_layout
 
 \begin_layout Standard
 By default only the estimations or ellipses are plotted.
- The variable SCATTER can be set to 1 to superimpose a scatter plot of all
- points on the 2D density or ellipse plot.
+ The variable TC_SCATTER can be set to 1 to superimpose a scatter plot of
+ all points on the 2D density or ellipse plot.
 \end_layout
 
 \begin_layout Standard
-The variable DIFF=1 can be set to convert cumulative data into non-cumulative
+The variable TC_DIFF=1 can be set to convert cumulative data into non-cumulative
  data.
  Effectively the data vector of non-cumulative values is generated by taking
  the differences of subsequent values of the original cumulative data vector.
@@ -8916,8 +8919,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> ADD_RAND=1 fab analyse_2d_density: exp_list= myexp_list.txt,res_dir="./results/"
-, variables="run
+> TC_ADD_RAND=1 fab analyse_2d_density: exp_list= myexp_list.txt,res_dir="./result
+s/", variables="run
 \backslash
 =0",source_filter= "D_172.16.11.68_5000",xmetric=throughput, ymetric=tcprtt,link_le
 n=1, group_by=
@@ -8988,8 +8991,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> ELLIPSE=1 ADD_RAND=1 fab analyse_2d_density: exp_list=myexp_list.txt,res_dir="./
-results/", variables="run
+> TC_ELLIPSE=1 TC_ADD_RAND=1 fab analyse_2d_density: exp_list=myexp_list.txt,res_
+dir="./results/", variables="run
 \backslash
 =0",source_filter= "D_172.16.11.68_5000",xmetric=throughput, ymetric=tcprtt,link_le
 n=1, group_by=
@@ -9061,7 +9064,7 @@ The previous section explained some environment variables that a user can
  passes them to the plotting script.
  The plotting script reads these environment variables and generates the
  plot based on their values.
- For example, TEACUP sets a variable YLAB with the value being the label
+ For example, TEACUP sets a variable TC_YLAB with the value being the label
  string plotted on the y-axis.
  All existing environment variables are explained at the beginning of each
  default plot script and the parameters passed are also explained in the
@@ -9120,13 +9123,13 @@ status open
 \family typewriter
 \size footnotesize
 > fab analyse_throughput:test_id= 20131206-102931_dash_2000_tcp_newreno,
- plot_params="YLAB
+ plot_params="TC_YLAB
 \backslash
 =
 \backslash
 "Throughput (mbps)
 \backslash
-" YSCALER
+" TC_YSCALER
 \backslash
 =0.000008" 
 \end_layout
@@ -9679,8 +9682,8 @@ First, we use analyse_throughput to plot throughput.
  flows from the querier are mainly ACKs after the initial query (using source_fi
 lter).
  We reduce the point size in the plot with POINT_SIZE and tweak the window
- for throughput calculations with AGGR_WIN_SIZE and AGGR_INT_FACTOR (the
- default window settings are inappropriate for short sub-second traffic
+ for throughput calculations with TC_AGGR_WIN_SIZE and TC_AGGR_INT_FACTOR
+ (the default window settings are inappropriate for short sub-second traffic
  bursts).
  We use plot_params to change from the default kbps to Mbps.
  We only plot the first two bursts (by setting etime=6), since all bursts
@@ -9726,12 +9729,12 @@ status open
 
 \family typewriter
 \size scriptsize
-> POINT_SIZE=0.25 AGGR_WIN_SIZE=0.05 AGGR_INT_FACTOR=10 fab analyse_throughput:tes
-t_id= 20150218-135735_experiment_aqm_pfifo_responders_4, out_dir=../result,link_le
-n=1,source_filter= "S_172.16.11.61_80; S_172.16.1 1.62_81;S_172.16.11.63_82;S_172.16.11.64_8
-3", etime=6,plot_params='YLAB
+> TC_POINT_SIZE=0.25 TC_AGGR_WIN_SIZE=0.05 TC_AGGR_INT_FACTOR=10 fab analyse_throu
+ghput:test_id= 20150218-135735_experiment_aqm_pfifo_responders_4, out_dir=../resul
+t,link_len=1,source_filter= "S_172.16.11.61_80; S_172.16.1 1.62_81;S_172.16.11.63_82;S_17
+2.16.11.64_83", etime=6,plot_params='TC_YLAB
 \backslash
-="Throughput (mbps)" YSCALER
+="Throughput (mbps)" TC_YSCALER
 \backslash
 =0.000008'
 \end_layout
@@ -9793,9 +9796,9 @@ status open
 
 \family typewriter
 \size scriptsize
-> POINT_SIZE=0.25 fab analyse_rtt:test_id= 20150218-135735_experiment_aqm_pfifo_r
-esponders_4, out_dir=../results,source_filter="S_172.16.11.61_80; S_172.16.11.62_81;S_17
-2.16.11.63_82; S_172.16.11.64_83",etime=6
+> TC_POINT_SIZE=0.25 fab analyse_rtt:test_id= 20150218-135735_experiment_aqm_pfif
+o_responders_4, out_dir=../results,source_filter="S_172.16.11.61_80; S_172.16.11.62_81;S
+_172.16.11.63_82; S_172.16.11.64_83",etime=6
 \end_layout
 
 \end_inset
@@ -10003,9 +10006,9 @@ status open
 
 \family typewriter
 \size scriptsize
-> POINT_SIZE=0.5 fab analyse_incast_iqtimes:test_id= 20150218-135735_experiment_a
-qm_pfifo_responders_4, out_dir=../results,query_host=newtcp20, by_responder=1,cumu
-lative=1 
+> TC_POINT_SIZE=0.5 fab analyse_incast_iqtimes:test_id= 20150218-135735_experimen
+t_aqm_pfifo_responders_4, out_dir=../results,query_host=newtcp20, by_responder=1,c
+umulative=1 
 \end_layout
 
 \end_inset
@@ -10140,8 +10143,8 @@ status open
 
 \family typewriter
 \size scriptsize
-> POINT_SIZE=0.5 fab analyse_incast:test_id= 20150218-135735_experiment_aqm_pfifo
-_responders_4, out_dir=../results
+> TC_POINT_SIZE=0.5 fab analyse_incast:test_id= 20150218-135735_experiment_aqm_pf
+ifo_responders_4, out_dir=../results
 \end_layout
 
 \end_inset
@@ -10287,9 +10290,9 @@ status open
 
 \family typewriter
 \size scriptsize
-> POINT_SIZE=0.25 fab analyse_ackseq:test_id= 20150218-135735_experiment_aqm_pfif
-o_responders_4, out_dir=../results,source_filter= "D_172.16.11.61_80;D_172.16.11.62_81;
- D_172.16.11.63_82;D_172.16.11.64_83", burst_sep=1,sburst=1,eburst=2
+> TC_POINT_SIZE=0.25 fab analyse_ackseq:test_id= 20150218-135735_experiment_aqm_p
+fifo_responders_4, out_dir=../results,source_filter= "D_172.16.11.61_80;D_172.16.11.62_8
+1; D_172.16.11.63_82;D_172.16.11.64_83", burst_sep=1,sburst=1,eburst=2
 \end_layout
 
 \end_inset
@@ -10452,7 +10455,7 @@ FIRST_FOUR
 \end_layout
 
 \begin_layout Standard
-To make the x-axis look nicer we set NICER_XLABS=1 and omit_const_xlab_vars=1.
+To make the x-axis look nicer we set TC_NICER_XLABS=1 and omit_const_xlab_vars=1.
  We decided to change the first default colour, as the default dark blue
  makes the median lines inside the boxes harder to read (and as excuse to
  introduce the plot_script parameter).
@@ -10538,7 +10541,7 @@ status open
 
 \family typewriter
 \size scriptsize
-> NICER_XLABS=1 fab analyse_cmpexp:exp_list= explist.txt,out_dir=../results,
+> TC_NICER_XLABS=1 fab analyse_cmpexp:exp_list= explist.txt,out_dir=../results,
  source_filter="D_172.16.11.61_80;D_172.16.11.62_81; D_172.16.11.63_82;D_172.16.11.64_83",
  metric=restime,ptype=box,omit_const_xlab_vars=1, out_name="FIRST_FOUR",plot_scr
 ipt="R CMD BATCH --vanilla ./my_plot_cmp_experiments.R"
@@ -10671,7 +10674,7 @@ status open
 
 \family typewriter
 \size scriptsize
-> NICER_XLABS=1 fab analyse_cmpexp:exp_list= explist.txt,out_dir=../results,
+> TC_NICER_XLABS=1 fab analyse_cmpexp:exp_list= explist.txt,out_dir=../results,
  source_filter="S_172.16.10.60_*",merge_data=1, metric=restime,ptype=box,omit_const
 _xlab_vars=1, out_name="ALL",plot_script="R CMD BATCH --vanilla ./my_plot_cmp_exp
 eriments.R" 

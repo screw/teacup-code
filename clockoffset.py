@@ -359,6 +359,9 @@ def adjust_timestamps(test_id='', file_name='', host_name='', sep=' ', out_dir='
         # offset is observed
         while host_times[curr][0] < time or host_times[curr][0] == 'NA':
             curr += 1
+            if curr == len(host_times):
+                break
+            
         if curr > 0 and host_times[curr - 1][0] != 'NA':
             curr -= 1
 

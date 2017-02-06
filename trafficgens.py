@@ -1200,7 +1200,7 @@ def start_bc_ping(file_prefix='', remote_dir='', local_dir='', bc_addr='',
 #  @param remote_dir Directory to create log file in
 #  @param local_dir Local directory to put files in
 #  @param game_type Set to q3, hl2cs, hl2dm, hlcs, hldm, et2pro or q4
-#  @param client_num Total number of clients
+#  @param client_num Emulate traffic of a game with this many clients
 #  @param port Client port
 #  @param src_port Server port
 #  @param client Client IP or name
@@ -1293,11 +1293,17 @@ def _start_c2s_game(counter='', file_prefix='', remote_dir='', local_dir='',
     bgproc.register_proc(env.host_string, 'pktgen', counter, pid, logfile)
 
 
-## Start emulated FPS game traffic session with one server and n clients
-## For server to client traffic we run the BITSS tool n times
-## For client to server traffic we run nttcp in UDP mode to send from each
-## client to the server (not very realistic but BITSS has not produced a
-## client to server sending tool)
+## Start emulated FPS game traffic session using pktgen 0.3.1 or later
+## from http://caia.swin.edu.au/bitss
+##
+## Server side is emulated with one instance of pktgen in server mode per client end point
+## in TEACUP testbed. The actual traffic emitted by pktgen can be set to correspond to a game
+## having more clients than actually exist in the testbed (e.g. to emulate the N client game
+## traffic that would be seen by one client, without needing N actual client machines.)
+## 
+## For client to server traffic we run pktgen in client mode, which currently (pktgen 0.3.1)
+## produces not very realistic, simplified UDP packet stream back to the server)
+##
 #  @param counter Unique ID start
 #  @param file_prefix File prefix for log file (iperf server output)
 #  @param remote_dir Directory to create log file in
@@ -1317,11 +1323,14 @@ def _start_c2s_game(counter='', file_prefix='', remote_dir='', local_dir='',
 #  @param check '0' don't check for executable,
 #               '1' check for executable
 #  @param wait Time to wait before process is started
+#  @param noclients_game    Emulate server to client traffic of this many clients, or
+#               number of clients in 'clients' parameter if not set (hsnguyen@swin.edu.au)
+
 def start_fps_game(counter='', file_prefix='', remote_dir='', local_dir='', clients='',
                   server='', game_type='q3', c2s_interval='0.01', c2s_psize='60',
 		  s2c_interval='0.05', duration='', client_start_delay='3.0',
-                  extra_params_client='', extra_params_server='', check='1', wait=''):
-    "Start FPS game traffic"
+                  extra_params_client='', extra_params_server='', check='1', wait='', noclients_game=''):
+    "Start FPS game traffic using pktgen from http://caia.swin.edu.au/bitss"
 
     if clients == '':
         abort('Must specify at least one client with clients')
@@ -1340,6 +1349,9 @@ def start_fps_game(counter='', file_prefix='', remote_dir='', local_dir='', clie
     # make sure number of clients is within pktgen's allowed range 
     if len(clients_list) < 4 or len(clients_list) > 32:
         abort('Number of clients must be between 4 and 32')
+        
+    if noclients_game == '':
+        noclients_game = str(len(clients_list))
 
     for client in clients_list:
         fields = client.split(':')
@@ -1355,7 +1367,7 @@ def start_fps_game(counter='', file_prefix='', remote_dir='', local_dir='', clie
                 remote_dir=remote_dir,
                 local_dir=local_dir,
                 game_type=game_type,
-                client_num=str(len(clients_list)),
+                client_num=noclients_game,
                 port=client_port,
                 src_port=server_port,
                 #src_port=client_port,
@@ -1384,7 +1396,7 @@ def start_fps_game(counter='', file_prefix='', remote_dir='', local_dir='', clie
                 remote_dir=remote_dir,
                 local_dir=local_dir,
                 game_type=game_type,
-                client_num=str(len(clients_list)),
+                client_num=noclients_game,
                 port=server_port,
                 #port=client_port,
                 src_port=client_port,

@@ -41,7 +41,7 @@ on a FreeBSD or Linux system, such as ping, kill and dd. We strongly
 recommend to run Linux or FreeBSD on the control host, as so far TEACUP 
 has only been tested on FreeBSD or Linux.
 
-TEACUP post v1.0 contains experimental animated playback functionality,
+TEACUP post-1.0 contains experimental animated playback functionality,
 which requires additional packages installed on the control host as
 described under ./animate/INSTALL-teaplot (and documented in
 ./docs/teaplot-docs.tex)

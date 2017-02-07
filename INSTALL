@@ -220,8 +220,10 @@ installed on the experiment hosts.
 Linux
 -----
 
-On Linux you need to install web10g. Download web10g from http://www.web10g.org/ and
-follow the instructions provided to install a patched Linux kernel and the web10g
+On Linux we now have two options -- using web10g (polling) or ttprobe (event-driven)
+
+(a) Install web10g by downloading web10g from http://www.web10g.org/ and
+following the instructions provided to install a patched Linux kernel and the web10g
 userland tools. If you use web10g version 2.0.8 or higher nothing else is required. If
 you use web10g version 2.0.7 you must patch the userland code with the patch provided
 in the TEACUP tarball (web10g-logger-0.1-web10g-2.0.7.patch) and then compile and install
@@ -229,6 +231,8 @@ the userland code.
 
 You must use web10g version 2.0.7 or newer, TEACUP does not work with older web10g 
 versions.
+
+(b) Install ttprobe by following the instructions in tools/ttprobe-0.1.2.tar.gz
 
 FreeBSD
 -------
@@ -255,10 +259,11 @@ Install the SIFTR-like logger for Mac OS X provided in the TEACUP tarball
 COPYRIGHT
 ---------
 
-Copyright (c) 2013-2015 Centre for Advanced Internet Architectures,
+Copyright (c) 2013-2017 Centre for Advanced Internet Architectures,
 Swinburne University of Technology. All rights reserved.
 
 Author: Sebastian Zander (sebastian.zander@gmx.de)
+Tweaks: Grenville Armitage (garmitage@swin.edu.au)
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions

@@ -232,7 +232,7 @@ the userland code.
 You must use web10g version 2.0.7 or newer, TEACUP does not work with older web10g 
 versions.
 
-(b) Install ttprobe by following the instructions in tools/ttprobe-0.1.2.tar.gz
+(b) Install ttprobe by following the instructions in tools/ttprobe-0.1.2.tgz
 
 FreeBSD
 -------

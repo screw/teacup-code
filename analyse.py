@@ -3561,11 +3561,11 @@ def _extract_pktloss(test_id='', out_dir='', replot_only='0', source_filter='',
                                                    os.path.isfile(rev_out_loss) ):
                         # compute loss 
                         local(
-                            'pktloss.py -t %s -T %s -f %s > %s' %
-                            (dump1, dump2, filter1, out_loss))
+                            '%s/tools/pktloss.py -t %s -T %s -f %s > %s' %
+                            (config.TPCONF_script_path, dump1, dump2, filter1, out_loss))
                         local(
-                            'pktloss.py -t %s -T %s -f %s > %s' %
-                            (dump2, dump1, filter2, rev_out_loss))
+                            '%s/tools/pktloss.py -t %s -T %s -f %s > %s' %
+                            (config.TPCONF_script_path, dump2, dump1, filter2, rev_out_loss))
 
                     already_done[long_name] = 1
                     already_done[long_rev_name] = 1

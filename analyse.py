@@ -3549,10 +3549,10 @@ def _extract_pktloss(test_id='', out_dir='', replot_only='0', source_filter='',
                     dump1 = dir_name + '/' + test_id + '_' + src + ifile_ext
                     dump2 = dir_name + '/' + test_id + '_' + dst + ifile_ext
 
-                    # filters for pktloss.py    
-		    filter1 = src_internal + ':' + src_port + ':' + dst_internal + ':' + dst_port 
-		    filter2 = dst_internal + ':' + dst_port + ':' + src_internal + ':' + src_port 
-	
+                    # filters for pktloss.py
+                    filter1 = src_internal + ':' + src_port + ':' + dst_internal + ':' + dst_port
+                    filter2 = dst_internal + ':' + dst_port + ':' + src_internal + ':' + src_port 
+
                     # output file names
                     out_loss = out_dirname + test_id + '_' + name + ofile_ext
                     rev_out_loss = out_dirname + test_id + '_' + rev_name + ofile_ext
@@ -3572,14 +3572,22 @@ def _extract_pktloss(test_id='', out_dir='', replot_only='0', source_filter='',
 
                     if sfil.is_in(name):
                         if ts_correct == '1':
-                            out_loss = adjust_timestamps(test_id, out_loss, src, ' ', out_dir)
+                            out_loss_tscorr = adjust_timestamps(test_id, out_loss, src, ' ', out_dir)
+                            # Clean up, we don't need to the pre-adjusted file
+                            os.remove(out_loss)
+                            out_loss = out_loss_tscorr
+                            
                         out_files[long_name] = out_loss
                         out_groups[out_loss] = group
 
                     if sfil.is_in(rev_name):
                         if ts_correct == '1':
-                            rev_out_loss = adjust_timestamps(test_id, rev_out_loss, dst, ' ',
+                            rev_out_loss_tscorr = adjust_timestamps(test_id, rev_out_loss, dst, ' ',
                                           out_dir)
+                            # Clean up, we don't need to the pre-adjusted file
+                            os.remove(rev_out_loss)
+                            rev_out_loss = rev_out_loss_tscorr
+                            
                         out_files[long_rev_name] = rev_out_loss
                         out_groups[rev_out_loss] = group
 

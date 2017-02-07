@@ -1130,7 +1130,7 @@ def _extract_cwnd(test_id='', out_dir='', replot_only='0', source_filter='',
                                ts_correct=ts_correct,
                                io_filter=io_filter)
 
-    # to deal with two Linux loggers for smae experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
+    # to deal with two Linux loggers for same experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
     inters = list(set(files2).intersection(files3))
     if inters is not None:
         try:
@@ -1143,7 +1143,7 @@ def _extract_cwnd(test_id='', out_dir='', replot_only='0', source_filter='',
             elif logger == 'web10g':
                 del files3[i]
             else:
-                files2[i + 'web10g'] = files2.pop(i)
+                files2['w' + i] = files2.pop(i)
 
     all_files = dict(files1.items() + files2.items() + files3.items())
     all_groups = dict(groups1.items() + groups2.items() + groups3.items())
@@ -1313,7 +1313,7 @@ def _extract_tcp_rtt(test_id='', out_dir='', replot_only='0', source_filter='',
                                ts_correct=ts_correct,
                                io_filter=io_filter)
 
-    # to deal with two Linux loggers for smae experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
+    # to deal with two Linux loggers for same experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
     inters = list(set(files2).intersection(files3))
     if inters is not None:
         try:
@@ -1326,7 +1326,7 @@ def _extract_tcp_rtt(test_id='', out_dir='', replot_only='0', source_filter='',
             elif logger == 'web10g':
                 del files3[i]
             else:
-                files2[i + 'web10g'] = files2.pop(i)
+                files2['w' + i] = files2.pop(i)
 
     all_files = dict(files1.items() + files2.items() + files3.items())
     all_groups = dict(groups1.items() + groups2.items() + groups3.items())
@@ -1486,7 +1486,7 @@ def _extract_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
                                ts_correct=ts_correct,
                                io_filter=io_filter)
 
-    # to deal with two Linux loggers for smae experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
+    # to deal with two Linux loggers for same experiments i.e. 'TPCONF_linux_tcp_logger = 'both'
     inters = list(set(files2).intersection(files3))
     if inters is not None:
         try:
@@ -1499,7 +1499,7 @@ def _extract_tcp_stat(test_id='', out_dir='', replot_only='0', source_filter='',
             elif logger == 'web10g':
                 del files3[i]
             else:
-                files2[i + 'web10g'] = files2.pop(i)
+                files2['w' + i] = files2.pop(i)
 
     all_files = dict(files1.items() + files2.items() + files3.items())
     all_groups = dict(groups1.items() + groups2.items() + groups3.items())

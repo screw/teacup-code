@@ -33,6 +33,7 @@ import time
 import datetime
 import re
 import socket
+import glob, os
 from fabric.api import task, warn, put, puts, get, local, run, execute, \
     settings, abort, hosts, env, runs_once, parallel
 from fabric.network import disconnect_all
@@ -139,6 +140,12 @@ def run_experiment(test_id='', test_id_pfx='', *args, **kwargs):
 
     # create sub directory for test id prefix
     mkdir_p(test_id_pfx)
+    
+    # remove <test_id>* files in <test_id_pfx> directory if exists
+    file_pattern = test_id_pfx + "/" + test_id + "_*"
+    
+    for f in glob.glob(file_pattern):
+        os.remove(f)
 
     # log experiment in started list
     local('echo "%s" >> experiments_started.txt' % test_id)

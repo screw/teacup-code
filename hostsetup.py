@@ -1146,6 +1146,8 @@ def init_dummynet():
         # check again (maybe a bit paranoid)
         run('kldstat | grep dummynet')
 
+    # increase pipe size limit
+    run('sysctl net.inet.ip.dummynet.pipe_slot_limit=20000')
     # allow packet to go through multiple pipes
     run('sysctl net.inet.ip.fw.one_pass=0')
     # disable firewall and flush everything

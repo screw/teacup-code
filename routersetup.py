@@ -73,8 +73,11 @@ def init_dummynet_pipe(counter='1', source='', dest='', rate='', delay='',
             queue_size = int(float(queue_size) * float(queue_size_mult))
         queue_size = str(queue_size)
 
-    if queue_disc != 'fifo' and queue_disc != 'red':
-        abort("Only queuing disciplines for Dummynet are 'fifo' and 'red'")
+    if queue_disc != 'fifo' and queue_disc != 'red' and \
+        queue_disc != 'codel' and queue_disc != 'pie' and \
+        queue_disc != 'fq_codel' and queue_disc != 'fq_pie':
+        abort("Only queuing disciplines for Dummynet are 'fifo'," \
+            "'red', 'codel','pie', 'fq_codel' and 'fq_pie'")
 
     # ipfw rule number
     rule_no = str(int(counter) * 100)
@@ -87,20 +90,37 @@ def init_dummynet_pipe(counter='1', source='', dest='', rate='', delay='',
         config_pipe_cmd += ' delay %sms' % delay
     if loss != "":
         config_pipe_cmd += ' plr %s' % loss
-    if queue_size != "":
+    if queue_size != "" and queue_disc != 'fq_codel' and \
+        queue_disc != 'fq_pie':
         config_pipe_cmd += ' queue %s' % queue_size
-    if queue_disc == 'red':
-        config_pipe_cmd += ' red %s' % queue_disc_params
+    if queue_disc == 'red' or queue_disc == 'codel' or \
+        queue_disc == 'pie':
+        config_pipe_cmd += ' %s %s' % (queue_disc, queue_disc_params)
     run(config_pipe_cmd)
 
-    # create pipe rule
-    create_pipe_cmd = 'ipfw add %s pipe %s ip from %s to %s out' % (
-        rule_no, counter, source, dest)
-    run(create_pipe_cmd)
-    if bidir == '1':
-        create_pipe_cmd = 'ipfw add %s pipe %s ip from %s to %s out' % (
-            rule_no, counter, dest, source)
+    # sched fq_codel/fq_pie
+    if  queue_disc == 'fq_codel' or queue_disc == 'fq_pie':
+        
+        config_pipe_cmd = 'ipfw sched %s config pipe %s type %s limit %s %s ' % \
+            (counter, counter, queue_disc, queue_size, queue_disc_params)
+        run(config_pipe_cmd)
+        
+        config_pipe_cmd = 'ipfw queue %s config sched %s' % (counter,counter)
+        run(config_pipe_cmd)
+     
+        create_pipe_cmd = 'ipfw add %s queue %s ip from %s to %s out' % (
+            rule_no, counter, source, dest)
         run(create_pipe_cmd)
+        
+    else:      
+        # create pipe rule
+        create_pipe_cmd = 'ipfw add %s pipe %s ip from %s to %s out' % (
+            rule_no, counter, source, dest)
+        run(create_pipe_cmd)
+        if bidir == '1':
+            create_pipe_cmd = 'ipfw add %s pipe %s ip from %s to %s out' % (
+                rule_no, counter, dest, source)
+            run(create_pipe_cmd)
 
 
 ## Initialse tc (Linux)

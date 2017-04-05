@@ -129,6 +129,18 @@ server.document-root = "@DOCUMENT_ROOT@"
 server.pid-file = state_dir + "@PID_FILE@"
 
 ##
+## Allow cross-origin requests and enable range request
+##
+server.modules += ( "mod_setenv" )
+setenv.add-response-header = ( 
+        "Access-Control-Allow-Origin" => "*",
+        "Access-Control-Allow-Headers" => "Range",
+	"Accept-Ranges" => "bytes"
+)
+
+server.range-requests = "enable" 
+
+##
 #######################################################################
 
 #######################################################################

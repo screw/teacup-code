@@ -38,7 +38,7 @@ import config
 from hosttype import get_type_cached
 from hostint import get_address_pair
 from runbg import runbg
-
+import os
 
 #
 # nttcp
@@ -1414,3 +1414,113 @@ def start_fps_game(counter='', file_prefix='', remote_dir='', local_dir='', clie
 
         counter += 1
 
+## Start DASH streaming at the client side with dash.js player in Chrome or Firefox
+#  @param counter: Unique ID
+#  @param file_prefix: File prefix for log file
+#  @param remote_dir: Directory to create log file in
+#  @param serv: IP address/hostname of DASH server
+#  @param duration: Video streaming duration in seconds
+#  @param wait: Time to wait before process is started
+#  @param serv_port: Port number of DASH server serving the video dataset
+#  @param browser: Browser in which dash.js runs (chrome, firefox)
+#  @param chunk_size: Video chunk size in seconds (depending on dataset)
+#  @param mpd: File name of Media Presentation Description (depending on dataset)
+#  @param player_path: Path to dash.js player's index.html page
+
+def _start_dash_streaming_dashjs(counter='1', file_prefix='', remote_dir='', serv='',
+		duration='', rate='1', check='1', wait='', serv_port='',
+		browser='chrome', chunk_size='', mpd='', player_path=''):
+    "Start dash.js DASH traffic flow"
+    
+    htype = get_type_cached(env.host_string)
+    
+    logfile = remote_dir + file_prefix + '_' + \
+        env.host_string.replace(':', '_') + '_' + counter + '_dash_streaming_dashjs.log'
+      
+    logfile2 = remote_dir + file_prefix + '_' + \
+        env.host_string.replace(':', '_') + '_' + counter + '_dash_streaming_dashjs2.log'  
+    
+    count = str(int(round(float(duration) * float(rate), 0)))
+    
+    xinit_filename = os.path.join(config.TPCONF_script_path, "/tmp/xinitrc_dash")
+    with open(xinit_filename,"w") as xinitrc:     
+
+      if browser == 'chrome':
+	
+	  xinitrc.write("chrome --disable-web-security --incognito --user-data-dir 'http://" 
+	    + player_path + 
+	    "/index.html?mpd=http://%s:%s/%ssec/%s'" % \
+	    (serv, serv_port,chunk_size,mpd))
+	  
+      elif browser == 'firefox':
+      
+	  xinitrc.write("dbus-run-session firefox -private-window 'http://" 
+	    + player_path + 
+	    "/index.html?mpd=http://%s:%s/%ssec/%s'" % \
+	  (serv, serv_port,chunk_size,mpd))   
+	  
+      else:
+	  abort('Browser not supported')
+	  
+    put(xinit_filename, '/root/.xinitrc')
+    
+    os.remove(xinit_filename)	    
+    
+    dash_streaming_cmd = 'startx'
+    pid = runbg(dash_streaming_cmd, wait, out_file=logfile)
+    bgproc.register_proc(env.host_string, 'dash_streaming_dashjs', counter, pid, logfile)
+
+    pkill_cmd = 'pkill ' + browser
+    pid = runbg(pkill_cmd, float(wait) + float(duration), out_file=logfile2)
+    bgproc.register_proc(env.host_string, 'dash_streaming_pkill', counter, pid, logfile2)
+	
+## Start DASH streaming at the client side with dash.js player in Chrome or Firefox
+#  @param counter: Unique ID
+#  @param file_prefix: File prefix for log file
+#  @param remote_dir: Directory to create log file in
+#  @param client: IP address/hostname of DASH client
+#  @param serv: IP address/hostname of DASH server
+#  @param duration: Video streaming duration in seconds
+#  @param wait: Time to wait before process is started
+#  @param serv_port: Port number of DASH server serving the video dataset
+#  @param browser: Browser in which dash.js runs (chrome, firefox)
+#  @param chunk_size: Video chunk size in seconds (depending on dataset)
+#  @param mpd: File name of Media Presentation Description (depending on dataset)
+#  @param player_path: Path to dash.js player's index.html page
+
+def start_dash_streaming_dashjs(counter='1', file_prefix='', remote_dir='', local_dir='', client='',
+		  serv='', duration='', rate='1', check='1', wait='',serv_port='',
+		  browser='chrome', chunk_size='', mpd='', player_path=''):
+    "Start dash.js DASH traffic flow"
+     
+    if client == '':
+	abort('Must specify client')
+    if serv == '':
+        abort('Must specify server')
+    if serv_port == '':
+	abort('Must specify server port')
+    if chunk_size == '':
+	abort('Must specify video chunk size')
+    if mpd == '':
+	abort('Must specify MPD')
+    if player_path == '':
+	abort('Must specify player path')
+	
+    client, dummy = get_address_pair(client)
+    dummy, dest_internal = get_address_pair(serv)
+    execute(
+        _start_dash_streaming_dashjs,
+        counter,
+        file_prefix,
+        remote_dir,
+        dest_internal,
+        duration,
+        rate,
+        check,
+        wait,
+        serv_port,
+        browser,
+        chunk_size, 
+        mpd,
+        player_path,
+        hosts=[client])

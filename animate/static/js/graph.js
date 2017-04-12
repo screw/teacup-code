@@ -83,6 +83,7 @@ function makeTextSprite(message, parameters) {
     // get size data (height depends only on font size)
     var metrics = context.measureText(message);
     var textWidth = metrics.width;
+//    console.log("Message: " + message + " - " + " Width: " + textWidth); //TODO: Fix width - title/y-axis clipped off
 
     // background color
     context.fillStyle = "rgba(" + backgroundColor.r + "," + backgroundColor.g +
@@ -407,9 +408,12 @@ void main() {\
             z: 4
         };
         this.axisColors = {
-            x: 0xFF0000,
+/*            x: 0xFF0000,
             y: 0x00FF00,
-            z: 0x0000FF
+            z: 0x0000FF*/
+            x: 0x000000,
+            y: 0x000000,
+            z: 0x000000
         };
         this.init();
     };
@@ -483,12 +487,14 @@ void main() {\
                     switch (axis) {
                         case 'x':
                             label.position.x = origin.x + i + size;
-                            label.position.y = origin.y + size / 8;
+//                            label.position.y = origin.y + size / 8;
+                            label.position.y = origin.y - size;
                             label.position.z = origin.z;
                             break;
                         case 'y':
                             label.position.x = origin.x - size / 2;
-                            label.position.y = origin.y + i;
+//                            label.position.y = origin.y + i;
+                            label.position.y = origin.y + i - size / 4;
                             label.position.z = origin.z + size / 2;
                             break;
                         case 'z':
@@ -922,12 +928,14 @@ void main() {\
                 switch (axis) {
                     case 'x':
                         xPos = this.origin.x + (this.limits.x.max - this.limits.x.min) / 2;
-                        yPos = this.origin.y - size / 2;
+//                        yPos = this.origin.y - size / 2;
+                        yPos = this.origin.y - size * 1.5;
                         zPos = this.origin.z;
                         break;
                     case 'y':
                         yPos = this.origin.y + (this.limits.y.max - this.limits.y.min) / 2 - size / 2;
-                        xPos = this.origin.x - size / 2;
+//                        xPos = this.origin.x - size / 2;
+                        xPos = this.origin.x - size * 1.5;
                         zPos = this.origin.z;
                         this.axisLabels[axis].material.rotation = Math.PI / 2;
                         break;
@@ -1018,7 +1026,7 @@ void main() {\
              */
 
             var stats = new Stats();
-            stats.setMode(1); // 0: fps, 1: ms, 2: mb
+            stats.setMode(0); // 0: fps, 1: ms, 2: mb
 
             // align top-left
             stats.domElement.style.position = 'absolute';

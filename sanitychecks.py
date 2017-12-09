@@ -45,7 +45,7 @@ from trafficgens import start_iperf, start_ping, \
     start_httperf_dash, create_http_dash_content, \
     create_http_incast_content, start_httperf_incast, \
     start_nttcp, start_httperf_incast_n, \
-    start_fps_game, start_dash_streaming_dashjs
+    start_fps_game, start_dash_streaming_dashjs, start_nginx_server
 
 
 def _args(*_nargs, **_kwargs):

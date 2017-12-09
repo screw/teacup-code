@@ -1544,3 +1544,121 @@ def start_dash_streaming_dashjs(counter='1', file_prefix='', remote_dir='', loca
         mpd,
         player_path,
         hosts=[client])
+
+## Start nginx web server
+#  @param counter Unique ID
+#  @param file_prefix File prefix for log file
+#  @param remote_dir Directory to create log file in
+#  @param local_dir Local directory to put files in
+#  @param port Port to listen to
+#  @param config_dir Directory that contains config file
+#  @param config_in Config file template to use
+#  @param docroot Document root on server
+#  @param check If '0' don't check for nginx executable, if '1' check for 
+#               nginx executable
+#  @param wait Time to wait before process is started
+def _start_nginx_server(counter='1', file_prefix='', remote_dir='',
+                       local_dir='', port='', config_dir='', config_in='',
+                       docroot='', check='1'):
+    global config
+
+    if port == "":
+        abort("Must specify port")
+
+    if check == '1':
+             # make sure we have nginx
+        run('which nginx', pty=False)
+
+    # get host type
+    htype = get_type_cached(env.host_string)
+
+    # automatic config if not specified explicitely
+    if config_dir == '':
+        if htype == 'FreeBSD':
+            config_dir = '/usr/local/etc/nginx'
+        elif htype == 'Darwin':
+            config_dir = '/opt/local/etc/nginx'
+        else:
+            config_dir = '/etc/nginx'
+    if config_in == '':
+        config_in = config.TPCONF_script_path + \
+            '/nginx_' + htype + '.conf.in'
+    if docroot == '':
+        docroot = _get_document_root(htype)
+
+    # start server
+    logfile = file_prefix + "_" + \
+        env.host_string.replace(':', '_') + "_" + counter + "_access.log"
+    # XXX currently we overwrite the main config file if we start multiple
+    # servers
+    config_file_remote = config_dir + '/nginx.conf'
+    config_file = local_dir + '/' + file_prefix + '_' + \
+        env.host_string.replace(':', '_') + '_' + counter + '_nginx.conf'
+    docroot_sed = docroot.replace("/", "\/")
+    pid_file = '/' + file_prefix + '_' + \
+        env.host_string.replace(':', '_') + '_' + counter + '_nginx.pid'
+    pid_file_sed = pid_file.replace("/", "\/")
+    local('cat %s | sed -e "s/@SERVER_PORT@/%s/" | sed -e "s/@DOCUMENT_ROOT@/%s/" | '
+          'sed -e "s/@ACCESS_LOG_NAME@/%s/" | sed -e "s/@PID_FILE@/%s/" > %s'
+          % (config_in, port, docroot_sed, logfile, pid_file_sed, config_file))
+    
+    # Statically set logdir and statedir location
+    logdir = "/var/log/nginx"
+    logfile = logdir + "/" + logfile
+    statedir = "/var/run"
+    
+    run('mkdir -p %s' % logdir, pty=False)
+    with settings(warn_only=True):
+        run('mkdir -p %s' % docroot, pty=False)
+    put(config_file, config_file_remote)
+    local('gzip %s' % config_file)
+    run('rm -f %s' % logfile, pty=False)
+
+    # generate dummy /index.html
+    run('cd %s && dd if=/dev/zero of=index.html bs=1024 count=1' %
+        docroot, pty=False)
+
+    if htype == 'FreeBSD' or htype == 'Linux' or htype == 'Darwin':
+        run('nginx -c %s ; sleep 0.1' % config_file_remote)
+    elif htype == "CYGWIN":
+        run('/usr/sbin/nginx -c %s ; sleep 0.1' %
+            config_file_remote, pty=False)
+
+    pid = run('cat %s%s' % (statedir, pid_file), pty=False)
+    # currently we only download the access.log, but not the error.log
+    bgproc.register_proc(env.host_string, 'nginx', counter, pid, logfile)
+
+## Start nginx web server wrapper
+#  @param counter Unique ID
+#  @param file_prefix File prefix for log file
+#  @param remote_dir Directory to create log file in
+#  @param server Server host 
+#  @param local_dir Directory to create log file in
+#  @param local_dir Local directory to put files in
+#  @param port Port to listen to
+#  @param config_dir Directory that contains config file
+#  @param config_in Config file template to use
+#  @param docroot Document root on server
+#  @param check If '0' don't check for nginx executable, if '1' check for 
+#               nginx executable
+#  @param wait Time to wait before process is started
+def start_nginx_server(counter='1', file_prefix='', remote_dir='', local_dir='',
+                      server='', port='', config_dir='', config_in='', docroot='',
+                      check='1', wait=''):
+    "Start nginx HTTP server"
+
+    if server == '':
+        abort('Must specify server')
+    server, dummy = get_address_pair(server)
+    execute(
+        _start_nginx_server,
+        counter,
+        file_prefix,
+        remote_dir,
+        local_dir,
+        port,
+        config_dir,
+        config_in,
+        docroot,
+        check,
+        hosts=[server])

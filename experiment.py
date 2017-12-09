@@ -59,7 +59,7 @@ from trafficgens import start_iperf, start_ping, \
     create_http_incast_content, start_httperf_incast, \
     start_nttcp, start_bc_ping, \
     start_httperf_incast_n, start_fps_game, \
-    start_dash_streaming_dashjs
+    start_dash_streaming_dashjs, start_nginx_server
 
 
 ## Collect all the arguments

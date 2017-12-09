@@ -66,6 +66,16 @@ def start_nttcp_server(counter='1', file_prefix='', remote_dir='',
     if check == '1':
         # make sure we have executable
         run('which nttcp', pty=False)
+        
+    hostOS = get_type_cached(env.host_string)
+    
+    if hostOS == 'FreeBSD':
+        # Reduces TIME_WAIT state to 30 seconds (2*MSL)
+	run('sysctl -w net.inet.tcp.msl=15000')
+    
+    elif hostOS == 'Linux':
+        # Recycle TIME_WAIT sockets faster   
+	run('sysctl -w net.ipv4.tcp_tw_recycle=1')
 
     # start nttcp
     logfile = remote_dir + file_prefix + '_' + \
@@ -107,6 +117,16 @@ def start_nttcp_client(counter='1', file_prefix='', remote_dir='', port='',
     if check == '1':
         # make sure we have nttcp
         run('which nttcp', pty=False)
+        
+    hostOS = get_type_cached(env.host_string)
+    
+    if hostOS == 'FreeBSD':
+        # Reduces TIME_WAIT state to 30 seconds (2*MSL)
+	run('sysctl -w net.inet.tcp.msl=15000')
+    
+    elif hostOS == 'Linux':
+        # Recycle TIME_WAIT sockets faster   
+	run('sysctl -w net.ipv4.tcp_tw_recycle=1')
 
     # start nttcp
     # number of bufs to send

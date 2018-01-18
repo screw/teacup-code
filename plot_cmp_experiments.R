@@ -459,7 +459,7 @@ if (ratio_res_time || nominal_res_time) {
 
 if (ptype == "box") {
 	boxplot(data, at=atvec, col=atcols, bg=atcols, cex=cexs[1], ylab=ylab, 
-                ylim=c(0, ymax*f), main = title, cex.main=0.5, axes=FALSE)
+                ylim=c(ymin, ymax*f), main = title, cex.main=0.5, axes=FALSE)
 	grid(nx=NA, ny=NULL)
 	abline(v=atvec_xgrid, lty=3, col="lightgray")
 	boxplot(data, at=atvec, col=atcols, bg=atcols, cex=cexs[1], axes=FALSE, 

@@ -188,21 +188,21 @@ if (no_nominal == FALSE) {
 	plot(data[[nominal_idx]][,5], data[[nominal_idx]][,6], type="p", pch=pchs[1], 
              col=cols[1], bg=cols[1], cex=cexs[1], xlab="Time (s)", ylab=ylab, 
              xlim=c(stime, etime), ylim=c(ymin, ymax*f), main = title, cex.main=0.5, 
-             axes=T)
+             axes=T, panel.first = grid())
 } else {
 	plot(data[[1]][,1], data[[1]][,2], type="p", pch=pchs[1], col=cols[1], 
              bg=cols[1], cex=cexs[1], xlab="Time (s)", ylab=ylab, xlim=c(stime, etime), 
-             ylim=c(ymin, ymax*f), main = title, cex.main=0.5, axes=T)
+             ylim=c(ymin, ymax*f), main = title, cex.main=0.5, axes=T, panel.first = grid())
 }
-
-grid()
 
 if (no_nominal == FALSE) {
-	points(data[[nominal_idx]][,5], data[[nominal_idx]][,6], type="p", pch=pchs[1], 
-               col=cols[1], bg=cols[1], cex=cexs[1])
+	start_idx = 1
+} else {
+	# already plotted first data series
+	start_idx = 2
 }
 
-for (i in c(1:length(data))) {
+for (i in c(start_idx:length(data))) {
 	if (no_nominal == FALSE) {
 		idx = i+1
 	} else {

@@ -30,6 +30,9 @@ Version 1.1 (XXX)
 - Imported http://caia.swin.edu.au/tools/teacup/downloads/teacup-dash-patch-0.2.tgz
 	to enable generation of DASH traffic using dash.js inside a browser
 - Updated teaplot ('fab animate') to version 0.2 (see ./animate/ChangeLog.teaplot)
+- Updated plot code so that points are not plotted twice (note that only
+  code using plot() has been updated but not code that uses boxplot() or
+  other derivatives of plot but ggplot stuff should not need this anyway)
 
 Version 1.0 (26th May 2015)
 ---------------------------

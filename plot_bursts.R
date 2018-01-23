@@ -357,13 +357,13 @@ f = 1 + ceiling(length(data) / 2) * ymax_inc
 
 plot(curr_data[[1]][,1], curr_data[[1]][,2], type="p", pch=pchs[1], col=cols[1], bg=cols[1], 
      cex=cexs[1], xlab="Time (s)", ylab=ylab, xlim=c(stime, etime), ylim=c(ymin, ymax*f), 
-     main = title, cex.main=0.5, axes=T)
+     main = title, cex.main=0.5, axes=T, panel.first = grid())
 
-grid()
-
-for (i in c(1:length(curr_data))) {
-	points(curr_data[[i]][,1], curr_data[[i]][,2], type="p", pch=pchs[i], col=cols[i], 
-               bg=cols[i], cex=cexs[i])
+if (length(curr_data) > 1) {
+	for (i in c(2:length(curr_data))) {
+		points(curr_data[[i]][,1], curr_data[[i]][,2], type="p", pch=pchs[i], col=cols[i], 
+               	bg=cols[i], cex=cexs[i])
+	}
 }
 
 legend("topleft", ncol=2, inset=linset, legend=curr_lnames, pch=pchs, col=cols, pt.bg=cols,

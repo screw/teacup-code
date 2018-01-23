@@ -458,6 +458,7 @@ if (ratio_res_time || nominal_res_time) {
 }
 
 if (ptype == "box") {
+        # TBD: check if panel.first also works with boxplot
 	boxplot(data, at=atvec, col=atcols, bg=atcols, cex=cexs[1], ylab=ylab, 
                 ylim=c(ymin, ymax*f), main = title, cex.main=0.5, axes=FALSE)
 	grid(nx=NA, ny=NULL)
@@ -506,12 +507,17 @@ if (ptype == "box") {
 
 	plot(xvals[,1], yvals[,1], type=plot_type, lwd=plot_lwd, lend=1, pch=pchs[1], col=cols[1], 
              bg=cols[1], cex=cexs[1], xlab="", ylab=ylab, xlim=c(1, length(data)), 
-             ylim=c(ymin, ymax*f), main = title, cex.main=0.5, axes=F)
-	grid(nx=NA, ny=NULL)
-	abline(v=atvec_xgrid, lty=3, col="lightgray")
-	for (j in c(1:length(lnames))) {
-		points(xvals[,j], yvals[,j], type=plot_type, lwd=plot_lwd, lend=1, pch=pchs[j], 
-                       col=cols[j], bg=cols[j], cex=cexs[j])	
+             ylim=c(ymin, ymax*f), main = title, cex.main=0.5, axes=F, 
+             panel.first = {
+             	grid(nx=NA, ny=NULL)
+ 		abline(v=atvec_xgrid, lty=3, col="lightgray")
+	     })
+
+        if (length(lnames) > 1) {
+		for (j in c(2:length(lnames))) {
+			points(xvals[,j], yvals[,j], type=plot_type, lwd=plot_lwd, lend=1, pch=pchs[j], 
+                       		col=cols[j], bg=cols[j], cex=cexs[j])	
+		}
 	}
 }
 

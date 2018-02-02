@@ -297,8 +297,8 @@ def run_experiment(test_id='', test_id_pfx='', *args, **kwargs):
 
     # start traffic generators
     sync_delay = 5.0
-    max_wait_time = sync_delay
     start_time = datetime.datetime.now()
+    total_duration = float(duration) + sync_delay
     for t, c, v in sorted(config.TPCONF_traffic_gens, cmp=_cmp_timekeys):
 
         try:
@@ -306,9 +306,6 @@ def run_experiment(test_id='', test_id_pfx='', *args, **kwargs):
             next_time = float(t) + sync_delay
         except ValueError:
             abort('Traffic generator entry key time must be a float')
-
-        if next_time > max_wait_time:
-            max_wait_time = next_time
 
         # add the kwargs parameter to the call of _param
         v = re.sub("(V_[a-zA-Z0-9_-]*)", "_param('\\1', kwargs)", v)
@@ -341,13 +338,23 @@ def run_experiment(test_id='', test_id_pfx='', *args, **kwargs):
         v += ', wait="' + wait + '"'
 
         _nargs, _kwargs = eval('_args(%s)' % v)
+
+        # get traffic generator duration
+        try:
+            traffic_duration = _kwargs ['duration']
+        except:
+            traffic_duration = 0
+        # find the largest total_duration possible
+        if next_time + traffic_duration > total_duration:
+            total_duration = next_time + traffic_duration
+
         execute(*_nargs, **_kwargs)
 
     # print process list
     print_proc_list()
 
     # wait until finished (add additional 5 seconds to be sure)
-    total_duration = float(duration) + max_wait_time + 5.0
+    total_duration = float(total_duration) + 5.0
     puts('\n[MAIN] Running experiment for %i seconds\n' % int(total_duration))
     time.sleep(total_duration)
 

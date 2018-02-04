@@ -28,11 +28,14 @@ Version 1.1 (XXX)
 - Imported CAIA Technical Report source under CC-BY-SA-4.0 for TEAPLOT
 - Imported TEAPLOT 0.1.1 source for 2D and 3D animation
 - Imported http://caia.swin.edu.au/tools/teacup/downloads/teacup-dash-patch-0.2.tgz
-	to enable generation of DASH traffic using dash.js inside a browser
+  to enable generation of DASH traffic using dash.js inside a browser
 - Updated teaplot ('fab animate') to version 0.2 (see ./animate/ChangeLog.teaplot)
 - Updated plot code so that points are not plotted twice (note that only
   code using plot() has been updated but not code that uses boxplot() or
   other derivatives of plot but ggplot stuff should not need this anyway)
+- Refine total experiment duration to be calculated as
+  max(V_duration, TrafficGen_wait_time[i] +TrafficGen_duration[i])
+  for i = 1 to number of traffic generators 
 
 Version 1.0 (26th May 2015)
 ---------------------------

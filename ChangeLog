@@ -24,6 +24,7 @@ Version 1.1 (XXX)
 - broadcast ping enabled in all example configs now
 - Prevent adding empty entries in flow cache (could happen if analysis
   was run with tcpdump not in path)
+- Added pktgen-0.3.1.tgz from http://caia.swin.edu.au/bitss/tools/pktgen-0.3.1.tgz
 - Imported CAIA Technical Report source under CC-BY-SA-4.0 for TEACUP
 - Imported CAIA Technical Report source under CC-BY-SA-4.0 for TEAPLOT
 - Imported TEAPLOT 0.1.1 source for 2D and 3D animation

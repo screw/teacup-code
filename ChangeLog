@@ -31,6 +31,7 @@ Version 1.1 (XXX)
 - Imported http://caia.swin.edu.au/tools/teacup/downloads/teacup-dash-patch-0.2.tgz
   to enable generation of DASH traffic using dash.js inside a browser
 - Updated teaplot ('fab animate') to version 0.2 (see ./animate/ChangeLog.teaplot)
+- Added support for launching an nginx web server (as an alternative traffic source)
 - Updated plot code so that points are not plotted twice (note that only
   code using plot() has been updated but not code that uses boxplot() or
   other derivatives of plot but ggplot stuff should not need this anyway)
@@ -54,8 +55,8 @@ Version 1.0 (26th May 2015)
   reconfiguring the test interface and static route
 - Fixed bug in Windows host setup introduced in version 0.9.3
 - Code cleanup and little fixes
-- Changed default experiment ID prefix to: 'exp_' + now.strftime("%Y%m%d-%H%M%S")
-  If you want to analyse experiment data with the old experiment ID prefix in 
+- Changed default test ID prefix to: 'exp_' + now.strftime("%Y%m%d-%H%M%S")
+  If you want to analyse experiment data with the old test ID prefix in 
   file names with analyse_cmpexp or analyse_2d_density, you must specify 
   test_id_prefix='[0-9]{8}\-[0-9]{6}_experiment_' as parameter.
 

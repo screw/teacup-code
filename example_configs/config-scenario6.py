@@ -24,7 +24,7 @@ env.shell = '/bin/sh -c'
 #
 
 # Path to teacup scripts
-TPCONF_script_path = '/home/teacup/teacup-0.8'
+TPCONF_script_path = '/home/teacup/teacup-1.1'
 # DO NOT remove the following line
 sys.path.append(TPCONF_script_path)
 
@@ -33,14 +33,13 @@ TPCONF_debug_level = 0
 
 # Host lists
 TPCONF_router = ['newtcprt3', ]
-TPCONF_hosts = [ 'newtcp20', 'newtcp21', 'newtcp27', ]
+TPCONF_hosts = [ 'newtcp20', 'newtcp33', ]
 
 # Map external IPs to internal IPs
 TPCONF_host_internal_ip = {
     'newtcprt3': ['172.16.10.1', '172.16.11.1'],
     'newtcp20':  ['172.16.10.60'],
-    'newtcp21':  ['172.16.10.61'],
-    'newtcp27':  ['172.16.11.67'],
+    'newtcp27':  ['172.16.11.33'],
 }
 
 #
@@ -116,24 +115,21 @@ TPCONF_router_queues = [
 # TPCONF_host_internal_ip). Alternativly, client and server can be specified as
 # internal addresses, which allows to use any internal interfaces configured.
 
-traffic_dash = [
-    # Start server and create content (server must be started first)
-    ('0.0', '1', " start_http_server, server='newtcp27', port=80 "),
-    ('0.0', '2', " create_http_dash_content, server='newtcp27', duration=2*V_duration, "
-     " rates='500, 1000', cycles='5, 10' "),
+traffic_dash_streaming = [ 
+	# Start server (server must be started first)
+   	( '0.0', '1', " start_http_server, server='newtcp33', port='8000', 
+	  docroot='/data/dash_dataset' "), 
 
-    # Create DASH-like flows
-    ('0.5', '3', " start_httperf_dash, client='newtcp20', server='newtcp27', port=80, "
-     " duration=V_duration, rate=500, cycle=5, prefetch=2.0, "
-     " prefetch_timeout=2.0 "),
-    ('0.5', '4', " start_httperf_dash, client='newtcp20', server='newtcp27', port=80, "
-     " duration=V_duration, rate=1000, cycle=10, prefetch=2.0, "
-     " prefetch_timeout=2.0 "),
+	# Create DASH flows 
+	( '0.1', '2', " start_dash_streaming_dashjs, client='newtcp20', serv='newtcp33', 
+	  serv_port='8000', browser='firefox', chunk_size=V_chunksize, mpd=V_mpd,
+	  player_path='136.186.229.181:8080/dashjs-v2.4.1/samples/dash-if-reference-player', 
+	  duration=V_duration " ),
 
 ]
 
 # THIS is the traffic generator setup we will use
-TPCONF_traffic_gens = traffic_dash
+TPCONF_traffic_gens = traffic_dash_streaming
 
 #
 # Traffic parameters 
@@ -200,6 +196,11 @@ TPCONF_aqms = ['pfifo', 'codel', 'fq_codel', ]
 # (e.g. we can specify 4Kbytes)
 TPCONF_buffer_sizes = [100]
 
+# Video chunk size and MPD pair
+TPCONF_chunksize_mpd = [
+    ('10','BigBuckBunny_10s.mpd'),   
+]
+
 #
 # List of all parameters that can be varied and default values
 #
@@ -225,6 +226,7 @@ TPCONF_parameter_list = {
     'bsizes'	    :  (['V_bsize'], 	  ['bs'], 	TPCONF_buffer_sizes, 	 {}),
     'runs'	    :  (['V_runs'],       ['run'], 	range(TPCONF_runs), 	 {}),
     'bandwidths'    :  (['V_down_rate', 'V_up_rate'], ['down', 'up'], TPCONF_bandwidths, {}),
+    'chunksize_mpd' : (['V_chunksize','V_mpd'], ['chunksize','mpd'], TPCONF_chunksize_mpd, {}),
 }
 
 # Default setting for variables (used for variables if not varied)
@@ -242,6 +244,8 @@ TPCONF_variable_defaults = {
     'V_up_rate'	    	:	TPCONF_bandwidths[0][1],
     'V_aqm'	    	:	TPCONF_aqms[0],
     'V_bsize'	    	:	TPCONF_buffer_sizes[0],
+    'V_chunksize'	:	TPCONF_chunksize_mpd[0][0],
+    'V_mpd'		: 	TPCONF_chunksize_mpd[0][1],
 }
 
 # Specify the parameters we vary through all values, all others will be fixed

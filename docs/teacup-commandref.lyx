@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass IEEEtran
 \begin_preamble
 %\usepackage{fixltx2e}
@@ -67,16 +69,16 @@
 \language_package default
 \inputencoding default
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -128,58 +130,136 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
-\tracking_changes false
-\output_changes true
+\tracking_changes true
+\output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author 193492759 "gja"
+\author 1685850735 "russell"
 \end_header
 
 \begin_body
 
-\begin_layout Title
-TEACUP v1.0 -- Command Reference
-\end_layout
+\begin_layout Standard
 
-\begin_layout Author
-\begin_inset Flex Author Name
-status open
-
-\begin_layout Plain Layout
-Sebastian Zander
-\end_layout
-
-\end_inset
-
-
-\begin_inset Flex Author Affiliation
-status open
-
-\begin_layout Plain Layout
-Centre for Advanced Internet Architectures
-\begin_inset Newline newline
-\end_inset
-
-Swinburne University of Technology
-\begin_inset Newline newline
-\end_inset
-
-Melbourne, Australia
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex URL
+\change_inserted 193492759 1517804523
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-szander@swin.edu.au
+\change_inserted 193492759 1517804464
+
+
+\backslash
+title{TEACUP v1.1 -- Command Reference}
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 193492759 1517804798
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 193492759 1517804108
+
+
+\backslash
+author{
+\backslash
+IEEEauthorblockN{Editor: Sebastian Zander}
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 193492759 1517804108
+
+
+\backslash
+IEEEauthorblockA{
+\backslash
+url{s.zander@murdoch.edu.au}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 193492759 1517804799
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 193492759 1517804799
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 193492759 1517804764
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 193492759 1517804645
+
+
+\backslash
+begin{abstract} This technical report lists all the TEACUP tasks implemented
+ and their parameters as well as the environment variables that can be used
+ to control the look of graphs.
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 193492759 1517804631
+
+
+\backslash
+end{abstract}
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 193492759 1517804631
+
+
+\backslash
+begin{IEEEkeywords} TCP, experiments, automated control
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 193492759 1517804631
+
+
+\backslash
+end{IEEEkeywords}
 \end_layout
 
 \end_inset
@@ -230,6 +310,8 @@ footrulewidth}{0pt}% Footer rule
 fancyfoot[C]{
 \backslash
 small{
+\change_deleted 193492759 1517804839
+
 \backslash
 copyright~2015 -- 2016 CAIA, Swinburne University of Technology
 \backslash
@@ -241,8 +323,22 @@ url{http://caia.swin.edu.au/reports/150529C/CAIA-TR-150529C.pdf}
 \backslash
 
 \backslash
-This version released June 2016 under Creative Commons BY-SA 4.0 License
- -- see terms on page~
+
+\change_deleted 1685850735 1494305394
+This version
+\change_deleted 193492759 1517804839
+Version 1.0 was released June 2016 under Creative Commons BY-SA 4.0 License
+ -- s
+\change_inserted 193492759 1517804848
+Based on a version of  
+\backslash
+url{http://caia.swin.edu.au/reports/150529C/CAIA-TR-150529C.pdf}, orginally
+ released June 2016 under Creative Commons BY-SA 4.0 License, 
+\backslash
+copyright~2015 -- 2016 CAIA, Swinburne University of Technology.
+ S
+\change_unchanged
+ee terms on page~
 \backslash
 pageref{sec:Copying}}}
 \end_layout
@@ -288,7 +384,13 @@ headrulewidth}{0pt}
 \backslash
 lfoot{
 \backslash
-small{TEACUP v1.0 -- Command Reference}}
+small{TEACUP v1.
+\change_inserted 1685850735 1494305083
+1
+\change_deleted 1685850735 1494305083
+0
+\change_unchanged
+ -- Command Reference}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -304,7 +406,23 @@ cfoot{}
 \backslash
 rfoot{
 \backslash
-small{June 9, 2016~~page 
+small{
+\change_deleted 1685850735 1494305498
+June
+\change_deleted 193492759 1517823338
+May
+\change_inserted 193492759 1517823349
+Feb
+\change_unchanged
+ 9, 201
+\change_inserted 193492759 1517823341
+8
+\change_deleted 193492759 1517823341
+7
+\change_deleted 1685850735 1494305500
+6
+\change_unchanged
+~~page 
 \backslash
 thepage ~of 
 \backslash
@@ -314,17 +432,8 @@ pageref{LastPage}}}
 \end_inset
 
 
-\end_layout
+\change_inserted 193492759 1517804531
 
-\begin_layout Abstract
-This technical report lists all the TEACUP tasks implemented and their parameter
-s as well as the environment variables that can be used to control the look
- of graphs.
- 
-\end_layout
-
-\begin_layout Keywords
-TCP, Testbed experiments
 \end_layout
 
 \begin_layout Section
@@ -357,15 +466,48 @@ TCP Experiment Automation Controlled Using Python
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "zander2015caia_teacup_v1.0"
+key "zander2018_teacup_v1.1_system"
 
 \end_inset
 
- is a software package designed to run TCP experiments.
- In this report we list all the tasks implemented by TEACUP version 1.0 and
- their parameters as well as the environment variables that can be used
- to control the look of graphs.
- This report is an update of the earlier reports 
+ is a software package 
+\change_deleted 193492759 1517805070
+designed to
+\change_inserted 193492759 1517805070
+that
+\change_unchanged
+ 
+\change_inserted 193492759 1517805065
+automates the process of 
+\change_unchanged
+run
+\change_inserted 193492759 1517805074
+ning
+\change_unchanged
+ TCP experiments
+\change_inserted 193492759 1517805086
+ across a range of network and system configurations
+\change_unchanged
+.
+ In this report we list 
+\change_deleted 193492759 1517805105
+all the 
+\change_unchanged
+tasks implemented by TEACUP version 1.
+\change_inserted 1685850735 1494305098
+1
+\change_deleted 1685850735 1494305098
+0
+\change_unchanged
+ and their parameters
+\change_inserted 1685850735 1494305106
+,
+\change_unchanged
+ as well as the environment variables that can be used to control the look
+ of graphs.
+ 
+\change_deleted 193492759 1517805025
+This report is an update of the earlier reports 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2014teacup_ref_v0.4,zander2014teacup_ref_v0.6"
@@ -373,6 +515,8 @@ key "zander2014teacup_ref_v0.4,zander2014teacup_ref_v0.6"
 \end_inset
 
 .
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -394,7 +538,7 @@ TEACUP uses environment variables to pass information from the tasks (e.g.
  by a user to customise the plotting of graphs 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "zander2015caia_teacup_v1.0_analysis"
+key "zander2018_teacup_v1.1_analysis"
 
 \end_inset
 
@@ -430,7 +574,7 @@ any
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="20" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="4.5cm">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="10.5cm">
@@ -528,7 +672,11 @@ Interpolation factor for throughput calculation windows (must be an integer
 \end_inset
 
 TC_AGGR_INT_FACTOR seconds.
- This meas we get interpolated points.
+ This mea
+\change_inserted 1685850735 1488938623
+n
+\change_unchanged
+s we get interpolated points.
 \end_layout
 
 \end_inset
@@ -678,8 +826,13 @@ TC_FILTER_FLOWS
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' flows not active in the (stime,etime) intervall defined by
- the user will be filtered out.
+If set to `1' flows not active in the (stime,etime) 
+\change_deleted 1685850735 1488938652
+intervall
+\change_inserted 1685850735 1488938652
+interval
+\change_unchanged
+ defined by the user will be filtered out.
  By default, set to `0' flows are not filtered out and will appear in the
  legend even if they were inactive in (stime,etime).
 \end_layout
@@ -1101,8 +1254,8 @@ Compare two metrics, such as RTT, CWND or throughput, for experiments with
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="34" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<lyxtabular version="3" rows="36" columns="3">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -1230,6 +1383,43 @@ Last query/burst response time to be included in plot (numbered from 1).
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1488942454
+etime
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1488942454
+duration of experiment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1488942454
+End time for filtering window.
+ For each experiment (test ID) only data inside the specified time window
+ is used for plotting.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 exp_list
 \end_layout
 
@@ -1250,7 +1440,23 @@ experiments_completed.txt
 \begin_layout Plain Layout
 Specifies the file that contains the test ID list.
  All listed experiments will be potentially included in the comparison.
- variables allows to further filter out experiments.
+ 
+\change_inserted 1685850735 1488938902
+V
+\change_deleted 1685850735 1488938901
+v
+\change_unchanged
+ariables allow
+\change_deleted 1685850735 1488938904
+s
+\change_unchanged
+ t
+\change_inserted 1685850735 1488938915
+he ability to
+\change_deleted 1685850735 1488938911
+o
+\change_unchanged
+ further filter out experiments.
 \end_layout
 
 \end_inset
@@ -1521,8 +1727,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943675
+.
+\change_deleted 1685850735 1488943675
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943678
+I
+\change_deleted 1685850735 1488943677
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -1743,11 +1960,22 @@ slowest_only
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot one per flow.
- If set to `1' at each point in time only plot the slowest response time
- over all flows.
- If set to `2' at each point in time plot the time between first request
- sent and last byte of last response received in each burst.
+If set to `0'
+\change_inserted 1685850735 1488945146
+,
+\change_unchanged
+ plot one per flow.
+ If set to `1'
+\change_inserted 1685850735 1488945148
+,
+\change_unchanged
+ at each point in time only plot the slowest response time over all flows.
+ If set to `2'
+\change_inserted 1685850735 1488945151
+,
+\change_unchanged
+ at each point in time plot the time between first request sent and last
+ byte of last response received in each burst.
 \end_layout
 
 \end_inset
@@ -1776,9 +2004,16 @@ smoothed
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' (default) smoothed TCP RTTs are plotted.
- If set to `0' unsmoothed TCP RTT estimates are plotted and for SIFTR data
- the ERTT 
+If set to `1' (default)
+\change_inserted 1685850735 1488944248
+,
+\change_unchanged
+ smoothed TCP RTTs are plotted.
+ If set to `0'
+\change_inserted 1685850735 1488944251
+,
+\change_unchanged
+ unsmoothed TCP RTT estimates are plotted and for SIFTR data the ERTT 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "CAIA-TR-100219A"
@@ -1817,13 +2052,67 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805733
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805733
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947227
+.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1488942470
+stime
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1488942470
+`0.0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1488942470
+Start time for filtering window.
+ For each experiment (test ID) only data inside the specified time window
+ is used for plotting.
 \end_layout
 
 \end_inset
@@ -1843,9 +2132,17 @@ test_id_prefix
 \begin_inset Text
 
 \begin_layout Plain Layout
-`[0-9]{8}
+`
+\change_inserted 193492759 1517805226
+exp_
+\change_unchanged
+[0-9]{8}
 \backslash
--[0-9]{6}_experiment'
+-[0-9]{6}
+\change_deleted 193492759 1517805231
+_experiment
+\change_unchanged
+'
 \end_layout
 
 \end_inset
@@ -1855,7 +2152,13 @@ test_id_prefix
 
 \begin_layout Plain Layout
 Specify test ID prefix as regular expression.
- Must be especified if not the default prefix.
+ Must be 
+\change_deleted 1685850735 1488942590
+especified
+\change_inserted 1685850735 1488942590
+specified
+\change_unchanged
+ if not the default prefix.
 \end_layout
 
 \end_inset
@@ -1884,12 +2187,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488944049
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488942628
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488942652
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -2190,7 +2503,7 @@ Plot acknowledged bytes or dupACKs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="21" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -2488,8 +2801,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943684
+.
+\change_deleted 1685850735 1488943684
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943686
+I
+\change_deleted 1685850735 1488943685
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -2681,13 +3005,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805744
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805744
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947231
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -2748,8 +3089,23 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948130
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946733
+ting
+\change_unchanged
+ 
+\change_inserted 1685850735 1488946735
+of 
+\change_unchanged
+the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948133
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -2779,12 +3135,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488944057
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944881
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488944061
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -2871,7 +3237,7 @@ This task computes Round Trip Time (RTT), TCP congestion window (CWND) and
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="21" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -3167,8 +3533,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943692
+.
+\change_deleted 1685850735 1488943692
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943694
+I
+\change_deleted 1685850735 1488943694
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -3361,13 +3738,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805753
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805753
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947234
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -3396,9 +3790,16 @@ smoothed
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' (default) smoothed TCP RTTs are plotted.
- If set to `0' unsmoothed TCP RTT estimates are plotted and for SIFTR data
- the ERTT 
+If set to `1' (default)
+\change_inserted 1685850735 1488943061
+,
+\change_unchanged
+ smoothed TCP RTTs are plotted.
+ If set to `0'
+\change_inserted 1685850735 1488943064
+,
+\change_unchanged
+ unsmoothed TCP RTT estimates are plotted and for SIFTR data the ERTT 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "CAIA-TR-100219A"
@@ -3464,8 +3865,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948141
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946798
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948144
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -3495,12 +3907,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943074
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944887
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488944068
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -3552,14 +3974,30 @@ analyse_cmpexp
 \end_layout
 
 \begin_layout Standard
-This tasks allows to compare one of the metrics, such as RTT, CWND or throughput
-, for experiments with different settings.
+This task
+\change_deleted 1685850735 1489545924
+s
+\change_unchanged
+ allows t
+\change_inserted 1685850735 1489545877
+he
+\change_deleted 1685850735 1489545876
+o
+\change_unchanged
+ compar
+\change_inserted 1685850735 1489545881
+ison of
+\change_deleted 1685850735 1489545878
+e
+\change_unchanged
+ one of the metrics, such as RTT, CWND or throughput, for experiments with
+ different settings.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="34" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -3615,8 +4053,16 @@ cum_ackseq
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot average ackseq data per time window.
- If set to `1' plot cumulative ackseq data (default).
+If set to `0'
+\change_inserted 1685850735 1488943103
+,
+\change_unchanged
+ plot average ackseq data per time window.
+ If set to `1'
+\change_inserted 1685850735 1488943107
+,
+\change_unchanged
+ plot cumulative ackseq data (default).
 \end_layout
 
 \end_inset
@@ -3645,8 +4091,16 @@ dupacks
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot acknowledged bytes (default).
- If set to `1' plot dupACKS.
+If set to `0'
+\change_inserted 1685850735 1488943114
+,
+\change_unchanged
+ plot acknowledged bytes (default).
+ If set to `1'
+\change_inserted 1685850735 1488943120
+,
+\change_unchanged
+ plot dupACKS.
 \end_layout
 
 \end_inset
@@ -3738,7 +4192,27 @@ experiments_completed.txt
 \begin_layout Plain Layout
 Specifies the file that contains the test ID list.
  All listed experiments will be potentially included in the comparison.
- variables allows to further filter out experiments.
+ 
+\change_inserted 1685850735 1494302989
+V
+\change_deleted 1685850735 1494302988
+v
+\change_unchanged
+ariables allows t
+\change_inserted 1685850735 1494302995
+he
+\change_deleted 1685850735 1494302994
+o
+\change_unchanged
+ further filter
+\change_inserted 1685850735 1494302998
+ing
+\change_unchanged
+ out
+\change_inserted 1685850735 1494303006
+ of
+\change_unchanged
+ experiments.
 \end_layout
 
 \end_inset
@@ -3864,8 +4338,20 @@ merge_data
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plots per flow data, such as per responder response times.
- If set to `1' merge the data of all flows for each experiment.
+If set to `0'
+\change_inserted 1685850735 1488943190
+,
+\change_unchanged
+ plot
+\change_deleted 1685850735 1488943236
+s
+\change_unchanged
+ per flow data, such as per responder response times.
+ If set to `1'
+\change_inserted 1685850735 1488943208
+,
+\change_unchanged
+ merge the data of all flows for each experiment.
 \end_layout
 
 \end_inset
@@ -3954,8 +4440,11 @@ omit_const
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' any data series that are constant for the the duration of
- the experiment are not plotted.
+If set to `1' any data series that are constant for 
+\change_deleted 1685850735 1488943273
+the 
+\change_unchanged
+the duration of the experiment are not plotted.
 \end_layout
 
 \end_inset
@@ -4044,8 +4533,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943703
+.
+\change_deleted 1685850735 1488943702
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943704
+I
+\change_deleted 1685850735 1488943704
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -4266,11 +4766,22 @@ res_time_mode
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' normal plot (default).
- If set to `1' plot nominal response times in addition to box/median/mean
- of observed response times.
- If set to `2' plot ratio of median/mean (as per ptype) and nominal response
- time.
+If set to `0'
+\change_inserted 1685850735 1488944134
+,
+\change_unchanged
+ normal plot (default).
+ If set to `1'
+\change_inserted 1685850735 1488944138
+,
+\change_unchanged
+ plot nominal response times in addition to box/median/mean of observed
+ response times.
+ If set to `2'
+\change_inserted 1685850735 1488944140
+,
+\change_unchanged
+ plot ratio of median/mean (as per ptype) and nominal response time.
  
 \end_layout
 
@@ -4330,11 +4841,22 @@ slowest_only
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot one per flow.
- If set to `1' at each point in time only plot the slowest response time
- over all flows.
- If set to `2' at each point in time plot the time between first request
- sent and last byte of last response received in each burst.
+If set to `0'
+\change_inserted 1685850735 1488944204
+,
+\change_unchanged
+ plot one per flow.
+ If set to `1'
+\change_inserted 1685850735 1488944206
+,
+\change_unchanged
+ at each point in time only plot the slowest response time over all flows.
+ If set to `2'
+\change_inserted 1685850735 1488944209
+,
+\change_unchanged
+ at each point in time plot the time between first request sent and last
+ byte of last response received in each burst.
 \end_layout
 
 \end_inset
@@ -4363,9 +4885,16 @@ smoothed
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' (default) smoothed TCP RTTs are plotted.
- If set to `0' unsmoothed TCP RTT estimates are plotted and for SIFTR data
- the ERTT 
+If set to `1' (default)
+\change_inserted 1685850735 1488944227
+,
+\change_unchanged
+ smoothed TCP RTTs are plotted.
+ If set to `0'
+\change_inserted 1685850735 1488944231
+,
+\change_unchanged
+ unsmoothed TCP RTT estimates are plotted and for SIFTR data the ERTT 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "CAIA-TR-100219A"
@@ -4404,13 +4933,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805764
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805764
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947244
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -4490,9 +5036,17 @@ test_id_prefix
 \begin_inset Text
 
 \begin_layout Plain Layout
-`[0-9]{8}
+`
+\change_inserted 193492759 1517805255
+exp_
+\change_unchanged
+[0-9]{8}
 \backslash
--[0-9]{6}_experiment'
+-[0-9]{6}
+\change_deleted 193492759 1517805259
+_experiment
+\change_unchanged
+'
 \end_layout
 
 \end_inset
@@ -4531,12 +5085,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943430
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488943441
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943448
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -4649,13 +5213,17 @@ analyse_cwnd
 \end_layout
 
 \begin_layout Standard
-This tasks plots TCP CWND data over time.
+This task
+\change_deleted 1685850735 1489545919
+s
+\change_unchanged
+ plots TCP CWND data over time.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="16" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -4890,8 +5458,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943566
+.
+\change_deleted 1685850735 1488943565
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943568
+I
+\change_deleted 1685850735 1488943568
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -4983,13 +5562,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805775
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805775
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947340
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -5049,7 +5645,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946809
+he
+\change_deleted 1685850735 1488946809
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946814
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -5079,12 +5684,24 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943837
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires to
+\change_inserted 1685850735 1488944720
+ 
+\change_deleted 1685850735 1488944719
+ have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943844
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -5164,13 +5781,29 @@ analyse_dash_goodput
 \end_layout
 
 \begin_layout Standard
-This tasks allows to compare the goodput of DASH-like flows over time.
+This task
+\change_deleted 1685850735 1489545930
+s
+\change_unchanged
+ allows t
+\change_deleted 1685850735 1494303028
+o
+\change_inserted 1685850735 1494303014
+he
+\change_unchanged
+ compar
+\change_inserted 1685850735 1494303022
+ison of
+\change_deleted 1685850735 1494303018
+e
+\change_unchanged
+ the goodput of DASH-like flows over time.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="15" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -5349,8 +5982,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943716
+.
+\change_deleted 1685850735 1488943715
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943718
+I
+\change_deleted 1685850735 1488943717
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -5568,12 +6212,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943854
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944737
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943857
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -5659,7 +6313,7 @@ Plot goodput of TCP flows over time (from acknowledged bytes).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="18" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -5866,8 +6520,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943597
+.
+\change_deleted 1685850735 1488943597
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943601
+I
+\change_deleted 1685850735 1488943599
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -6029,13 +6694,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805790
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805790
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947349
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -6096,8 +6778,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948150
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946829
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948153
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -6157,12 +6850,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943862
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944745
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943866
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -6242,14 +6945,18 @@ analyse_incast
 \end_layout
 
 \begin_layout Standard
-This tasks plots the response times for queries over time for incast experiment
- (response times are taken from httperf files).
+This task
+\change_deleted 1685850735 1489545939
+s
+\change_unchanged
+ plots the response times for queries over time for incast experiment (response
+ times are taken from httperf files).
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="23" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.1cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -6305,8 +7012,16 @@ boxplot
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot one line per flow.
- If set to `1' plot boxplots over all flows.
+If set to `0'
+\change_inserted 1685850735 1488945004
+,
+\change_unchanged
+ plot one line per flow.
+ If set to `1'
+\change_inserted 1685850735 1488945013
+,
+\change_unchanged
+ plot boxplots over all flows.
 \end_layout
 
 \end_inset
@@ -6513,8 +7228,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943726
+.
+\change_deleted 1685850735 1488943725
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943727
+I
+\change_deleted 1685850735 1488943727
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -6733,11 +7459,22 @@ slowest_only
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot one per flow.
- If set to `1' at each point in time only plot the slowest response time
- over all flows.
- If set to `2' at each point in time plot the time between first request
- sent and last byte of last response received in each burst.
+If set to `0'
+\change_inserted 1685850735 1488945098
+,
+\change_unchanged
+ plot one per flow.
+ If set to `1'
+\change_inserted 1685850735 1488945100
+,
+\change_unchanged
+ at each point in time only plot the slowest response time over all flows.
+ If set to `2'
+\change_inserted 1685850735 1488945113
+,
+\change_unchanged
+ at each point in time plot the time between first request sent and last
+ byte of last response received in each burst.
 \end_layout
 
 \end_inset
@@ -6769,13 +7506,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805799
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805799
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947352
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -6866,7 +7620,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946836
+he
+\change_deleted 1685850735 1488946836
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946843
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -6896,12 +7659,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943871
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944753
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943873
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -6987,7 +7760,7 @@ Plot times between request/queries for incast experiment.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="22" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -7072,8 +7845,16 @@ by_responder
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' aggregate times for all responders.
- If set to `1' extract times for each responder separately.
+If set to `0'
+\change_inserted 1685850735 1488945239
+,
+\change_unchanged
+ aggregate times for all responders.
+ If set to `1'
+\change_inserted 1685850735 1488945248
+,
+\change_unchanged
+ extract times for each responder separately.
 \end_layout
 
 \end_inset
@@ -7102,8 +7883,16 @@ cumulative
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' generate non-cumulative statistics.
- If set to `1' generate cumulative statistics.
+If set to `0'
+\change_inserted 1685850735 1488945242
+,
+\change_unchanged
+ generate non-cumulative statistics.
+ If set to `1'
+\change_inserted 1685850735 1488945250
+,
+\change_unchanged
+ generate cumulative statistics.
 \end_layout
 
 \end_inset
@@ -7132,10 +7921,17 @@ diff_to_burst_start
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' print time differences between requests, i.e.
+If set to `0'
+\change_inserted 1685850735 1488945438
+,
+\change_unchanged
+ print time differences between requests, i.e.
  the times are the differences between request and previous request.
- If set to `1' print time differences between requests and first requests
- in burst (default).
+ If set to `1'
+\change_inserted 1685850735 1488945439
+,
+\change_unchanged
+ print time differences between requests and first requests in burst (default).
  
 \end_layout
 
@@ -7313,8 +8109,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943619
+.
+\change_deleted 1685850735 1488943618
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943621
+I
+\change_deleted 1685850735 1488943620
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -7506,13 +8313,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805806
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805806
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947354
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -7572,7 +8396,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946857
+he
+\change_deleted 1685850735 1488946857
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946861
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -7602,12 +8435,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943880
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944759
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943884
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -7683,18 +8526,920 @@ Minimum y-axis value.
 \end_layout
 
 \begin_layout Section
+
+\change_inserted 1685850735 1489545568
+analyse_owd
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1685850735 1489545568
+This task plots the one way delay (OWD) over time.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1685850735 1489545568
+\begin_inset Tabular
+<lyxtabular version="3" rows="23" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="11cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Default Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Explanation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489546040
+anchor_map
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489549412
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489549444
+Expressed in the form <src_ip1>:<dst_ip1>;<src_ip2>:<dst_ip2>;...
+ , this parameter can be used to determine whether to log OWD packets of
+ the source ip address when closer to the destination ip
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489546032
+burst_sep
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489546032
+`0.0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489546032
+Time between bursts.
+ If set to values larger then 0.0, data is separated into bursts if idle
+ periods are longer than burst_sep.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+eburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Last query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts up to the last.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+etime
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+duration of experiment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+End time for plot window (x-axis ends at this time).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+lnames
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+List of names for legend (separated by semicolons).
+ The list must have the same length as the data series plotted.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+min_values
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`3'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Only data series with more than min_values data values are plotted.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+omit_const
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+If set to `1' any data series that are constant for the the duration of
+ the experiment are not plotted.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+out_dir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Extracted data files and plots are generated in this directory.
+ By default the files are generated in the experiment directory.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+out_name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+A user-defined string that is used as prefix for the generated plot file.
+ It can be used to describe the plot file.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489549541
+owd_midpoint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489549558
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489549579
+This can be used determine whether the OWD is logged at the packets origin
+ (`0'), or at the halfway between the origin and the destination (`1').
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+pdf_dir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+out_dir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Store generated plots (PDF files) and plot logs (Rout files) in this directory.
+ By default the files are created in the out_dir directory.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+plot_params
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Environment variables passed to the plot script overriding TEACUP's default
+ settings.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+plot_script
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Script that is executed for plotting.
+ Data is passed to the script via environment variables.
+ The parameter can be of the form 
+\begin_inset Quotes eld
+\end_inset
+
+<interpreter> <script>
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Empty string means use default script.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+replot_only
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+If set to `1' the data extraction is skipped and the plots are regenerated
+ based on the data previously extracted.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+sburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+First query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts starting from the first.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+seek_window
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`16000'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Matching of packets within the seek window size of the most recent match
+ in the destination capture file.
+ The default value is set to 16000 for UDP traffic, to avoid duplicate matching.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+source_filter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Specify the sources or destinations to filter on.
+ Metrics will only be plotted for the sources and destinations on the list.
+ See 
+\change_deleted 193492759 1517805814
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2015caia_teacup_v1.0_analysis"
+
+\end_inset
+
+
+\change_inserted 193492759 1517805814
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_inserted 1685850735 1489545568
+ for how to specify the list.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+stime
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`0.0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Start time for plot window (x-axis starts at this time).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+test_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Specifies the test ID of the experiment to be analysed.
+ Must be specified.
+ Specifying multiple test IDs with semicolons as separators allows the plotting
+ of the results of multiple experiments in the same graph.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+ts_correct
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+If set to `1', plot data with timestamps corrected based on estimated clock
+ offsets.
+ This requires a clock offset data file that can be created with the get_clock_o
+ffsets task.
+ If set to `0' (default), plot data based on timestamps as they are in the
+ log files.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+ymax
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Maximum y-axis value.
+ By default (if ymax set to `0') the maximum will be determined automatically.
+ The parameter can be used to enforce a certain maximum, i.e.
+ to generate different plots with the same scale.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+ymin
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489545568
+Minimum y-axis value.
+ The parameter can be used to enforce the specified minimum.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 analyse_pktloss
 \end_layout
 
 \begin_layout Standard
-This tasks plots the packet loss rate over time (works only for FPS game
- traffic generated).
+This task
+\change_deleted 1685850735 1489545955
+s
+\change_unchanged
+ plots the packet loss rate over time
+\change_deleted 1685850735 1489542511
+ (works only for FPS game traffic generated)
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="17" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<lyxtabular version="3" rows="22" columns="3">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -7732,6 +9477,81 @@ Explanation
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623494
+burst_sep
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623494
+`0.0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623494
+Time between bursts.
+ If set to values larger then 0.0, data is separated into bursts if idle
+ periods are longer than burst_sep.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623494
+eburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623494
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623494
+Last query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts up to the last.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623485
 etime
 \end_layout
 
@@ -7741,6 +9561,8 @@ etime
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623485
 duration of experiment
 \end_layout
 
@@ -7750,7 +9572,47 @@ duration of experiment
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623485
 End time for plot window (x-axis ends at this time).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623537
+log_loss
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623537
+`2'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623537
+This can be equal to 1 for the plotting of individual packet loss events,
+ or being equal to 2, which enables the plotting of cumulative packet loss
+ events (default).
+ 
 \end_layout
 
 \end_inset
@@ -7898,8 +9760,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943628
+.
+\change_deleted 1685850735 1488943627
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943630
+I
+\change_deleted 1685850735 1488943629
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -8040,6 +9913,79 @@ If set to `1' the data extraction is skipped and the plots are regenerated
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623576
+sburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623576
+`1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623576
+First query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts starting from the first.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623576
+seek_window
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623576
+`16000'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623576
+Matching of packets within the seek window size of the most recent match
+ in the destination capture file.
+ The default value is set to 16000 for UDP traffic, to avoid duplicate matching.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 source_filter
 \end_layout
 
@@ -8061,13 +10007,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805822
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805822
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947357
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -8127,7 +10090,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946466
+he
+\change_deleted 1685850735 1488946465
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946471
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -8157,12 +10129,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943889
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944765
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943892
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -8235,6 +10217,8 @@ Minimum y-axis value.
 \end_inset
 
 
+\change_deleted 1685850735 1489623644
+
 \end_layout
 
 \begin_layout Section
@@ -8242,7 +10226,11 @@ analyse_rtt
 \end_layout
 
 \begin_layout Standard
-This tasks computes RTT using SPP 
+This task
+\change_deleted 1685850735 1489549886
+s
+\change_unchanged
+ computes RTT using SPP 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander13minimally,sppweb"
@@ -8255,7 +10243,7 @@ key "zander13minimally,sppweb"
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="21" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -8520,8 +10508,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943636
+.
+\change_deleted 1685850735 1488943636
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943638
+I
+\change_deleted 1685850735 1488943638
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -8713,13 +10712,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805830
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805830
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947139
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -8779,7 +10795,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946490
+he
+\change_deleted 1685850735 1488946489
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946494
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -8809,12 +10834,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943895
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944773
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943897
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -8843,8 +10878,24 @@ udp_map
 \begin_inset Text
 
 \begin_layout Plain Layout
-This parameter allows to specify a map that defines how to combine unidirectiona
-l UDP flows, as SPP needs bidirectional flows.
+This parameter allows t
+\change_inserted 1685850735 1488947065
+he
+\change_deleted 1685850735 1488947065
+o
+\change_unchanged
+ specif
+\change_inserted 1685850735 1488947068
+ication
+\change_deleted 1685850735 1488947067
+y
+\change_unchanged
+ 
+\change_inserted 1685850735 1488947072
+of 
+\change_unchanged
+a map that defines how to combine unidirectional UDP flows, as SPP needs
+ bidirectional flows.
  The format is:
 \end_layout
 
@@ -8942,7 +10993,7 @@ This task plots the TCP RTT estimates over time.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="20" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -9177,8 +11228,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943644
+.
+\change_deleted 1685850735 1488943643
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943647
+I
+\change_deleted 1685850735 1488943647
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -9337,9 +11399,16 @@ smoothed
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' (default) smoothed TCP RTTs are plotted.
- If set to `0' unsmoothed TCP RTT estimates are plotted and for SIFTR data
- the ERTT 
+If set to `1' (default)
+\change_inserted 1685850735 1488944238
+,
+\change_unchanged
+ smoothed TCP RTTs are plotted.
+ If set to `0'
+\change_inserted 1685850735 1488944241
+,
+\change_unchanged
+ unsmoothed TCP RTT estimates are plotted and for SIFTR data the ERTT 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "CAIA-TR-100219A"
@@ -9378,13 +11447,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805857
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805857
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947157
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -9444,7 +11530,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946499
+he
+\change_deleted 1685850735 1488946499
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946503
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -9474,12 +11569,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943903
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944780
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943906
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -9592,13 +11697,23 @@ analyse_tcp_stat
 \end_layout
 
 \begin_layout Standard
-This task allows to plot an arbitrary TCP statistic over time.
+This task allows t
+\change_inserted 1685850735 1494302905
+he
+\change_deleted 1685850735 1494302905
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1494302910
+ting of
+\change_unchanged
+ an arbitrary TCP statistic over time.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="22" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.2cm">
 <column alignment="center" valignment="top" width="3.8cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -9833,8 +11948,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943658
+.
+\change_deleted 1685850735 1488943658
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943660
+I
+\change_deleted 1685850735 1488943659
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -10025,13 +12151,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805867
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805867
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947161
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -10091,7 +12234,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946512
+he
+\change_deleted 1685850735 1488946511
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946517
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -10121,12 +12273,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943911
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944787
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943915
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -10293,14 +12455,18 @@ analyse_throughput
 \end_layout
 
 \begin_layout Standard
-This tasks extracts the packet sizes from the tcpdump files and plots throughput
- over time.
+This task
+\change_deleted 1685850735 1489550006
+s
+\change_unchanged
+ extracts the packet sizes from the tcpdump files and plots throughput over
+ time.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="19" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -10534,8 +12700,19 @@ out_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-A user-defined string that is used as prefix for the generated plot file,
- it can be used to describe the plot file.
+A user-defined string that is used as prefix for the generated plot file
+\change_inserted 1685850735 1488943666
+.
+\change_deleted 1685850735 1488943666
+,
+\change_unchanged
+ 
+\change_inserted 1685850735 1488943668
+I
+\change_deleted 1685850735 1488943667
+i
+\change_unchanged
+t can be used to describe the plot file.
 \end_layout
 
 \end_inset
@@ -10697,13 +12874,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805876
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805876
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947165
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -10763,7 +12957,16 @@ test_id
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
  Must be specified.
- Specifying multiple test IDs with semicolons as separators allows to plot
+ Specifying multiple test IDs with semicolons as separators allows t
+\change_inserted 1685850735 1488946524
+he
+\change_deleted 1685850735 1488946524
+o
+\change_unchanged
+ plot
+\change_inserted 1685850735 1488946528
+ting of
+\change_unchanged
  the results of multiple experiments in the same graph.
 \end_layout
 
@@ -10823,12 +13026,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943920
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944794
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943923
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -10904,20 +13117,762 @@ Minimum y-axis value.
 \end_layout
 
 \begin_layout Section
+
+\change_inserted 1685850735 1489454916
+animate
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1685850735 1489623725
+This task uses the Teaplot tool to animate the specified experimental results
+ in a web interface (Note: This task is experimental, and problems may exist).
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1685850735 1489454908
+\begin_inset Tabular
+<lyxtabular version="3" rows="19" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="4.5cm">
+<column alignment="center" valignment="top" width="9.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+Default Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+Explanation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455223
+address
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455543
+`127.0.0.1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456605
+Used to Specify the IP address for the server.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455232
+animate_dir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455555
+`animate'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455971
+Identifies where the Teaplot animate directory is located (The directory
+ containing the Django WSGI application).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455244
+etime
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455244
+experiment duration
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455244
+End time for plot window (x-axis ends at this time).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455749
+exp_list
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456945
+'experiments_completed.txt'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455749
+Specifies the file that contains the test ID list.
+ Statistics will be computed for all experiments listed.
+ Only used if test_id is an empty string.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455260
+exp_dir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455567
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456122
+Indicates where the experimental data files can be found (Blank means use
+ the current working directory).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455337
+graph_count
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455578
+`1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456559
+Specifies the number of graphs to be displayed.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455344
+graph_names
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455581
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456548
+List of names for the graphs to be displayed via the graph_count parameter
+ (separated by semicolons).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456359
+metric
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456359
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456359
+The metric to use.
+ Currently supported metrics are `throughput', `spprtt', `tcprtt' (unsmoothed/ER
+TT), `cwnd', `tcpstat', `ackseq', `restime' and `iqtime'.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+lnames
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+List of names for legend (separated by semicolons).
+ The list must have the same length as the data series plotted.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+out_dir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+Extracted data files and plots are generated in this directory.
+ By default the files are generated in the experiment directory.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455408
+port
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455593
+`8000'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456591
+Used to Specify the port number for the server.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455413
+processes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455599
+`1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456655
+Indicates the number of uWSGI processes to use.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455434
+siftr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455607
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489457608
+Specifies whether to enable (`1') or disable (`0') SIFTR.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+source_filter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+Specify the sources or destinations to filter on.
+ Metrics will only be plotted for the sources and destinations on the list.
+ See 
+\change_deleted 193492759 1517805882
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2015caia_teacup_v1.0_analysis"
+
+\end_inset
+
+
+\change_inserted 193492759 1517805883
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_inserted 1685850735 1489454908
+ for how to specify the list.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+stime
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+`0.0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+Start time for plot window (x-axis starts at this time).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+test_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489454908
+Specifies the test ID of the experiment to be analysed.
+ Must be specified.
+ Specifying multiple test IDs with semicolons as separators allows the plotting
+ of the results of multiple experiments in the same graph.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455461
+threads
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455632
+`1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489456751
+Indicates the number of uWSGI threads for each process.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455491
+web10g
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489455624
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489457610
+Specifies whether to enable (`1') or disable (`0') web10g.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 authorize_key
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted 1685850735 1488947569
 Th
 \family typewriter
 \size footnotesize
 is
+\change_inserted 1685850735 1488947569
+
 \family default
 \size default
+This
+\change_unchanged
  task can be used to append the current user's public RSA key to the ~./ssh/autho
 rized_keys file of the remote user.
  The user can then login via SSH without having to enter a password.
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726245
+e task
+\change_inserted 1685850735 1489726245
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -10925,11 +13880,21 @@ check_config
 \end_layout
 
 \begin_layout Standard
-This tasks performs a number of sanity checks for the given config.py file.
+This task
+\change_deleted 1685850735 1489550103
+s
+\change_unchanged
+ performs a number of sanity checks for the given config.py file.
  It will terminate with an error message if there is an error in the config
  file.
  Otherwise, it will terminate with an OK message.
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726246
+e task
+\change_inserted 1685850735 1489726246
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -10938,9 +13903,21 @@ check_connectivity
 
 \begin_layout Standard
 This task checks the connectivity between each pair of hosts using ping.
- The task only checks connectivity on the test network, it does not check
- connectivity on the control network.
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726250
+e task
+\change_inserted 1685850735 1489726250
+is task
+\change_unchanged
+ only checks connectivity on the test network, it does not check connectivity
+ on the control network.
+ Th
+\change_deleted 1685850735 1489726253
+e task
+\change_inserted 1685850735 1489726253
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -10948,9 +13925,27 @@ check_host
 \end_layout
 
 \begin_layout Standard
-The task checks if all necessary tools are installed on a host.
- If a required tool is missing the task will terminate with an error.
- The task has no parameters.
+Th
+\change_deleted 1685850735 1489726256
+e task
+\change_inserted 1685850735 1489726256
+is task
+\change_unchanged
+ checks if all necessary tools are installed on a host.
+ If a required tool is missing th
+\change_deleted 1685850735 1489726260
+e task
+\change_inserted 1685850735 1489726260
+is task
+\change_unchanged
+ will terminate with an error.
+ Th
+\change_deleted 1685850735 1489726262
+e task
+\change_inserted 1685850735 1489726262
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -10958,10 +13953,21 @@ copy_file
 \end_layout
 
 \begin_layout Standard
-The task will copy a file from the local file system to the remote host(s).
- If hosts are not explicitly specified, the task will copy the file to all
- hosts listed in the config.py file including the router (TPCONF_router plus
- TPCONF_hosts).
+Th
+\change_deleted 1685850735 1489726263
+e task
+\change_inserted 1685850735 1489726263
+is task
+\change_unchanged
+ will copy a file from the local file system to the remote host(s).
+ If hosts are not explicitly specified, th
+\change_deleted 1685850735 1489726265
+e task
+\change_inserted 1685850735 1489726265
+is task
+\change_unchanged
+ will copy the file to all hosts listed in the config.py file including the
+ router (TPCONF_router plus TPCONF_hosts).
  The file will be copied as the user env.user, which must be specified in
  config.py (or on the command line).
 \end_layout
@@ -10969,7 +13975,7 @@ The task will copy a file from the local file system to the remote host(s).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -11104,17 +14110,28 @@ exec_cmd
 \end_layout
 
 \begin_layout Standard
-The task will execute a command on the remote host(s).
- If hosts are not explicitly specified, the task will copy the file to all
- hosts listed in the config.py file including the router (TPCONF_router plus
- TPCONF_hosts).
+Th
+\change_deleted 1685850735 1489726267
+e task
+\change_inserted 1685850735 1489726267
+is task
+\change_unchanged
+ will execute a command on the remote host(s).
+ If hosts are not explicitly specified, th
+\change_deleted 1685850735 1489726268
+e task
+\change_inserted 1685850735 1489726268
+is task
+\change_unchanged
+ will copy the file to all hosts listed in the config.py file including the
+ router (TPCONF_router plus TPCONF_hosts).
  
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -11195,7 +14212,7 @@ Extract acknowledged bytes and dupACKs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -11405,13 +14422,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805890
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805890
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947169
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11441,8 +14475,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948157
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946544
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948160
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -11502,12 +14547,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943928
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944801
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943931
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -11531,7 +14586,7 @@ Extract packet sizes, RTTs and CWND.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -11773,13 +14828,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805898
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805898
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947174
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -11809,8 +14881,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948165
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946571
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948167
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -11840,12 +14923,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943936
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944811
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943940
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -11903,7 +14996,7 @@ Extract TCP CWND data.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -12053,13 +15146,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805904
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805904
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947178
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -12089,8 +15199,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948172
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946585
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948176
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -12120,12 +15241,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943944
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944818
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943947
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -12149,7 +15280,7 @@ Extract incast response times from httperf logs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -12235,9 +15366,16 @@ merge_data
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' generate per flow response times (default).
- If set to `1' generate additional data file with response times of all
- flows.
+If set to `0'
+\change_inserted 1685850735 1488948430
+,
+\change_unchanged
+ generate per flow response times (default).
+ If set to `1'
+\change_inserted 1685850735 1488948431
+,
+\change_unchanged
+ generate additional data file with response times of all flows.
 \end_layout
 
 \end_inset
@@ -12356,11 +15494,22 @@ slowest_only
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot one per flow.
- If set to `1' at each point in time only plot the slowest response time
- over all flows.
- If set to `2' at each point in time plot the time between first request
- sent and last byte of last response received in each burst.
+If set to `0'
+\change_inserted 1685850735 1488945131
+,
+\change_unchanged
+ plot one per flow.
+ If set to `1'
+\change_inserted 1685850735 1488945132
+,
+\change_unchanged
+ at each point in time only plot the slowest response time over all flows.
+ If set to `2'
+\change_inserted 1685850735 1488945134
+,
+\change_unchanged
+ at each point in time plot the time between first request sent and last
+ byte of last response received in each burst.
 \end_layout
 
 \end_inset
@@ -12392,13 +15541,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805912
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805912
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947182
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -12428,8 +15594,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948180
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946600
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948184
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -12459,12 +15636,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943952
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944825
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943954
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -12488,7 +15675,7 @@ Extract incast inter-query times.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -12723,11 +15910,22 @@ slowest_only
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' plot one per flow.
- If set to `1' at each point in time only plot the slowest response time
- over all flows.
- If set to `2' at each point in time plot the time between first request
- sent and last byte of last response received in each burst.
+If set to `0'
+\change_inserted 1685850735 1488945138
+,
+\change_unchanged
+ plot one per flow.
+ If set to `1'
+\change_inserted 1685850735 1488945140
+,
+\change_unchanged
+ at each point in time only plot the slowest response time over all flows.
+ If set to `2'
+\change_inserted 1685850735 1488945141
+,
+\change_unchanged
+ at each point in time plot the time between first request sent and last
+ byte of last response received in each burst.
 \end_layout
 
 \end_inset
@@ -12759,13 +15957,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805918
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805918
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947185
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -12795,8 +16010,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948187
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946614
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948198
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -12826,12 +16052,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943959
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944832
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943961
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -12855,7 +16091,7 @@ Extract incast response times from tcpdump files.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -13004,13 +16240,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805923
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805923
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947189
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -13040,8 +16293,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948202
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946626
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948204
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -13071,11 +16335,474 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
+If set to `1'
+\change_inserted 1685850735 1488943966
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944837
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943972
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\change_inserted 1685850735 1489550336
+extract_owd
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1685850735 1489550342
+Extract OWD from tcpdump files.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1685850735 1489550159
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+Default Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+Explanation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550676
+anchor_map
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550676
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550676
+Expressed in the form <src_ip1>:<dst_ip1>;<src_ip2>:<dst_ip2>;...
+ , this parameter can be used to determine whether to log OWD packets of
+ the source ip address when closer to the destination ip
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550598
+burst_sep
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550598
+`0.0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550598
+Time between bursts.
+ If set to values larger then 0.0, data is separated into bursts if idle
+ periods are longer than burst_sep.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550457
+eburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550457
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550457
+Last query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts up to the last.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550375
+out_dir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550375
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550375
+Extracted data files and plots are generated in this directory.
+ By default the files are generated in the experiment directory.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550656
+owd_midpoint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550656
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550656
+This can be used determine whether the OWD is logged at the packets origin
+ (`0'), or at the halfway between the origin and the destination (`1').
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+replot_only
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+If set to `1' the data extraction is skipped and the plots are regenerated
+ based on the data previously extracted.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550429
+sburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550429
+`1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550429
+First query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts starting from the first.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+source_filter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+Specify the sources or destinations to filter on.
+ Metrics will only be plotted for the sources and destinations on the list.
+ See 
+\change_deleted 193492759 1517805931
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2015caia_teacup_v1.0_analysis"
+
+\end_inset
+
+
+\change_inserted 193492759 1517805931
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_inserted 1685850735 1489550159
+ for how to specify the list.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+test_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+`'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+Specifies the test ID of the experiment to be analysed.
+ Specifying multiple test IDs with semicolons as separators allows plotting
+ of the results of multiple experiments in the same graph.
+ If an empty string the test IDs will be read from exp_list.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+ts_correct
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489550159
+If set to `1', plot data with timestamps corrected based on estimated clock
  offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
+ This requires a clock offset data file that can be created with the get_clock_o
+ffsets task.
+ If set to `0' (default), plot data based on timestamps as they are in the
  log files.
 \end_layout
 
@@ -13099,8 +16826,8 @@ Extract packet loss rate from tcpdump files.
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<lyxtabular version="3" rows="10" columns="3">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -13138,6 +16865,119 @@ Explanation
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+burst_sep
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+`0.0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+Time between bursts.
+ If set to values larger then 0.0, data is separated into bursts if idle
+ periods are longer than burst_sep.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+eburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+`0'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+Last query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts up to the last.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+log_loss
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+`2'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623862
+This can be equal to 1 for the plotting of individual packet loss events,
+ or being equal to 2, which enables the plotting of cumulative packet loss
+ events (default).
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623847
 out_dir
 \end_layout
 
@@ -13147,6 +16987,8 @@ out_dir
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623847
 `'
 \end_layout
 
@@ -13156,6 +16998,8 @@ out_dir
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623847
 Extracted data files and plots are generated in this directory.
  By default the files are generated in the experiment directory.
 \end_layout
@@ -13198,6 +17042,42 @@ If set to `1' the data extraction is skipped and the plots are regenerated
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623880
+sburst
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623880
+`1'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\change_inserted 1685850735 1489623880
+First query/burst response time to be included in plot (numbered from 1).
+ The default will include all bursts starting from the first.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 source_filter
 \end_layout
 
@@ -13219,13 +17099,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805936
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805936
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947194
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -13255,8 +17152,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948208
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946656
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948210
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -13286,12 +17194,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488943975
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944842
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488943978
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -13301,6 +17219,8 @@ If set to `1' plot data with timestamps corrected based on estimated clock
 
 \end_inset
 
+
+\change_deleted 1685850735 1489623890
 
 \end_layout
 
@@ -13315,7 +17235,7 @@ Extract packet sizes from tcpdump files for throughput calculations.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -13464,13 +17384,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805942
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805942
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947199
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -13500,8 +17437,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948085
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946668
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948092
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -13561,12 +17509,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488944020
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944849
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488944022
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -13590,7 +17548,7 @@ Extract RTT from tcpdump files using SPP.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -13800,13 +17758,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805948
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805948
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947203
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -13836,8 +17811,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948097
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946678
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948102
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -13867,12 +17853,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488944028
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944856
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488944030
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -13901,8 +17897,20 @@ udp_map
 \begin_inset Text
 
 \begin_layout Plain Layout
-This parameter allows to specify a map that defines how to combine unidirectiona
-l UDP flows, as SPP needs bidirectional flows.
+This parameter allows t
+\change_inserted 1685850735 1488948810
+he
+\change_deleted 1685850735 1488948809
+o
+\change_unchanged
+ specif
+\change_inserted 1685850735 1488948814
+ication of
+\change_deleted 1685850735 1488948812
+y
+\change_unchanged
+ a map that defines how to combine unidirectional UDP flows, as SPP needs
+ bidirectional flows.
  The format is:
 \end_layout
 
@@ -13938,7 +17946,7 @@ Extract RTT from TCP log files.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -14088,13 +18096,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805954
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805954
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947208
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -14124,8 +18149,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948108
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946690
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948111
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -14155,12 +18191,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488944033
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944862
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488944036
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -14217,7 +18263,7 @@ Extract arbitrary TCP statistics from SIFTR or web10g logs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -14396,13 +18442,30 @@ source_filter
 Specify the sources or destinations to filter on.
  Metrics will only be plotted for the sources and destinations on the list.
  See 
+\change_deleted 193492759 1517805960
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
 
 \end_inset
 
+
+\change_inserted 193492759 1517805960
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zander2018_teacup_v1.1_analysis"
+
+\end_inset
+
+
+\change_unchanged
  for how to specify the list
+\change_inserted 1685850735 1488947211
+.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -14432,8 +18495,19 @@ test_id
 
 \begin_layout Plain Layout
 Specifies the test ID of the experiment to be analysed.
- Specifying multiple test IDs with semicolons as separators allows to plot
- the results of multiple experiments in the same graphs.
+ Specifying multiple test IDs with semicolons as separators allows 
+\change_deleted 1685850735 1488948118
+to 
+\change_unchanged
+plot
+\change_inserted 1685850735 1488946700
+ting of
+\change_unchanged
+ the results of multiple experiments in the same graph
+\change_deleted 1685850735 1488948122
+s
+\change_unchanged
+.
  If an empty string the test IDs will be read from exp_list.
 \end_layout
 
@@ -14463,12 +18537,22 @@ ts_correct
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `1' plot data with timestamps corrected based on estimated clock
- offsets.
- This requires to have a clock offset data file that can be created with
- the get_clock_offsets task.
- If set to `0' (default) plot data based on timestamps as they are in the
- log files.
+If set to `1'
+\change_inserted 1685850735 1488944040
+,
+\change_unchanged
+ plot data with timestamps corrected based on estimated clock offsets.
+ This requires 
+\change_deleted 1685850735 1488944868
+to have 
+\change_unchanged
+a clock offset data file that can be created with the get_clock_offsets
+ task.
+ If set to `0' (default)
+\change_inserted 1685850735 1488944041
+,
+\change_unchanged
+ plot data based on timestamps as they are in the log files.
 \end_layout
 
 \end_inset
@@ -14516,8 +18600,14 @@ get_clock_offsets
 
 \begin_layout Standard
 This task will estimate the offsets between host clocks during an experiment.
- The task can only be used if broadcast/multicast ping traffic was enabled
- during the experiment (see 
+ 
+\change_deleted 1685850735 1489725973
+The task
+\change_inserted 1685850735 1489725973
+This task
+\change_unchanged
+ can only be used if broadcast/multicast ping traffic was enabled during
+ the experiment (see 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2015caia_teacup_v1.0_analysis"
@@ -14530,7 +18620,7 @@ key "zander2015caia_teacup_v1.0_analysis"
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.1cm">
 <column alignment="center" valignment="top" width="4.2cm">
 <column alignment="center" valignment="top" width="10.7cm">
@@ -14732,7 +18822,7 @@ This task will return the network interface name(s).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -14819,8 +18909,14 @@ windump
 \begin_layout Plain Layout
 On Windows there are two names: 1) the name Windows uses and 2) the name
  Windump uses.
- If this parameter is set to `0' the task will return the Windows name,
- if this parameter is set to `1' it will return the Windump name.
+ If this parameter is set to `0' 
+\change_deleted 1685850735 1489726157
+the task
+\change_inserted 1685850735 1489726157
+this task
+\change_unchanged
+ will return the Windows name, if this parameter is set to `1' it will return
+ the Windump name.
 \end_layout
 
 \end_inset
@@ -14845,7 +18941,7 @@ This task returns the MAC address of a host's control network or experimental
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -14923,7 +19019,13 @@ get_type
 \begin_layout Standard
 This task returns the type of host(s), e.g.
  `Linux', `FreeBSD' or `CYGWIN'.
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726197
+e task
+\change_inserted 1685850735 1489726197
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -14937,7 +19039,7 @@ This task configures the congestion control for a host.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -15020,7 +19122,7 @@ This task enables or disables explicit congestion notification (ECN) for
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -15094,10 +19196,20 @@ init_host
 \end_layout
 
 \begin_layout Standard
-This tasks performs basic initialisation for a host (other than the router),
- including disabling the TCP host cache and disabling various NIC offloading
- mechanisms, such as TCP segmentation offloading (TSO).
- The task has no parameters.
+This task
+\change_deleted 1685850735 1489550713
+s
+\change_unchanged
+ performs basic initialisation for a host (other than the router), including
+ disabling the TCP host cache and disabling various NIC offloading mechanisms,
+ such as TCP segmentation offloading (TSO).
+ Th
+\change_deleted 1685850735 1489726210
+e task
+\change_inserted 1685850735 1489726210
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -15107,7 +19219,13 @@ init_host_custom
 \begin_layout Standard
 This task executes custom initialisation commands on hosts based on the
  config.py settings.
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726213
+e task
+\change_inserted 1685850735 1489726213
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -15115,14 +19233,18 @@ init_os
 \end_layout
 
 \begin_layout Standard
-This tasks initialises the OS on host(s), i.e.
+This task
+\change_deleted 1685850735 1489550718
+s
+\change_unchanged
+ initialises the OS on host(s), i.e.
  it reboots hosts into the desired OS.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -15178,9 +19300,16 @@ boot_timeout
 \begin_inset Text
 
 \begin_layout Plain Layout
-Number of seconds to wait for host to reboot.
- After this timeout give up or power cycle host if do_power_cycle is set
- to `1'
+Number of seconds to wait for
+\change_inserted 1685850735 1488949133
+ the
+\change_unchanged
+ host to reboot.
+ After this timeout give up or power cycle
+\change_inserted 1685850735 1488949140
+ the
+\change_unchanged
+ host if do_power_cycle is set to `1'
 \end_layout
 
 \end_inset
@@ -15210,8 +19339,15 @@ do_power_cycle
 
 \begin_layout Plain Layout
 If set to `0' do not power cycle.
- If set to `1' power cycle host if it does not come up after boot_timeout
- seconds.
+ If set to `1'
+\change_inserted 1685850735 1488949084
+,
+\change_unchanged
+ power cycle
+\change_inserted 1685850735 1488949147
+ the
+\change_unchanged
+ host if it does not come up after boot_timeout seconds.
 \end_layout
 
 \end_inset
@@ -15269,8 +19405,11 @@ force_reboot
 \begin_inset Text
 
 \begin_layout Plain Layout
-If set to `0' host is not rebooted if the current OS equals the desired
- OS.
+If set to `0'
+\change_inserted 1685850735 1488949165
+ the
+\change_unchanged
+ host is not rebooted if the current OS equals the desired OS.
  If set to `1' the host is always rebooted.
 \end_layout
 
@@ -15300,7 +19439,11 @@ linux_kern_hosts
 \begin_inset Text
 
 \begin_layout Plain Layout
-Linux kernel to boot on hosts.
+Linux kernel to boot on
+\change_inserted 1685850735 1488949184
+ the
+\change_unchanged
+ hosts.
  The name is the name of the kernel file without the 
 \begin_inset Quotes eld
 \end_inset
@@ -15347,7 +19490,11 @@ linux_kern_router
 \begin_inset Text
 
 \begin_layout Plain Layout
-Linux kernel to boot on routers.
+Linux kernel to boot on
+\change_inserted 1685850735 1488949297
+ the
+\change_unchanged
+ routers.
  The name is the name of the kernel file without the 
 \begin_inset Quotes eld
 \end_inset
@@ -15400,8 +19547,19 @@ Comma-separated list of OS names (`Linux', `FreeBSD' or `CYGWIN'), one name
  fab -H command line parameter.
  If the number of entries in the list is smaller than the number of hosts
  it will be padded to the same length by duplicating the last entry.
- This allows to specify a single name for booting many hosts into the same
- OS.
+ This allows t
+\change_inserted 1685850735 1488949322
+he
+\change_deleted 1685850735 1488949321
+o
+\change_unchanged
+ specif
+\change_inserted 1685850735 1488949330
+ication of
+\change_deleted 1685850735 1488949323
+y
+\change_unchanged
+ a single name for booting many hosts into the same OS.
 \end_layout
 
 \end_inset
@@ -15425,7 +19583,7 @@ This task configures a pipe on the router.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="14" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -15481,8 +19639,17 @@ attach_to_queue
 \begin_inset Text
 
 \begin_layout Plain Layout
-This parameter works on Linux only! It allows to direct matching packets
- into an existing queue referenced by the specified queue ID (counter),
+This parameter works on Linux only! It allows t
+\change_inserted 1685850735 1488949407
+he
+\change_deleted 1685850735 1488949407
+o
+\change_unchanged
+ direct matching 
+\change_inserted 1685850735 1488949410
+of 
+\change_unchanged
+packets into an existing queue referenced by the specified queue ID (counter),
  but to emulate flow-specific delay/loss (different from the delay and loss
  of other traffic going through the same queue).
  If attach_to_queue is specified, the matching traffic will go through the
@@ -15517,9 +19684,19 @@ bidir
 
 \begin_layout Plain Layout
 If set to `0' the pipe is unidirectional (packets going from source to dest
+\change_inserted 1685850735 1488949640
+ination
+\change_unchanged
  only).
  If set to `1' the pipe is bidirectional (packets going from source to dest
- and packets going from dest to source).
+\change_inserted 1685850735 1488949662
+ination,
+\change_unchanged
+ and packets going from dest
+\change_inserted 1685850735 1488949667
+ination
+\change_unchanged
+ to source).
  Note that in the bidirectional case there are completely different buffers
  in both directions.
 \end_layout
@@ -15672,7 +19849,15 @@ queue_disc
 The queuing discipline / AQM mechanism used.
  This can be the same of any of the queuing disciplines supported by Linux,
  such as `fq_codel', `codel', `red', `choke', `pfifo', `pie' etc.
- On FreeBSD the only queuing disciplines available are `fifo' and `red'.
+ On FreeBSD the 
+\change_deleted 1685850735 1488950114
+only 
+\change_unchanged
+queuing disciplines available are `fifo'
+\change_inserted 1685850735 1488950240
+, `fq_codel', `codel', `fq_pie', `pie'
+\change_unchanged
+ and `red'.
  For compatibility, with FreeBSD one can specify `fifo' on Linux, which
  is mapped to `pfifo' (`pfifo' is the default for HTB classes, which we
  use for rate limiting).
@@ -15772,7 +19957,19 @@ queue_size_mult
 \begin_layout Plain Layout
 A multiplier for queue size.
  This should only be used if queue_size if set to `bdp'.
- This allows to vary the queue size in multiples of the nominal BDP.
+ This allows t
+\change_inserted 1685850735 1488950304
+he
+\change_deleted 1685850735 1488950303
+o
+\change_unchanged
+ var
+\change_inserted 1685850735 1488950309
+iation of
+\change_deleted 1685850735 1488950306
+y
+\change_unchanged
+ the queue size in multiples of the nominal BDP.
 \end_layout
 
 \end_inset
@@ -15804,7 +20001,19 @@ rate
 Rate limit.
  Must be specified in bytes or with unit specifiers allowed by Linux tc
  or FreeBSD Dummynet.
- For example, Linux tc allows to specify `kbit' or `mbit'.
+ For example, Linux tc allows t
+\change_inserted 1685850735 1494302940
+he
+\change_deleted 1685850735 1494302939
+o
+\change_unchanged
+ specif
+\change_inserted 1685850735 1494302945
+ication of
+\change_deleted 1685850735 1494302943
+y
+\change_unchanged
+ `kbit' or `mbit'.
 \end_layout
 
 \end_inset
@@ -15891,7 +20100,13 @@ init_router
 This task performs basic initialisation of the router, for example it sets
  up the root for queuing disciplines and disables NIC offloading mechanisms
  on Linux.
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726215
+e task
+\change_inserted 1685850735 1489726215
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -15899,15 +20114,19 @@ init_topology
 \end_layout
 
 \begin_layout Standard
-This tasks reconfigures VLAN membership on the switch port(s) as well as
- the NIC and static routes of host(s) in order to put host(s) in a specific
- test subnet and configure their IP address(es) accordingly.
+This task
+\change_deleted 1685850735 1489550727
+s
+\change_unchanged
+ reconfigures VLAN membership on the switch port(s) as well as the NIC and
+ static routes of host(s) in order to put host(s) in a specific test subnet
+ and configure their IP address(es) accordingly.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -16044,8 +20263,18 @@ kill_old_processes
 \end_layout
 
 \begin_layout Standard
-This tasks kills any possible old processes on the host(s).
- The task has no parameters.
+This task
+\change_deleted 1685850735 1489550734
+s
+\change_unchanged
+ kills any possible old processes on the host(s).
+ Th
+\change_deleted 1685850735 1489726216
+e task
+\change_inserted 1685850735 1489726216
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -16053,14 +20282,18 @@ log_queue_stats
 \end_layout
 
 \begin_layout Standard
-This task log the queue statistics from the router.
+This task log
+\change_inserted 1685850735 1489550743
+s
+\change_unchanged
+ the queue statistics from the router.
  
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -16211,7 +20444,7 @@ key "zander2015caia_teacup_v1.0"
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -16348,7 +20581,13 @@ power_cycle
 \begin_layout Standard
 This task power cycles the host(s).
  It requires a config.py that specifies the power controller(s) for the host(s).
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726217
+e task
+\change_inserted 1685850735 1489726217
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -16363,7 +20602,7 @@ d in config.py).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -16419,7 +20658,16 @@ test_id
 \begin_inset Text
 
 \begin_layout Plain Layout
-The test ID prefix used.
+The test ID 
+\series bold
+prefix
+\series default
+ used
+\change_inserted 193492759 1517805568
+ to generate test IDs and hence filenames for raw experiment logs and metadata
+ files
+\change_unchanged
+.
 \end_layout
 
 \end_inset
@@ -16468,13 +20716,17 @@ run_experiment_single
 \end_layout
 
 \begin_layout Standard
-This task runs a single experiment with the default parameters inf config.py.
+This task runs a single experiment with the default parameters in
+\change_deleted 1685850735 1488950535
+f
+\change_unchanged
+ config.py.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -16530,7 +20782,16 @@ test_id
 \begin_inset Text
 
 \begin_layout Plain Layout
-The test ID prefix used.
+The test ID 
+\series bold
+prefix
+\series default
+ used
+\change_inserted 193492759 1517805597
+ to generate one test ID and hence filenames for raw experiment logs and
+ metadata files
+\change_unchanged
+.
 \end_layout
 
 \end_inset
@@ -16548,9 +20809,19 @@ sanity_checks
 \end_layout
 
 \begin_layout Standard
-This tasks executes the check_host, check_connectivity and kill_old_processes
- tasks for the host(s).
- The task has no parameters.
+This task
+\change_deleted 1685850735 1489550776
+s
+\change_unchanged
+ executes the check_host, check_connectivity and kill_old_processes tasks
+ for the host(s).
+ Th
+\change_deleted 1685850735 1489726219
+e task
+\change_inserted 1685850735 1489726219
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section
@@ -16559,7 +20830,13 @@ show_pipes
 
 \begin_layout Standard
 This task shows the current pipe setup and statistics on the router.
- The task has no parameters.
+ Th
+\change_deleted 1685850735 1489726220
+e task
+\change_inserted 1685850735 1489726220
+is task
+\change_unchanged
+ has no parameters.
 \end_layout
 
 \begin_layout Section*
@@ -16571,7 +20848,19 @@ TEACUP versions prior to 1.0 were developed as part of a project funded by
  Cisco Systems and titled "Study in TCP Congestion Control Performance In
  A Data Centre".
  This was a collaborative effort between Swinburne University of Technology's
- Center for Advanced Internet Archectures and Fred Baker of Cisco Systems.
+ 
+\change_deleted 1685850735 1488950579
+Center
+\change_inserted 1685850735 1488950579
+Centre
+\change_unchanged
+ for Advanced Internet 
+\change_deleted 1685850735 1488950581
+Archectures
+\change_inserted 1685850735 1488950581
+Architectures
+\change_unchanged
+ and Fred Baker of Cisco Systems.
  These may be found at 
 \begin_inset Flex URL
 status collapsed
@@ -16600,6 +20889,17 @@ http://sourceforge.net/projects/teacup
 \end_inset
 
 .
+\change_inserted 193492759 1517805609
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 193492759 1517805978
+Russell Collom and Grenville Armitage contributed additional text in 2017
+ for version 1.1 of this document.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section*
@@ -16614,11 +20914,17 @@ name "sec:Copying"
 \end_layout
 
 \begin_layout Standard
-This document, 
+This document
+\change_inserted 1685850735 1494304929
+ is based on
+\change_deleted 1685850735 1494304923
+,
+\change_unchanged
+ 
 \begin_inset Quotes eld
 \end_inset
 
-TEACUP v1.0 -- Command Reference
+TEACUP v1.0 – Command Reference
 \begin_inset Quotes erd
 \end_inset
 
@@ -16639,9 +20945,19 @@ copyright
 \begin_inset space ~
 \end_inset
 
-2015 -- 2016 CAIA, Swinburne University of Technology.
- As of June 2016 this document has been licensed under a Creative Commons
- Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0, 
+2015 – 2016 CAIA, Swinburne University of Technology.
+ 
+\change_deleted 1685850735 1494305019
+As of
+\change_inserted 1685850735 1494305019
+The original was released in
+\change_unchanged
+ June 2016 
+\change_deleted 1685850735 1494305281
+this document has been licensed 
+\change_unchanged
+under a Creative Commons Attribution-ShareAlike 4.0 International License
+ (CC BY-SA 4.0, 
 \begin_inset Flex URL
 status collapsed
 

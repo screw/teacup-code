@@ -52,6 +52,8 @@ import config
 from internalutil import mkdir_p
 from filefinder import get_testid_file_list
 
+import gzip
+
 ## Create safe place to dump output from stderr of various shell processes
 stderrhack = os.tmpfile()
 
@@ -289,7 +291,11 @@ def adjust_timestamps(test_id='', file_name='', host_name='', sep=' ', out_dir='
     # clock offset file name
     offs_fname = out_dirname + test_id + CLOCK_OFFSET_FILE_EXT
     # new file name
-    new_fname = file_name + DATA_CORRECTED_FILE_EXT
+    if file_name.endswith('.gz'):
+        # TBD: Strip the trailing .gz from file_name first
+        new_fname = file_name + DATA_CORRECTED_FILE_EXT + '.gz'        
+    else:
+        new_fname = file_name + DATA_CORRECTED_FILE_EXT
 
     #print(offs_fname)
 
@@ -346,8 +352,12 @@ def adjust_timestamps(test_id='', file_name='', host_name='', sep=' ', out_dir='
     except IOError:
         abort('Cannot open file %s' % offs_fname)
 
-    reader = csv.reader(open(file_name, 'r'), delimiter=sep)
-    fout = open(new_fname, 'w')
+    if file_name.endswith('.gz'):
+        reader = csv.reader(gzip.open(file_name, 'rb'), delimiter=sep)
+        fout = gzip.open(new_fname, 'wb',1)
+    else:
+        reader = csv.reader(open(file_name, 'r'), delimiter=sep)
+        fout = open(new_fname, 'w')
 
     # index to curr_ref_time
     curr = 0

@@ -1366,12 +1366,13 @@ def start_fps_game(counter='', file_prefix='', remote_dir='', local_dir='', clie
         server_port = fields[1]
 
     clients_list = clients.split(',')
-    # make sure number of clients is within pktgen's allowed range 
-    if len(clients_list) < 4 or len(clients_list) > 32:
-        abort('Number of clients must be between 4 and 32')
-        
+    
     if noclients_game == '':
         noclients_game = str(len(clients_list))
+
+    # make sure number of clients is within pktgen's allowed range
+    if int(noclients_game) < 4 or int(noclients_game) > 32:
+       abort('Number of clients must be between 4 and 32')
 
     for client in clients_list:
         fields = client.split(':')

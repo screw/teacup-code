@@ -166,7 +166,7 @@ def get_ttprobe_flows(ttprobe_file=''):
 #  @param attributes Fields to be extracted
 #  @param rflow Flows to be filtered on
 #  @param out the output file
-def extract_ttprobe_fileds_data(ttprobe_file, attributes, rflow, io_filter, out):
+def extract_ttprobe_fields_data(ttprobe_file, attributes, rflow, io_filter, out):
 
     puts('Extracting fields (%s) from ttprobe file %s' % (attributes, ttprobe_file))
     fields = attributes.split(',')
@@ -317,7 +317,7 @@ def extract_ttprobe(test_id='', out_dir='', replot_only='0', source_filter='',
                     long_flow_name = flow_name
                 out = out_dirname + test_id + '_' + flow_name + '_ttprobe.' + out_file_ext
                 if replot_only == '0' or not os.path.isfile(out):
-                    extract_ttprobe_fileds_data(ttprobe_file, attributes, flow, io_filter, out)
+                    extract_ttprobe_fields_data(ttprobe_file, attributes, flow, io_filter, out)
 
                     if post_proc is not None:
                         post_proc(ttprobe_file, out)

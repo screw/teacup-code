@@ -177,8 +177,6 @@ try:
 except ImportError:
     pass
 
-
-
 ## Set to zero if we don't need OS initialisation anymore
 # XXX this is a bit ugly as a global
 do_init_os = '1'

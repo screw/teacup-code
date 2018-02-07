@@ -45,6 +45,8 @@ from internalutil import mkdir_p
 from hostint import get_address_pair
 from filefinder import get_testid_file_list
 
+import gzip
+
 
 ## Figure out directory for output files and create if it doesn't exist
 ## If out_dir is a relative path, the actual out_dir will be the directory where
@@ -157,19 +159,40 @@ def extract_bursts(data_file='', burst_sep=0.0, normalize=0):
     firstTS = -1
     prev_data = -1
 
-    try:
-        lines = []
-        # First read the entire contents of a data file
-        with open(data_file) as f:
-            lines = f.readlines()
+    if burst_sep == 0.0 and normalize == 0:
+        new_fnames.append(data_file)
+        return new_fnames
 
-            if burst_sep != 0 :
-                # Create the first .N output file
-                out_f = open(data_file + "." + "1", "w")
-                new_fnames.append(data_file + "." + "1")
+    try:
+            lines = []
+            # First read the entire contents of a data file, using
+            # gzip.open() if the extract_* task has generated .gz
+            # intermediate files.
+            if data_file.endswith(".gz"):
+                gzip_output = 1
+                with gzip.open(data_file) as f:
+                    lines = f.readlines()
             else:
-                out_f = open(data_file + "." + "0", "w")
-                new_fnames.append(data_file + "." + "0")
+                gzip_output = 0
+                with open(data_file) as f:
+                    lines = f.readlines()
+
+            # Create the first .N output file
+            if burst_sep != 0 :
+                out_fname = data_file + "." + "1"
+            else:
+                out_fname = data_file + "." + "0"
+                
+            if gzip_output:
+                # Don't append .gz as the R script's burst handling
+                # currently relies on the trailing ".N". Note that
+                # R subsequentely auto-detects gzip'd file contents
+                # without relying on .gz suffix.
+                out_f = gzip.open(out_fname, "w")
+            else:
+                out_f = open(out_fname, "w")
+                
+            new_fnames.append(out_fname)
 
             # Now walk through every line of the data file
             for oneline in lines:
@@ -222,10 +245,18 @@ def extract_bursts(data_file='', burst_sep=0.0, normalize=0):
                             first_data = prev_data
 
                         # Create the next .N output file
-                        out_f = open(data_file + "." + str(burstN), "w")
-                        new_fnames.append(data_file + "." + str(burstN))
-
-
+                        out_fname = data_file + "." + str(burstN)
+                        if gzip_output:
+                            # Don't append .gz as the R script's burst handling
+                            # currently relies on the trailing ".N". Note that
+                            # R subsequentely auto-detects gzip'd file contents
+                            # without relying on .gz suffix.
+                            out_f = gzip.open(out_fname, "w")
+                        else:
+                            out_f = open(out_fname, "w")
+                            
+                        new_fnames.append(out_fname)
+                        
                 # data value (potentially normalised based on first value / first value of burst
                 data_gap = float(fields[1]) - float(first_data)
 

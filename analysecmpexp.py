@@ -47,7 +47,7 @@ from analyseutil import merge_data_files
 from analyse import _extract_rtt, _extract_cwnd, _extract_tcp_rtt, \
     _extract_dash_goodput, _extract_tcp_stat, _extract_incast, \
     _extract_pktsizes, _extract_incast_iqtimes, _extract_incast_restimes, \
-    _extract_pktloss, _extract_ackseq
+    _extract_ackseq
 from plot import plot_cmpexp, plot_2d_density, sort_by_flowkeys
 
 
@@ -269,13 +269,13 @@ def get_metric_params(metric='', smoothed='0', ts_correct='1', stat_index='0', d
         yscaler = 1000.0
         sep = ' '
         aggr = '0'
-    elif metric == 'pktloss':
-        ext = '.loss'
-        ylab = 'Packet loss (%)'
-        yindex = 2
-        yscaler = 1.0
-        sep = ' '
-        aggr = '2'
+    #elif metric == 'pktloss':
+        #ext = '.loss'
+        #ylab = 'Packet loss (%)'
+        #yindex = 2
+        #yscaler = 1.0
+        #sep = ' '
+        #aggr = '2'
     # elif add more
     else:
         return None
@@ -315,7 +315,7 @@ def get_extract_function(metric='', link_len='0', stat_index='0', slowest_only='
         'ackseq'     : _extract_ackseq,
         'restime'    : _extract_incast,
         'iqtime'     : _extract_incast_iqtimes,
-        'pktloss'    : _extract_pktloss,
+        #'pktloss'    : _extract_pktloss,
     }
 
     # additonal arguments for extract functions
@@ -336,7 +336,7 @@ def get_extract_function(metric='', link_len='0', stat_index='0', slowest_only='
         'iqtime'     : { 'cumulative'   : '0',
                          'by_responder' : '0',
                          'query_host'   : query_host },
-        'pktloss'    : { },
+        #'pktloss'    : { },
     }
 
     return (extract_functions[metric], extract_kwargs[metric])

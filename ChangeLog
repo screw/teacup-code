@@ -37,7 +37,9 @@ Version 1.1 (XXX)
   other derivatives of plot but ggplot stuff should not need this anyway)
 - Refine total experiment duration to be calculated as
   max(V_duration, TrafficGen_wait_time[i] +TrafficGen_duration[i])
-  for i = 1 to number of traffic generators 
+  for i = 1 to number of traffic generators
+- Merged updated {extract,analyse}_pktloss tasks and new {extract,analyse}_owd tasks
+- Updated main docs to reflect key changes for version 1.1
 
 Version 1.0 (26th May 2015)
 ---------------------------

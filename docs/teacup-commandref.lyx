@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass IEEEtran
 \begin_preamble
 %\usepackage{fixltx2e}
@@ -69,16 +67,16 @@
 \language_package default
 \inputencoding default
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -135,6 +133,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1143499204 "szander" 
 \end_header
 
 \begin_body
@@ -456,7 +455,7 @@ any
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="20" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="4.5cm">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="10.5cm">
@@ -1128,7 +1127,7 @@ Compare two metrics, such as RTT, CWND or throughput, for experiments with
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="36" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -2278,7 +2277,7 @@ Plot acknowledged bytes or dupACKs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="21" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -2959,7 +2958,7 @@ This task computes Round Trip Time (RTT), TCP congestion window (CWND) and
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="21" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -3647,7 +3646,7 @@ This task allows the comparison of one of the metrics, such as RTT, CWND
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="34" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -4743,7 +4742,7 @@ This task plots TCP CWND data over time.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="16" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -5258,7 +5257,7 @@ This task allows the comparison of the goodput of DASH-like flows over time.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="15" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -5747,7 +5746,7 @@ Plot goodput of TCP flows over time (from acknowledged bytes).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="18" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -6337,7 +6336,7 @@ This task plots the response times for queries over time for incast experiment
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="23" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.1cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -7075,7 +7074,7 @@ Plot times between request/queries for incast experiment.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="22" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -7781,7 +7780,7 @@ This task plots the one way delay (OWD) over time.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="23" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -8519,7 +8518,7 @@ This task plots the packet loss rate over time.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="22" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -9213,6 +9212,12 @@ Minimum y-axis value.
 
 \end_inset
 
+
+\change_inserted -1143499204 1518062033
+
+\end_layout
+
+\begin_layout Section
 analyse_rtt
 \end_layout
 
@@ -9230,7 +9235,7 @@ key "zander13minimally,sppweb"
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="21" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -9917,7 +9922,7 @@ This task plots the TCP RTT estimates over time.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="20" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -10573,7 +10578,7 @@ This task allows the plotting of an arbitrary TCP statistic over time.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="22" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.2cm">
 <column alignment="center" valignment="top" width="3.8cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -11275,7 +11280,7 @@ This task extracts the packet sizes from the tcpdump files and plots throughput
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="19" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -11890,7 +11895,7 @@ This task uses the Teaplot tool to animate the specified experimental results
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="19" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4.5cm">
 <column alignment="center" valignment="top" width="9.5cm">
@@ -12533,7 +12538,7 @@ This task will copy a file from the local file system to the remote host(s).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -12678,7 +12683,7 @@ This task will execute a command on the remote host(s).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -12759,7 +12764,7 @@ Extract acknowledged bytes and dupACKs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -13095,7 +13100,7 @@ Extract packet sizes, RTTs and CWND.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -13467,7 +13472,7 @@ Extract TCP CWND data.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -13713,7 +13718,7 @@ Extract incast response times from httperf logs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -14052,7 +14057,7 @@ Extract incast inter-query times.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -14419,7 +14424,7 @@ Extract incast response times from tcpdump files.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -14664,7 +14669,7 @@ Extract OWD from tcpdump files.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -15032,7 +15037,7 @@ Extract packet loss rate from tcpdump files.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -15356,6 +15361,12 @@ ffsets task.
 
 \end_inset
 
+
+\change_inserted -1143499204 1518062093
+
+\end_layout
+
+\begin_layout Section
 extract_pktsizes
 \end_layout
 
@@ -15366,7 +15377,7 @@ Extract packet sizes from tcpdump files for throughput calculations.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -15641,7 +15652,7 @@ Extract RTT from tcpdump files using SPP.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -15989,7 +16000,7 @@ Extract RTT from TCP log files.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -16268,7 +16279,7 @@ Extract arbitrary TCP statistics from SIFTR or web10g logs.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="10cm">
@@ -16581,7 +16592,7 @@ key "zander2015caia_teacup_v1.0_analysis"
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.1cm">
 <column alignment="center" valignment="top" width="4.2cm">
 <column alignment="center" valignment="top" width="10.7cm">
@@ -16783,7 +16794,7 @@ This task will return the network interface name(s).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -16896,7 +16907,7 @@ This task returns the MAC address of a host's control network or experimental
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -16988,7 +16999,7 @@ This task configures the congestion control for a host.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -17071,7 +17082,7 @@ This task enables or disables explicit congestion notification (ECN) for
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -17173,7 +17184,7 @@ This task initialises the OS on host(s), i.e.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -17476,7 +17487,7 @@ This task configures a pipe on the router.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="14" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -17960,7 +17971,7 @@ This task reconfigures VLAN membership on the switch port(s) as well as
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -18113,7 +18124,7 @@ This task logs the queue statistics from the router.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -18264,7 +18275,7 @@ key "zander2015caia_teacup_v1.0"
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -18416,7 +18427,7 @@ d in config.py).
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">
@@ -18532,7 +18543,7 @@ This task runs a single experiment with the default parameters in config.py.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
-<features islongtable="true" longtabularalignment="center">
+<features rotate="0" islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="2.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="11cm">

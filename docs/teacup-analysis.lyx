@@ -134,7 +134,6 @@
 \html_css_as_file 0
 \html_be_strict false
 \author 193492759 "gja"
-\author 1685850735 "russell"
 \end_header
 
 \begin_body
@@ -147,13 +146,7 @@ status open
 
 
 \backslash
-title{TEACUP v1.
-\change_inserted 1685850735 1494305143
-1
-\change_deleted 1685850735 1494305143
-0
-\change_unchanged
- -- Data Analysis Functions}
+title{TEACUP v1.1 -- Data Analysis Functions}
 \end_layout
 
 \end_inset
@@ -171,53 +164,14 @@ status open
 \backslash
 author{
 \backslash
-IEEEauthorblockN{
-\change_inserted 193492759 1517561166
-Editors: 
-\change_unchanged
-Sebastian Zander, Grenville Armitage}
+IEEEauthorblockN{Editors: Sebastian Zander, Grenville Armitage}
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_deleted 193492759 1517561694
-
-
-\backslash
-IEEEauthorblockA{Centre for Advanced Internet Architectures
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_deleted 193492759 1517561694
-
-Swinburne University of Technology
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_deleted 193492759 1517561694
-
-Melbourne, Australia
-\backslash
-
-\backslash
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted 193492759 1517551419
 
 
 \backslash
@@ -228,13 +182,7 @@ IEEEauthorblockA{
 
 
 \backslash
-url{
-\change_deleted 193492759 1517551471
-szander@swin.edu.au
-\change_inserted 193492759 1517551483
-s.zander@murdoch.edu.au
-\change_unchanged
-}, 
+url{s.zander@murdoch.edu.au}, 
 \backslash
 url{garmitage@swin.edu.au}}}
 \end_layout
@@ -298,19 +246,10 @@ cite{dash-standard}.
  However, the impact of different TCP congestion control algorithms on TCP-based
  streaming flows (within a mix of other typical traffic) is not well understood.
  Experiments in a controlled testbed allow shedding more light on this issue.
- TEACUP (TCP Experiment Automation Controlled Using Python) version 1.
-\change_inserted 193492759 1517551108
-1
-\change_deleted 193492759 1517551109
-0
-\change_unchanged
- is a software tool for running automated TCP experiments in a testbed 
+ TEACUP (TCP Experiment Automation Controlled Using Python) version 1.1 is
+ a software tool for running automated TCP experiments in a testbed 
 \backslash
-cite{
-\change_inserted 193492759 1517563617
-zander2018_teacup_v1.1_system
-\change_unchanged
-}.
+cite{zander2018_teacup_v1.1_system}.
  This report describes the analysis functions TEACUP provides to extract
  statistics and plot graphs based on data collected during the experiments.
  
@@ -338,22 +277,14 @@ baselineskip}
 \backslash
 noindent
 \backslash
-begin{
-\change_inserted 193492759 1517792808
-IEEE
-\change_unchanged
-keywords} TCP, experiments, automated control, data analysis 
+begin{IEEEkeywords} TCP, experiments, automated control, data analysis 
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-end{
-\change_inserted 193492759 1517792811
-IEEE
-\change_unchanged
-keywords} 
+end{IEEEkeywords} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -430,50 +361,13 @@ footrulewidth}{0pt}% Footer rule
 \backslash
 fancyfoot[C]{
 \backslash
-small{
-\change_deleted 193492759 1517561345
-
+small{Based on a version of  
 \backslash
-copyright~2015 -- 2016 CAIA, Swinburne University of Technology
-\backslash
-
-\backslash
-
-\change_inserted 193492759 1517561407
-Based on a version of 
-\change_deleted 193492759 1517561290
-Originally published as
-\change_unchanged
- 
-\backslash
-url{http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf}
-\change_inserted 193492759 1517561362
-, 
-\change_deleted 193492759 1517561363
-
-\backslash
-
-\backslash
-
-\change_deleted 1685850735 1494305414
-This version
-\change_deleted 193492759 1517561413
-Version 1.0 was
-\change_inserted 193492759 1517561418
-orginally
-\change_unchanged
- released June 2016 under Creative Commons BY-SA 4.0 License
-\change_inserted 193492759 1517561329
-, 
+url{http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf}, orginally
+ released June 2016 under Creative Commons BY-SA 4.0 License, 
 \backslash
 copyright~2015 -- 2016 CAIA, Swinburne University of Technology.
- 
-\change_deleted 193492759 1517561331
- -- s
-\change_inserted 193492759 1517561331
-S
-\change_unchanged
-ee terms on page~
+ See terms on page~
 \backslash
 pageref{sec:Copying}}}
 \end_layout
@@ -519,13 +413,7 @@ headrulewidth}{0pt}
 \backslash
 lfoot{
 \backslash
-small{TEACUP v1.
-\change_inserted 1685850735 1494305147
-1
-\change_deleted 1685850735 1494305147
-0
-\change_unchanged
- -- Data Analysis Functions}}
+small{TEACUP v1.1 -- Data Analysis Functions}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -541,23 +429,7 @@ cfoot{}
 \backslash
 rfoot{
 \backslash
-small{
-\change_deleted 1685850735 1494305506
-June
-\change_deleted 193492759 1517551136
-May
-\change_inserted 193492759 1517551137
-Feb
-\change_unchanged
- 9, 201
-\change_deleted 193492759 1517551140
-7
-\change_inserted 193492759 1517551140
-8
-\change_deleted 1685850735 1494305508
-6
-\change_unchanged
-~~page 
+small{Feb 9, 2018~~page 
 \backslash
 thepage ~of 
 \backslash
@@ -656,13 +528,8 @@ key "dash-standard"
 
 \begin_layout Standard
 This report describes the data analysis functionality of TEACUP (TCP Experiment
- Automation Controlled Using Python) version 1.
-\change_inserted 193492759 1517562743
-1
-\change_deleted 193492759 1517562743
-0
-\change_unchanged
- – a software tool for running automated TCP experiments in a testbed 
+ Automation Controlled Using Python) version 1.1 – a software tool for running
+ automated TCP experiments in a testbed 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2018_teacup_v1.1_system"
@@ -670,14 +537,10 @@ key "zander2018_teacup_v1.1_system"
 \end_inset
 
 .
-\change_inserted 193492759 1517650626
-
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517650659
 Updating a previous analysis report for TEACUP version 1.0 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -686,14 +549,10 @@ key "CAIA-TR-150529B"
 \end_inset
 
 .
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
  The TEACUP project originated at Swinburne University of Technology's Centre
  for Advanced Internet Architectures (
 \begin_inset Flex URL
@@ -722,14 +581,10 @@ http://sourceforge.net/projects/teacup
 \end_layout
 
 \begin_layout Standard
-Based on a 
-\change_inserted 193492759 1517564137
-python 
-\change_unchanged
-configuration file TEACUP can perform a series of experiments with different
- traffic mixes, different bottlenecks (such as bandwidths, queue mechanisms),
- different emulated network delays and/or loss rates, and different host
- settings (e.g.
+Based on a python configuration file TEACUP can perform a series of experiments
+ with different traffic mixes, different bottlenecks (such as bandwidths,
+ queue mechanisms), different emulated network delays and/or loss rates,
+ and different host settings (e.g.
  TCP congestion control algorithm) 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -828,15 +683,7 @@ This section provides an overview of TEACUP's architecture for data extraction
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 193492759 1517897049
-Experiment analysis 
-\change_deleted 193492759 1517896968
-A
-\change_inserted 193492759 1517896968
-a
-\change_unchanged
-rchitecture
+Experiment analysis architecture
 \end_layout
 
 \begin_layout Standard
@@ -852,8 +699,6 @@ key "zander2018_teacup_v1.1_system"
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 193492759 1517897062
 Extract and analyse tasks
 \end_layout
 
@@ -881,13 +726,7 @@ reference "fig:TEACUP_analysis_architecture"
 \end_inset
 
  depicts this architecture.
- 
-\change_deleted 193492759 1517896706
-As the figure indicates t
-\change_inserted 193492759 1517897057
-T
-\change_unchanged
-here is not a one-to-one relationship between analysis and extract tasks,
+ There is not a one-to-one relationship between analysis and extract tasks,
  as some analysis tasks may run multiple extract tasks.
 \end_layout
 
@@ -937,67 +776,26 @@ Extract tasks generate files with interim data and pass the names of these
  files to an analyse task if called from that analysis task.
  The analysis task will do further processing and eventually pass (a subset)
  of the files together with other parameters to the plot function.
-\change_inserted 193492759 1517897071
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 193492759 1517897132
 User-supplied plotting/graphing functions
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517897267
 The data extraction and analysis aspect of TEACUP is quite distinct from
  the tasks that actually run experiments and gather testbed data.
- And the analysis aspect of 
-\change_unchanged
-TEACUP cleanly separates the Python pre-processing and R plotting code with
- a well-defined interface between the the two parts
-\change_inserted 193492759 1517897525
-, passing information regarding the data to be plotted using environment
- variables
-\change_unchanged
-.
-
-\change_deleted 193492759 1517897535
- 
-\change_inserted 193492759 1517897421
-
+ And the analysis aspect of TEACUP cleanly separates the Python pre-processing
+ and R plotting code with a well-defined interface between the the two parts,
+ passing information regarding the data to be plotted using environment
+ variables.
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517897454
-As Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:TEACUP_analysis_architecture"
-
-\end_inset
-
- indicates, information regarding the data to be plotted is passed using
- environment variables, so 
-\change_inserted 193492759 1517897555
 If end-users want to develop their own data analysis and graphing tools,
- 
-\change_unchanged
-TEACUP's existing 
-\change_inserted 193492759 1517897295
-R-based 
-\change_unchanged
-plotting functions can be replaced by alternative
-\change_inserted 193492759 1517897295
-,
-\change_unchanged
+ TEACUP's existing R-based plotting functions can be replaced by alternative,
  user-supplied plotting functions implemented in any convenient language
  or tool.
-
-\change_inserted 193492759 1517897372
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1008,107 +806,25 @@ reference "sec:customising_plotting"
  describes how to customise the plotting/graphing by (1) manipulating the
  environment variables passed to the plot script and (2) replacing the default
  plot scripts with customised scripts.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
-Experiment configuration 
-\change_deleted 193492759 1517897155
-information
-\change_inserted 193492759 1517897156
-data
-\change_unchanged
-
+Experiment configuration data
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517789084
-For experiments carried out with TEACUP prior to version 0.9, the config.py
- file used when extract or analysis tasks are executed must be the file
- used to run the experiments (as far as the testbed configuration is concerned)
- or the config file used to run the experiments must be specified with 
+Since TEACUP version 0.9 all config variables for an experiment or group
+ of experiments are stored in a file named 
 \family typewriter
 \size small
---set teacup_config
+<testIDprefix>_varying_params.log.gz
 \family default
 \size default
- (see technical report 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "zander2018_teacup_v1.1_system"
-
-\end_inset
-
- on how to load user-specified config files).
- 
-\end_layout
-
-\begin_layout Standard
-Since
-\change_inserted 193492759 1517789281
- TEACUP
-\change_unchanged
- version 0.9 
-\change_deleted 193492759 1517789270
-TEACUP stores 
-\change_unchanged
-all config variables for a
-\change_inserted 193492759 1517789025
-n experiment or group
-\change_deleted 193492759 1517789030
- series
-\change_unchanged
- of experiments
-\change_inserted 193492759 1517789277
- are stored
-\change_unchanged
- in a file
-\change_inserted 193492759 1517789045
- named
-\change_unchanged
- 
-\family typewriter
-\size small
-<
-\change_deleted 193492759 1517686383
-test_id_pfx
-\change_inserted 193492759 1517686383
-testIDprefix
-\change_unchanged
->_varying_params.log.gz
-\family default
-\size default
- located in the experiment
-\change_inserted 193492759 1517788886
--specific
-\change_unchanged
- 
-\change_deleted 193492759 1517788889
-series 
-\change_unchanged
-sub-directory
-\change_inserted 193492759 1517789374
-.
-
-\change_deleted 193492759 1517789369
- (see technical report 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "zander2018_teacup_v1.1_system"
-
-\end_inset
-
-)
-\change_inserted 193492759 1517789369
-
+ located in the experiment-specific sub-directory.
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517789396
 By default this will be under 
 \family typewriter
 \size footnotesize
@@ -1123,110 +839,27 @@ key "zander2018_teacup_v1.1_system"
 \end_inset
 
 .
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_deleted 193492759 1517789376
-.
-
-\change_unchanged
- 
-\change_inserted 193492759 1517789330
-This file is subsequently used to provide context for 
-\change_deleted 193492759 1517789138
-E
-\change_inserted 193492759 1517789330
-e
-\change_unchanged
-xtract
-\change_inserted 193492759 1517789330
-ion
-\change_unchanged
- and analysis functions
-\change_deleted 193492759 1517789142
- will access this file and the config file used to run the experiments is
- not required anymore when running analysis tasks
-\change_unchanged
-.
-\change_deleted 193492759 1517897384
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517897384
-Modifying or replacing analysis functionality
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517897384
-The data extraction and analysis aspect of TEACUP is quite distinct from
- the tasks that actually run experiments and gather testbed data.
- Instead of using TEACUP's analysis functions, end-users may want to develop
- their own data analysis and graphing tools.
- However, TEACUP also provides some options to customise the behaviour of
- its analysis functions, so users may find it easier to modify or extend
- the existing functions instead.
- For example, Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:customising_plotting"
-
-\end_inset
-
- describes how to customise the plotting by (1) manipulating the environment
- variables passed to the plot script and (2) replacing the default plot
- scrips with customised scripts.
-\change_unchanged
-
+ This file is subsequently used to provide context for extraction and analysis
+ functions.
 \end_layout
 
 \begin_layout Subsection
-Inter
-\change_inserted 193492759 1517908340
-mediate
-\change_deleted 193492759 1517908341
-im
-\change_unchanged
- data file names
+Intermediate data file names
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517738295
-During extraction and post-processing, 
-\change_deleted 193492759 1517908345
-Interim
-\change_inserted 193492759 1517908346
-intermediate
-\change_unchanged
- data files are named as follows
-\change_inserted 193492759 1517897937
-:
-\change_deleted 193492759 1517897939
-.
- 
-\change_inserted 193492759 1517897939
-
+During extraction and post-processing, intermediate data files are named
+ as follows:
 \end_layout
 
 \begin_layout Itemize
 The first part of the file name is the 
-\change_deleted 193492759 1517897939
-experiment
-\change_inserted 193492759 1517738256
-
 \series bold
-test
-\change_unchanged
- ID
-\change_inserted 193492759 1517909943
-
+test ID
 \series default
  (section 
 \begin_inset CommandInset ref
@@ -1235,62 +868,13 @@ reference "subsec:Specifying-experiments-TestIDs"
 
 \end_inset
 
-)
-\change_unchanged
-, which 
-\change_deleted 193492759 1517897939
-allows the ability to
-\change_deleted 1685850735 1494296111
-o
-\change_deleted 193492759 1517897939
- 
-\change_unchanged
-link
-\change_inserted 193492759 1517897677
-s
-\change_unchanged
- 
-\change_deleted 193492759 1517897939
-the
-\change_inserted 193492759 1517897914
-each
-\change_unchanged
- 
-\change_deleted 193492759 1517908351
-interim
-\change_inserted 193492759 1517908354
-intermediate
-\change_unchanged
- data file to the 
-\change_inserted 193492759 1517897677
-specific 
-\change_unchanged
-experiment 
-\change_inserted 193492759 1517897677
-from which 
-\change_unchanged
-it was generated
-\change_deleted 193492759 1517897939
- from
-\change_unchanged
-.
-\change_inserted 193492759 1517897948
-
+), which links each intermediate data file to the specific experiment from
+ which it was generated.
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517897988
- Then f
-\change_inserted 193492759 1517897988
-F
-\change_unchanged
-or extract and analysis task
-\change_inserted 193492759 1517897996
-s
-\change_unchanged
- that process per-flow data, the next part of the file name is of the form
- 
+For extract and analysis tasks that process per-flow data, the next part
+ of the file name is of the form 
 \family typewriter
 \size small
 <src_ip>_<src_port>_<dst_ip>_<dst_port>
@@ -1299,36 +883,11 @@ s
 , where <src_ip> is the source IP address, <src_port> is the source port,
  <dst_ip> is the destination IP address and <dst_port> is the destination
  port.
-\change_inserted 193492759 1517897956
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517897955
- 
-\change_unchanged
 The last part of the file name is an extension that indicates the type of
- data a file contains
-\change_deleted 193492759 1517907329
-.
- The extension is
-\change_inserted 193492759 1517907329
- (
-\change_deleted 193492759 1517907331
- 
-\change_unchanged
-specific to 
-\change_deleted 193492759 1517907354
-the
-\change_inserted 193492759 1517907354
-each
-\change_unchanged
- extract function
-\change_inserted 193492759 1517907334
-)
-\change_unchanged
-.
+ data a file contains (specific to each extract function).
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1336,20 +895,10 @@ reference "sec:Data_extraction"
 
 \end_inset
 
- describes 
-\change_deleted 193492759 1517907342
-the 
-\change_unchanged
-extension names in more detail.
-\change_inserted 193492759 1517897966
-
+ describes extension names in more detail.
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517897966
- 
-\change_unchanged
 Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1357,27 +906,17 @@ reference "lis:Example-interim-file"
 
 \end_inset
 
- shows an example 
-\change_deleted 193492759 1517908365
-interim
-\change_inserted 193492759 1517908367
-intermediate
-\change_unchanged
- data file name
-\change_inserted 193492759 1517909866
- where the test ID is `exp_20150218-135735_aqm_pfifo_responders_4', the
- source was 172.16.10.60:50001, destination was 172.16.11.61:80 with the .rtimes
- extension indicating a file generated by the extract_incast task (section
- 
+ shows an example intermediate data file name where the test ID is `exp_20150218
+-135735_aqm_pfifo_responders_4', the source was 172.16.10.60:50001, destination
+ was 172.16.11.61:80 with the .rtimes extension indicating a file generated
+ by the extract_incast task (section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:extract_incast"
 
 \end_inset
 
-)
-\change_unchanged
-.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1388,15 +927,7 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502326225
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 193492759 1517907387
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_4_172.16.10.60_50001_172.16.11.61_80.rtimes
+exp_20150218-135735_aqm_pfifo_responders_4_172.16.10.60_50001_172.16.11.61_80.rtimes
 \end_layout
 
 \begin_layout Plain Layout
@@ -1428,71 +959,30 @@ Directory caching
 \end_layout
 
 \begin_layout Standard
-Most of TEACUP's extract and analyse tasks 
-\change_deleted 193492759 1517907522
-make 
-\change_unchanged
-use 
-\change_deleted 193492759 1517907524
-of 
-\change_unchanged
-the
-\change_inserted 193492759 1517907430
- unix
-\change_unchanged
- 
+Most of TEACUP's extract and analyse tasks use the unix 
 \family typewriter
 \size footnotesize
 find
 \family default
 \size default
- command 
-\change_deleted 193492759 1517907434
-line tool 
-\change_unchanged
-to locate experiment data files or intermediate data files used for plotting.
+ command to locate experiment data files or intermediate data files used
+ for plotting.
  The root directory for 
-\change_deleted 1685850735 1489723884
-find
-\change_inserted 1685850735 1489723884
-
 \family typewriter
 \size footnotesize
 find
-\change_unchanged
-
 \family default
 \size default
- is the directory in which the 
-\change_inserted 193492759 1517907478
-fab 
-\change_unchanged
-task is run (
-\change_deleted 193492759 1517907485
-or 
-\change_unchanged
-in other words the fabfile.py directory).
+ is the directory in which the fab task is run (in other words the fabfile.py
+ directory).
  In case there are many experiment series' stored in sub directories under
  this directory the find process will be slow.
  
 \end_layout
 
 \begin_layout Standard
-To speed up 
-\change_deleted 193492759 1517907547
-the 
-\change_unchanged
-extraction and analysis, since version 0.9 TEACUP uses a directory cache
-\change_deleted 193492759 1517907639
-, which
-\change_inserted 193492759 1517907640
- to
-\change_unchanged
- store
-\change_deleted 193492759 1517907642
-s
-\change_unchanged
- a map of test ID prefixes and their associated sub directories.
+To speed up extraction and analysis, since version 0.9 TEACUP uses a directory
+ cache to store a map of test ID prefixes and their associated sub directories.
  If there is a cache entry for the test ID of a particular file that TEACUP
  is trying to locate, then the search will only be carried out under the
  cached sub directory.
@@ -1502,11 +992,7 @@ s
 teacup_dir_cache.txt
 \family default
 \size default
- 
-\change_deleted 193492759 1517907681
-and is stored 
-\change_unchanged
-in the directory where fabfile.py is located.
+ in the directory where fabfile.py is located.
  
 \end_layout
 
@@ -1532,18 +1018,8 @@ Many of TEACUP's extract and analysis functions work on a per-flow basis.
 
 \begin_layout Standard
 To speed up the extraction and analysis, since version 0.9 TEACUP uses a
- flow cache
-\change_deleted 193492759 1517907697
-, which
-\change_inserted 193492759 1517907697
- to
-\change_unchanged
- store
-\change_deleted 193492759 1517907700
-s
-\change_unchanged
- a map of file names (including the path relative to the directory in which
- fabfile is located) and their associated flow tuples.
+ flow cache to store a map of file names (including the path relative to
+ the directory in which fabfile is located) and their associated flow tuples.
  If a cache entry is present for a file, TEACUP will use the flow tuples
  from the cache as basis for the analysis.
  If there is no cache entry, TEACUP will extract the flow tuples from the
@@ -1555,11 +1031,7 @@ s
 teacup_flow_cache.txt
 \family default
 \size default
- 
-\change_deleted 193492759 1517907712
-and is stored 
-\change_unchanged
-in the directory where fabfile.py is located.
+ in the directory where fabfile.py is located.
 \end_layout
 
 \begin_layout Standard
@@ -1585,19 +1057,8 @@ name "sec:Data_extraction"
 \end_layout
 
 \begin_layout Standard
-TEACUP provides a number of 
-\change_deleted 193492759 1517907748
-basic extract 
-\change_unchanged
-tasks for extracting 
-\change_inserted 193492759 1517907769
-intermediate 
-\change_unchanged
-data to be plotted from the 
-\change_inserted 193492759 1517907757
-raw 
-\change_unchanged
-data collected during the experiments.
+TEACUP provides a number of tasks for extracting intermediate data to be
+ plotted from the raw data collected during the experiments.
  Here we describe the extract tasks, their parameters and their output.
  The extracted data is used by the analysis tasks described in Section 
 \begin_inset CommandInset ref
@@ -1607,28 +1068,11 @@ reference "sec:Data_analysis"
 \end_inset
 
 .
- Note that analysis tasks automatically call relevant extract tasks to 
-\change_deleted 193492759 1517907844
-extract
-\change_inserted 193492759 1517907847
-obtain
-\change_unchanged
- the 
-\change_inserted 193492759 1517907828
-intermediate 
-\change_unchanged
-data needed for plotting
-\change_inserted 193492759 1517907855
- – there is no need to explicitly run an extract task prior to a related
- analyse task
-\change_unchanged
-.
+ Note that analysis tasks automatically call relevant extract tasks to obtain
+ the intermediate data needed for plotting – there is no need to explicitly
+ run an extract task prior to a related analyse task.
  However, the extract tasks can be executed directly by an end-user who
- wishes to only extract 
-\change_inserted 193492759 1517907817
-intermediate 
-\change_unchanged
-data but not plot graph(s).
+ wishes to only extract intermediate data but not plot graph(s).
 \end_layout
 
 \begin_layout Standard
@@ -1669,14 +1113,8 @@ Extracting the TCP congestion window size (CWND) from SIFTR and Web10G data
 
 \begin_layout Enumerate
 Extracting TCP's RTT estimate from SIFTR and Web10G data (extract_tcp_rtt).
- Th
-\change_inserted 1685850735 1489724113
-is
-\change_deleted 1685850735 1489724113
-e
-\change_unchanged
- task extracts both, the smoothed estimate and an unsmoothed estimate (for
- SIFTR the unsmoothed estimate is the improved ERTT 
+ This task extracts both, the smoothed estimate and an unsmoothed estimate
+ (for SIFTR the unsmoothed estimate is the improved ERTT 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "CAIA-TR-100219A"
@@ -1684,46 +1122,15 @@ key "CAIA-TR-100219A"
 \end_inset
 
  estimate);
-\change_inserted 1685850735 1488774705
-
 \end_layout
 
 \begin_layout Enumerate
 Extract arbitrary TCP statistics from SIFTR and Web10G data (extract_tcp_stat);
-\change_inserted 1685850735 1488778242
-
 \end_layout
 
 \begin_layout Enumerate
-
-\change_deleted 193492759 1517738436
-Ability to e
-\change_inserted 193492759 1517738436
-E
-\change_inserted 1685850735 1488778268
-xtract RTT 
-\change_inserted 193492759 1517738451
-(
-\change_inserted 1685850735 1488778268
-using SPP and
-\change_inserted 193492759 1517738458
-/or
-\change_inserted 1685850735 1488778268
- estimated 
-\change_inserted 193492759 1517738461
-RTT 
-\change_inserted 1685850735 1488778268
-from SIFTR and Web10G data
-\change_inserted 193492759 1517738465
-)
-\change_inserted 1685850735 1488778268
-, as well as 
-\change_deleted 193492759 1517738475
-extract the 
-\change_inserted 1685850735 1488778268
-CWND and packet size data all at once (extract_all);
-\change_unchanged
-
+Extract RTT (using SPP and/or estimated RTT from SIFTR and Web10G data),
+ as well as CWND and packet size data all at once (extract_all);
 \end_layout
 
 \begin_layout Enumerate
@@ -1746,64 +1153,36 @@ Extracting the response times for incast experiments from tcpdump files
 \end_layout
 
 \begin_layout Enumerate
-
-\change_deleted 1685850735 1488773368
-Extrating
-\change_inserted 1685850735 1488773368
-Extracting
-\change_unchanged
- the inter-query times for incast experiments from tcpdump files (extract_incast
-_iqtimes)
-\change_inserted 1685850735 1488774891
-;
+Extracting the inter-query times for incast experiments from tcpdump files
+ (extract_incast_iqtimes);
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1489464298
 Extracting the packet loss rates from tcpdump files (extract_pktloss);
-\change_deleted 1685850735 1488774031
-.
-\change_inserted 1685850735 1489464213
-
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1489621595
 Extracting the one way delay (OWD) from tcpdump files (extract_owd).
 \end_layout
 
 \begin_layout Subsection
-Common 
-\change_inserted 193492759 1517908466
-task 
-\change_unchanged
-parameters
+Common task parameters
 \end_layout
 
 \begin_layout Standard
-This section describes the common parameter
-\change_inserted 193492759 1517908454
-s
-\change_unchanged
-.
+This section describes the common parameters.
  Most of these are supported by all extract tasks, but some of them are
  only supported by a subset of tasks.
 \end_layout
 
 \begin_layout Subsubsection
-Specifying experiments to process
-\change_inserted 193492759 1517909914
- (test IDs)
+Specifying experiments to process (test IDs)
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Specifying-experiments-TestIDs"
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -1814,22 +1193,12 @@ The
 test_id
 \family default
 \size default
- parameter specifies the
-\change_inserted 193492759 1517686437
- full
-\change_unchanged
- 
-\change_inserted 193492759 1517686451
-
+ parameter specifies the full 
 \series bold
-test 
-\change_unchanged
-ID
+test ID
 \series default
  of the experiment from which to extract data.
- 
-\change_inserted 193492759 1517687717
-An experiment in this context means results logged under a particular 
+ An experiment in this context means results logged under a particular 
 \series bold
 test ID prefix
 \series default
@@ -1846,8 +1215,6 @@ key "zander2018_teacup_v1.1_system"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517688098
 
 \family typewriter
 \size small
@@ -1871,8 +1238,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517687571
-
 \family typewriter
 \size footnotesize
 <testID> = <testIDprefix>_[<parName>_<parVal>_]*
@@ -1884,8 +1249,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517907959
 
 \family typewriter
 \size footnotesize
@@ -1902,28 +1265,16 @@ status open
 \size default
  defaults to a string of the form `exp_YYYYMMDD-HHMMSS' (based on the date
  when the overall experiment was launched).
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517687625
-The
-\change_inserted 193492759 1517789606
-A TEACUP fab task's
-\change_unchanged
- 
+A TEACUP fab task's 
 \family typewriter
 \size small
 test_id
 \family default
 \size default
- parameter 
-\change_inserted 193492759 1517687732
-typically 
-\change_unchanged
-accepts multiple test IDs separated by semicolons.
+ parameter typically accepts multiple test IDs separated by semicolons.
 \begin_inset Foot
 status open
 
@@ -1934,28 +1285,10 @@ Since TEACUP v0.5.
 
 \end_inset
 
- If 
-\change_inserted 193492759 1517687641
-such 
-\change_unchanged
-a 
-\change_inserted 193492759 1517687528
-semicolon-separated 
-\change_unchanged
-list
-\change_inserted 193492759 1517687532
- of testIDs
-\change_unchanged
- is specified, data will be extracted for each test ID.
- Extracted data is stored in files that start with the experiment
-\change_inserted 193492759 1517687496
-'s
-\change_unchanged
- 
-\change_inserted 193492759 1517687747
-test 
-\change_unchanged
-ID and have a task-specific extension.
+ If such a semicolon-separated list of testIDs is specified, data will be
+ extracted for each test ID.
+ Extracted data is stored in files that start with the experiment's test
+ ID and have a task-specific extension.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1972,17 +1305,8 @@ replot_only
 .
  While the parameter can be used when executing an extract task, it is mainly
  used for analysis tasks and passed on to the underlying extract tasks.
- This parameter allows t
-\change_inserted 1685850735 1494294293
-he
-\change_deleted 1685850735 1494294293
-o
-\change_unchanged
- replot
-\change_inserted 1685850735 1494294299
-ting of
-\change_unchanged
- the graphs without extracting the data again (e.g.
+ This parameter allows the replotting of the graphs without extracting the
+ data again (e.g.
  from tcpdump, SIFTR or Web10G files).
  If 
 \family typewriter
@@ -2000,38 +1324,10 @@ Data output directory
 \end_layout
 
 \begin_layout Standard
-By default all extracted data files are 
-\change_deleted 193492759 1517790573
-generated
-\change_inserted 193492759 1517790577
-created
-\change_unchanged
- in the sub directory where the experiment
-\change_inserted 193492759 1517790593
-'s raw
-\change_unchanged
- data is located (
-\change_deleted 193492759 1517790457
-the
-\change_inserted 193492759 1517790457
-a
-\change_unchanged
- sub directory 
-\change_inserted 193492759 1517790460
-whose 
-\change_unchanged
-name 
-\change_deleted 193492759 1517790463
-being
-\change_inserted 193492759 1517790463
-is
-\change_unchanged
- the test ID prefix) inside the directory where fab is executed.
- To put the
-\change_inserted 193492759 1517911507
-se
-\change_unchanged
- output files into a specific directory, the 
+By default all extracted data files are created in the sub directory where
+ the experiment's raw data is located (a sub directory whose name is the
+ test ID prefix) inside the directory where fab is executed.
+ To put these output files into a specific directory, the 
 \family typewriter
 \size footnotesize
 out_dir
@@ -2073,13 +1369,7 @@ name "subsec:Data-series-selection"
 \end_layout
 
 \begin_layout Standard
-All extract tasks, except extract_dash_goodput, 
-\change_deleted 193492759 1517908318
-provide
-\change_inserted 193492759 1517908318
-offer
-\change_unchanged
- the 
+All extract tasks, except extract_dash_goodput, offer the 
 \family typewriter
 \size small
 source_filter
@@ -2358,23 +1648,8 @@ status open
 \begin_layout Standard
 Instead of an actual port number on can specify the wild-card character
  (`*').
- This allows t
-\change_inserted 1685850735 1494294317
-he
-\change_deleted 1685850735 1494294316
-o
-\change_unchanged
- filter
-\change_inserted 1685850735 1494294319
-ing
-\change_unchanged
- o
-\change_inserted 1685850735 1494294327
-f
-\change_deleted 1685850735 1494294327
-n
-\change_unchanged
- a specific source or destination with any port number.
+ This allows the filtering of a specific source or destination with any
+ port number.
  For example, we can plot data for all flows 
 \emph on
 from
@@ -2449,15 +1724,8 @@ Note that
 source_filter
 \family default
 \size default
- identifies the flows selected
-\change_inserted 193492759 1517910106
- as the 'source' of information
-\change_unchanged
-, not the flows 
-\change_inserted 193492759 1517910113
-to be 
-\change_unchanged
-filtered out.
+ identifies the flows selected as the 'source' of information, not the flows
+ to be filtered out.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2503,11 +1771,7 @@ replot_only
 \end_layout
 
 \begin_layout Subsubsection
-Burst-separation (incast 
-\change_inserted 193492759 1517910166
-and similar 
-\change_unchanged
-experiments)
+Burst-separation (incast and similar experiments)
 \end_layout
 
 \begin_layout Standard
@@ -2521,60 +1785,17 @@ name "subsec:burst_separation"
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517910270
-The
-\change_inserted 193492759 1517910273
-A number of
-\change_unchanged
- tasks 
-\change_deleted 193492759 1517910278
-extract_rtt, extract_ackseq and extract_incast 
-\change_unchanged
-can extract data on a per-burst basis for 
-\change_deleted 193492759 1517910173
-incast 
-\change_unchanged
-experiments
-\change_deleted 193492759 1517910176
-,
-\change_unchanged
- where we have bursts of TCP requests sent by a querier to 
-\change_inserted 193492759 1517910182
-one or more
-\change_deleted 193492759 1517910185
-multiple
-\change_unchanged
- responders interspersed by idle times.
+A number of tasks can extract data on a per-burst basis for experiments
+ where we have bursts of TCP requests sent by a querier to one or more responder
+s interspersed by idle times.
  The parameter 
 \family typewriter
 \size small
 burst_sep
 \family default
 \size default
- 
-\change_deleted 193492759 1517912102
-allows the
-\change_deleted 1685850735 1494294350
-o
-\change_deleted 193492759 1517912102
- specification of
-\change_deleted 1685850735 1494294353
-y
-\change_inserted 193492759 1517912103
-specifies
-\change_unchanged
- the
-\change_inserted 193492759 1517912154
- minimum
-\change_unchanged
- time between 
-\change_inserted 193492759 1517910214
-the end of one burst and the start of another
-\change_deleted 193492759 1517910217
-bursts
-\change_unchanged
-.
+ specifies the minimum time between the end of one burst and the start of
+ another.
  Any idle time longer than 
 \family typewriter
 \size small
@@ -2605,19 +1826,9 @@ sburst
 eburst
 \family default
 \size default
- can be used to select the bursts to be plotted (
-\change_inserted 193492759 1517910237
-with a 
-\change_unchanged
-start index of 1).
- The
-\change_inserted 193492759 1517910382
-se parameters are 
-\change_deleted 193492759 1517910387
-y are not useful when running an extract task directly.
- They are only useful when 
-\change_unchanged
-passed to an analyse task, which passes them further to an extract task.
+ can be used to select the bursts to be plotted (with a start index of 1).
+ These parameters are passed to an analyse task, which passes them further
+ to an extract task.
 \end_layout
 
 \begin_layout Subsection
@@ -2635,69 +1846,18 @@ name "subsec:clock-offset-analysis"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517908506
-Since version 0.7, 
-\change_unchanged
-TEACUP provides an additional mechanism to evaluate the quality of the time
- synchronisation between hosts and (optionally) correct for clock offsets
- in the post-analysis.
-\change_deleted 193492759 1517908509
-
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
- Since TEACUP version 0.7.
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- 
-\change_deleted 193492759 1517908540
-This mechanism requires that b
-\change_inserted 193492759 1517908540
-B
-\change_unchanged
-roadcast
-\change_inserted 193492759 1517908543
- or 
-\change_deleted 193492759 1517908543
-/
-\change_unchanged
-multicast pings 
-\change_inserted 193492759 1517908553
-must have been
-\change_deleted 193492759 1517908555
-were
-\change_unchanged
- enabled for an experiment
-\change_inserted 193492759 1517908176
-,
-\change_unchanged
- 
-\change_deleted 193492759 1517908163
-(
-\change_unchanged
-with TPCONF_bc_ping_enable=`1'
-\change_deleted 193492759 1517908169
-) as described in Section IV-I in technical report
-\change_unchanged
- 
+Since version 0.7, TEACUP provides an additional mechanism to evaluate the
+ quality of the time synchronisation between hosts and (optionally) correct
+ for clock offsets in the post-analysis.
+ Broadcast or multicast pings must have been enabled for an experiment,
+ with TPCONF_bc_ping_enable=`1' 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zander2018_teacup_v1.1_system"
 
 \end_inset
 
-
-\change_inserted 193492759 1517908195
 .
-\change_deleted 193492759 1517908190
-,
-\change_unchanged
  
 \end_layout
 
@@ -2706,49 +1866,16 @@ Computing clock offsets
 \end_layout
 
 \begin_layout Standard
-The get_clock_offsets task
-\change_deleted 193492759 1517908710
-s
-\change_unchanged
- 
-\change_deleted 193492759 1517908719
-allows 
-\change_unchanged
-comput
-\change_deleted 193492759 1517908722
-ing
-\change_inserted 193492759 1517908722
-es
-\change_unchanged
- the clock offsets between all hosts using the clock of one host as reference
- (by default the router's clock).
- 
-\change_inserted 193492759 1517909361
-By default t
-\change_deleted 193492759 1517909363
-T
-\change_unchanged
-h
-\change_inserted 1685850735 1489724290
-is
-\change_deleted 1685850735 1489724290
-e
-\change_unchanged
- task will generate a 
-\change_inserted 193492759 1517909379
-
+The get_clock_offsets task computes the clock offsets between all hosts
+ using the clock of one host as reference (by default the router's clock).
+ By default this task will generate a 
 \family typewriter
 \size small
 <testID>_clock_offsets.txt
 \family default
 \size default
- 
-\change_unchanged
-file for each experiment in experiments_completed.txt
-\change_deleted 193492759 1517909402
- by default
-\change_unchanged
-, for a specific experiment if the 
+ file for each experiment in experiments_completed.txt, for a specific experiment
+ if the 
 \family typewriter
 \size small
 test_id
@@ -2772,34 +1899,16 @@ The
 baseline_host
 \family default
 \size default
- parameter can be used to specify the 
-\change_inserted 193492759 1517908805
-host whose timestamps will be considered the 
-\change_unchanged
-reference clock
-\change_inserted 193492759 1517908810
-,
-\change_unchanged
- and the 
+ parameter can be used to specify the host whose timestamps will be considered
+ the reference clock, and the 
 \family typewriter
 \size small
 out_dir
 \family default
 \size default
  parameter specifies the directory in which the clock offset file is generated.
- Assuming <
-\change_deleted 193492759 1517686648
-test_id
-\change_inserted 193492759 1517686648
-testID
-\change_unchanged
-> is the experiment ID, the name of the clock offsets file is <
-\change_deleted 193492759 1517686649
-test_id
-\change_inserted 193492759 1517686649
-testID
-\change_unchanged
->_clock_offsets.txt.
+ Assuming <testID> is the experiment ID, the name of the clock offsets file
+ is <testID>_clock_offsets.txt.
 \end_layout
 
 \begin_layout Standard
@@ -2918,64 +2027,27 @@ ts_correct=1
 
 \begin_layout Standard
 Note that if 
-\change_deleted 193492759 1517909318
-ts_correct is set to 1
-\change_inserted 193492759 1517909318
-
 \family typewriter
 \size small
 ts_correct=1
-\change_unchanged
-
 \family default
 \size default
  and no clock offsets file is present, TEACUP will automatically try to
  create the 
-\change_inserted 193492759 1517909463
-
 \family typewriter
 \size small
 <testID>_clock_offsets.txt
 \family default
 \size default
- 
-\change_unchanged
-file
-\change_inserted 193492759 1517909489
-(s)
-\change_deleted 193492759 1517909469
-
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-<
-\change_deleted 193492759 1517686656
-test_id
-\change_inserted 193492759 1517686656
-testID
-\change_unchanged
->_clock_offsets.txt file
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-.
+ file(s).
  Also note that enabling 
 \family typewriter
 \size small
 ts_correct
 \family default
 \size default
- will only modify timestamps in the additional 
-\change_deleted 193492759 1517909528
-interim
-\change_inserted 193492759 1517909530
-intermediate
-\change_unchanged
- data files used for plotting.
+ will only modify timestamps in the additional intermediate data files used
+ for plotting.
  Original timestamps in the actual log files (e.g.
  timestamps in tcpdump or web10g files) are 
 \emph on
@@ -2985,73 +2057,28 @@ not
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517909664
-Extract and analyse tasks 
-\change_deleted 193492759 1517909665
-P
-\change_inserted 193492759 1517909665
-p
-\change_unchanged
-rior to TEACUP version 0.9
-\change_inserted 193492759 1517909701
- used
-\change_unchanged
- 
+Extract and analyse tasks prior to TEACUP version 0.9 used 
 \family typewriter
 \size small
 ts_correct=0
 \family default
 \size default
- 
-\change_deleted 193492759 1517909676
-w
-\change_unchanged
-as the default
-\change_inserted 193492759 1517909679
-.
- 
-\change_deleted 193492759 1517909681
-, but s
-\change_inserted 193492759 1517909681
-S
-\change_unchanged
-ince version 0.9 the default is 
+ as the default.
+ Since version 0.9 the default is 
 \family typewriter
 \size small
 ts_correct=1
 \family default
 \size default
 .
- 
-\change_inserted 193492759 1517909553
-To analyse 
-\change_deleted 193492759 1517909554
-If 
-\change_unchanged
-an experiment 
-\change_inserted 193492759 1517909558
-that 
-\change_unchanged
-was run without broadcast/multicast pings,
-\change_inserted 193492759 1517909568
- you must manually specify
-\change_unchanged
- 
+ To analyse an experiment that was run without broadcast/multicast pings,
+ you must manually specify 
 \family typewriter
 \size small
 ts_correct=0
 \family default
 \size default
- 
-\change_deleted 193492759 1517909574
-must be specified 
-\change_unchanged
-for extract or analysis tasks, 
-\change_deleted 193492759 1517909579
-or 
-\change_unchanged
-otherwise these tasks will fail.
+ for extract or analysis tasks, otherwise these tasks will fail.
  
 \end_layout
 
@@ -3081,13 +2108,7 @@ This task extracts packet size information from tcpdump files.
 \end_layout
 
 \begin_layout Standard
-Besides the common parameters th
-\change_inserted 1685850735 1489724312
-is
-\change_deleted 1685850735 1489724312
-e
-\change_unchanged
- task has the parameters 
+Besides the common parameters this task has the parameters 
 \family typewriter
 \size small
 link_len 
@@ -3114,20 +2135,8 @@ The parameter
 link_len 
 \family default
 \size default
-allows t
-\change_inserted 1685850735 1494294366
-he
-\change_deleted 1685850735 1494294366
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1494294369
-ication of
-\change_deleted 1685850735 1494294368
-y
-\change_unchanged
- whether the packet sizes extracted are the IP sizes (`0') or the sizes
- including the link layer header (`1').
+allows the specification of whether the packet sizes extracted are the IP
+ sizes (`0') or the sizes including the link layer header (`1').
  
 \end_layout
 
@@ -3158,24 +2167,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use th
-\change_inserted 1685850735 1489724326
-is
-\change_deleted 1685850735 1489724325
-e
-\change_unchanged
- task
-\change_inserted 1685850735 1502327754
- to extract packet size information including the link layer header from
- a tcpdump file for a certain 
-\change_deleted 193492759 1517686667
-test_id
-\change_inserted 193492759 1517686667
-testID
-\change_inserted 1685850735 1502327754
-, to the current working directory under the results folder
-\change_unchanged
-:
+The following shows an example of how to use this task to extract packet
+ size information including the link layer header from a tcpdump file for
+ a certain testID, to the current working directory under the results folder:
 \end_layout
 
 \begin_layout Standard
@@ -3219,31 +2213,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_pktsizes:test_id=
-\change_inserted 1685850735 1494296661
- 
-\change_deleted 1685850735 1489538677
- 
-\change_inserted 1685850735 1502326314
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502326523
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502326569
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489541998
-.
-\change_unchanged
-/results,
-\change_deleted 1685850735 1489538680
- 
-\change_unchanged
-link_len=1
+> fab extract_pktsizes:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../
+results,link_len=1
 \end_layout
 
 \end_inset
@@ -3287,107 +2258,47 @@ key "sppweb"
 .
  Extracted data files are created for each bidirectional traffic flow with
  .rtts extension.
- They contain 
-\change_inserted 193492759 1517910516
-pairs of 
+ They contain pairs of 
 \family typewriter
 \size small
 <timestamp> <RTT>
 \family default
 \size default
- as two 
-\change_deleted 193492759 1517910519
-the following 
-\change_unchanged
-space-separated columns
-\change_inserted 193492759 1517910534
-,
-\change_unchanged
- with one line per timestamp
-\change_deleted 193492759 1517910530
-: timestamp of RTT and RTT estimated by SPP
-\change_unchanged
-.
+ as two space-separated columns, with one line per timestamp.
 \end_layout
 
 \begin_layout Standard
-Besides the common parameters th
-\change_inserted 1685850735 1489724334
-is
-\change_deleted 1685850735 1489724334
-e
-\change_unchanged
- task has the parameter 
+Besides the common parameters this task has the parameter 
 \family typewriter
 \size small
 udp_map
 \family default
 \size default
 .
- 
-\change_inserted 193492759 1517910929
-SPP requires two flows, one in each direction, to estimate the RTT between
+ SPP requires two flows, one in each direction, to estimate the RTT between
  two points in the network.
  For TCP connections TEACUP assumes the Data flow in one direction can be
  paired with the ACK flow in the opposite direction for SPP's analysis.
- However, 
-\change_deleted 193492759 1517910936
-T
-\change_inserted 193492759 1517910937
-t
-\change_unchanged
-h
-\change_deleted 193492759 1517910947
-is
-\change_inserted 193492759 1517910949
-e 
+ However, the 
 \family typewriter
 \size small
 udp_map
-\change_unchanged
-
 \family default
 \size default
- parameter allows 
-\change_inserted 193492759 1517910968
-us to specify 
-\change_deleted 193492759 1517910971
-the
-\change_deleted 1685850735 1494294383
-o
-\change_deleted 193492759 1517910971
- mapping of
-\change_unchanged
+ parameter allows us to specify
+\change_deleted 193492759 1518046267
  
-\change_inserted 193492759 1517910956
-two unrelated 
 \change_unchanged
-unidirectional UDP flows in opposite direction
-\change_inserted 193492759 1517910980
-s as the input data to SPP.
+ two unrelated unidirectional UDP flows in opposite directions as the input
+ data to SPP.
  
-\change_deleted 193492759 1517910985
- into bidirectional UDP flows, as SPP needs bidirectional flows to estimate
- the RTT.
-\change_inserted 193492759 1517910985
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517910985
- 
-\change_unchanged
 The format for 
-\change_deleted 193492759 1517911005
-the parameter
-\change_inserted 193492759 1517911005
-
 \family typewriter
 \size small
 udp_map
-\change_unchanged
-
 \family default
 \size default
  is a semicolon-separated list of source IP source port pairs.
@@ -3395,52 +2306,19 @@ udp_map
 \family typewriter
 \size footnotesize
 <src_ip1>
-\change_inserted 1685850735 1494302111
-
 \backslash
-
-\change_unchanged
 ,<src_port1>:<src_ip2>
-\change_inserted 1685850735 1494302114
-
 \backslash
-
-\change_unchanged
 ,<src_port2>
 \family default
 \size default
 , where <src_ip1>
-\change_inserted 1685850735 1494302120
-
 \backslash
-
-\change_unchanged
-,<src_port1> is the source IP addresses and source port pair of one 
-\change_inserted 193492759 1517911055
-unidirectional 
-\change_unchanged
-UDP flow and <src_ip2>
-\change_inserted 1685850735 1494302126
-
+,<src_port1> is the source IP addresses and source port pair of one unidirection
+al UDP flow and <src_ip2>
 \backslash
-
-\change_unchanged
 ,<src_port2> is the source IP addresses and source port pair of another
- 
-\change_inserted 193492759 1517911060
-unidirectional 
-\change_unchanged
-UDP flow 
-\change_deleted 193492759 1517911063
-(
-\change_unchanged
-in opposite direction
-\change_deleted 193492759 1517911066
-)
-\change_unchanged
-.
-
-\change_inserted 193492759 1517911167
+ unidirectional UDP flow in opposite direction.
  Note: The 
 \begin_inset Quotes eld
 \end_inset
@@ -3466,21 +2344,11 @@ udp_map
 \family default
 \size default
  on the command line.
-
-\change_unchanged
  
-\change_inserted 193492759 1517911117
-
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489724341
-is
-\change_deleted 1685850735 1489724340
-e
-\change_unchanged
- task also has the 
+This task also has the 
 \family typewriter
 \size small
 burst_sep
@@ -3499,19 +2367,7 @@ eburst
 \family default
 \size default
  parameters which make it possible to extract the RTT estimates on a burst-by-bu
-rst bas
-\change_inserted 193492759 1517911190
-i
-\change_deleted 193492759 1517911190
-e
-\change_unchanged
-s for 
-\change_deleted 193492759 1517911005
-incast 
-\change_inserted 193492759 1517911201
-relevant 
-\change_unchanged
-experiments.
+rst basis for relevant experiments.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3519,29 +2375,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows a
-\change_inserted 1685850735 1502325409
- simple
-\change_deleted 1685850735 1502325408
-n
-\change_unchanged
- example of how to use th
-\change_inserted 1685850735 1489724353
-is
-\change_deleted 1685850735 1489724352
-e
-\change_unchanged
- task
-\change_inserted 1685850735 1502327847
- to extract RTT based on SPP for a certain 
-\change_deleted 193492759 1517686686
-test_id
-\change_inserted 193492759 1517686686
-testID
-\change_inserted 1685850735 1502327847
-, to the current working directory under the results folder
-\change_unchanged
-:
+The following shows a simple example of how to use this task to extract
+ RTT based on SPP for a certain testID, to the current working directory
+ under the results folder:
 \end_layout
 
 \begin_layout Standard
@@ -3585,31 +2421,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_rtt:test_id=
-\change_inserted 1685850735 1502326633
- exp_
-\change_deleted 1685850735 1489538694
- 
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502326640
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502326646
- 
-\change_deleted 1685850735 1489538696
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542013
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538698
-/
-\change_unchanged
-
+> fab extract_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../resul
+ts
 \end_layout
 
 \end_inset
@@ -3629,11 +2442,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-The following command shows 
-\change_inserted 1685850735 1502328033
-the same example as before but now illustrates 
-\change_unchanged
-how to combine two unidirectional UDP flows, one originating from 192.168.0.10
+The following command shows the same example as before but now illustrates
+ how to combine two unidirectional UDP flows, one originating from 192.168.0.10
  port 5000 and the other originating from 192.168.0.11 port 5001:
 \end_layout
 
@@ -3681,59 +2491,20 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_rtt:test_id=
-\change_inserted 1685850735 1494296778
+> fab extract_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, udp_map=
  
-\change_deleted 1685850735 1489538708
- 
-\change_inserted 1685850735 1502326659
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502326666
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502326670
- 
-\change_deleted 1685850735 1489538710
- 
-\change_unchanged
-udp_map=
-\change_inserted 1685850735 1494296781
- 
-\change_deleted 1685850735 1489538713
- 
-\change_unchanged
-
 \begin_inset Quotes erd
 \end_inset
 
 192.168.0.10
-\change_inserted 1685850735 1494296792
-
 \backslash
-
-\change_unchanged
-,5000:
-\change_inserted 1685850735 1502326693
- 
-\change_unchanged
-192.168.0.11
-\change_inserted 1685850735 1494296795
-
+,5000: 192.168.0.11
 \backslash
-
-\change_unchanged
 ,5001
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_inserted 1685850735 1502325590
 ,out_dir=../results
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -3772,13 +2543,7 @@ This task extracts the CWND data from TCP log files.
  extension.
  They contain the following comma-separated columns with one line per timestamp:
  timestamp and CWND value (from SIFTR or web10g log file).
- Besides the common parameters th
-\change_inserted 1685850735 1489724491
-is
-\change_deleted 1685850735 1489724491
-e
-\change_unchanged
- task has the parameter 
+ Besides the common parameters this task has the parameter 
 \family typewriter
 \size small
 io_filter
@@ -3800,21 +2565,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use th
-\change_inserted 1685850735 1489724496
-is
-\change_deleted 1685850735 1489724495
-e
-\change_unchanged
- task
-\change_inserted 1685850735 1502327876
- to extract CWND data from TCP logs for a certain 
-\change_deleted 193492759 1517686693
-test_id
-\change_inserted 193492759 1517686693
-testID
-\change_inserted 1685850735 1502327876
-, to the current working directory under the results folder.
+The following shows an example of how to use this task to extract CWND data
+ from TCP logs for a certain testID, to the current working directory under
+ the results folder.
  Additionally an 
 \family typewriter
 \size small
@@ -3822,9 +2575,7 @@ io_filter
 \family default
 \size default
  parameter value is specified to show only outbound packets from the SIFTR
- logs
-\change_unchanged
-:
+ logs:
 \end_layout
 
 \begin_layout Standard
@@ -3868,35 +2619,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_cwnd:test_id=
-\change_inserted 1685850735 1494296868
- 
-\change_deleted 1685850735 1489538718
- 
-\change_inserted 1685850735 1502326750
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502326753
-_run_0
-\change_unchanged
-,
-\change_deleted 1685850735 1489538720
- 
-\change_inserted 1685850735 1502326757
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542027
-.
-\change_unchanged
-/results
-\change_inserted 1685850735 1502326948
-,io_filter=o
-\change_deleted 1685850735 1489538721
-/
-\change_unchanged
-
+> fab extract_cwnd:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../resu
+lts,io_filter=o
 \end_layout
 
 \end_inset
@@ -3926,13 +2650,7 @@ This task extracts TCP's RTT estimates from the TCP log files (SIFTR or
  extension.
  They contain the following comma-separated columns with one line per timestamp:
  timestamp, smoothed RTT estimate and sample/unsmoothed RTT estimate.
- Besides the common parameters th
-\change_inserted 1685850735 1489724500
-is
-\change_deleted 1685850735 1489724500
-e
-\change_unchanged
- task has the parameter 
+ Besides the common parameters this task has the parameter 
 \family typewriter
 \size small
 io_filter
@@ -3953,17 +2671,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use 
-\change_deleted 1685850735 1489724510
-the task
-\change_inserted 1685850735 1502328131
-this task to extract RTT based on the TCP logs for a certain 
-\change_deleted 193492759 1517686701
-test_id
-\change_inserted 193492759 1517686701
-testID
-\change_inserted 1685850735 1502328131
-, to the current working directory under the results folder.
+The following shows an example of how to use this task to extract RTT based
+ on the TCP logs for a certain testID, to the current working directory
+ under the results folder.
  Additionally an 
 \family typewriter
 \size small
@@ -3971,9 +2681,7 @@ io_filter
 \family default
 \size default
  parameter value is specified to show only outbound packets from the SIFTR
- logs
-\change_unchanged
-:
+ logs:
 \end_layout
 
 \begin_layout Standard
@@ -4017,39 +2725,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_
-\change_inserted 1685850735 1502326984
-tcp_rtt
-\change_deleted 1685850735 1502326982
-cwnd
-\change_unchanged
-:test_id=
-\change_inserted 1685850735 1494296881
- 
-\change_deleted 1685850735 1489538728
- 
-\change_inserted 1685850735 1502326967
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502326975
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502326976
- 
-\change_deleted 1685850735 1489538730
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542053
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538732
-/
-\change_unchanged
-,io_filter=o
+> fab extract_tcp_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../r
+esults,io_filter=o
 \end_layout
 
 \end_inset
@@ -4093,13 +2770,7 @@ This task extracts a user-defined statistic from the TCP log files.
 \end_layout
 
 \begin_layout Standard
-Besides the common parameters 
-\change_deleted 1685850735 1489724512
-the task
-\change_inserted 1685850735 1489724512
-this task
-\change_unchanged
- has the parameter 
+Besides the common parameters this task has the parameter 
 \family typewriter
 \size small
 io_filter
@@ -4159,17 +2830,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use 
-\change_deleted 1685850735 1489724514
-the task
-\change_inserted 1685850735 1502329070
-this task to extract TCP statistics from TCP logs for a certain 
-\change_deleted 193492759 1517686707
-test_id
-\change_inserted 193492759 1517686707
-testID
-\change_inserted 1685850735 1502329070
-, to the current working directory under the results folder.
+The following shows an example of how to use this task to extract TCP statistics
+ from TCP logs for a certain testID, to the current working directory under
+ the results folder.
  Additionally an 
 \family typewriter
 \size small
@@ -4191,9 +2854,7 @@ web10g_index
 \family default
 \size default
  parameters are given values to specify the statistical column being looked
- at in their respective logs
-\change_unchanged
-:
+ at in their respective logs:
 \end_layout
 
 \begin_layout Standard
@@ -4237,37 +2898,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_tcp_stat:test_id=
-\change_inserted 1685850735 1494296913
- 
-\change_deleted 1685850735 1489538746
- 
-\change_inserted 1685850735 1502327537
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502327541
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502327543
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542057
-.
-\change_unchanged
-/results,
-\change_inserted 1685850735 1502328874
-io_filter=o,
-\change_deleted 1685850735 1489538748
- 
-\change_unchanged
-siftr_index=22,
-\change_inserted 1685850735 1502328904
- 
-\change_unchanged
-web10g_index=120
+> fab extract_tcp_stat:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../
+results,io_filter=o,siftr_index=22, web10g_index=120
 \end_layout
 
 \end_inset
@@ -4295,38 +2927,23 @@ This task executes the following tasks: extract_rtt, extract_cwnd, extract_tcp_r
 tt and extract_pktsizes.
  The task parameters are a superset of the parameters of the individual
  tasks.
-\change_inserted 1685850735 1502329103
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1502329104
 Examples
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502329967
 The following shows an example of how to use this task to extract the SPP
- RTT and regular RTT, CWND and packets sizes for a certain 
-\change_deleted 193492759 1517686713
-test_id
-\change_inserted 193492759 1517686713
-testID
-\change_inserted 1685850735 1502329967
-, to the current working directory under the results folder:
+ RTT and regular RTT, CWND and packets sizes for a certain testID, to the
+ current working directory under the results folder:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502329104
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502329104
 
 
 \backslash
@@ -4361,8 +2978,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502329114
-
 \family typewriter
 \size footnotesize
 > fab extract_all:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../resul
@@ -4377,15 +2992,11 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502329104
-
 }
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -4395,24 +3006,15 @@ extract_ackseq – Extract acknowledged bytes or dupACKs
 
 \begin_layout Standard
 This task extracts TCP acknowledgement data.
- 
-\change_deleted 193492759 1517789780
-It is useful for incast experiments but not limited to these.
- 
-\change_unchanged
-Extracted data files are created for each traffic flow and have an .acks.0
+ Extracted data files are created for each traffic flow and have an .acks.0
  extension (without burst separation) or a file extension is .acks.<burst_number>
- (with burst separation
-\change_inserted 193492759 1517997092
-, section 
+ (with burst separation, section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:burst_separation"
 
 \end_inset
 
-
-\change_unchanged
 ).
  The data files contain the following space-separated columns with one line
  per timestamp: timestamp, cumulative acknowledged bytes (from tcpdump log)
@@ -4421,13 +3023,7 @@ reference "subsec:burst_separation"
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489724630
-is
-\change_deleted 1685850735 1489724629
-e
-\change_unchanged
- task has the common parameters as well as the burst-separation parameters
+This task has the common parameters as well as the burst-separation parameters
  
 \family typewriter
 \size small
@@ -4454,13 +3050,7 @@ reference "subsec:burst_separation"
 \end_inset
 
 .
- Th
-\change_inserted 1685850735 1489724640
-is
-\change_deleted 1685850735 1489724640
-e
-\change_unchanged
- task also has the parameter 
+ This task also has the parameter 
 \family typewriter
 \size small
 total_per_experiment
@@ -4535,26 +3125,16 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use 
-\change_deleted 1685850735 1489725144
-the task
-\change_inserted 1685850735 1502331785
-this task to extract TCP acknowledgement data for a certain 
-\change_deleted 193492759 1517686718
-test_id
-\change_inserted 193492759 1517686718
-testID
-\change_inserted 1685850735 1502331785
-, to the current working directory under the results folder.
+The following shows an example of how to use this task to extract TCP acknowledg
+ement data for a certain testID, to the current working directory under
+ the results folder.
  The 
 \family typewriter
 \size small
 burst_sep
 \family default
 \size default
- parameter allows the specification of the time between bursts
-\change_unchanged
-:
+ parameter allows the specification of the time between bursts:
 \end_layout
 
 \begin_layout Standard
@@ -4598,31 +3178,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_ackseq:test_id=
-\change_inserted 1685850735 1494296939
- 
-\change_deleted 1685850735 1489538755
- 
-\change_inserted 1685850735 1502330363
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502330366
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502330368
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542061
-.
-\change_unchanged
-/results,
-\change_deleted 1685850735 1489538758
- 
-\change_unchanged
-burst_sep=1.0
+> fab extract_ackseq:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../re
+sults,burst_sep=1.0
 \end_layout
 
 \end_inset
@@ -4642,27 +3199,15 @@ status open
 \end_layout
 
 \begin_layout Subsection
-extract_dash_goodput – Extract goodput for DASH
-\change_inserted 193492759 1517789854
--like
-\change_unchanged
- experiments
-\change_inserted 193492759 1517789859
- based on httperf
-\change_unchanged
-
+extract_dash_goodput – Extract goodput for DASH-like experiments based on
+ httperf
 \end_layout
 
 \begin_layout Standard
-This task extracts goodput for DASH-like clients
-\change_inserted 193492759 1517790283
-, based on data from the httperf log files (*_httperf_dash.log.gz) generated
- by the start_httperf_dash traffic generator
-\change_unchanged
-.
- 
-\change_inserted 193492759 1517790107
-(Note: The use of the start_httperf_dash traffic generator is deprecated
+This task extracts goodput for DASH-like clients, based on data from the
+ httperf log files (*_httperf_dash.log.gz) generated by the start_httperf_dash
+ traffic generator.
+ (Note: The use of the start_httperf_dash traffic generator is deprecated
  for TEACUP v1.1 in favor of launching real DASH clients using start_dash_streami
 ng_dashjs.)
 \end_layout
@@ -4678,13 +3223,7 @@ Extracted data files are created for each DASH-like client and have a .dashgp
 \end_layout
 
 \begin_layout Standard
-Besides the common parameters 
-\change_deleted 1685850735 1489725146
-the task
-\change_inserted 1685850735 1489725146
-this task
-\change_unchanged
- has a 
+Besides the common parameters this task has a 
 \family typewriter
 \size small
 dash_log_list
@@ -4719,14 +3258,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use 
-\change_deleted 1685850735 1489725147
-the task
-\change_inserted 1685850735 1502332470
-this task to extract goodput from DASH-like clients for a certain dash log
- list, to the current working directory under the results folder
-\change_unchanged
-:
+The following shows an example of how to use this task to extract goodput
+ from DASH-like clients for a certain dash log list, to the current working
+ directory under the results folder:
 \end_layout
 
 \begin_layout Standard
@@ -4770,23 +3304,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_dash_goodput:
-\change_deleted 1685850735 1489538763
- 
-\change_unchanged
-dash_log_list=
-\change_inserted 1685850735 1494296973
- 
-\change_unchanged
-dash_logs.txt,out_dir=.
-\change_inserted 1685850735 1489542065
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538766
-/
-\change_unchanged
-
+> fab extract_dash_goodput:dash_log_list= dash_logs.txt,out_dir=../results
 \end_layout
 
 \end_inset
@@ -4832,13 +3350,7 @@ This task extracts response times for incast experiments.
 \end_layout
 
 \begin_layout Standard
-Besides the common parameters 
-\change_deleted 1685850735 1489725149
-the task
-\change_inserted 1685850735 1489725149
-this task
-\change_unchanged
- has the 
+Besides the common parameters this task has the 
 \family typewriter
 \size small
 sburst
@@ -4884,13 +3396,7 @@ Slowest response only
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725160
-is
-\change_deleted 1685850735 1489725159
-e
-\change_unchanged
- task has a parameter 
+This task has a parameter 
 \family typewriter
 \size small
 slowest_only
@@ -4903,29 +3409,18 @@ slowest_only
 slowest_only
 \family default
 \size default
- is set to `1', 
-\change_deleted 1685850735 1489725167
-the task
-\change_inserted 1685850735 1489725167
-this task
-\change_unchanged
- will also generate a file with the extension .rtimes.slowest that only contains
- the slowest response time over all flows for each burst.
+ is set to `1', this task will also generate a file with the extension .rtimes.slo
+west that only contains the slowest response time over all flows for each
+ burst.
  If 
 \family typewriter
 \size small
 slowest_only
 \family default
 \size default
- is set to `2', 
-\change_deleted 1685850735 1489725169
-the task
-\change_inserted 1685850735 1489725169
-this task
-\change_unchanged
- will also generate a file with the extension .rtimes.slowest that only contains
- the time between the first request sent and the time the last response
- was finished for each burst (default is `0').
+ is set to `2', this task will also generate a file with the extension .rtimes.slo
+west that only contains the time between the first request sent and the
+ time the last response was finished for each burst (default is `0').
 \end_layout
 
 \begin_layout Subsubsection
@@ -4933,18 +3428,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use 
-\change_deleted 1685850735 1489725170
-the task
-\change_inserted 1685850735 1502332823
-this task to extract response times from incast experiments httperf logs
- for a certain 
-\change_deleted 193492759 1517686742
-test_id
-\change_inserted 193492759 1517686742
-testID
-\change_inserted 1685850735 1502332823
-, to the current working directory under the results folder.
+The following shows an example of how to use this task to extract response
+ times from incast experiments httperf logs for a certain testID, to the
+ current working directory under the results folder.
  The parameters 
 \family typewriter
 \size small
@@ -4957,9 +3443,7 @@ sburst
 eburst
 \family default
 \size default
- are specified to select the bursts to be plotted
-\change_unchanged
-:
+ are specified to select the bursts to be plotted:
 \end_layout
 
 \begin_layout Standard
@@ -5003,31 +3487,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_incast:test_id=
-\change_inserted 1685850735 1494297002
- 
-\change_deleted 1685850735 1489538771
- 
-\change_inserted 1685850735 1502332555
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502332559
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502332561
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542070
-.
-\change_unchanged
-/results,
-\change_deleted 1685850735 1489538775
- 
-\change_unchanged
-sburst=2,eburst=0
+> fab extract_incast:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../re
+sults,sburst=2,eburst=0
 \end_layout
 
 \end_inset
@@ -5072,13 +3533,7 @@ reference "subsec:extract_incast"
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725178
-is
-\change_deleted 1685850735 1489725178
-e
-\change_unchanged
- task has the common parameters.
+This task has the common parameters.
  Furthermore, it has the parameter 
 \family typewriter
 \size small
@@ -5111,13 +3566,7 @@ Slowest response only
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725184
-is
-\change_deleted 1685850735 1489725184
-e
-\change_unchanged
- task has a parameter 
+This task has a parameter 
 \family typewriter
 \size small
 slowest_only
@@ -5130,50 +3579,28 @@ slowest_only
 slowest_only
 \family default
 \size default
- is set to `1', 
-\change_deleted 1685850735 1489725229
-the task
-\change_inserted 1685850735 1489725229
-this task
-\change_unchanged
- will also generate a file with the extension .restimes.slowest that only
- contains the slowest response time over all flows for each burst.
+ is set to `1', this task will also generate a file with the extension .restimes.s
+lowest that only contains the slowest response time over all flows for each
+ burst.
  If 
 \family typewriter
 \size small
 slowest_only
 \family default
 \size default
- is set to `2', 
-\change_deleted 1685850735 1489725231
-the task
-\change_inserted 1685850735 1489725231
-this task
-\change_unchanged
- will also generate a file with the extension .restimes.slowest that only
- contains the time between the first request sent and the time the last
- response was finished for each burst (default is `0').
-\change_inserted 1685850735 1502332835
-
+ is set to `2', this task will also generate a file with the extension .restimes.s
+lowest that only contains the time between the first request sent and the
+ time the last response was finished for each burst (default is `0').
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1502332835
 Examples
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502333846
 The following shows an example of how to use this task to extract response
- times from incast experiments tcpdump logs for a certain 
-\change_deleted 193492759 1517686748
-test_id
-\change_inserted 193492759 1517686748
-testID
-\change_inserted 1685850735 1502333846
-, to the current working directory under the results folder.
+ times from incast experiments tcpdump logs for a certain testID, to the
+ current working directory under the results folder.
  The parameter 
 \family typewriter
 \size small
@@ -5185,14 +3612,10 @@ query_host
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502332835
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502332835
 
 
 \backslash
@@ -5227,14 +3650,10 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502333326
-
 \family typewriter
 \size footnotesize
 > fab extract_incast_restimes:test_id= exp_20131206-102931_tcp_newreno_run_0,
  out_dir=../results,query_host=testhost1
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -5245,15 +3664,11 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502332835
-
 }
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -5275,31 +3690,21 @@ This task extracts the times between requests sent by the querier for incast
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725242
-is
-\change_deleted 1685850735 1489725240
-e
-\change_unchanged
- task has the common parameters.
+This task has the common parameters.
  It also has the 
 \family typewriter
 \size small
 burst_sep
 \family default
 \size default
- parameter used to detect the bursts
-\change_inserted 193492759 1517997034
- (section 
+ parameter used to detect the bursts (section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:burst_separation"
 
 \end_inset
 
-)
-\change_unchanged
-; however, the semantic here is slightly different as 
+); however, the semantic here is slightly different as 
 \family typewriter
 \size small
 burst_sep
@@ -5332,11 +3737,7 @@ The parameter
 by_responder
 \family default
 \size default
- is set to `1' by default
-\change_inserted 1685850735 1488779916
-,
-\change_unchanged
- meaning per responder data files are created.
+ is set to `1' by default, meaning per responder data files are created.
  If set to `0' one file with the times for all responders is created.
  
 \end_layout
@@ -5352,11 +3753,7 @@ By default and if the parameter
 cumulative 
 \family default
 \size default
-is set to `0'
-\change_inserted 1685850735 1488779982
-,
-\change_unchanged
- raw inter-query times are computed (as explained above).
+is set to `0', raw inter-query times are computed (as explained above).
  If the parameter 
 \family typewriter
 \size small
@@ -5376,18 +3773,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use 
-\change_deleted 1685850735 1489725248
-the task
-\change_inserted 1685850735 1502333831
-this task to extract the times between requests sent by the querier from
- incast experiments for a certain 
-\change_deleted 193492759 1517686758
-test_id
-\change_inserted 193492759 1517686758
-testID
-\change_inserted 1685850735 1502333831
-, to the current working directory under the results folder.
+The following shows an example of how to use this task to extract the times
+ between requests sent by the querier from incast experiments for a certain
+ testID, to the current working directory under the results folder.
  The parameter 
 \family typewriter
 \size small
@@ -5402,9 +3790,7 @@ query_host
 cumulative
 \family default
 \size default
- is used to plot bursts in a cumulative fashion
-\change_unchanged
-:
+ is used to plot bursts in a cumulative fashion:
 \end_layout
 
 \begin_layout Standard
@@ -5448,35 +3834,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_iqtimes:test_id=
-\change_inserted 1685850735 1494297151
- 
-\change_deleted 1685850735 1489538788
- 
-\change_inserted 1685850735 1502333068
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502333072
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502333074
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542081
-.
-\change_unchanged
-/results,
-\change_deleted 1685850735 1489538792
- 
-\change_unchanged
-query_host=testhost1,
-\change_inserted 1685850735 1502333083
- 
-\change_unchanged
-cumulative=1
+> fab extract_iqtimes:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../r
+esults,query_host=testhost1, cumulative=1
 \end_layout
 
 \end_inset
@@ -5496,14 +3855,10 @@ status open
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1489621460
 extract_owd – Extract OWD information
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489621557
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:extract_owd"
@@ -5514,20 +3869,14 @@ name "subsec:extract_owd"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489621460
 The extracted data files for each data flow are given the .owd extension.
  They contain the following space-separated columns with one line per timestamp:
  timestamp of OWD and OWD estimated.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502333918
 It utilises many of the common parameters specified previously under the
- extract_rtt,
-\change_inserted 193492759 1517997192
- and the burst-separation parameters 
+ extract_rtt, and the burst-separation parameters 
 \family typewriter
 \size small
 burst_sep
@@ -5553,19 +3902,7 @@ reference "subsec:burst_separation"
 \end_inset
 
 .
- 
-\change_deleted 193492759 1517996904
- however a
-\change_inserted 193492759 1517996904
-A
-\change_inserted 1685850735 1502333918
-dditionally it 
-\change_deleted 193492759 1517996909
-has
-\change_inserted 193492759 1517996913
-provides
-\change_inserted 1685850735 1502333918
- 
+ Additionally it provides 
 \family typewriter
 \size small
 anchor_map
@@ -5575,16 +3912,9 @@ anchor_map
 \family typewriter
 \size small
 owd_midpoint
-\change_deleted 193492759 1517996923
-
 \family default
 \size default
-.
-
-\change_inserted 193492759 1517996920
  parameters.
-
-\change_inserted 1685850735 1502333918
  The 
 \family typewriter
 \size small
@@ -5607,8 +3937,6 @@ anchor_map
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489621460
 There is also a 
 \family typewriter
 \size small
@@ -5620,33 +3948,20 @@ parameter for the matching of packets within the seek window size of the
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1489621460
 Examples
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502335373
 The following shows an example of how to use this task to extract the one-way
- delay for a certain 
-\change_deleted 193492759 1517686764
-test_id
-\change_inserted 193492759 1517686764
-testID
-\change_inserted 1685850735 1502335373
-, to the current working directory under the results folder:
+ delay for a certain testID, to the current working directory under the
+ results folder:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489621460
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1489621460
 
 
 \backslash
@@ -5681,8 +3996,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502334854
-
 \family typewriter
 \size footnotesize
 > fab extract_owd:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../resul
@@ -5697,8 +4010,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1489621460
-
 }
 \end_layout
 
@@ -5712,8 +4023,6 @@ extract_pktloss – Extract packet loss information
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489621543
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:extract_pktloss"
@@ -5724,8 +4033,6 @@ name "subsec:extract_pktloss"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517997173
 This task has the common parameters, the burst-separation parameters 
 \family typewriter
 \size small
@@ -5758,47 +4065,13 @@ log_loss
 \family default
 \size default
  parameter.
- 
-\change_deleted 193492759 1517996169
-This task can be
-\change_inserted 193492759 1517996825
-The task is
-\change_inserted 1685850735 1489621353
- used to 
-\change_inserted 193492759 1517996825
-identify when packet losses occur versus time, or the cumulative count of
- packet losses versus time for 
-\change_deleted 193492759 1517996130
-determine how much packet loss was being experienced for the 
-\change_inserted 1685850735 1489621353
-specified traffic.
-\change_deleted 1685850735 1488780796
-only
-\change_unchanged
- 
-\change_deleted 1685850735 1488780868
-be used with emulated FPS game traffic generated with the start_fps_game
- function.
- 
-\change_unchanged
-Extracted 
-\change_inserted 193492759 1517996825
-intermediate 
-\change_unchanged
-data files are created for each traffic flow and have a .loss
-\change_inserted 193492759 1517996825
-2
-\change_unchanged
- extension.
-\change_inserted 193492759 1517996825
-
+ The task is used to identify when packet losses occur versus time, or the
+ cumulative count of packet losses versus time for specified traffic.
+ Extracted intermediate data files are created for each traffic flow and
+ have a .loss2 extension.
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517996297
- 
-\change_inserted 193492759 1517996509
 If 
 \family typewriter
 \size small
@@ -5816,8 +4089,6 @@ log_loss=1
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517996479
 If 
 \family typewriter
 \size small
@@ -5832,38 +4103,6 @@ log_loss=2
 \size default
 , where cumulative_loss_count is the number of loss events experienced by
  a given flow at each specific point in time.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517996379
-They contain the following space-separated columns with one line per packet:
- timestamp, lost flag (0 if packet arrived, 1 if packet was lost).
- This
-\change_deleted 1685850735 1489725256
-e
-\change_deleted 193492759 1517996157
- task has the common parameters
-\change_deleted 1685850735 1489621425
-.
-\change_deleted 193492759 1517996379
-, as well as the 
-\family typewriter
-\size small
-log_loss
-\family default
-\size default
- parameter.
- This can be equal to 1 for the plotting of individual packet loss events,
- or being equal to 2, which enables the plotting of cumulative packet loss
- events (default).
- The extract data files in this case have the same timestamping per line,
- but the second field is a cumulative total of the packets lost, as opposed
- to just and indication of a packet loss.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -5871,72 +4110,24 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use 
-\change_deleted 1685850735 1489725261
-the task
-\change_inserted 1685850735 1502335654
-this task to extract packet loss for a certain 
-\change_deleted 193492759 1517686768
-test_id
-\change_inserted 193492759 1517686768
-testID
-\change_inserted 1685850735 1502335654
-, to the current working directory under 
-\change_deleted 193492759 1517996606
-the
-\change_inserted 193492759 1517996610
-a 
+The following shows an example of how to use this task to extract packet
+ loss for a certain testID, to the current working directory under a 
 \begin_inset Quotes eld
 \end_inset
 
-../
-\change_deleted 193492759 1517996610
- 
-\change_inserted 1685850735 1502335654
-results
-\change_inserted 193492759 1517996614
-
+../results
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_inserted 1685850735 1502335654
  folder.
- 
-\change_deleted 193492759 1517996545
-The parameter 
-\family typewriter
-\size small
-log_loss
-\family default
-\size default
- being a value of 2
-\change_inserted 193492759 1517996547
-Setting 
+ Setting 
 \family typewriter
 \size small
 log_loss=2
-\change_inserted 1685850735 1502335654
-
 \family default
 \size default
- means a
-\change_inserted 193492759 1517996572
-n intermediate file of
-\change_inserted 1685850735 1502335654
- cumulative 
-\change_deleted 193492759 1517996575
-plot
-\change_inserted 193492759 1517996582
-loss count versus time
-\change_inserted 1685850735 1502335654
- will 
-\change_deleted 193492759 1517996551
-occur
-\change_inserted 193492759 1517996552
-be created
-\change_unchanged
-:
+ means an intermediate file of cumulative loss count versus time will be
+ created:
 \end_layout
 
 \begin_layout Standard
@@ -5980,37 +4171,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab extract_pktloss:test_id=
-\change_inserted 1685850735 1494297199
- 
-\change_deleted 1685850735 1489538797
- 
-\change_inserted 1685850735 1502335429
-exp_
-\change_unchanged
-20141003-111821_
-\change_inserted 1685850735 1502335504
-tcp_newreno
-\change_deleted 1685850735 1502335492
-game_traffic_aqm_pfifo
-\change_inserted 1685850735 1502335434
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494297202
- 
-\change_deleted 1685850735 1489538801
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542087
-.
-\change_unchanged
-/results
-\change_inserted 1685850735 1502335667
-,log_loss=2
-\change_unchanged
-
+> fab extract_pktloss:test_id= exp_20141003-111821_tcp_newreno_run_0, out_dir=../r
+esults,log_loss=2
 \end_layout
 
 \end_inset
@@ -6026,8 +4188,6 @@ status open
 
 \end_inset
 
-
-\change_inserted 1685850735 1489464332
 
 \end_layout
 
@@ -6051,11 +4211,7 @@ Now we describe TEACUP's analyse tasks that allow to plot various types
  First, we give an overview of the existing analysis tasks.
  Then we discuss parameters common to most tasks as well as common environment
  variables that are used by the plotting code.
- Next, we discuss the
-\change_inserted 1685850735 1489725281
-se
-\change_unchanged
- tasks in detail.
+ Next, we discuss these tasks in detail.
  Finally, we discuss ways to customise the plotting beyond using the existing
  tasks.
 \end_layout
@@ -6101,14 +4257,8 @@ Plotting the TCP congestion window size (CWND) based on SIFTR and Web10G
 
 \begin_layout Enumerate
 Plotting the TCP RTT estimate based on SIFTR and Web10G data (analyse_tcp_rtt).
- Th
-\change_inserted 1685850735 1489725289
-is
-\change_deleted 1685850735 1489725289
-e
-\change_unchanged
- task can plot both, the smoothed estimate and an unsmoothed estimate (for
- SIFTR the unsmoothed estimate is the improved ERTT 
+ This task can plot both, the smoothed estimate and an unsmoothed estimate
+ (for SIFTR the unsmoothed estimate is the improved ERTT 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "CAIA-TR-100219A"
@@ -6121,17 +4271,11 @@ key "CAIA-TR-100219A"
 \begin_layout Enumerate
 Plotting an arbitrary TCP statistic from SIFTR and Web10G data (analyse_tcp_stat
 );
-\change_inserted 1685850735 1488780704
-
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1488780744
 Plots RTT using SPP and estimated from SIFTR and Web10G data, as well as
  plotting the CWND and packet size data all at once (analyse_all);
-\change_unchanged
-
 \end_layout
 
 \begin_layout Enumerate
@@ -6153,48 +4297,23 @@ Plotting the response times for incast experiments (analyse_incast);
 \end_layout
 
 \begin_layout Enumerate
-Plotting the inter-query times for incast experiments (analyse_incast_iqtimes)
-\change_inserted 1685850735 1488780552
-;
+Plotting the inter-query times for incast experiments (analyse_incast_iqtimes);
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1489535246
 Plotting the packet loss being experienced based off tcpdump data (analyse_pktlo
 ss);
-\change_deleted 1685850735 1488780552
-.
-\change_inserted 1685850735 1489535250
-
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1489535743
 Plotting the one way delay (OWD) being experienced based off tcpdump data
  (analyse_owd);
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 1685850735 1489535503
-A convenience function exists that plots graphs 1–4 listed above (analyse_all).
- 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
 The above tasks usually plot a single statistic over time.
- However, there are t
-\change_inserted 1685850735 1494566252
-wo
-\change_deleted 1685850735 1489535319
-wo
-\change_unchanged
- tasks that allow to compare the above statistics across different experimental
- settings:
+ However, there are two tasks that allow to compare the above statistics
+ across different experimental settings:
 \end_layout
 
 \begin_layout Enumerate
@@ -6204,13 +4323,7 @@ Plotting boxplots, mean or median of a statistic for different combinations
 
 \begin_layout Enumerate
 Plotting 2D-density plots or ellipse plots of two statistics for different
- combinations of experiment parameters (analyse_2d_density)
-\change_inserted 1685850735 1494566258
-.
-\change_deleted 1685850735 1489534947
-.
-\change_inserted 1685850735 1489534892
-
+ combinations of experiment parameters (analyse_2d_density).
 \end_layout
 
 \begin_layout Subsection
@@ -6247,28 +4360,12 @@ test_id
 \size default
  parameter.
  The analysis can be run for a single experiment only by specifying a single
- test
-\change_deleted 193492759 1517686862
- 
-\change_unchanged
-ID.
+ testID.
  For example, the following command generates the RTT graph for the experiment
  
-\change_inserted 1685850735 1502335740
-
 \family typewriter
 \size footnotesize
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502335831
-dash_2000_
-\change_unchanged
-tcp_newreno
-\change_inserted 1685850735 1502335772
-_run_0
-\change_unchanged
-
+exp_20131206-102931_tcp_newreno_run_0
 \family default
 \size default
 :
@@ -6315,23 +4412,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_rtt:test_id=
-\change_inserted 1685850735 1494297228
- 
-\change_deleted 1685850735 1489538826
- 
-\change_inserted 1685850735 1502335715
-exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502335835
-_dash_2000
-\change_unchanged
-_tcp_newreno
-\change_inserted 1685850735 1502335721
-_run_0
-\change_unchanged
-
+> fab analyse_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0
 \end_layout
 
 \end_inset
@@ -6357,11 +4438,7 @@ The
 test_id
 \family default
 \size default
- parameter also accepts multiple test IDs 
-\change_inserted 193492759 1517686890
-(testIDs) 
-\change_unchanged
-separated by semicolons.
+ parameter also accepts multiple test IDs (testIDs) separated by semicolons.
 \begin_inset Foot
 status collapsed
 
@@ -6392,12 +4469,7 @@ test_id
 \family default
 \size default
  parameter some tasks, such as analyse_cmpexp and analyse_2d_density, have
- a parameter that allows specifying a file that contains a list of 
-\change_deleted 193492759 1517790371
-experiment
-\change_inserted 193492759 1517790371
-test
-\change_unchanged
+ a parameter that allows specifying a file that contains a list of test
  IDs.
  
 \end_layout
@@ -6432,13 +4504,7 @@ reference "subsec:Data-series-selection"
 
 \end_inset
 
- describes how to use th
-\change_inserted 1685850735 1502336487
-is
-\change_deleted 1685850735 1502336487
-e
-\change_unchanged
- parameter.
+ describes how to use this parameter.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6453,19 +4519,8 @@ replot_only
 \family default
 \size default
 .
- This parameter allows t
-\change_inserted 1685850735 1494294401
-he
-\change_deleted 1685850735 1494294400
-o
-\change_unchanged
- 
-\change_deleted 1685850735 1494294415
-replot
-\change_inserted 1685850735 1494294415
-re-plotting of
-\change_unchanged
- the graphs without extracting the data again (e.g.
+ This parameter allows the re-plotting of the graphs without extracting
+ the data again (e.g.
  from tcpdump, SIFTR or Web10G files).
  If 
 \family typewriter
@@ -6545,28 +4600,9 @@ Specifying the location of intermediate data files
 \end_layout
 
 \begin_layout Standard
-By default all 
-\change_deleted 193492759 1517911439
-interim
-\change_inserted 193492759 1517911443
-intermediate
-\change_unchanged
- data files are generated in a sub directory (
-\change_deleted 193492759 1517790512
-with
-\change_inserted 193492759 1517790516
-whose name
-\change_deleted 193492759 1517790523
- the directory name being
-\change_inserted 193492759 1517790523
- is
-\change_unchanged
- the test ID prefix) inside the directory where fab is executed.
- To put the
-\change_inserted 193492759 1517911526
-se
-\change_unchanged
- output files into a specific directory the 
+By default all intermediate data files are generated in a sub directory
+ (whose name is the test ID prefix) inside the directory where fab is executed.
+ To put these output files into a specific directory the 
 \family typewriter
 \size footnotesize
 out_dir
@@ -6638,15 +4674,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_all:out_dir=.
-\change_inserted 1685850735 1489542120
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538837
-/
-\change_unchanged
-
+> fab analyse_all:out_dir=../results
 \end_layout
 
 \end_inset
@@ -6690,28 +4718,12 @@ status open
 
 \begin_layout Plain Layout
 
-<fabfile_dir>/
-\change_inserted 1685850735 1502335970
-exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502335966
-_exp
-\change_unchanged
-/results/
+<fabfile_dir>/exp_20131206-102931/results/
 \end_layout
 
 \begin_layout Plain Layout
 
-<fabfile_dir>/
-\change_inserted 1685850735 1502335973
-exp_
-\change_unchanged
-20131206-124510
-\change_deleted 1685850735 1502335968
-_exp
-\change_unchanged
-/results/
+<fabfile_dir>/exp_20131206-124510/results/
 \end_layout
 
 \end_inset
@@ -6731,39 +4743,21 @@ out_dir
 \family default
 \size default
 .
- This can be 
-\change_deleted 193492759 1517911578
-adjusted
-\change_inserted 193492759 1517911583
-overridden
-\change_unchanged
- using the 
+ This can be overridden using the 
 \family typewriter
 \size footnotesize
 pdf_dir
 \family default
 \size default
  parameter.
- 
-\change_deleted 193492759 1517911632
-Like
-\change_inserted 193492759 1517911633
-As with
-\change_unchanged
- 
+ As with 
 \family typewriter
 \size footnotesize
 out_dir
-\change_deleted 193492759 1517911609
-
 \family default
 \size default
- 
-\change_inserted 193492759 1517911608
-, 
-\change_unchanged
-the specified directory is either an absolute path or a relative path which
- is relative to the location of the experiment's log files.
+, the specified directory is either an absolute path or a relative path
+ which is relative to the location of the experiment's log files.
  The directory is automatically created if it does not exist.
  The parameter can be used as follows:
 \end_layout
@@ -6809,31 +4803,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_
-\change_deleted 1685850735 1502341379
-spp_
-\change_unchanged
-rtt:test_id= 
-\change_inserted 1685850735 1502336014
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502336018
-dash_2000_
-\change_unchanged
-tcp_newreno
-\change_inserted 1685850735 1502336023
-_run_0
-\change_unchanged
-, out_dir=.
-\change_inserted 1685850735 1494297270
-.
-\change_unchanged
-/results,pdf_dir=.
-\change_inserted 1685850735 1494297303
-.
-\change_unchanged
-/pdfs
+> fab analyse_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../resul
+ts,pdf_dir=../pdfs
 \end_layout
 
 \end_inset
@@ -7090,23 +5061,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_
-\change_deleted 1685850735 1502341395
-spp_
-\change_unchanged
-rtt:test_id= 
-\change_inserted 1685850735 1502336070
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502336078
-dash_2000_
-\change_unchanged
-tcp_newreno
-\change_inserted 1685850735 1502336082
-_run_0
-\change_unchanged
-, ymin=100,ymax=200
+> fab analyse_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, ymin=100,ymax=
+200
 \end_layout
 
 \end_inset
@@ -7130,11 +5086,7 @@ Adjusting time (x-axes) scales
 \end_layout
 
 \begin_layout Standard
-All tasks
-\change_deleted 1685850735 1488781186
- tasks
-\change_unchanged
- that plot data over time have the parameters 
+All tasks that plot data over time have the parameters 
 \family typewriter
 \size footnotesize
 stime
@@ -7159,15 +5111,8 @@ etime
 \family default
 \size default
  is the duration of the experiment).
- Note that using these parameters allows t
-\change_inserted 1685850735 1494294446
-he
-\change_deleted 1685850735 1494294445
-o
-\change_inserted 1685850735 1494294605
-ability to
-\change_unchanged
- zoom in, but the data outside the specified interval is not filtered out.
+ Note that using these parameters allows theability to zoom in, but the
+ data outside the specified interval is not filtered out.
  The y-axis maximum is adjusted automatically to the maximum occurring in
  the specified x-axis interval, but the legend is not adjusted.
  To remove unwanted entries in the legend (e.g.
@@ -7230,23 +5175,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_
-\change_deleted 1685850735 1502341398
-spp_
-\change_unchanged
-rtt:test_id= 
-\change_inserted 1685850735 1502336136
-exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502336128
-_dash_2000
-\change_unchanged
-_tcp_newreno
-\change_inserted 1685850735 1502336133
-_run_0
-\change_unchanged
-, stime=5,etime=10
+> fab analyse_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, stime=5,etime=
+10
 \end_layout
 
 \end_inset
@@ -7279,11 +5209,8 @@ lnames
 \family default
 \size default
  can be used to replace these with more informative names.
- One must specify the same number as names as there are data series
-\change_inserted 1685850735 1502336630
- or source filters
-\change_unchanged
-.
+ One must specify the same number as names as there are data series or source
+ filters.
  Names specified must be separated by semicolons.
  The parameter can be used as follows:
 \end_layout
@@ -7329,23 +5256,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_
-\change_deleted 1685850735 1502341401
-spp_
-\change_unchanged
-rtt:test_id= 
-\change_inserted 1685850735 1502336162
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502336156
-dash_2000_
-\change_unchanged
-tcp_newreno
-\change_inserted 1685850735 1502336159
-_run_0
-\change_unchanged
-, lnames='TCP Reno;TCP Cubic'
+> fab analyse_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, lnames='TCP
+ Reno;TCP Cubic'
 \end_layout
 
 \end_inset
@@ -7375,29 +5287,7 @@ The
 out_name
 \family default
 \size default
- parameter allows t
-\change_inserted 1685850735 1488781287
-he
-\change_deleted 1685850735 1488781286
-o
-\change_unchanged
- chang
-\change_inserted 1685850735 1488781290
-ing
-\change_deleted 1685850735 1488781289
-e
-\change_unchanged
- 
-\change_inserted 1685850735 1488781296
-of 
-\change_unchanged
-the name 
-\change_inserted 1685850735 1488781299
-for
-\change_deleted 1685850735 1488781299
-of
-\change_unchanged
- the PDF files produced.
+ parameter allows the changing of the name for the PDF files produced.
  If 
 \family typewriter
 \size footnotesize
@@ -7456,23 +5346,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_
-\change_deleted 1685850735 1502341403
-spp_
-\change_unchanged
-rtt:test_id= 
-\change_inserted 1685850735 1502336165
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502336168
-dash_2000_
-\change_unchanged
-tcp_newreno
-\change_inserted 1685850735 1502336172
-_run_0
-\change_unchanged
-, out_name='ExperimentA'
+> fab analyse_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, out_name='Expe
+rimentA'
 \end_layout
 
 \end_inset
@@ -7530,21 +5405,15 @@ replot_only
 \family default
 \size default
  is set to `0' (i.e.
- you must re-extract intermediate data if you want to change io_filter)
-\change_inserted 1685850735 1502337093
-.
+ you must re-extract intermediate data if you want to change io_filter).
  The parameter can be used as follows:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502337093
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502337093
 
 
 \backslash
@@ -7579,8 +5448,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502341310
-
 \family typewriter
 \size footnotesize
 > fab analyse_tcp_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, io_filter=
@@ -7594,8 +5461,6 @@ o
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502337093
 
 }
 \end_layout
@@ -7638,64 +5503,24 @@ reference "subsec:clock-offset-analysis"
 \end_layout
 
 \begin_layout Subsubsection
-Burst-separation (incast 
-\change_inserted 193492759 1517912171
-and similar 
-\change_unchanged
-experiments)
+Burst-separation (incast and similar experiments)
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517912054
-A number of tasks
-\change_deleted 193492759 1517912047
-The tasks analyse_rtt, analyse_ackseq and analyse_incast
-\change_unchanged
- can extract and plot data on a per-burst basis for 
-\change_deleted 193492759 1517912061
-incast 
-\change_unchanged
-experiments
-\change_deleted 193492759 1517912064
-,
-\change_unchanged
- where we have bursts of TCP requests sent by a querier to 
-\change_inserted 193492759 1517912069
-one or more
-\change_deleted 193492759 1517912072
-multiple
-\change_unchanged
- responders interspersed by idle times.
+A number of tasks can extract and plot data on a per-burst basis for experiments
+ where we have bursts of TCP requests sent by a querier to one or more responder
+s interspersed by idle times.
  The parameter 
 \family typewriter
 \size small
 burst_sep
 \family default
 \size default
- 
-\change_deleted 193492759 1517912122
-allows for the
-\change_deleted 1685850735 1488781429
-to
-\change_deleted 193492759 1517912122
- specifying of
-\change_inserted 193492759 1517912123
-specifies
-\change_inserted 1685850735 1488781439
+ specifies the minimum time between
+\change_deleted 193492759 1518046267
  
 \change_unchanged
-the 
-\change_inserted 193492759 1517912144
-minimum 
-\change_unchanged
-time between 
-\change_deleted 193492759 1517912129
-bursts
-\change_inserted 193492759 1517912129
- the end of one burst and the start of another
-\change_unchanged
-.
+ the end of one burst and the start of another.
  Any idle time longer than 
 \family typewriter
 \size small
@@ -7731,20 +5556,14 @@ eburst=0
 \family default
 \size default
  means to end with the last burst.
-
-\change_inserted 1685850735 1502341182
  The parameters can be used as follows:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502341028
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502341028
 
 
 \backslash
@@ -7779,8 +5598,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502341286
-
 \family typewriter
 \size footnotesize
 > fab analyse_incast:test_id= exp_20131206-102931_tcp_newreno_run_0, burst_sep=1
@@ -7795,15 +5612,11 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502341028
-
 }
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -7836,20 +5649,14 @@ source_filter
 \family default
 \size default
  should be specified that filters on a particular source or destination.
-
-\change_inserted 1685850735 1502341261
  The parameter can be used as follows:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502341263
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502341263
 
 
 \backslash
@@ -7884,8 +5691,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502341642
-
 \family typewriter
 \size footnotesize
 > fab analyse_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, source_filter=
@@ -7900,20 +5705,11 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502341263
-
 }
 \end_layout
 
 \end_inset
 
-
-\change_deleted 1685850735 1502341261
-
-\family default
-\size default
- 
-\change_unchanged
 
 \end_layout
 
@@ -7996,13 +5792,9 @@ TC_AGGR_WIN_SIZE is specified in seconds, with fractional values allowed.
  Effectively the interpolation creates overlapping time windows, with the
  gaps between windows being TC_AGGR_WIN_SIZE/TC_AGGR_INT_FACTOR seconds.
  By default TC_AGGR_WIN_SIZE=1 and TC_AGGR_INT_FACTOR=4.
-\change_inserted 193492759 1517912281
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517913419
 
 \series bold
 Note:
@@ -8028,8 +5820,6 @@ not
  periods.
  Such sparse traffic also skews the results high when using analyse_cmpexp
  to generate throughput boxplots.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -8038,12 +5828,8 @@ Point thinning
 
 \begin_layout Standard
 By default all plot functions will plot every point for each data series.
- If the data series
-\change_deleted 1685850735 1488781624
-'
-\change_unchanged
- are very large, the resulting PDF files will be large and the figures will
- take a long time to display.
+ If the data series are very large, the resulting PDF files will be large
+ and the figures will take a long time to display.
  To reduce the size of the plots and the time for opening them without loosing
  important information TEACUP implements 
 \begin_inset Quotes eld
@@ -8077,21 +5863,9 @@ Using the absolute Euclidean distance is problematic if the scales of x-axis
 \end_layout
 
 \begin_layout Standard
-Since version 0.8 TEACUP also allows t
-\change_inserted 1685850735 1494295689
-he
-\change_deleted 1685850735 1494295689
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1494295694
-ication of
-\change_deleted 1685850735 1494295692
-y
-\change_unchanged
- the variable TC_PTHIN_DIST_FAC which controls the minimum distance of points
- in x-dimension and y-dimension separately, relative to the x-range and
- y-range plotted.
+Since version 0.8 TEACUP also allows the specification of the variable TC_PTHIN_D
+IST_FAC which controls the minimum distance of points in x-dimension and
+ y-dimension separately, relative to the x-range and y-range plotted.
  A point is plotted if either the distance in x-dimension is larger or equal
  TC_PTHIN_DIST_FAC*<xrange> or the distance in y-dimension is larger or
  equal TC_PTHIN_DIST_FAC*<yrange>, where <xrange> and <yrange> are given
@@ -8133,13 +5907,7 @@ etime
 \size default
 .
  Legend entries for these flows are still plotted, although they can be
- 
-\change_deleted 1685850735 1488851153
-supressed
-\change_inserted 1685850735 1488851153
-suppressed
-\change_unchanged
- by using 
+ suppressed by using 
 \family typewriter
 \size small
 source_filter
@@ -8219,25 +5987,7 @@ status open
 \family typewriter
 \size footnotesize
 > TC_AGGR_WIN_SIZE=2 TC_AGGR_INT_FACTOR=8 TC_PTHIN_DIST=0.25 fab analyse_throughp
-ut:
-\change_deleted 1685850735 1489538862
- 
-\change_inserted 1685850735 1502341766
- 
-\change_unchanged
-test_id=
-\change_inserted 1685850735 1502341733
-exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502341729
-_dash_2000
-\change_unchanged
-_tcp_newreno
-\change_inserted 1685850735 1502341737
-_run_0
-\change_unchanged
-
+ut: test_id=exp_20131206-102931_tcp_newreno_run_0
 \end_layout
 
 \end_inset
@@ -8262,13 +6012,7 @@ analyse_throughput – Plot throughput over time
 
 \begin_layout Standard
 This task plots the total or per-flow throughput over time.
- Th
-\change_inserted 1685850735 1489725587
-is
-\change_deleted 1685850735 1489725587
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -8429,21 +6173,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_throughput:test_id=
-\change_deleted 1685850735 1489538871
- 
-\change_inserted 1685850735 1502342299
- exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502342281
-_dash_2000
-\change_unchanged
-_tcp_newreno
-\change_inserted 1685850735 1502342287
-_run_0
-\change_unchanged
-
+> fab analyse_throughput:test_id= exp_20131206-102931_tcp_newreno_run_0
 \end_layout
 
 \end_inset
@@ -8508,27 +6238,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_throughput:test_id=
-\change_deleted 1685850735 1489538881
- 
-\change_inserted 1685850735 1502342309
- exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502342316
-_dash_2000
-\change_unchanged
-_tcp_newreno
-\change_inserted 1685850735 1502342319
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494298900
- 
-\change_deleted 1685850735 1489538883
- 
-\change_unchanged
-link_len=1
+> fab analyse_throughput:test_id= exp_20131206-102931_tcp_newreno_run_0,
+ link_len=1
 \end_layout
 
 \end_inset
@@ -8553,13 +6264,7 @@ analyse_rtt – Plot RTT (SPP) over time
 
 \begin_layout Standard
 This task plots RTT estimated by SPP for each bidirectional flow over time.
- Th
-\change_inserted 1685850735 1489725597
-is
-\change_deleted 1685850735 1489725596
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -8676,32 +6381,22 @@ reference "subsec:extract_rtt"
 \end_inset
 
 ).
-\change_inserted 1685850735 1502342872
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1502342872
 Examples
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502342952
 The following command generates a SPP RTT graph were a udp_map was required
  due to udp traffic being present:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502342953
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502342953
 
 
 \backslash
@@ -8716,8 +6411,6 @@ colorbox{lightgray}{
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502342953
 
 \family typewriter
 \size footnotesize
@@ -8740,8 +6433,6 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502343186
 
 \family typewriter
 \size footnotesize
@@ -8768,8 +6459,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502342953
-
 }
 \end_layout
 
@@ -8785,13 +6474,7 @@ analyse_cwnd – Plot TCP CWND over time
 \begin_layout Standard
 This task plots the TCP CWND from SIFTR or web10g logs for each direction
  of a TCP flow over time.
- Th
-\change_inserted 1685850735 1489725601
-is
-\change_deleted 1685850735 1489725600
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -8890,32 +6573,22 @@ reference "subsec:filtering_siftr_analysis"
 \end_inset
 
 .
-\change_inserted 1685850735 1502343225
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1502343225
 Examples
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502411536
 The following command generates a CWND graph for outbound packets according
  to the SIFTR logs:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502343225
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502343225
 
 
 \backslash
@@ -8930,8 +6603,6 @@ colorbox{lightgray}{
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1502343225
 
 \family typewriter
 \size footnotesize
@@ -8955,8 +6626,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502343254
-
 \family typewriter
 \size footnotesize
 > fab analyse_cwnd:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../resu
@@ -8970,8 +6639,6 @@ lts,io_filter=o
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1502343225
 
 }
 \end_layout
@@ -8998,13 +6665,7 @@ name "subsec:analyse_tcp_rtt"
 \begin_layout Standard
 The analyse_tcp_rtt task plots a graph of TCP's estimate of the RTT (from
  SIFTR or web10g log files).
- Th
-\change_inserted 1685850735 1489725605
-is
-\change_deleted 1685850735 1489725604
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -9180,29 +6841,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_tcp_rtt:test_id=
-\change_inserted 1685850735 1494298923
- 
-\change_deleted 1685850735 1489538886
- 
-\change_inserted 1685850735 1502411662
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502411667
-dash_2000_
-\change_unchanged
-tcp_newreno
-\change_inserted 1685850735 1502411673
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494298931
- 
-\change_deleted 1685850735 1489538888
- 
-\change_unchanged
-smoothed=0
+> fab analyse_tcp_rtt:test_id= exp_20131206-102931_tcp_newreno_run_0, smoothed=0
 \end_layout
 
 \end_inset
@@ -9333,19 +6972,7 @@ For analyse_all the parameter
 exp_list
 \family default
 \size default
- allows t
-\change_inserted 1685850735 1494296144
-he
-\change_deleted 1685850735 1494296144
-o
-\change_unchanged
- chang
-\change_inserted 1685850735 1494296147
-ing of
-\change_deleted 1685850735 1494296146
-e
-\change_unchanged
- the file used as list of test IDs (by default 
+ allows the changing of the file used as list of test IDs (by default 
 \family typewriter
 \size small
 experiments_completed.txt
@@ -9397,11 +7024,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_all:exp_list=myexp_list.txt, out_dir=".
-\change_inserted 1685850735 1494298948
-.
-\change_unchanged
-/results" 
+> fab analyse_all:exp_list=myexp_list.txt, out_dir="../results" 
 \end_layout
 
 \end_inset
@@ -9443,28 +7066,10 @@ resume_id
 \family default
 \size default
  parameter.
- For example, if for a test ID 
-\change_inserted 1685850735 1502411865
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502411871
-dash_2000_
-\change_unchanged
-tcp_newreno_run_0 we cannot do the analysis because of corrupted data files
- and the next test ID is 
-\change_inserted 1685850735 1502411854
-exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502411859
-_dash_2000
-\change_unchanged
-_tcp_newreno_run
-\change_inserted 1685850735 1502411918
-_
-\change_unchanged
-1, we can continue the analysis with this command:
+ For example, if for a test ID exp_20131206-102931_tcp_newreno_run_0 we
+ cannot do the analysis because of corrupted data files and the next test
+ ID is exp_20131206-102931_tcp_newreno_run_1, we can continue the analysis
+ with this command:
 \end_layout
 
 \begin_layout Standard
@@ -9508,15 +7113,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_all:resume_id= 
-\change_inserted 1685850735 1502411838
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502411844
-dash_2000_
-\change_unchanged
-tcp_newreno_run_1
+> fab analyse_all:resume_id= exp_20131206-102931_tcp_newreno_run_1
 \end_layout
 
 \end_inset
@@ -9542,13 +7139,7 @@ analyse_tcp_stat – Plot arbitrary TCP statistic over time
 \begin_layout Standard
 The analyse_tcp_stat function can be used to plot any TCP statistic from
  SIFTR or Web10G logs.
- Th
-\change_inserted 1685850735 1489725610
-is
-\change_deleted 1685850735 1489725609
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -9780,41 +7371,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_tcp_stat:test_id=
-\change_inserted 1685850735 1494299043
- 
-\change_deleted 1685850735 1489538898
- 
-\change_inserted 1685850735 1502412019
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502412023
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502412029
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1494299047
-.
-\change_unchanged
-/results,
-\change_inserted 1685850735 1494299059
- 
-\change_deleted 1685850735 1489538902
- 
-\change_unchanged
-siftr_index=22,
-\change_inserted 1685850735 1502412039
- 
-\change_unchanged
-web10g_index=120,
-\change_deleted 1685850735 1489538904
- 
-\change_unchanged
-ylabel="Snd buf (kbytes)",yscaler=0.001
+> fab analyse_tcp_stat:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../
+results, siftr_index=22, web10g_index=120,ylabel="Snd buf (kbytes)",yscaler=0.001
 \end_layout
 
 \end_inset
@@ -9850,13 +7408,7 @@ name "subsec:analyse_ackseq"
 \begin_layout Standard
 This task plots the cumulative number of bytes acknowledged or the cumulative
  number of dupACKs for TCP flows.
- Th
-\change_inserted 1685850735 1489725616
-is
-\change_deleted 1685850735 1489725616
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -10024,27 +7576,19 @@ source_filter
 \family typewriter
 \size footnotesize
 source_filter=
-\change_inserted 1685850735 1494301752
-
 \size small
 
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 
 \size footnotesize
 S_172.16.10.60_*
-\change_inserted 1685850735 1494301758
-
 \size small
 
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 
 \family default
 \size default
@@ -10052,27 +7596,19 @@ S_172.16.10.60_*
 \family typewriter
 \size footnotesize
 source_filter=
-\change_inserted 1685850735 1494301776
-
 \size small
 
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 
 \size footnotesize
 D_172.16.10.60_*
-\change_inserted 1685850735 1494301772
-
 \size small
 
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 
 \family default
 \size default
@@ -10090,13 +7626,7 @@ The parameter
 dupacks
 \family default
 \size default
- allows t
-\change_inserted 1685850735 1494295835
-he ability to
-\change_deleted 1685850735 1494295830
-o
-\change_unchanged
- choose whether acknowledged bytes (
+ allows the ability to choose whether acknowledged bytes (
 \family typewriter
 \size small
 dupacks
@@ -10116,14 +7646,9 @@ Examples
 \end_layout
 
 \begin_layout Standard
-The following shows an example of how to use th
-\change_inserted 1685850735 1489725628
-is
-\change_deleted 1685850735 1489725628
-e
-\change_unchanged
- task to plot per burst acknowledged bytes omitting the first burst (assuming
- the gaps between bursts are at least 1 second long):
+The following shows an example of how to use this task to plot per burst
+ acknowledged bytes omitting the first burst (assuming the gaps between
+ bursts are at least 1 second long):
 \end_layout
 
 \begin_layout Standard
@@ -10167,35 +7692,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_ackseq:test_id=
-\change_inserted 1685850735 1494299090
- 
-\change_deleted 1685850735 1489538917
- 
-\change_inserted 1685850735 1502412197
-exp_
-\change_unchanged
-20131206-102931_tcp_newreno
-\change_inserted 1685850735 1502412201
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1502412210
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542165
-.
-\change_unchanged
-/results,
-\change_deleted 1685850735 1489538922
- 
-\change_unchanged
-burst_sep=1.0,sburst=2,
-\change_inserted 1685850735 1502412216
- 
-\change_unchanged
-eburst=0
+> fab analyse_ackseq:test_id= exp_20131206-102931_tcp_newreno_run_0, out_dir=../re
+sults,burst_sep=1.0,sburst=2, eburst=0
 \end_layout
 
 \end_inset
@@ -10215,13 +7713,7 @@ status open
 \end_layout
 
 \begin_layout Subsection
-
-\change_deleted 1685850735 1489536762
-anlyse
-\change_inserted 1685850735 1489536762
-analyse
-\change_unchanged
-_dash_goodput – Plot DASH-like client goodput over time
+analyse_dash_goodput – Plot DASH-like client goodput over time
 \end_layout
 
 \begin_layout Standard
@@ -10235,41 +7727,17 @@ name "subsec:plot-dash-goodput"
 \end_layout
 
 \begin_layout Standard
-The analyse_dash_goodput task allows t
-\change_inserted 1685850735 1488851794
-he
-\change_deleted 1685850735 1488851794
-o
-\change_unchanged
- plot
-\change_inserted 1685850735 1488851798
-ting of
-\change_unchanged
- the goodput for DASH-like traffic over time.
- The plot is based on data from the httperf log files 
-\change_inserted 193492759 1517790265
-(*_httperf_dash.log.gz) 
-\change_deleted 193492759 1517790233
-of the DASH-like clients (named <test_id>_httperf_dash.log.gz).
-\change_inserted 193492759 1517790260
-generated by the start_httperf_dash traffic generator.
+The analyse_dash_goodput task allows the plotting of the goodput for DASH-like
+ traffic over time.
+ The plot is based on data from the httperf log files (*_httperf_dash.log.gz)
+ generated by the start_httperf_dash traffic generator.
  (Note: The use of the start_httperf_dash traffic generator is deprecated
  for TEACUP v1.1 in favor of launching real DASH clients using start_dash_streami
 ng_dashjs.)
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517790202
- 
-\change_unchanged
-Th
-\change_inserted 1685850735 1489725634
-is
-\change_deleted 1685850735 1489725634
-e
-\change_unchanged
- task has the common parameters 
+This task has the common parameters 
 \family typewriter
 \size small
 etime
@@ -10352,49 +7820,24 @@ Extracting data for specific experiments
 \end_layout
 
 \begin_layout Standard
-By default th
-\change_inserted 1685850735 1489725639
-is
-\change_deleted 1685850735 1489725639
-e
-\change_unchanged
- task extracts data from all client log files for all test IDs specified.
+By default this task extracts data from all client log files for all test
+ IDs specified.
  However, if 
 \family typewriter
 \size small
 dash_log_list
 \family default
 \size default
- is specified 
-\change_deleted 1685850735 1489725652
-the task
-\change_inserted 1685850735 1489725652
-this task
-\change_unchanged
- extracts the data from the log files listed in a text file (the value of
- 
+ is specified this task extracts the data from the log files listed in a
+ text file (the value of 
 \family typewriter
 \size small
 dash_log_list
 \family default
 \size default
  is the file name).
- This allows t
-\change_inserted 1685850735 1488851860
-he
-\change_deleted 1685850735 1488851859
-o
-\change_unchanged
- explicit
-\change_deleted 1685850735 1488851863
-ly
-\change_unchanged
- list
-\change_inserted 1685850735 1488851876
-ing of
-\change_unchanged
- which dash client logs are used, and these files can also be from experiments
- with different test IDs.
+ This allows the explicit listing of which dash client logs are used, and
+ these files can also be from experiments with different test IDs.
  The format of the log list file is one file name per line.
  The paths do not need to be specified, as TEACUP will automatically find
  the files assuming they are in a sub directory below the fabfile.py directory.
@@ -10436,13 +7879,8 @@ By default analyse_dash_goodput will also plot the nominal goodput, i.e.
  The TC_NO_NOMINAL environment variable can be used to tell plot_dash_goodput
  to not plot this.
  If TC_NO_NOMINAL=1 the nominal goodput will not be plotted.
- Note that 
-\change_deleted 1685850735 1489725661
-the task
-\change_inserted 1685850735 1489725661
-this task
-\change_unchanged
- can only plot a maximum of 11 data series in a single graph.
+ Note that this task can only plot a maximum of 11 data series in a single
+ graph.
 \end_layout
 
 \begin_layout Subsubsection
@@ -10450,13 +7888,7 @@ Examples
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725667
-is
-\change_deleted 1685850735 1489725666
-e
-\change_unchanged
- task can be used as follows: 
+This task can be used as follows: 
 \end_layout
 
 \begin_layout Standard
@@ -10500,29 +7932,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_dash_goodput:
-\change_inserted 1685850735 1494299221
- 
-\change_deleted 1685850735 1489538934
- 
-\change_unchanged
-dash_log_list=dash_logs.txt,
-\change_inserted 1685850735 1502412706
- 
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542170
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538938
-/
-\change_unchanged
-,
-\change_deleted 1685850735 1489538940
- 
-\change_unchanged
-lnames="newreno;cdg;vegas"
+> fab analyse_dash_goodput: dash_log_list=dash_logs.txt, out_dir=../results,lnames=
+"newreno;cdg;vegas"
 \end_layout
 
 \end_inset
@@ -10546,23 +7957,9 @@ analyse_goodput – Plot TCP goodput over time
 \end_layout
 
 \begin_layout Standard
-This task plots goodput for TCP flows
-\change_inserted 1685850735 1488851972
-,
-\change_deleted 1685850735 1488851946
-.
- This task plots the
-\change_inserted 1685850735 1488851950
- as well as the
-\change_unchanged
- total or per-flow goodput over time.
- Th
-\change_inserted 1685850735 1489725709
-is
-\change_deleted 1685850735 1489725708
-e
-\change_unchanged
- task has the standard parameters 
+This task plots goodput for TCP flows, as well as the total or per-flow
+ goodput over time.
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -10677,24 +8074,16 @@ reference "subsec:analyse_ackseq"
 ).
  In the future it would be better to compute the goodput from the TCP sequence
  numbers directly.
-
-\change_inserted 1685850735 1488852444
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1488852475
 This looks like it is still the case, from the analyse.py file.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -10748,51 +8137,16 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_goodput:test_id=
-\change_inserted 1685850735 1494299249
- 
-\change_deleted 1685850735 1489538946
- 
-\change_inserted 1685850735 1502412676
-exp_
-\change_unchanged
-20131206-102931_
-\change_deleted 1685850735 1502412681
-dash_2000_
-\change_unchanged
-tcp_newreno
-\change_inserted 1685850735 1502412685
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494299255
- 
-\change_deleted 1685850735 1489538948
- 
-\change_unchanged
-source_filter=
-\change_inserted 1685850735 1494301600
-
+> fab analyse_goodput:test_id= exp_20131206-102931_tcp_newreno_run_0, source_fil
+ter=
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 D_172.16.11.60_*
-\change_inserted 1685850735 1494301604
-
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
-,
-\change_inserted 1685850735 1494299264
- 
-\change_deleted 1685850735 1489538950
- 
-\change_unchanged
-total_per_experiment=1
+, total_per_experiment=1
 \end_layout
 
 \end_inset
@@ -10820,13 +8174,7 @@ The task analyse_incast can be used to plot response times for incast experiment
 s over time.
  It plots the response times as reported by httperf (httperf log files are
  present if incast traffic was generated).
- Th
-\change_inserted 1685850735 1489725740
-is
-\change_deleted 1685850735 1489725740
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -10998,27 +8346,19 @@ source_filter
 \family typewriter
 \size footnotesize
 source_filter=
-\change_inserted 1685850735 1494301802
-
 \size small
 
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 
 \size footnotesize
 D_172.16.11.60_*
-\change_inserted 1685850735 1494301809
-
 \size small
 
 \begin_inset Quotes erd
 \end_inset
 
-
-\change_unchanged
 
 \family default
 \size default
@@ -11030,13 +8370,7 @@ Boxplots instead of lines
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725751
-is
-\change_deleted 1685850735 1489725750
-e
-\change_unchanged
- task has a 
+This task has a 
 \family typewriter
 \size small
 boxplot
@@ -11062,14 +8396,9 @@ By default analyse_incast extracts the data from the httperf log files.
 tcpdump 
 \family default
 \size default
-is set to `1' th
-\change_inserted 1685850735 1489725759
-is
-\change_deleted 1685850735 1489725759
-e
-\change_unchanged
- task will extract the response times from the tcpdump files collected at
- the querier (time between seeing the GET and the last packet of the response).
+is set to `1' this task will extract the response times from the tcpdump
+ files collected at the querier (time between seeing the GET and the last
+ packet of the response).
  If 
 \family typewriter
 \size small
@@ -11092,13 +8421,7 @@ Slowest response only
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725766
-is
-\change_deleted 1685850735 1489725764
-e
-\change_unchanged
- task has a parameter 
+This task has a parameter 
 \family typewriter
 \size small
 slowest_only
@@ -11111,12 +8434,7 @@ slowest_only
 slowest_only
 \family default
 \size default
- is set to `1', instead of plotting separate data for each flow, 
-\change_deleted 1685850735 1489725776
-the task
-\change_inserted 1685850735 1489725776
-this task
-\change_unchanged
+ is set to `1', instead of plotting separate data for each flow, this task
  will only plot the slowest response time over all flows for each burst.
  If 
 \family typewriter
@@ -11124,12 +8442,7 @@ this task
 slowest_only
 \family default
 \size default
- is set to `2', instead of plotting separate data for each flow, 
-\change_deleted 1685850735 1489725778
-the task
-\change_inserted 1685850735 1489725778
-this task
-\change_unchanged
+ is set to `2', instead of plotting separate data for each flow, this task
  will only plot the time between the first request sent and the time the
  last response was finished for each burst (default is `0').
 \end_layout
@@ -11184,37 +8497,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_incast:
-\change_deleted 1685850735 1489538957
- 
-\change_unchanged
-test_id=
-\change_inserted 1685850735 1502412756
- exp_
-\change_unchanged
-20140704-181632_incast_tcp_newreno
-\change_inserted 1685850735 1502412760
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494299367
- 
-\change_deleted 1685850735 1489538962
- ,
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542176
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538965
-/
-\change_unchanged
-,
-\change_deleted 1685850735 1489538966
- 
-\change_unchanged
-slowest_only='1'
+> fab analyse_incast:test_id= exp_20140704-181632_incast_tcp_newreno_run_0,
+ out_dir=../results,slowest_only='1'
 \end_layout
 
 \end_inset
@@ -11279,43 +8563,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_incast:
-\change_deleted 1685850735 1489538970
- 
-\change_unchanged
-test_id=
-\change_inserted 1685850735 1502412771
- exp_
-\change_unchanged
-20140704-181632_incast_tcp_newreno
-\change_inserted 1685850735 1502412775
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494299363
- 
-\change_deleted 1685850735 1489538972
- ,
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542177
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538974
-/
-\change_unchanged
-,
-\change_deleted 1685850735 1489538975
- 
-\change_unchanged
-tcpdump='1',
-\change_inserted 1685850735 1494299390
- 
-\change_deleted 1685850735 1489538978
- 
-\change_unchanged
-query_host=testhost1
+> fab analyse_incast:test_id= exp_20140704-181632_incast_tcp_newreno_run_0,
+ out_dir=../results,tcpdump='1', query_host=testhost1
 \end_layout
 
 \end_inset
@@ -11341,13 +8590,7 @@ analyse_incast_iqtimes – Plot inter-query times (incast)
 \begin_layout Standard
 This task plots the times between requests sent by the querier (for checking
  whether requests were sent close together in time).
- Th
-\change_inserted 1685850735 1489725786
-is
-\change_deleted 1685850735 1489725785
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -11456,17 +8699,7 @@ Definition of inter-query time
 \begin_layout Standard
 By default inter-query time is defined as the time difference between a
  request and the first request in the same burst of requests.
- This allows t
-\change_inserted 1685850735 1494295867
-he
-\change_deleted 1685850735 1494295867
-o
-\change_unchanged
- view
-\change_inserted 1685850735 1494295872
-ing of
-\change_unchanged
- how far query times are spread within each burst.
+ This allows the viewing of how far query times are spread within each burst.
  To get a better idea of the timing jitter, the parameter 
 \family typewriter
 \size small
@@ -11501,13 +8734,7 @@ Cumulative response times
 
 \begin_layout Standard
 By default inter-query times are plotted against the time they occurred.
- Th
-\change_inserted 1685850735 1489725793
-is
-\change_deleted 1685850735 1489725792
-e
-\change_unchanged
- task also supports a cumulative plot mode to be able to analyse whether
+ This task also supports a cumulative plot mode to be able to analyse whether
  inter-query times significantly differ between different responders or
  different experiments.
  Setting the parameter 
@@ -11599,43 +8826,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_incast_iqtimes:
-\change_deleted 1685850735 1489538986
- 
-\change_unchanged
-test_id=
-\change_inserted 1685850735 1502413033
- exp_
-\change_unchanged
-20140704-181632_incast_tcp_newreno
-\change_inserted 1685850735 1502413037
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494299420
- 
-\change_deleted 1685850735 1489538991
- ,
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542182
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489538993
-/
-\change_unchanged
-,
-\change_deleted 1685850735 1489538994
- 
-\change_unchanged
-query_host=testhost1,
-\change_inserted 1685850735 1494299425
- 
-\change_deleted 1685850735 1489538996
- 
-\change_unchanged
-cumulative=0
+> fab analyse_incast_iqtimes:test_id= exp_20140704-181632_incast_tcp_newreno_run
+_0, out_dir=../results,query_host=testhost1, cumulative=0
 \end_layout
 
 \end_inset
@@ -11700,43 +8892,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_incast_iqtimes:
-\change_deleted 1685850735 1489539000
- 
-\change_unchanged
-test_id=
-\change_inserted 1685850735 1502413041
- exp_
-\change_unchanged
-20140704-181632_incast_tcp_newreno
-\change_inserted 1685850735 1502413045
-_run_0
-\change_unchanged
-,
-\change_inserted 1685850735 1494299421
- 
-\change_deleted 1685850735 1489539003
- ,
-\change_unchanged
-out_dir=.
-\change_inserted 1685850735 1489542183
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489539004
-/
-\change_unchanged
-,
-\change_deleted 1685850735 1489539005
- 
-\change_unchanged
-query_host=testhost1,
-\change_inserted 1685850735 1494299424
- 
-\change_deleted 1685850735 1489539006
- 
-\change_unchanged
-cumulative=1,by_responder=1
+> fab analyse_incast_iqtimes:test_id= exp_20140704-181632_incast_tcp_newreno_run
+_0, out_dir=../results,query_host=testhost1, cumulative=1,by_responder=1
 \end_layout
 
 \end_inset
@@ -11756,14 +8913,10 @@ status open
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1489623238
 analyse_owd – Plot OWD over time
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489725799
 This task plots the OWD being experienced, for the specified traffic flows.
  This task has the standard parameters 
 \family typewriter
@@ -11899,27 +9052,19 @@ reference "subsec:extract_owd"
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1489623238
 Examples
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489623238
 The following command plots the OWD being experienced for two flows originating
  from the same source:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489623238
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1489623238
 
 
 \backslash
@@ -11954,8 +9099,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502413094
-
 \family typewriter
 \size footnotesize
 > fab analyse_owd:test_id= exp_20141003-111821_tcp_newreno_run_0, out_dir=../resul
@@ -11978,8 +9121,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1489623238
-
 }
 \end_layout
 
@@ -11989,40 +9130,13 @@ status open
 \end_layout
 
 \begin_layout Subsection
-analyse_pktloss – Plot packet loss 
-\change_deleted 193492759 1517996071
-rate
-\change_inserted 193492759 1517996072
-versus time
-\change_unchanged
-
+analyse_pktloss – Plot packet loss versus time
 \end_layout
 
 \begin_layout Standard
-This task plots the packet loss rate 
-\change_deleted 1685850735 1488852904
-in
-\change_deleted 193492759 1517995832
-as a percentage, 
-\change_unchanged
-for 
-\change_deleted 1685850735 1488852916
-emulated FPS game
-\change_inserted 1685850735 1488852920
-the specified
-\change_unchanged
- traffic flows
-\change_inserted 193492759 1517995897
-, either loss events versus time or cumulative loss count versus time
-\change_unchanged
-.
- Th
-\change_inserted 1685850735 1489725806
-is
-\change_deleted 1685850735 1489725804
-e
-\change_unchanged
- task has the standard parameters 
+This task plots the packet loss rate for the specified traffic flows, either
+ loss events versus time or cumulative loss count versus time.
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -12107,9 +9221,7 @@ ymin
 \family default
 \size default
 .
- 
-\change_inserted 193492759 1517997266
-It also has the burst separation parameters 
+ It also has the burst separation parameters 
 \family typewriter
 \size small
 burst_sep
@@ -12139,22 +9251,10 @@ reference "subsec:extract_rtt"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1489623079
-The 
-\change_inserted 193492759 1517997262
-additional 
-\change_inserted 1685850735 1489623079
-parameter 
+The additional parameter 
 \family typewriter
 \size small
-log_loss
-\change_inserted 193492759 1517997262
-=1
-\change_inserted 1685850735 1489623079
- 
-\change_inserted 193492759 1517997262
-
+log_loss=1 
 \family default
 \size default
 requests a graph of loss events versus time, while 
@@ -12164,12 +9264,7 @@ log_loss=2
 \family default
 \size default
  (the default) requests a graph of cumulative count of loss events versus
- time 
-\change_deleted 193492759 1517995972
-can also be used to plot either a cumulative or individual packet loss graph
- 
-\change_inserted 1685850735 1489623079
-(explained in Section 
+ time (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:extract_pktloss"
@@ -12177,19 +9272,6 @@ reference "subsec:extract_pktloss"
 \end_inset
 
 ).
-\change_deleted 193492759 1517996054
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517996054
-Packet loss is computed from the raw data by computing the percentage of
- lost packets for each time window.
- The environment variables TC_AGGR_WINDOW_SIZE and TC_AGGR_INT_FACTOR can
- be used to control the window size and oversampling.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -12197,15 +9279,8 @@ Examples
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 1685850735 1489623104
-The following command plots the packet loss rate for two game traffic flows
- originating from the same source
-\change_inserted 1685850735 1489623104
 The following command plots the cumulative packet loss rate for a game traffic
- flow
-\change_unchanged
-:
+ flow:
 \end_layout
 
 \begin_layout Standard
@@ -12249,21 +9324,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_pktloss:
-\change_deleted 1685850735 1489623186
- test_id=20141003-111821_game_traffic_aqm_pfifo, ,out_dir=./results/, source_filt
-er=
-\begin_inset Quotes erd
-\end_inset
-
-S_172.16.10.2:10000; S_172.16.10.2:10001
-\begin_inset Quotes erd
-\end_inset
-
-
-\change_inserted 1685850735 1502413345
-test_id= exp_20141003-111821_tcp_newreno_run_0, out_dir=../results,source_filter=
- 
+> fab analyse_pktloss:test_id= exp_20141003-111821_tcp_newreno_run_0, out_dir=../r
+esults,source_filter= 
 \begin_inset Quotes erd
 \end_inset
 
@@ -12272,8 +9334,6 @@ S_172.16.10.2:10000
 \end_inset
 
 ,log_loss=2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -12289,8 +9349,6 @@ status open
 
 \end_inset
 
-
-\change_inserted 1685850735 1489536281
 
 \end_layout
 
@@ -12309,28 +9367,13 @@ name "subsec:plot-metric-comparison"
 \end_layout
 
 \begin_layout Standard
-The task analyse_cmpexp allows t
-\change_inserted 1685850735 1488855160
-he
-\change_deleted 1685850735 1488855160
-o
-\change_unchanged
- plot
-\change_inserted 1685850735 1488855170
-ting of
-\change_unchanged
- the metrics `throughput', `spprtt', `tcprtt' (unsmoothed/ERTT), `cwnd',
- `tcpstat', `ackseq', `restime' and `iqtime' depending on the different
- experiment parameters for different selected flows.
+The task analyse_cmpexp allows the plotting of the metrics `throughput',
+ `spprtt', `tcprtt' (unsmoothed/ERTT), `cwnd', `tcpstat', `ackseq', `restime'
+ and `iqtime' depending on the different experiment parameters for different
+ selected flows.
  It can show the metric distribution as boxplots (default), or plot the
  mean or median.
- Th
-\change_inserted 1685850735 1489725863
-is
-\change_deleted 1685850735 1489725862
-e
-\change_unchanged
- task has the standard parameters 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
@@ -12418,13 +9461,7 @@ Specifying test IDs
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725869
-is
-\change_deleted 1685850735 1489725868
-e
-\change_unchanged
- task has no 
+This task has no 
 \family typewriter
 \size footnotesize
 test_id
@@ -12437,36 +9474,10 @@ test_id
 exp_list
 \family default
 \size default
- parameter allows t
-\change_inserted 1685850735 1488855388
-he
-\change_deleted 1685850735 1488855387
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1488855391
-ication
-\change_deleted 1685850735 1488855390
-y
-\change_unchanged
- 
-\change_inserted 1685850735 1488855396
-of 
-\change_unchanged
-a text file containing the list of experiments
-\change_inserted 1685850735 1488855541
-, the same
-\change_unchanged
- as for analyse_all (one experiment
-\change_inserted 193492759 1517687021
-'s
-\change_unchanged
- 
-\change_inserted 193492759 1517687025
-test
-\change_unchanged
-ID per line), making it possible to precisely select which combinations
- of parameters should be considered.
+ parameter allows the specification of a text file containing the list of
+ experiments, the same as for analyse_all (one experiment's testID per line),
+ making it possible to precisely select which combinations of parameters
+ should be considered.
  For example, we can remove certain parameter values by removing all test
  IDs with these values from the list passed via 
 \family typewriter
@@ -12505,41 +9516,19 @@ exp_list
 Since version 0.9 TEACUP identifies which variables were used and what their
  names are from the experiment file names directly and does not need to
  access config.py.
- In order to reliabl
-\change_inserted 1685850735 1488855694
-y
-\change_deleted 1685850735 1488855694
-e
-\change_unchanged
- detect the parameter names, the user must specify the test ID prefix format
- (as regular expression) using the parameter 
+ In order to reliably detect the parameter names, the user must specify
+ the test ID prefix format (as regular expression) using the parameter 
 \family typewriter
 \size footnotesize
 test_id_prefix
 \family default
 \size default
 .
- By default the parameter is set to `
-\change_inserted 193492759 1517687150
-exp_
-\change_unchanged
-[0-9]{8}
+ By default the parameter is set to `exp_[0-9]{8}
 \backslash
--[0-9]{6}
-\change_deleted 193492759 1517687154
-_experiment
-\change_unchanged
-' (to match the default 
-\change_inserted 193492759 1517687122
-
+-[0-9]{6}' (to match the default 
 \family typewriter
-exp_
-\change_unchanged
-YYYYMMDD_HHMMSS
-\change_deleted 193492759 1517687132
-_experiment
-\change_unchanged
-
+exp_YYYYMMDD_HHMMSS
 \family default
  format for test ID prefixes).
 \end_layout
@@ -12708,22 +9697,8 @@ ymax
 lnames
 \family default
 \size default
- parameter allows t
-\change_inserted 1685850735 1494295894
-he
-\change_deleted 1685850735 1494295894
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1494295897
-ication
-\change_deleted 1685850735 1494295896
-y
-\change_inserted 1685850735 1494295906
- of
-\change_unchanged
- the legend names used as list of semicolon-separated strings (as for the
- other analyse tasks).
+ parameter allows the specification of the legend names used as list of
+ semicolon-separated strings (as for the other analyse tasks).
  Note, the number of legend strings must the same as the number of source
  filters.
  By default the legend names are the source filters specified.
@@ -12762,13 +9737,8 @@ Currently it is not possible to reorder the different parameters for plotting
 omit_const_xlab_vars
 \family default
 \size default
- allows t
-\change_inserted 1685850735 1494295939
-he ability to
-\change_deleted 1685850735 1494295937
-o
-\change_unchanged
- automatically exclude constant variables from the x-axis labels.
+ allows the ability to automatically exclude constant variables from the
+ x-axis labels.
  If set to `1' any variables that always had the same value in all experiments
  do not appear in the x-axis labels.
 \end_layout
@@ -12789,13 +9759,7 @@ By default analyse_cmpexp groups experiments by traffic flow, meaning each
 group-by-experiment
 \family default
 \size default
- allows t
-\change_inserted 1685850735 1494295964
-he ability to
-\change_deleted 1685850735 1494295962
-o
-\change_unchanged
- group by test ID prefix instead by setting 
+ allows the ability to group by test ID prefix instead by setting 
 \family typewriter
 \size footnotesize
 group-by-experiment=1
@@ -12834,11 +9798,7 @@ merge_data=0
  If 
 \family typewriter
 \size footnotesize
-merge_data=1
-\change_inserted 1685850735 1488863972
-,
-\change_unchanged
-
+merge_data=1,
 \family default
 \size default
  only one box/median/mean will be plotted for each experiment.
@@ -12851,15 +9811,9 @@ Metric specific parameters
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725880
-is
-\change_deleted 1685850735 1489725879
-e
-\change_unchanged
- task has a number of metric specific parameters that are passed to the
- appropriate extract functions and/or select the data columns in the interim
- data files needed.
+This task has a number of metric specific parameters that are passed to
+ the appropriate extract functions and/or select the data columns in the
+ interim data files needed.
  
 \end_layout
 
@@ -13144,51 +10098,10 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_cmpexp:exp_list=
-\change_deleted 1685850735 1489541718
- 
-\change_unchanged
-myexp_list.txt,
-\change_inserted 1685850735 1494299587
- 
-\change_unchanged
-res_dir=".
-\change_inserted 1685850735 1489542304
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489541721
-/
-\change_unchanged
-",
-\change_inserted 1685850735 1494299740
- 
-\change_deleted 1685850735 1489541723
- 
-\change_unchanged
-variables="run
+> fab analyse_cmpexp:exp_list=myexp_list.txt, res_dir="../results", variables="run
 \backslash
-=0",
-\change_deleted 1685850735 1489541725
- 
-\change_unchanged
-source_filter=
-\change_inserted 1685850735 1494299697
- 
-\change_deleted 1685850735 1489541726
- 
-\change_unchanged
-"D_172.16.10.2_5001;D_172.16.10.3_5006",
-\change_inserted 1685850735 1494299723
- 
-\change_deleted 1685850735 1489541729
- 
-\change_unchanged
-metric=tcprtt,
-\change_deleted 1685850735 1494299607
- 
-\change_unchanged
-lnames="CDG;Newreno"
+=0",source_filter= "D_172.16.10.2_5001;D_172.16.10.3_5006", metric=tcprtt,lnames="CDG;
+Newreno"
 \end_layout
 
 \end_inset
@@ -13208,41 +10121,24 @@ status open
 \end_layout
 
 \begin_layout Subsection
-analyse_2
-\change_inserted 1685850735 1488864802
-d
-\change_unchanged
-_density – Plot two metrics against each other depending on experiment variables
+analyse_2d_density – Plot two metrics against each other depending on experiment
+ variables
 \end_layout
 
 \begin_layout Standard
-The analyse_2
-\change_inserted 1685850735 1488864804
-d
-\change_unchanged
-_density task can create 2-dimensional density plots or ellipse plots allowing
- to explore the relationship between two metrics depending on different
- experiment parameter combinations.
+The analyse_2d_density task can create 2-dimensional density plots or ellipse
+ plots allowing to explore the relationship between two metrics depending
+ on different experiment parameter combinations.
  It supports the same metrics as analyse_cmpexp: `throughput', `spprtt',
  `tcprtt' (unsmoothed/ERTT), `cwnd', `tcpstat', `ackseq', `restime' and
  `iqtime'.
- Th
-\change_inserted 1685850735 1489725889
-is
-\change_deleted 1685850735 1489725889
-e
-\change_unchanged
- task has the standard parameters
-\change_inserted 1685850735 1488864683
- 
+ This task has the standard parameters 
 \family typewriter
 \size small
 etime
 \family default
 \size default
-,
-\change_unchanged
- 
+, 
 \family typewriter
 \size small
 out_dir
@@ -13260,23 +10156,13 @@ replot_only
 source_filter
 \family default
 \size default
-,
-\change_inserted 1685850735 1488864704
- 
-\change_deleted 193492759 1517548087
-stime
-\change_inserted 193492759 1517548087
-
+, 
 \family typewriter
 \size small
 stime
-\change_inserted 1685850735 1488864704
-
 \family default
 \size default
 ,
-\change_unchanged
-
 \family typewriter
 \size small
  ymin
@@ -13324,24 +10210,16 @@ pdf_dir
 
 \begin_layout Standard
 Please note that this task is somewhat experimental and still under development.
-
-\change_inserted 1685850735 1488864745
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1488864754
 Possibly still the case
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -13350,13 +10228,7 @@ Specifying test IDs
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725894
-is
-\change_deleted 1685850735 1489725893
-e
-\change_unchanged
- task has no 
+This task has no 
 \family typewriter
 \size footnotesize
 test_id
@@ -13369,21 +10241,8 @@ test_id
 exp_list
 \family default
 \size default
- parameter allows t
-\change_inserted 1685850735 1494296046
-he
-\change_deleted 1685850735 1494296046
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1494296050
-ication
-\change_deleted 1685850735 1494296049
-y
-\change_inserted 1685850735 1494296055
- of
-\change_unchanged
- a text file containing the list of experiments as for analyse_cmpexp.
+ parameter allows the specification of a text file containing the list of
+ experiments as for analyse_cmpexp.
  Also, as for analyse_cmpexp, the parameter 
 \family typewriter
 \size footnotesize
@@ -13477,31 +10336,7 @@ Axis limits
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 1685850735 1488865023
-Instead of the usual parameters 
-\family typewriter
-\size small
-stime
-\family default
-\size default
-,
-\family typewriter
-\size small
- etime
-\family default
-\size default
-,
-\change_inserted 1685850735 1489536144
-Initially
-\change_unchanged
- analyse_2d_density 
-\change_inserted 1685850735 1488865044
-used 
-\change_deleted 1685850735 1488865035
-has 
-\change_unchanged
-the parameters 
+Initially analyse_2d_density used the parameters 
 \family typewriter
 \size small
 xmin
@@ -13514,42 +10349,20 @@ xmin
 \family default
 \size default
  for limiting the x-axis values.
-
-\change_inserted 1685850735 1488865110
- Support 
-\change_inserted 193492759 1517548055
-now exists 
-\change_inserted 1685850735 1488865110
-for using
-\change_unchanged
- 
-\change_inserted 1685850735 1488865253
-
+ Support now exists for using 
 \family typewriter
 \size small
 stime
 \family default
 \size default
  and 
-\change_deleted 193492759 1517548045
-etime
-\change_inserted 193492759 1517548045
-
 \family typewriter
 \size small
 etime
-\change_inserted 1685850735 1488865253
-
 \family default
 \size default
- to do the same thing
-\change_deleted 193492759 1517548059
- now exist
-\change_inserted 1685850735 1488865253
-.
- 
-\change_unchanged
-Note that due to the internals of a different plotting function used (R
+ to do the same thing.
+ Note that due to the internals of a different plotting function used (R
  ggplot2), the parameters 
 \family typewriter
 \size small
@@ -13648,15 +10461,9 @@ Metric specific parameters
 \end_layout
 
 \begin_layout Standard
-Th
-\change_inserted 1685850735 1489725899
-is
-\change_deleted 1685850735 1489725899
-e
-\change_unchanged
- task has a number of metric specific parameters that are passed to the
- extract functions and/or select the data columns in the interim data files
- needed.
+This task has a number of metric specific parameters that are passed to
+ the extract functions and/or select the data columns in the interim data
+ files needed.
  It has all the metric-specific parameters of analyse_cmpexp, except 
 \family typewriter
 \size footnotesize
@@ -13693,15 +10500,9 @@ xstat_index
 \family typewriter
 \size footnotesize
 xmetric=tcpstat
-\change_inserted 1685850735 1488865289
-
 \family default
 \size default
-, 
-\change_deleted 1685850735 1488865288
- 
-\change_unchanged
-and 
+, and 
 \family typewriter
 \size footnotesize
 ystat_index
@@ -13756,13 +10557,7 @@ The variable TC_BINS can be used to set the number of bins for the 2D density
 
 \begin_layout Standard
 The variable TC_MEDIAN can be set to 1 to plot the median for each group.
- By default 
-\change_deleted 1685850735 1489725908
-the task
-\change_inserted 1685850735 1489725908
-this task
-\change_unchanged
- does not plot the median.
+ By default this task does not plot the median.
  The variable TC_NO_LEGEND can be set to 1 to suppress the legend, which
  by default is shown to the right of the graph.
 \end_layout
@@ -13832,43 +10627,11 @@ status open
 
 \family typewriter
 \size footnotesize
-> TC_ADD_RAND=1 fab analyse_2d_density:
-\change_deleted 1685850735 1489541747
- 
-\change_inserted 1685850735 1494299783
- 
-\change_unchanged
-exp_list=
-\change_deleted 1685850735 1489541749
- 
-\change_unchanged
-myexp_list.txt,res_dir=".
-\change_inserted 1685850735 1489542311
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489541752
-/
-\change_unchanged
-",
-\change_inserted 1685850735 1494299790
- 
-\change_deleted 1685850735 1489541754
- 
-\change_unchanged
-variables="run
+> TC_ADD_RAND=1 fab analyse_2d_density: exp_list=myexp_list.txt,res_dir="../results
+", variables="run
 \backslash
-=0",source_filter=
-\change_inserted 1685850735 1494299819
- 
-\change_deleted 1685850735 1489541757
- 
-\change_unchanged
-"D_172.16.11.68_5000",xmetric=throughput, ymetric=tcprtt,link_len=1,
-\change_deleted 1685850735 1489541762
- 
-\change_unchanged
-group_by=
+=0",source_filter= "D_172.16.11.68_5000",xmetric=throughput, ymetric=tcprtt,link_le
+n=1,group_by=
 \begin_inset Quotes erd
 \end_inset
 
@@ -13876,11 +10639,7 @@ aqm
 \begin_inset Quotes erd
 \end_inset
 
-,
-\change_inserted 1685850735 1494299829
- 
-\change_unchanged
-lnames="fifo;codel;pie"
+, lnames="fifo;codel;pie"
 \end_layout
 
 \end_inset
@@ -13945,51 +10704,11 @@ status open
 
 \family typewriter
 \size footnotesize
-> TC_ELLIPSE=1 TC_ADD_RAND=1 fab analyse_2d_density:
-\change_deleted 1685850735 1489541779
- 
-\change_unchanged
-exp_list=myexp_list.txt,
-\change_inserted 1685850735 1494299897
- 
-\change_unchanged
-res_dir=".
-\change_inserted 1685850735 1489542313
-.
-\change_unchanged
-/results
-\change_deleted 1685850735 1489541782
-/
-\change_unchanged
-",
-\change_deleted 1685850735 1489541784
- 
-\change_unchanged
-variables="run
+> TC_ELLIPSE=1 TC_ADD_RAND=1 fab analyse_2d_density:exp_list=myexp_list.txt,
+ res_dir="../results",variables="run
 \backslash
-=0",
-\change_inserted 1685850735 1494299905
- 
-\change_unchanged
-source_filter=
-\change_deleted 1685850735 1494299907
- 
-\change_unchanged
-"D_172.16.11.68_5000",
-\change_inserted 1685850735 1494299931
- 
-\change_unchanged
-xmetric=throughput,
-\change_deleted 1685850735 1489541789
- 
-\change_unchanged
-ymetric=tcprtt,link_len=1,
-\change_inserted 1685850735 1494299941
- 
-\change_deleted 1685850735 1489541792
- 
-\change_unchanged
-group_by=
+=0", source_filter="D_172.16.11.68_5000", xmetric=throughput,ymetric=tcprtt,link_le
+n=1, group_by=
 \begin_inset Quotes erd
 \end_inset
 
@@ -14035,27 +10754,17 @@ Currently the underlying plot function for all time series graphs, such
 \begin_layout Standard
 The number of groups (corresponding to legend entries) that can be plotted
  in one graph with analyse_cmpexp and analyse_2d_density is limited to 12.
-\change_inserted 1685850735 1494566323
-
 \end_layout
 
 \begin_layout Section
-
-\change_inserted 1685850735 1502413917
 Teaplot – browser-based tool for animating TEACUP experimental data
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494570252
 By default, TEACUP uses its analysis functions to generate results obtained
  from its gathered experimental data, in the form of pdf documents.
- Teaplot adds the ability to use a web browser to animate
-\change_deleted 193492759 1517547956
-d
-\change_inserted 1685850735 1494570252
- these experimental results (Note: This is experimental, so problems may
- exist).
+ Teaplot adds the ability to use a web browser to animate these experimental
+ results (Note: This is experimental, so problems may exist).
  The processes involved with the usage of Teaplot are described below.
  For extra information such as how it was developed, and any installation
  requirements, please consult the other included Teaplot documentation as
@@ -14063,14 +10772,10 @@ d
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1494569820
 Requirements
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494569261
 \begin_inset CommandInset label
 LatexCommand label
 name "sect:usage-1"
@@ -14081,15 +10786,11 @@ name "sect:usage-1"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 The following assumptions are made when running a TEACUP Fabric task, and
  thus Teaplot:
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1494568133
 
 \family typewriter
 fab
@@ -14107,8 +10808,6 @@ config.py
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1494568133
 The file 
 \family typewriter
 config.py
@@ -14125,8 +10824,6 @@ $TEACUP_DIR
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1494569854
 The Fabfile directory (
 \family typewriter
 $FABFILE_DIR
@@ -14137,21 +10834,15 @@ $FABFILE_DIR
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1494570257
 The required dependencies for Teaplot are installed (see separate Teaplot
  documentation).
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1494568133
 Task Arguments
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568640
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14165,14 +10856,10 @@ reference "table:args"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568641
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568641
 
 
 \backslash
@@ -14207,8 +10894,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568780
-
 \family typewriter
 \size footnotesize
 > fab animate:arg1="value1",arg2=
@@ -14220,8 +10905,6 @@ value3
 \end_inset
 
 ,...
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -14232,8 +10915,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568641
-
 }
 \end_layout
 
@@ -14243,8 +10924,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 Values should be enclosed by quote marks (i.e.
  
 \family typewriter
@@ -14287,8 +10966,6 @@ exp_dir
 
 \begin_layout Standard
 
-\change_inserted 1685850735 1494568133
-
 \family typewriter
 exp_list
 \family default
@@ -14316,8 +10993,6 @@ TPCONF_script_path
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14330,8 +11005,6 @@ reference "table:defaults"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568958
 For example, if the user wishes to have the server listen on IP address
  
 \family typewriter
@@ -14341,14 +11014,10 @@ For example, if the user wishes to have the server listen on IP address
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568825
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568825
 
 
 \backslash
@@ -14383,8 +11052,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568923
-
 \family typewriter
 \size footnotesize
 > fab animate:address="127.0.0.1:8000"
@@ -14398,8 +11065,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568825
-
 }
 \end_layout
 
@@ -14409,8 +11074,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 \begin_inset Float table
 placement t
 wide false
@@ -14418,14 +11081,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 
 \backslash
@@ -14438,8 +11097,6 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 Fabric task arguments for Teaplot
 \end_layout
 
@@ -14458,8 +11115,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 small 
@@ -14467,16 +11122,12 @@ small
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 begin{tabular}{l  l}	 	
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14492,8 +11143,6 @@ toprule
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14517,8 +11166,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{port}          &  
@@ -14540,8 +11187,6 @@ midrule
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14567,8 +11212,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{out
@@ -14593,8 +11236,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{processes}    &  
@@ -14617,8 +11258,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{threads}       &  
@@ -14640,8 +11279,6 @@ midrule
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14671,8 +11308,6 @@ bottomrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 end{tabular}
@@ -14689,8 +11324,6 @@ end{tabular}
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 \begin_inset Float table
 placement t
 wide false
@@ -14698,14 +11331,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 
 \backslash
@@ -14718,8 +11347,6 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 Fabric task arguments for default client settings
 \end_layout
 
@@ -14738,8 +11365,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 small 	
@@ -14747,16 +11372,12 @@ small
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 begin{tabular}{l  l}	 		
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14772,8 +11393,6 @@ toprule
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14800,8 +11419,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{test
@@ -14827,8 +11444,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{metric}        & 
@@ -14850,8 +11465,6 @@ midrule
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14876,8 +11489,6 @@ midrule
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14937,8 +11548,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{web10g}        & 
@@ -14960,8 +11569,6 @@ midrule
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 	
 \backslash
@@ -14988,8 +11595,6 @@ midrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 	
 \backslash
 texttt{stime}         & 
@@ -15012,8 +11617,6 @@ bottomrule
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 end{tabular}
@@ -15029,36 +11632,22 @@ end{tabular}
 
 \end_layout
 
-\begin_layout Standard
-
-\change_inserted 1685850735 1494568133
-
-\end_layout
-
 \begin_layout Subsection
-
-\change_inserted 1685850735 1494568133
 Launching the Client
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 In order to visualise TEACUP experiment data, the following steps should
  be carried out:
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 Start the web server component using the method outlined in the previous
  section (ensuring that the IP address and port chosen are reachable by
  the client) 
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 Open the web browser on the client computer, and navigate to the IP address
  and port pair used by the server 
 \begin_inset Newline newline
@@ -15073,8 +11662,6 @@ http://127.0.0.1:8000
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 If desired, increase the number of graphs to be shown on-screen by clicking
  the 
 \begin_inset Quotes eld
@@ -15109,14 +11696,10 @@ graph_names
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1494568133
 Selecting Tests and Flows
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 The Teaplot client web UI should now be visible on-screen.
  First, open the metric selection dialogue by clicking 
 \begin_inset Quotes eld
@@ -15150,8 +11733,6 @@ exp_list
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 Select the 
 \begin_inset Quotes eld
 \end_inset
@@ -15175,8 +11756,6 @@ web10g='1'
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 Click the 
 \begin_inset Quotes eld
 \end_inset
@@ -15203,8 +11782,6 @@ $FABFILE_DIR
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 Open the 
 \begin_inset Quotes eld
 \end_inset
@@ -15228,8 +11805,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 footnotemark[1]
@@ -15249,8 +11824,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 footnotemark[2]
@@ -15262,8 +11835,6 @@ footnotemark[2]
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 Select a number of flows to show on the graph using the check boxes.
  Once a flow is selected, it will be added to the 
 \begin_inset Quotes eld
@@ -15302,8 +11873,6 @@ ions may not work or be compatible.
 \end_layout
 
 \begin_layout Enumerate
-
-\change_inserted 1685850735 1494568133
 Once the desired flows have been selected, click the 
 \begin_inset Quotes eld
 \end_inset
@@ -15324,8 +11893,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 
 \backslash
 footnotemark[3]
@@ -15337,14 +11904,10 @@ footnotemark[3]
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494569558
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 
 \backslash
@@ -15381,8 +11944,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 }
 \end_layout
 
@@ -15393,8 +11954,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 
 \backslash
@@ -15418,8 +11977,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 }
 \end_layout
 
@@ -15430,8 +11987,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1685850735 1494568133
 
 
 \backslash
@@ -15454,8 +12009,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1494568133
-
 }
 \end_layout
 
@@ -15465,14 +12018,10 @@ status open
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1494568133
 Interactivity
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 \begin_inset CommandInset label
 LatexCommand label
 name "sect:interactivity"
@@ -15483,8 +12032,6 @@ name "sect:interactivity"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 Once the 
 \begin_inset Quotes eld
 \end_inset
@@ -15529,8 +12076,6 @@ Control
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 Individual flows are represented by a single colour, irrespective of metric,
  in order to ease visual comparisons of the same flow on multiple graphs.
  If desired, names can be assigned to individual flows by clicking the flow
@@ -15550,22 +12095,16 @@ lnames
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 The graph view is controlled using the mouse.
  In 2D view (the default), panning can be achieved by clicking and holding
  the right mouse button, while zooming is achieved using the scroll wheel.
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1494568133
 Button Functions
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 3D view can be toggled (for experimental 3D plots) using the 
 \begin_inset Quotes eld
 \end_inset
@@ -15587,8 +12126,6 @@ Reset View
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 Clicking 
 \begin_inset Quotes eld
 \end_inset
@@ -15625,8 +12162,6 @@ reference "sect:interactivity"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 There are three buttons that essentially act as the Animation functionality
  buttons.
  The 
@@ -15682,8 +12217,6 @@ Stop
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1494568133
 The 
 \begin_inset Quotes eld
 \end_inset
@@ -15699,12 +12232,6 @@ Export Command
  arguments and restart the server in more-or-less the same state, with the
  same metrics, for example, at a later time.
  
-\change_deleted 1685850735 1494569394
-
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Section
@@ -15791,19 +12318,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab analyse_throughput:test_id= 
-\change_inserted 1685850735 1502414807
-exp_
-\change_unchanged
-20131206-102931
-\change_deleted 1685850735 1502414811
-_dash_2000
-\change_unchanged
-_tcp_newreno
-\change_inserted 1685850735 1502414814
-_run_0
-\change_unchanged
-, plot_params="TC_YLAB
+> fab analyse_throughput:test_id= exp_20131206-102931_tcp_newreno_run_0,
+ plot_params="TC_YLAB
 \backslash
 =
 \backslash
@@ -15975,11 +12491,8 @@ tcp_comparison.sh
  can be used to combine throughput, RTT, CWND or SPP RTT graphs for up to
  four different TCP congestion control algorithms on one page.
  For example, the following command creates four PDFs, each with four graphs
- for each TCP congestion control algorithm (assuming the test ID is 
-\change_inserted 1685850735 1502414981
-exp_
-\change_unchanged
-20131220-182929_del_<delay>_tcp_<tcp_algo>):
+ for each TCP congestion control algorithm (assuming the test ID is exp_20131220
+-182929_del_<delay>_tcp_<tcp_algo>):
 \end_layout
 
 \begin_layout Standard
@@ -16023,24 +12536,14 @@ status open
 
 \family typewriter
 \size footnotesize
-> tcp_comparison.sh
-\change_inserted 1685850735 1502415052
- 
-\change_deleted 1685850735 1502415031
- 
-\change_inserted 1685850735 1502415098
-
+> tcp_comparison.sh 
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502415034
-
 \family typewriter
 \size footnotesize
-exp_
-\change_unchanged
-20131220-182929_del_10_tcp test
+exp_20131220-182929_del_10_tcp test
 \end_layout
 
 \end_inset
@@ -16148,11 +12651,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> tcp_comparison_allinone.sh 
-\change_inserted 1685850735 1502415209
-exp_
-\change_unchanged
-20131220-182929_del_10_tcp test
+> tcp_comparison_allinone.sh exp_20131220-182929_del_10_tcp test
 \end_layout
 
 \end_inset
@@ -16227,23 +12726,8 @@ combine_graphs.sh
 \family default
 \size default
 , which is used by the scripts for TCP comparison.
- The script allows t
-\change_inserted 1685850735 1494296070
-he
-\change_deleted 1685850735 1494296069
-o
-\change_unchanged
- combin
-\change_inserted 1685850735 1494296074
-ation of
-\change_deleted 1685850735 1494296072
-e
-\change_unchanged
- an arbitrary number of graphs on
-\change_deleted 1685850735 1494296090
-e
-\change_unchanged
- one page.
+ The script allows the combination of an arbitrary number of graphs on one
+ page.
  For example, if we want to compare the CWND graphs for two different delay
  values and four different TCP congestion control algorithms we can do this
  with the following command: 
@@ -16303,13 +12787,9 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502415224
-
 \family typewriter
 \size footnotesize
-exp_
-\change_unchanged
-20131220-182929_del_*_tcp_*cwnd*.pdf | sort`
+exp_20131220-182929_del_*_tcp_*cwnd*.pdf | sort`
 \end_layout
 
 \end_inset
@@ -16473,49 +12953,10 @@ status open
 
 \family typewriter
 \size scriptsize
-> TC_POINT_SIZE=0.25 TC_AGGR_WIN_SIZE=0.05 TC_AGGR_INT_FACTOR=10 fab
-\change_inserted 1685850735 1494301016
- 
-\change_deleted 1685850735 1494301015
- 
-\change_unchanged
-analyse_throughput:test_id=
-\change_deleted 1685850735 1489541809
- 
-\change_inserted 1685850735 1502417246
- exp_
-\change_unchanged
-20150218-135735_
-\change_deleted 1685850735 1502417398
-experiment_
-\change_unchanged
-aqm_pfifo_responders_4,
-\change_inserted 1685850735 1494301096
- 
-\change_deleted 1685850735 1489541813
- 
-\change_unchanged
-out_dir=../result,link_len=1,source_filter= "S_172.16.11.61_80;
-\change_deleted 1685850735 1489541819
- 
-\change_unchanged
-S_172.16.1
-\change_deleted 1685850735 1494301155
- 
-\change_unchanged
-1.62_81;
-\change_inserted 1685850735 1494301168
- 
-\change_unchanged
-S_172.16.11.63_82;S_172.16.11.64_83",
-\change_deleted 1685850735 1489541824
- 
-\change_unchanged
-etime=6,
-\change_inserted 1685850735 1494301176
- 
-\change_unchanged
-plot_params='TC_YLAB
+> TC_POINT_SIZE=0.25 TC_AGGR_WIN_SIZE=0.05 TC_AGGR_INT_FACTOR=10 fab analyse_throu
+ghput:test_id= exp_20150218-135735_aqm_pfifo_responders_4, out_dir=../result,link_
+len=1,source_filter= "S_172.16.11.61_80;S_172.16.11.62_81; S_172.16.11.63_82;S_172.16.11.64_
+83",etime=6, plot_params='TC_YLAB
 \backslash
 ="Throughput (mbps)" TC_YSCALER
 \backslash
@@ -16584,31 +13025,9 @@ status open
 
 \family typewriter
 \size scriptsize
-> TC_POINT_SIZE=0.25 fab analyse_rtt:test_id=
-\change_inserted 1685850735 1494301198
- 
-\change_deleted 1685850735 1489541838
- 
-\change_inserted 1685850735 1502417407
-exp_
-\change_unchanged
-20150218-135735_
-\change_deleted 1685850735 1502417403
-experiment_
-\change_unchanged
-aqm_pfifo_responders_4,
-\change_inserted 1685850735 1494301207
- 
-\change_deleted 1685850735 1489541841
- 
-\change_unchanged
-out_dir=../results,source_filter="S_172.16.11.61_80;
-\change_inserted 1685850735 1494301233
- 
-\change_deleted 1685850735 1489541854
- 
-\change_unchanged
-S_172.16.11.62_81;S_172.16.11.63_82; S_172.16.11.64_83",etime=6
+> TC_POINT_SIZE=0.25 fab analyse_rtt:test_id= exp_20150218-135735_aqm_pfifo_respo
+nders_4, out_dir=../results,source_filter="S_172.16.11.61_80; S_172.16.11.62_81;S_172.16.1
+1.63_82; S_172.16.11.64_83",etime=6
 \end_layout
 
 \end_inset
@@ -16821,31 +13240,9 @@ status open
 
 \family typewriter
 \size scriptsize
-> TC_POINT_SIZE=0.5 fab analyse_incast_iqtimes:test_id=
-\change_inserted 1685850735 1494301260
- 
-\change_deleted 1685850735 1489541884
- 
-\change_inserted 1685850735 1502417616
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417621
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_4,
-\change_inserted 1685850735 1494301263
- 
-\change_deleted 1685850735 1489541886
- 
-\change_unchanged
-out_dir=../results,query_host=newtcp20,
-\change_inserted 1685850735 1494301271
- 
-\change_deleted 1685850735 1489541889
- 
-\change_unchanged
-by_responder=1,cumulative=1 
+> TC_POINT_SIZE=0.5 fab analyse_incast_iqtimes:test_id= exp_20150218-135735_aqm_p
+fifo_responders_4, out_dir=../results,query_host=newtcp20, by_responder=1,cumulati
+ve=1 
 \end_layout
 
 \end_inset
@@ -16879,14 +13276,8 @@ reference "fig:Incast-inter-query-times"
 \end_inset
 
 ms.
- However, from burst 8 
-\change_deleted 1685850735 1488865728
-onwards
-\change_inserted 1685850735 1488865728
-onward
-\change_unchanged
-, the requests were sent more and more spread out with the request to responder
- 1 falling behind more and more.
+ However, from burst 8 onward, the requests were sent more and more spread
+ out with the request to responder 1 falling behind more and more.
  Still, even for the last burst all requests were sent within 9
 \begin_inset space \thinspace{}
 \end_inset
@@ -16991,25 +13382,8 @@ status open
 
 \family typewriter
 \size scriptsize
-> TC_POINT_SIZE=0.5 fab analyse_incast:test_id=
-\change_inserted 1685850735 1494301299
- 
-\change_deleted 1685850735 1489541895
- 
-\change_inserted 1685850735 1502417629
-exp_
-\change_unchanged
-20150218-135735_
-\change_deleted 1685850735 1502417667
-experiment_
-\change_unchanged
-aqm_pfifo_responders_4,
-\change_inserted 1685850735 1494301304
- 
-\change_deleted 1685850735 1489541902
- 
-\change_unchanged
-out_dir=../results
+> TC_POINT_SIZE=0.5 fab analyse_incast:test_id= exp_20150218-135735_aqm_pfifo_res
+ponders_4, out_dir=../results
 \end_layout
 
 \end_inset
@@ -17160,43 +13534,9 @@ status open
 
 \family typewriter
 \size scriptsize
-> TC_POINT_SIZE=0.25 fab analyse_ackseq:test_id=
-\change_deleted 1685850735 1489541917
- 
-\change_inserted 1685850735 1502417715
- exp_
-\change_unchanged
-20150218-135735_
-\change_deleted 1685850735 1502417720
-experiment_
-\change_unchanged
-aqm_pfifo_responders_4,
-\change_inserted 1685850735 1494301335
- 
-\change_deleted 1685850735 1489541919
- 
-\change_unchanged
-out_dir=../results,source_filter=
-\change_inserted 1685850735 1494301338
- 
-\change_deleted 1685850735 1489541922
- 
-\change_unchanged
-"D_172.16.11.61_80;D_172.16.11.62_81;
-\change_inserted 1685850735 1494301339
- 
-\change_deleted 1685850735 1489541928
- 
-\change_unchanged
-D_172.16.11.63_82;D_172.16.11.64_83",
-\change_deleted 1685850735 1489541931
- 
-\change_unchanged
-burst_sep=1,
-\change_inserted 1685850735 1494301370
- 
-\change_unchanged
-sburst=1,eburst=2
+> TC_POINT_SIZE=0.25 fab analyse_ackseq:test_id= exp_20150218-135735_aqm_pfifo_re
+sponders_4, out_dir=../results,source_filter= "D_172.16.11.61_80;D_172.16.11.62_81;
+ D_172.16.11.63_82;D_172.16.11.64_83",burst_sep=1, sburst=1,eburst=2
 \end_layout
 
 \end_inset
@@ -17293,119 +13633,47 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417733
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417760
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_4
+exp_20150218-135735_aqm_pfifo_responders_4
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417737
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417765
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_5
+exp_20150218-135735_aqm_pfifo_responders_5
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417739
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417770
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_6
+exp_20150218-135735_aqm_pfifo_responders_6
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417741
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417774
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_7
+exp_20150218-135735_aqm_pfifo_responders_7
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417743
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417778
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_8
+exp_20150218-135735_aqm_pfifo_responders_8
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417746
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417782
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_9
+exp_20150218-135735_aqm_pfifo_responders_9
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417748
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417786
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_10
+exp_20150218-135735_aqm_pfifo_responders_10
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417750
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417789
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_11
+exp_20150218-135735_aqm_pfifo_responders_11
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502417754
-
-exp_
-\change_unchanged
-20150218-135735
-\change_deleted 1685850735 1502417794
-_experiment
-\change_unchanged
-_aqm_pfifo_responders_12
+exp_20150218-135735_aqm_pfifo_responders_12
 \end_layout
 
 \end_inset
@@ -17522,47 +13790,10 @@ status open
 
 \family typewriter
 \size scriptsize
-> TC_NICER_XLABS=1 fab analyse_cmpexp:exp_list=
-\change_deleted 1685850735 1489541939
- 
-\change_unchanged
-explist.txt,
-\change_inserted 1685850735 1494301425
- 
-\change_unchanged
-out_dir=../results,
-\change_deleted 1685850735 1489541942
- 
-\change_unchanged
-source_filter="D_172.16.11.61_80;
-\change_inserted 1685850735 1494301432
- 
-\change_unchanged
-D_172.16.11.62_81;
-\change_deleted 1685850735 1489541945
- 
-\change_unchanged
-D_172.16.11.63_82;
-\change_inserted 1685850735 1494301435
- 
-\change_unchanged
-D_172.16.11.64_83",
-\change_deleted 1685850735 1494301438
- 
-\change_unchanged
-metric=restime,ptype=box,
-\change_inserted 1685850735 1494301458
- 
-\change_unchanged
-omit_const_xlab_vars=1,
-\change_deleted 1685850735 1489541949
- 
-\change_unchanged
-out_name="FIRST_FOUR",
-\change_inserted 1685850735 1494301472
- 
-\change_unchanged
-plot_script="R CMD BATCH --vanilla ./my_plot_cmp_experiments.R"
+> TC_NICER_XLABS=1 fab analyse_cmpexp:exp_list=explist.txt, out_dir=../results,sour
+ce_filter="D_172.16.11.61_80; D_172.16.11.62_81;D_172.16.11.63_82; D_172.16.11.64_83",metric
+=restime,ptype=box, omit_const_xlab_vars=1,out_name="FIRST_FOUR", plot_script="R
+ CMD BATCH --vanilla ./my_plot_cmp_experiments.R"
 \end_layout
 
 \end_inset
@@ -17697,36 +13928,10 @@ status open
 
 \family typewriter
 \size scriptsize
-> TC_NICER_XLABS=1 fab analyse_cmpexp:exp_list=
-\change_deleted 1685850735 1489541960
- 
-\change_unchanged
-explist.txt,
-\change_inserted 1685850735 1494301510
- 
-\change_unchanged
-out_dir=../results,
-\change_deleted 1685850735 1489541962
- 
-\change_unchanged
-source_filter="S_172.16.10.60_*",
-\change_inserted 1685850735 1494301533
- 
-\change_unchanged
-merge_data=1,
-\change_deleted 1685850735 1489541965
- 
-\change_unchanged
-metric=restime,ptype=box,
-\change_inserted 1685850735 1494301550
- 
-\change_unchanged
-omit_const_xlab_vars=1,
-\change_deleted 1685850735 1494301522
- 
-\change_unchanged
-out_name="ALL",plot_script="R CMD BATCH --vanilla ./my_plot_cmp_experiments.R"
- 
+> TC_NICER_XLABS=1 fab analyse_cmpexp:exp_list=explist.txt, out_dir=../results,sour
+ce_filter="S_172.16.10.60_*", merge_data=1,metric=restime,ptype=box, omit_const_xla
+b_vars=1,out_name="ALL",plot_script="R CMD BATCH --vanilla ./my_plot_cmp_experime
+nts.R" 
 \end_layout
 
 \end_inset
@@ -17843,19 +14048,7 @@ TEACUP versions prior to 1.0 were developed as part of a project funded by
  Cisco Systems and titled "Study in TCP Congestion Control Performance In
  A Data Centre".
  This was a collaborative effort between Swinburne University of Technology's
- 
-\change_deleted 1685850735 1488934472
-Center
-\change_inserted 1685850735 1488934472
-Centre
-\change_unchanged
- for Advanced Internet 
-\change_deleted 1685850735 1488934458
-Archectures
-\change_inserted 1685850735 1488934458
-Architectures
-\change_unchanged
- and Fred Baker of Cisco Systems.
+ Centre for Advanced Internet Architectures and Fred Baker of Cisco Systems.
  These may be found at 
 \begin_inset Flex URL
 status collapsed
@@ -17884,17 +14077,11 @@ http://sourceforge.net/projects/teacup/
 \end_inset
 
 .
-\change_inserted 193492759 1517561476
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517561509
 Russell Collom contributed additional text in 2017 for version 1.1 of this
  document.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Section*
@@ -17909,13 +14096,7 @@ name "sec:Copying"
 \end_layout
 
 \begin_layout Standard
-This document
-\change_inserted 1685850735 1494304939
- is based on
-\change_deleted 1685850735 1494304936
-,
-\change_unchanged
- 
+This document is based on 
 \begin_inset Quotes eld
 \end_inset
 
@@ -17941,18 +14122,8 @@ copyright
 \end_inset
 
 2015 – 2016 CAIA, Swinburne University of Technology.
- 
-\change_deleted 1685850735 1494305027
-As of
-\change_inserted 1685850735 1494305027
-The original was released in
-\change_unchanged
- June 2016 
-\change_deleted 1685850735 1494305294
-this document has been licensed 
-\change_unchanged
-under a Creative Commons Attribution-ShareAlike 4.0 International License
- (CC BY-SA 4.0, 
+ The original was released in June 2016 under a Creative Commons Attribution-Sha
+reAlike 4.0 International License (CC BY-SA 4.0, 
 \begin_inset Flex URL
 status collapsed
 

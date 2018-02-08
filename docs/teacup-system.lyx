@@ -128,8 +128,6 @@
 \html_css_as_file 0
 \html_be_strict false
 \author 193492759 "gja"
-\author 1685850735 "russell"
-\author 1870295737 "Jonathan Kua"
 \end_header
 
 \begin_body
@@ -142,15 +140,7 @@ status open
 
 
 \backslash
-title{TEACUP v1.
-\change_inserted 1685850735 1494305058
-1
-\change_deleted 1685850735 1494305058
-X
-\change_deleted 193492759 1491893154
-0
-\change_unchanged
- -- A System for Automated TCP Testbed Experiments}
+title{TEACUP v1.1 -- A System for Automated TCP Testbed Experiments}
 \end_layout
 
 \end_inset
@@ -168,67 +158,20 @@ status open
 \backslash
 author{
 \backslash
-IEEEauthorblockN{
-\change_inserted 193492759 1517561870
-Editors: 
-\change_unchanged
-Sebastian Zander, Grenville Armitage}
+IEEEauthorblockN{Editors: Sebastian Zander, Grenville Armitage}
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_deleted 193492759 1517561892
-
-
-\backslash
-IEEEauthorblockA{Centre for Advanced Internet Architectures
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_deleted 193492759 1517561877
-
-Swinburne University of Technology
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_deleted 193492759 1517561877
-
-Melbourne, Australia
-\backslash
-
-\backslash
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted 193492759 1517561895
 
 
 \backslash
 IEEEauthorblockA{
-\change_unchanged
-
 \backslash
-url{
-\change_deleted 193492759 1517561917
-szander@swin.edu.au
-\change_inserted 193492759 1517561917
-s.zander@murdoch.edu.au
-\change_unchanged
-}, 
+url{s.zander@murdoch.edu.au}, 
 \backslash
 url{garmitage@swin.edu.au}}}
 \end_layout
@@ -314,13 +257,8 @@ cite{dash-standard}.
  streaming flows (within a mix of other typical traffic) is not well understood.
  Experiments in a controlled testbed allow shedding more light on this issue.
  This report describes TEACUP (TCP Experiment Automation Controlled Using
- Python) version 1.
-\change_inserted 193492759 1494480788
-1
-\change_deleted 193492759 1493286968
-0
-\change_unchanged
- -- a software tool for running automated TCP experiments in a testbed.
+ Python) version 1.1 -- a software tool for running automated TCP experiments
+ in a testbed.
  Based on a configuration file TEACUP can perform a series of experiments
  with different traffic mixes, different bottleneck configurations (such
  as bandwidths, queue mechanisms), different emulated network delays and/or
@@ -353,22 +291,14 @@ baselineskip}
 \backslash
 noindent
 \backslash
-begin{
-\change_inserted 193492759 1517792863
-IEEE
-\change_unchanged
-keywords} TCP, experiments, automated control
+begin{IEEEkeywords} TCP, experiments, automated control
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-end{
-\change_inserted 193492759 1517792866
-IEEE
-\change_unchanged
-keywords} 
+end{IEEEkeywords} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -455,36 +385,13 @@ footrulewidth}{0pt}% Footer rule
 \backslash
 fancyfoot[C]{
 \backslash
-small{
-\change_deleted 193492759 1517561958
-
-\backslash
-copyright~2015 -- 2016 CAIA, Swinburne University of Technology
-\backslash
-
-\backslash
-Originally published as 
-\backslash
-url{http://caia.swin.edu.au/reports/150529A/CAIA-TR-150529A.pdf}
-\backslash
-
-\backslash
-
-\change_deleted 1685850735 1494305447
-This version
-\change_deleted 193492759 1517561958
-Version 1.0 was released June 2016 under Creative Commons BY-SA 4.0 License
- -- s
-\change_inserted 193492759 1517561958
-Based on a version of  
+small{Based on a version of  
 \backslash
 url{http://caia.swin.edu.au/reports/150529B/CAIA-TR-150529B.pdf}, orginally
  released June 2016 under Creative Commons BY-SA 4.0 License, 
 \backslash
 copyright~2015 -- 2016 CAIA, Swinburne University of Technology.
- S
-\change_unchanged
-ee terms on page~
+ See terms on page~
 \backslash
 pageref{sec:Copying}}}
 \end_layout
@@ -530,15 +437,7 @@ headrulewidth}{0pt}
 \backslash
 lfoot{
 \backslash
-small{TEACUP v1.
-\change_inserted 1685850735 1494305065
-1
-\change_deleted 1685850735 1494305064
-X
-\change_deleted 193492759 1491893113
-0
-\change_unchanged
- -- A System for Automated TCP Testbed Experiments}}
+small{TEACUP v1.1 -- A System for Automated TCP Testbed Experiments}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -554,23 +453,7 @@ cfoot{}
 \backslash
 rfoot{
 \backslash
-small{
-\change_deleted 1685850735 1494305486
-June
-\change_deleted 193492759 1517600663
-May
-\change_inserted 193492759 1517600663
-Feb
-\change_unchanged
- 9, 201
-\change_inserted 193492759 1517600666
-8
-\change_deleted 193492759 1517600667
-7
-\change_deleted 1685850735 1494305491
-6
-\change_unchanged
-~~page 
+small{Feb 9, 2018~~page 
 \backslash
 thepage ~of 
 \backslash
@@ -599,10 +482,6 @@ status open
 \begin_inset Newpage newpage
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
@@ -686,21 +565,15 @@ key "dash-standard"
 
 \begin_layout Standard
 This report
-\change_inserted 193492759 1517896431
-
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517896431
 Available online at 
 \begin_inset Flex URL
 status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517896431
 
 https://sourceforge.net/projects/teacup/files/TEACUP-System-v1.1.pdf
 \end_layout
@@ -719,30 +592,8 @@ key "CAIA-TR-150529A"
 
 \end_inset
 
-
-\change_unchanged
  describes TEACUP (TCP Experiment Automation Controlled Using Python) version
- 1.
-\change_deleted 193492759 1493287988
-0
-\change_inserted 1685850735 1494305074
-1
-\change_deleted 1685850735 1494305073
-X
-\change_unchanged
- – a software tool for running automated TCP experiments in a testbed.
-
-\change_deleted 193492759 1517650549
- It updates the previous report describing TEACUP version 0.9 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "CAIA-TR-150529A"
-
-\end_inset
-
-.
-
-\change_unchanged
+ 1.1 – a software tool for running automated TCP experiments in a testbed.
  The TEACUP project originated at Swinburne University of Technology's Centre
  for Advanced Internet Architectures (
 \begin_inset Flex URL
@@ -796,18 +647,10 @@ IEEEpubidadjcol
 \end_layout
 
 \begin_layout Standard
-Based on a 
-\change_inserted 193492759 1517564145
-python 
-\change_unchanged
-configuration file
-\change_inserted 193492759 1517997363
-,
-\change_unchanged
- TEACUP can perform a series of experiments with different traffic mixes,
- different bottlenecks (such as bandwidths, queue mechanisms), different
- emulated network delays and/or loss rates, and different host settings
- (e.g.
+Based on a python configuration file, TEACUP can perform a series of experiments
+ with different traffic mixes, different bottlenecks (such as bandwidths,
+ queue mechanisms), different emulated network delays and/or loss rates,
+ and different host settings (e.g.
  TCP congestion control algorithm).
  For each experiment TEACUP automatically collects relevant information
  that allows analysing TCP behaviour, such as tcpdump files, SIFTR 
@@ -931,13 +774,7 @@ reference "sec:Conclusions"
 \end_layout
 
 \begin_layout Section
-TEACUP 
-\change_deleted 193492759 1517724735
-Requirements
-\change_inserted 193492759 1517724740
-Motivation
-\change_unchanged
- and Design
+TEACUP Motivation and Design
 \end_layout
 
 \begin_layout Standard
@@ -951,48 +788,18 @@ name "sec:Design"
 \end_layout
 
 \begin_layout Standard
-This section describes the 
-\change_deleted 193492759 1517724760
-design 
-\change_inserted 193492759 1517724748
-goals that motivated 
-\change_deleted 193492759 1517724750
-of 
-\change_unchanged
-TEACUP
-\change_inserted 193492759 1517724757
-'s design
-\change_unchanged
-.
- We first list the 
-\change_inserted 193492759 1517724769
-intended 
-\change_unchanged
-requirements.
+This section describes the goals that motivated TEACUP's design.
+ We first list the intended requirements.
  Then we describe the overall functional block design and the process flow.
  Finally, we describe the naming scheme for log files.
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 193492759 1517724808
-Motivations and 
-\change_deleted 193492759 1517724809
-R
-\change_inserted 193492759 1517724809
-r
-\change_unchanged
-equirements
+Motivations and requirements
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517724784
-The following paragraphs
-\change_inserted 193492759 1517724785
-Here we
-\change_unchanged
- describe the requirements that motivated our design of TEACUP.
+Here we describe the requirements that motivated our design of TEACUP.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1130,17 +937,8 @@ TCP algorithms
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517724838
-The following
-\change_inserted 193492759 1517724838
-Multiple
-\change_unchanged
- TCP congestion control algorithms must be supported
-\change_inserted 193492759 1517724842
-, including
-\change_unchanged
-: NewReno and CUBIC (representing classic loss-based algorithms), CompoundTCP
+Multiple TCP congestion control algorithms must be supported, including:
+ NewReno and CUBIC (representing classic loss-based algorithms), CompoundTCP
  (Microsoft's hybrid), CDG (CAIA's hybrid), and HD (Hamilton Institutes'
  delay-based TCP).
  Optionally other TCPs may be supported.
@@ -1168,23 +966,9 @@ Bottleneck AQM
 
 \begin_layout Standard
 The following Active Queuing Management (AQM) mechanisms are required: TailDrop/
-FIFO, CoDel, PIE, 
-\change_inserted 193492759 1493287014
-FQ-CoDel, 
-\change_unchanged
-RED.
- Optionally other AQM mechanisms may be supported
-\change_inserted 1685850735 1488952007
-, with the router being able to run either Linux or FreeBSD
-\change_inserted 193492759 1493287002
- (10.3 onwards)
-\change_deleted 1685850735 1488952016
-.
- Since FreeBSD does not support some of the required AQMs the router must
- run Linux (but to allow comparison TEACUP also has some basic support for
- a FreeBSD router)
-\change_unchanged
-.
+FIFO, CoDel, PIE, FQ-CoDel, RED.
+ Optionally other AQM mechanisms may be supported, with the router being
+ able to run either Linux or FreeBSD (10.3 onwards).
  The buffer size must be configurable.
 \end_layout
 
@@ -1202,13 +986,7 @@ Host OS
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1493287058
-We are
-\change_inserted 193492759 1493287058
-TEACUP is largely
-\change_unchanged
- OS-agnostic.
+TEACUP is largely OS-agnostic.
  However, to cover the various TCP algorithms 
 \emph on
 and
@@ -1353,13 +1131,7 @@ TEACUP main functional blocks
 \end_layout
 
 \begin_layout Subsection
-Experiment 
-\change_inserted 193492759 1517692620
-naming and 
-\change_unchanged
-process flow
-\change_inserted 193492759 1517719389
-
+Experiment naming and process flow
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Experiment-naming-and"
@@ -1367,13 +1139,9 @@ name "subsec:Experiment-naming-and"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517785181
 An individual experiment consists of running one or more traffic generators
  for configurable periods of time across a path emulating specific network
  conditions.
@@ -1606,17 +1374,8 @@ experiments_completed.txt
 
 \end_deeper
 \begin_layout Enumerate
-If 
-\change_inserted 193492759 1517692383
-the config specifies 
-\change_deleted 193492759 1517692385
-we have 
-\change_unchanged
-another parameter combination to run 
-\change_inserted 193492759 1517785247
-under the same test ID prefix, 
-\change_unchanged
-go to step III, otherwise finish
+If the config specifies another parameter combination to run under the same
+ test ID prefix, go to step III, otherwise finish
 \end_layout
 
 \begin_layout Standard
@@ -2054,27 +1813,11 @@ Traffic sources and sinks
 \end_layout
 
 \begin_layout Standard
-We now describe 
-\change_deleted 193492759 1517600507
-the
-\change_inserted 193492759 1517600509
-TEACUP's
-\change_unchanged
- available traffic generator functions
-\change_inserted 193492759 1517785322
- that control underlying applications such as iperf, httperf, ping and so
- forth.
+We now describe TEACUP's available traffic generator functions that control
+ underlying applications such as iperf, httperf, ping and so forth.
  These underlying applications must be separately installed on the end hosts
- before TEACUP can control them
-\change_unchanged
-.
- 
-\change_deleted 193492759 1517600617
-How these can be used
-\change_inserted 193492759 1517600620
-Use of these generators
-\change_unchanged
- is described in more detail in Section 
+ before TEACUP can control them.
+ Use of these generators is described in more detail in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Config-traffic-generators"
@@ -2109,15 +1852,8 @@ ping
 \end_layout
 
 \begin_layout Standard
-This starts a ping from one host to another (
-\change_inserted 193492759 1517733918
-generating pairs of 
-\change_unchanged
-ICMP Echo
-\change_inserted 193492759 1517733943
- Request and Echo Reply packets
-\change_unchanged
-).
+This starts a ping from one host to another (generating pairs of ICMP Echo
+ Request and Echo Reply packets).
  The rate of pings is configurable for FreeBSD and Linux but limited to
  one ping per second for Windows.
  
@@ -2139,86 +1875,25 @@ key "lighttpd"
  This can be used as traffic source for httperf-based sinks.
  There are also scripts to setup fake content for DASH-like streaming and
  incast scenario traffic.
-
-\change_inserted 1685850735 1489708535
+ In addition,
+\change_deleted 193492759 1518046343
  
-\change_deleted 1870295737 1491538574
-Additionally
-\change_inserted 1870295737 1491538576
-In addition
-\change_inserted 1685850735 1489708535
-, 
-\change_deleted 1870295737 1491803520
-a DASH dataset can be hosted on a setup server
-\change_inserted 1870295737 1491803537
- lighttpd can be used as a web server that serve
-\change_inserted 193492759 1491893478
-s
-\change_inserted 1870295737 1491803537
- 
-\change_inserted 193492759 1491893485
-genuine 
-\change_inserted 1870295737 1491803537
-DASH content to 
-\change_inserted 193492759 1491893494
-a client started by 
+\change_unchanged
+ lighttpd can be used as a web server that serves genuine DASH content to
+ a client started by 
 \emph on
 dash_streaming_dashjs
-\change_deleted 193492759 1491893498
-
 \emph default
-dash.js
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "dashjs"
-
-\end_inset
-
- client
-\change_inserted 1870295737 1491803537
 .
-\change_deleted 1870295737 1491803488
-, in order to utilise the dash.js or VLC steaming client for generating realistic
- DASH traffic.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted 1685850735 1489708562
-Potentially remove VLC mention
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
  However, for specific experiments one may need to setup web server content
  manually or create new scripts to do this.
-
-\change_deleted 193492759 1517600712
- We choose lighttpd as the web server because it is leaner than some other
- popular web servers, and hence it is easier to configure and provides higher
- performance.
-\change_inserted 1870295737 1517868172
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1870295737 1517868422
 nginx (new in TEACUP 1.1)
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1870295737 1517870328
 An nginx 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2233,21 +1908,7 @@ key "nginx"
 dash_streaming_dashjs
 \emph default
 .
- It is currently 
-\change_inserted 193492759 1517894019
-only 
-\change_inserted 1870295737 1517870328
-available under FreeBSD
-\change_inserted 193492759 1517894007
--based
-\change_inserted 1870295737 1517870328
- and Linux-based hosts
-\change_deleted 193492759 1517894026
- only
-\change_inserted 1870295737 1517870328
-.
-\change_unchanged
-
+ It is currently only available under FreeBSD-based and Linux-based hosts.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2279,19 +1940,13 @@ key "httperf"
 \end_inset
 
 ).
-\change_inserted 193492759 1493288752
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 193492759 1493288753
 dash_streaming_dashjs (new in TEACUP 1.1)
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1493288753
 This starts a HTML-5 based dash.js
 \begin_inset space ~
 \end_inset
@@ -2304,13 +1959,15 @@ key "dashjs"
 \end_inset
 
  client inside a Chrome or Firefox web-browser on one host, which then retrieves
- video content  served by a regular web server (e.g lighttpd) on other host.
+ video content
+\change_deleted 193492759 1518046343
+ 
+\change_unchanged
+ served by a regular web server (e.g lighttpd) on other host.
  The client's host system must have Xorg, and either Chrome or Firefox installed.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1493288840
 In DASH systems
 \begin_inset space ~
 \end_inset
@@ -2339,8 +1996,6 @@ chunks
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1493288753
 When a streaming session starts, DASH client will request the Media Presentation
  Description (MPD) file which describes content information (available represent
 ations, metadata, download URLs), then start requesting video chunks as
@@ -2381,14 +2036,6 @@ key "comst_dash_abr"
 
 \begin_layout Standard
 
-\change_inserted 193492759 1493288753
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 193492759 1517734303
-
 \series bold
 NOTE:
 \series default
@@ -2411,36 +2058,19 @@ httperf_dash
 \end_layout
 
 \begin_layout Subsubsection
-httperf_dash
-\change_inserted 193492759 1517734202
- (deprecated in TEACUP 1.1 but still available)
-\change_unchanged
-
+httperf_dash (deprecated in TEACUP 1.1 but still available)
 \end_layout
 
 \begin_layout Standard
-This starts a 
-\change_deleted 193492759 1491893278
-TCP video streaming 
-\change_unchanged
-httperf client 
+This starts a httperf client 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "modified-httperf"
 
 \end_inset
 
- that 
-\change_inserted 193492759 1491893298
-simplistically 
-\change_unchanged
-emulates the behaviour of DASH or other similar 
-\change_inserted 193492759 1517734083
-HTTP-based chunked-transfer 
-\change_deleted 193492759 1517734087
-TCP 
-\change_unchanged
-streaming algorithms 
+ that simplistically emulates the behaviour of DASH or other similar HTTP-based
+ chunked-transfer streaming algorithms 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Finamore2011,Rao2011"
@@ -2448,66 +2078,18 @@ key "Finamore2011,Rao2011"
 \end_inset
 
 .
- In the initial buffering phase the client will download 
-\change_deleted 193492759 1491893321
-the first part of the
+ In the initial buffering phase the client will download
+\change_deleted 193492759 1518046343
+ 
 \change_unchanged
  content as fast as possible.
- Then the client will fetch 
-\change_deleted 193492759 1491893326
-another
-\change_inserted 193492759 1491893327
-successive
-\change_unchanged
- block
-\change_inserted 193492759 1491893329
-s
-\change_unchanged
- of content every 
+ Then the client will fetch successive blocks of content every 
 \begin_inset Formula $t$
 \end_inset
 
  seconds.
- 
-\change_deleted 193492759 1493288891
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mbox{
-\end_layout
-
-\end_inset
-
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:TCP-video-streaming"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- shows an illustration of this behaviour.
- 
-\change_unchanged
-The video rate and the cycle length are configurable (and the size of the
+ The video rate and the cycle length are configurable (and the size of the
  data blocks depends on these).
-\change_inserted 193492759 1491892966
-
 \end_layout
 
 \begin_layout Standard
@@ -2538,27 +2120,9 @@ name "fig:TCP-video-streaming"
 
 \end_inset
 
-
-\change_inserted 193492759 1493288913
-Simplified illustration of 
-\change_unchanged
-TCP 
-\change_deleted 193492759 1491893361
-video streaming
-\change_inserted 193492759 1491893365
-traffic generated by 
-\change_deleted 193492759 1491893369
- (DASH
-\change_inserted 193492759 1493288976
-
+Simplified illustration of TCP traffic generated by 
 \emph on
 dash_streaming_dashjs
-\change_deleted 193492759 1491893369
-
-\emph default
-) behaviour
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -2568,33 +2132,21 @@ dash_streaming_dashjs
 
 \end_inset
 
-
-\change_inserted 193492759 1491893393
 
 \end_layout
 
 \begin_layout Standard
 
-\change_inserted 193492759 1517600830
-
 \series bold
 NOTE:
 \series default
  This generator is deprecated in TEACUP version 1.1.
- If you have installed the required Xorg and 
-\change_deleted 1870295737 1517870313
-Chromium
-\change_inserted 1870295737 1517870314
-Chrome
-\change_inserted 193492759 1517600830
- or Firefox packages on your intended client end host, we recommend using
- 
+ If you have installed the required Xorg and Chrome or Firefox packages
+ on your intended client end host, we recommend using 
 \emph on
 dash_streaming_dashjs
 \emph default
  to launch and control a standards-compliant DASH client.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -2637,92 +2189,34 @@ key "nttcp-web"
  However, on this connection only a few packets are exchanged before and
  after the data flow.
  
-\change_inserted 1685850735 1489014008
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1489014015
 pktgen
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1491894774
-The tool 
-\change_inserted 193492759 1493289000
-TEACUP knows how to use 
-\change_inserted 1685850735 1489015187
-pktgen
-\change_inserted 193492759 1491893759
- 0.3.1
-\change_inserted 1685850735 1489015187
- 
+TEACUP knows how to use pktgen 0.3.1 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bitss-web"
 
 \end_inset
 
- 
-\change_deleted 193492759 1491894823
-can be used
-\change_inserted 1685850735 1489015187
- to 
-\change_inserted 193492759 1491894707
-crudely 
-\change_inserted 1685850735 1489015187
-emulate 
-\change_inserted 193492759 1517785415
-the UDP traffic of 
-\change_inserted 1685850735 1489015187
-first person shooter (
-\change_deleted 193492759 1491894841
-fps
-\change_inserted 193492759 1491894841
-FPS
-\change_inserted 1685850735 1489015187
-) game
-\change_inserted 193492759 1491894897
-s 
-\change_deleted 193492759 1491894900
- traffic based off synthetically generated traffic of popular fps games,
-\change_inserted 1685850735 1489015187
- such as Quake 
-\change_inserted 193492759 1491893783
-III Arena
-\change_deleted 193492759 1491893781
-3
-\change_inserted 1685850735 1489015187
-.
- 
-\change_unchanged
-Note that
-\change_inserted 193492759 1491894672
- 
-\change_inserted 1685850735 1489015187
-pktgen 
-\change_inserted 193492759 1491894715
-0.3.1 
-\change_unchanged
-can only 
-\change_inserted 1685850735 1489015187
-generate a single UDP unidirectional traffic flow, so 
-\change_inserted 193492759 1491894614
-TEACUP launches a pair of 
-\change_inserted 1685850735 1489015187
-pktgen 
-\change_inserted 193492759 1517785396
-instances between the server and every nominated client (one sending client-to-s
-erver traffic and the other sending server-to-client traffic).
- 
-\change_deleted 193492759 1491894696
-must be run twice as many times as there are clients (half of these processes
- generate the client-to-server traffic, and half of these processes generate
- the server-to-client traffic) to emulate a real game scenario.
-\change_unchanged
 
+\change_deleted 193492759 1518046343
+ 
+\change_unchanged
+ to crudely emulate the UDP traffic of first person shooter (FPS) games
+\change_deleted 193492759 1518046343
+ 
+\change_unchanged
+ such as Quake III Arena.
+ Note that pktgen 0.3.1 can only generate a single UDP unidirectional traffic
+ flow, so TEACUP launches a pair of pktgen instances between the server
+ and every nominated client (one sending client-to-server traffic and the
+ other sending server-to-client traffic).
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2730,44 +2224,20 @@ Loggers
 \end_layout
 
 \begin_layout Standard
-Currently, there are 
-\change_deleted 193492759 1493289241
-two types o
-\change_inserted 193492759 1493289244
-a range o
-\change_unchanged
-f loggers that log information on all hosts.
+Currently, there are a range of loggers that log information on all hosts.
  All 
-\change_inserted 193492759 1517600915
-
 \emph on
 host-to-host
 \emph default
  and 
 \emph on
 cross router 
-\change_unchanged
-
 \emph default
-traffic is logged with tcpdump 
-\change_deleted 193492759 1493289265
-and
-\change_inserted 193492759 1493289266
-while
-\change_unchanged
- 
+traffic is logged with tcpdump while 
 \emph on
 TCP state information
 \emph default
- 
-\change_inserted 193492759 1493289271
-on each host 
-\change_unchanged
-is logged with different 
-\change_inserted 193492759 1493289224
-OS-specific 
-\change_unchanged
-tools.
+ on each host is logged with different OS-specific tools.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2776,22 +2246,8 @@ Traffic logger
 
 \begin_layout Standard
 tcpdump is used to capture the traffic on all testbed NICs on all hosts.
- All traffic is captured
-\change_inserted 193492759 1517785465
-.
- 
-\change_deleted 193492759 1517785467
-, but t
-\change_inserted 193492759 1517785467
-T
-\change_unchanged
-he snap size 
-\change_inserted 193492759 1517788012
-defaults to 80 bytes but can be increased in the config file.
-\change_deleted 193492759 1517785487
-is limited to 68 bytes by default.
-\change_unchanged
-
+ All traffic is captured.
+ The snap size defaults to 80 bytes but can be increased in the config file.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2816,8 +2272,6 @@ key "web10g"
 
 \end_inset
 
-
-\change_inserted 193492759 1493289177
  (polling) or ttprobe
 \begin_inset space ~
 \end_inset
@@ -2830,11 +2284,7 @@ key "CAIA-TR-150911A"
 \end_inset
 
  (event driven).
- Web10g
-\change_deleted 193492759 1493289150
-, which
-\change_unchanged
- implements the TCP EStats MIB 
+ Web10g implements the TCP EStats MIB 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "rfc4898"
@@ -2843,12 +2293,8 @@ key "rfc4898"
 
  inside the Linux kernel, with our own logging tool based on the Web10G
  library.
- 
-\change_inserted 193492759 1493289164
-TEACUP directly interprets ttprobe output.
- 
-\change_unchanged
-For Windows 7 we implemented our own logging tool, which can access the
+ TEACUP directly interprets ttprobe output.
+ For Windows 7 we implemented our own logging tool, which can access the
  TCP EStats MIB inside the Windows 7 kernel.
  SIFTR has not been ported to Mac OS X, so for Mac OS X we implemented our
  own logging tool that outputs TCP statistics logs in SIFTR format based
@@ -2861,11 +2307,7 @@ key "dtrace"
 
 .
  Note that the DTrace tool collects most but not all statistics collected
- by SIFTR (the tool's documentation describes the
-\change_inserted 193492759 1517601043
-se
-\change_unchanged
- limitations).
+ by SIFTR (the tool's documentation describes these limitations).
 \end_layout
 
 \begin_layout Standard
@@ -2887,13 +2329,9 @@ key "web10g-stats"
 \end_inset
 
 .
-\change_inserted 193492759 1517601258
-
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 193492759 1517785813
 Log file naming – syntax and structure
 \begin_inset CommandInset label
 LatexCommand label
@@ -2905,14 +2343,10 @@ name "subsec:Log-file-naming"
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 193492759 1517785820
 test IDs and test ID prefixes
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517721941
 As noted in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2937,8 +2371,6 @@ test ID prefix
 
 \begin_layout Standard
 
-\change_inserted 193492759 1517719641
-
 \family typewriter
 \size small
 \begin_inset Box Frameless
@@ -2961,8 +2393,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517720114
-
 \family typewriter
 \size footnotesize
 <testID> = <testIDprefix>_[<parName>_<parVal>_]*
@@ -2974,8 +2404,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517785573
 The 
 \series bold
 test ID prefix,
@@ -2992,23 +2420,17 @@ test ID prefix,
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517720725
 (TPCONF_test_id
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517720725
 Will be renamed TPCONF_test_id_prefix in a future release.
 \end_layout
 
 \end_inset
 
 )
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -3047,25 +2469,13 @@ reference "sec:Running"
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517786034
 Changed from the pre TEACUP v1.0 default of `YYYYMMDD-HHMMSS_experiment'
  to simplify test ID parsing.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
  
-\change_deleted 193492759 1517719906
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 193492759 1517785830
-
 \family typewriter
 \size small
 [<parName>_<parVal>_]*
@@ -3094,8 +2504,6 @@ Changed from the pre TEACUP v1.0 default of `YYYYMMDD-HHMMSS_experiment'
 status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517723328
 This allows later parsing of the name-value pairs using the underscores
  as separators.
  Note the default `exp_YYYYMMDD-HHMMSS' testID prefix may also be parsed
@@ -3112,16 +2520,10 @@ value
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 193492759 1517785852
 Grouping experiments under a test ID prefix
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517786656
 If an experiment is started with
 \family typewriter
 \size footnotesize
@@ -3151,13 +2553,9 @@ run_experiment_single
 \family default
 \size default
 .
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517786096
 However, the more common TEACUP use-case is to launch a group of related
  experiments with 
 \family typewriter
@@ -3195,8 +2593,6 @@ TPCONF_vary_parameters
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517721895
 In other words, the 
 \family typewriter
 \size footnotesize
@@ -3219,8 +2615,6 @@ In other words, the
 \family default
 \size default
 .
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -3229,8 +2623,6 @@ In other words, the
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517786520
 Note: You can also run a single experiment using 
 \family typewriter
 \size small
@@ -3258,8 +2650,6 @@ run_experiment_single
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517808500
 In practical terms 
 \family typewriter
 \size footnotesize
@@ -3279,8 +2669,6 @@ TPCONF_vary_parameters
 \family default
 \size default
 .
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -3289,21 +2677,15 @@ TPCONF_vary_parameters
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 193492759 1517785899
 File name formats
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517722651
 Finally, most TEACUP log file and metadata file names share the following
  format:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517719671
 
 \family typewriter
 \size small
@@ -3327,8 +2709,6 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517722716
-
 \family typewriter
 \size footnotesize
 filename = <testID>_<host>_ [<traffgenID>_]<fileName>.<extension>[.gz]
@@ -3340,8 +2720,6 @@ filename = <testID>_<host>_ [<traffgenID>_]<fileName>.<extension>[.gz]
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517601259
 The 
 \family typewriter
 \size small
@@ -3354,8 +2732,6 @@ The
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517651530
 If the log file is from a traffic generator specified in TPCONF_traffic_gens,
  the traffic generator number follows the host identifier (
 \family typewriter
@@ -3374,8 +2750,6 @@ If the log file is from a traffic generator specified in TPCONF_traffic_gens,
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517652288
 The 
 \family typewriter
 \size small
@@ -3402,8 +2776,6 @@ depends on which process logged the data.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517722784
 The 
 \family typewriter
 \size small
@@ -3415,8 +2787,6 @@ The
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517601259
 Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3431,8 +2801,6 @@ reference "fig:Example-file-names-1-1"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517601259
 \begin_inset Float figure
 placement t
 wide true
@@ -3440,8 +2808,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517601259
 \begin_inset listings
 lstparams "basicstyle={\footnotesize\ttfamily}"
 inline false
@@ -3449,30 +2815,22 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517601259
-
 # tcpdump file collected on testhost2 for an experiment where two parameters
  where varied
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517601259
-
 exp_20131206-170846_dash_1000_tcp_compound_testhost2.dmp.gz
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517601259
 
 # output of httperf traffic generator (traffic generator 3) executed on
  testhost2
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517601259
 
 exp_20131206-170846_dash_1000_tcp_compound_testhost2_3_httperf_dash.log.gz
 \end_layout
@@ -3483,13 +2841,9 @@ exp_20131206-170846_dash_1000_tcp_compound_testhost2_3_httperf_dash.log.gz
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517601259
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517601259
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Example-file-names-1-1"
@@ -3510,14 +2864,10 @@ Example file names
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 193492759 1517785922
 Storing results per test ID prefix
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517787053
 When using the provided launch scripts, all log files for one experiment
  (
 \family typewriter
@@ -3542,8 +2892,6 @@ fab run_experiment_multiple
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517601259
 Prior to version 0.4.7 TEACUP stored all log files in the directory where
  fabfile.py was located.
 \end_layout
@@ -3551,22 +2899,10 @@ Prior to version 0.4.7 TEACUP stored all log files in the directory where
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
-Host 
-\change_inserted 193492759 1517723487
-and router 
-\change_unchanged
-information logg
-\change_deleted 193492759 1517723492
-ed
-\change_inserted 193492759 1517723492
-ing
-\change_unchanged
-
+Host and router information logging
 \end_layout
 
 \begin_layout Standard
@@ -3580,55 +2916,20 @@ name "subsec:Host-info"
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517723556
-TEACUP does not only log the
-\change_inserted 193492759 1517723558
-In addition to logging the
-\change_unchanged
- output of traffic generators and loggers, 
-\change_inserted 193492759 1517723561
-TEACUP 
-\change_deleted 193492759 1517723563
-but 
-\change_unchanged
-also collects per-host
-\change_inserted 193492759 1517723567
- and per-router
-\change_unchanged
- information.
- This section describes the information collected for each host 
-\change_inserted 193492759 1517723573
-or router 
-\change_unchanged
-participating in an experiment.
+In addition to logging the output of traffic generators and loggers, TEACUP
+ also collects per-host and per-router information.
+ This section describes the information collected for each host or router
+ participating in an experiment.
  The following information is gathered 
 \emph on
 before
 \emph default
- an experiment is started (where <
-\change_deleted 193492759 1517651886
-test_id_prefix
-\change_inserted 193492759 1517651886
-testIDprefix
-\change_unchanged
-> is a test ID prefix and <
-\change_deleted 193492759 1517651939
-test_id
-\change_inserted 193492759 1517651939
-testID
-\change_unchanged
-> is a test ID):
+ an experiment is started (where <testIDprefix> is a test ID prefix and
+ <testID> is a test ID):
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651942
-test_id
-\change_inserted 193492759 1517651942
-testID
-\change_unchanged
->_ifconfig.log.gz: This file contains the output of 
+<testID>_ifconfig.log.gz: This file contains the output of 
 \family typewriter
 \size small
 ifconfig
@@ -3645,13 +2946,7 @@ ipconfig
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651943
-test_id
-\change_inserted 193492759 1517651943
-testID
-\change_unchanged
->_uname.log.gz: This file contains the output of 
+<testID>_uname.log.gz: This file contains the output of 
 \family typewriter
 \size small
 uname -a
@@ -3662,14 +2957,8 @@ uname -a
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651943
-test_id
-\change_inserted 193492759 1517651943
-testID
-\change_unchanged
->_netstat.log.gz: This file contains information about routing obtained with
- 
+<testID>_netstat.log.gz: This file contains information about routing obtained
+ with 
 \family typewriter
 \size small
 netstat -r
@@ -3680,14 +2969,8 @@ netstat -r
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651944
-test_id
-\change_inserted 193492759 1517651944
-testID
-\change_unchanged
->_ntp.log.gz: This file contains information about the NTP status based on
- 
+<testID>_ntp.log.gz: This file contains information about the NTP status based
+ on 
 \family typewriter
 \size small
 ntpq -p
@@ -3704,14 +2987,8 @@ w32tm
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651945
-test_id
-\change_inserted 193492759 1517651945
-testID
-\change_unchanged
->_procs.log.gz: This file contains the list of all running processes (output
- of 
+<testID>_procs.log.gz: This file contains the list of all running processes
+ (output of 
 \family typewriter
 \size small
 ps
@@ -3722,13 +2999,7 @@ ps
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651947
-test_id
-\change_inserted 193492759 1517651947
-testID
-\change_unchanged
->_sysctl.log.gz: This file contains the output of 
+<testID>_sysctl.log.gz: This file contains the output of 
 \family typewriter
 \size small
 sysctl -a
@@ -3739,14 +3010,8 @@ sysctl -a
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651948
-test_id
-\change_inserted 193492759 1517651948
-testID
-\change_unchanged
->_config_vars.log.gz: This file contains information about all the V_ parameters
- in config.py (see Section 
+<testID>_config_vars.log.gz: This file contains information about all the
+ V_ parameters in config.py (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Config"
@@ -3762,36 +3027,18 @@ reference "sec:Config"
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651948
-test_id
-\change_inserted 193492759 1517651948
-testID
-\change_unchanged
->_host_tcp.log.gz: This file contains information about the TCP congestion
+<testID>_host_tcp.log.gz: This file contains information about the TCP congestion
  control algorithm used on each host, and any TCP parameters specified.
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651949
-test_id
-\change_inserted 193492759 1517651949
-testID
-\change_unchanged
->_tcpmod.log.gz: This file contains the TCP congestion control kernel module
- parameter settings (Linux only).
+<testID>_tcpmod.log.gz: This file contains the TCP congestion control kernel
+ module parameter settings (Linux only).
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651949
-test_id
-\change_inserted 193492759 1517651949
-testID
-\change_unchanged
->_ethtool.log.gz: This file contains the network interface configuration informati
-on provided by 
+<testID>_ethtool.log.gz: This file contains the network interface configuration
+ information provided by 
 \family typewriter
 ethtool
 \family default
@@ -3799,28 +3046,13 @@ ethtool
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651889
-test_id_prefix
-\change_inserted 193492759 1517651889
-testIDprefix
-\change_unchanged
->_nameip_map.log.gz: This file logs host names and IP addresses (control interface
- IP addresses) of all hosts and routers participating in the 
-\change_inserted 193492759 1517723615
-experiment or group 
-\change_deleted 193492759 1517723617
-series 
-\change_unchanged
-of experiments.
+<testIDprefix>_nameip_map.log.gz: This file logs host names and IP addresses
+ (control interface IP addresses) of all hosts and routers participating
+ in the experiment or group of experiments.
 \end_layout
 
 \begin_layout Standard
-The following information is gathered
-\change_inserted 193492759 1517723581
- from the router
-\change_unchanged
- 
+The following information is gathered from the router 
 \emph on
 after
 \emph default
@@ -3828,13 +3060,7 @@ after
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651951
-test_id
-\change_inserted 193492759 1517651951
-testID
-\change_unchanged
->_queue_stats.log.gz: Information about the router queue setup (including
+<testID>_queue_stats.log.gz: Information about the router queue setup (including
  all queue discipline parameters) as well as router queue and filtering
  statistics based on the output of 
 \family typewriter
@@ -3851,64 +3077,26 @@ ipfw
 \family default
 \size default
  (FreeBSD).
-
-\change_deleted 193492759 1517723587
- Of course this information is collected 
-\emph on
-only
-\emph default
- for the router.
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
-Config information logg
-\change_deleted 193492759 1517723637
-ed
-\change_inserted 193492759 1517723637
-ing
-\change_unchanged
-
+Config information logging
 \end_layout
 
 \begin_layout Standard
-TEACUP also logs information about the configuration of each 
-\change_inserted 193492759 1517723658
-experiment or group
-\change_deleted 193492759 1517723654
-series
-\change_unchanged
- of experiments and variables set for each experiment.
+TEACUP also logs information about the configuration of each experiment
+ or group of experiments and variables set for each experiment.
  The following information is gathered 
 \emph on
 before
 \emph default
- an experiment is started (where <
-\change_deleted 193492759 1517651891
-test_id_prefix
-\change_inserted 193492759 1517651891
-testIDprefix
-\change_unchanged
-> is a test ID prefix and <
-\change_deleted 193492759 1517651953
-test_id
-\change_inserted 193492759 1517651953
-testID
-\change_unchanged
-> is a test ID):
+ an experiment is started (where <testIDprefix> is a test ID prefix and
+ <testID> is a test ID):
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651954
-test_id
-\change_inserted 193492759 1517651954
-testID
-\change_unchanged
->_config_vars.log.gz: This file logs the values of all V_ variables for each
- experiment (see Section 
+<testID>_config_vars.log.gz: This file logs the values of all V_ variables
+ for each experiment (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:variables_logged"
@@ -3919,38 +3107,20 @@ reference "subsec:variables_logged"
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651894
-test_id_prefix
-\change_inserted 193492759 1517651894
-testIDprefix
-\change_unchanged
->_config.tar.gz: This file contains copies of the config file(s) – there can
- be multiple files if Python's execfile() is used to separate the configuration
- into multiple files.
+<testIDprefix>_config.tar.gz: This file contains copies of the config file(s)
+ – there can be multiple files if Python's execfile() is used to separate
+ the configuration into multiple files.
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651895
-test_id_prefix
-\change_inserted 193492759 1517651895
-testIDprefix
-\change_unchanged
->_tpconf_vars.log.gz: This file lists all TPCONF_ parameters specified in
- the config file(s) in a format that can be imported into Python.
+<testIDprefix>_tpconf_vars.log.gz: This file lists all TPCONF_ parameters
+ specified in the config file(s) in a format that can be imported into Python.
 \end_layout
 
 \begin_layout Itemize
-<
-\change_deleted 193492759 1517651827
-test_id_pfx
-\change_inserted 193492759 1517651827
-testIDprefix
-\change_unchanged
->_varying_params.log.gz: This file contains a list of all V_ variables varied
- during the experiment(s) and their short names used in file names (see
- Section 
+<testIDprefix>_varying_params.log.gz: This file contains a list of all V_
+ variables varied during the experiment(s) and their short names used in
+ file names (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:variables_logged"
@@ -3958,346 +3128,6 @@ reference "subsec:variables_logged"
 \end_inset
 
 ).
-\change_inserted 193492759 1517650751
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-Log file naming
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-The log file names of TEACUP follow a naming scheme that has the following
- format:
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-
-\family typewriter
-\size small
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "98col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-
-\family typewriter
-\size footnotesize
-<test_ID_pfx>_[<par_name>_<par_val>_]*_<host>_ [<traffgen_ID>_]_<file_name>.<exte
-nsion>.gz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-The 
-\series bold
-test ID prefix
-\series default
- 
-\family typewriter
-\size small
-<test_ID_pfx>
-\family default
-\size default
- is the start of the file name and either specified in the config file (TPCONF_t
-est_id) or on the command line (as described in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Running"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-The
-\family typewriter
-\size footnotesize
- 
-\size small
-[<par_name>_<par_val>_]*
-\family default
-\size default
- is the zero to 
-\begin_inset Formula $n$
-\end_inset
-
- parameter names and parameter values (separated by an underscore).
- Parameter names (
-\family typewriter
-\size small
-<par_name>
-\family default
-\size default
-) should not contain underscores by definition and all underscores in parameter
- values (
-\family typewriter
-\size small
-<par_val>
-\family default
-\size default
-) are changed to hyphens (this allows later parsing of the names and values
- using the underscores as separators).
- If an experiment was started with
-\family typewriter
-\size footnotesize
- 
-\size small
-run_experiment_single
-\family default
-\size default
- there are zero parameter names and values.
- If an experiment was started with
-\family typewriter
-\size footnotesize
- 
-\size small
-run_experiment_multiple
-\size footnotesize
- 
-\family default
-\size default
-there are as many parameters names and values as specified in TPCONF_vary_parame
-ters.
- We also refer to the part 
-\family typewriter
-\size small
-<test_ID_pfx>_[<par_name>_<par_val>_]*
-\family default
-\size default
- (the part before the 
-\family typewriter
-\size small
-<host>
-\family default
-\size default
-) as 
-\series bold
-test ID
-\series default
-.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-The 
-\family typewriter
-\size small
-<host>
-\family default
-\size default
- part specifies the IP or name of the testbed host a log file was collected
- from.
- This corresponds to an entry in TPCONF_router or TPCONF_hosts.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-If the log file is from a traffic generator specified in TPCONF_traffic_gens,
- the traffic generator number follows the host identifier (
-\family typewriter
-\size small
-[<traffgen_ID>]
-\family default
-\size default
-).
- Otherwise, 
-\family typewriter
-\size small
-<traffgen_ID>
-\family default
-\size default
- does not exist.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-The 
-\family typewriter
-\size small
-<file_name>
-\size footnotesize
- 
-\family default
-\size default
-depends on the process which logged the data, for example it set to `uname'
- for uname information collected, it is set to `httperf_dash' for an httperf
- client emulating DASH, or it set to `web10g' for a Web10G log file.
- tcpdump files are special in that they have an empty file name for tcpdumps
- collected on hosts (assuming they only have one testbed NIC), or the file
- name is <int_name>_router for tcpdumps collected on the router, where <int_name
-> is the name of the NIC (e.g.
- eth1).
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-The 
-\family typewriter
-\size small
-<extension>
-\family default
-\size default
- is either `dmp' indicating a tcpdump file or `log' for all other log files.
- All log files are usually compressed with gzip, hence their file names
- end with `.gz'.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Example-file-names-1"
-
-\end_inset
-
- shows an example name for a tcpdump file collected on host testhost2 for
- an experiment where two parameters (dash, tcp) where varied, and an example
- name for the output of one httperf traffic generator (traffic generator
- number 3) executed on host testhost2 for the same experiment.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-\begin_inset Float figure
-placement t
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "basicstyle={\footnotesize\ttfamily}"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-# tcpdump file collected on testhost2 for an experiment where two parameters
- where varied
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted 1685850735 1502422218
-
-exp_
-\change_unchanged
-20131206-170846_
-\change_deleted 1685850735 1502422244
-windows_
-\change_unchanged
-dash_1000_tcp_compound_testhost2.dmp.gz
-\end_layout
-
-\begin_layout Plain Layout
-
-# output of httperf traffic generator (traffic generator 3) executed on
- testhost2
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted 1685850735 1502422221
-
-exp_
-\change_unchanged
-20131206-170846_
-\change_deleted 1685850735 1502422247
-windows_
-\change_unchanged
-dash_1000_tcp_compound_testhost2_3_httperf_dash.log.gz
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Example-file-names-1"
-
-\end_inset
-
-Example file names
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1517601238
-All log files for one experiment (e.g.
- fab run_experiment_single) or a series of experiments (e.g.
- fab run_experiments_multiple) are stored under a sub directory named 
-\family typewriter
-\size small
-<test_ID_pfx>
-\family default
-\size default
- created inside the directory where fabfile.py is located.
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Prior to version 0.4.7 TEACUP stored all log files in the directory where
- fabfile.py was located.
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Section
@@ -4315,8 +3145,6 @@ This section provides a general description of how the hosts and router
  are configured for each experiment and test within an experiment.
  The router implements a bottleneck with configurable one-way delays, rate
  limits and AQM (active queue management).
-
-\change_inserted 193492759 1517724106
  A Linux-based bottleneck router uses tc and netem (section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4334,8 +3162,6 @@ reference "subsec:FreeBSD-router-setup"
 
 ).
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
@@ -4344,55 +3170,24 @@ Host setup
 
 \begin_layout Standard
 The setup of hosts other than the router is relatively straight-forward.
- First
-\change_inserted 193492759 1517808678
-:
+ First:
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517808680
-, 
-\change_inserted 193492759 1517808681
-E
-\change_deleted 193492759 1517808681
-e
-\change_unchanged
-ach host is booted into the selected OS
-\change_inserted 193492759 1517808689
-
+Each host is booted into the selected OS
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517808693
-.
- Then, h
-\change_inserted 193492759 1517808693
-H
-\change_unchanged
-ardware offloading, such as TCP segmentation offloading (TSO), is disabled
+Hardware offloading, such as TCP segmentation offloading (TSO), is disabled
  on testbed interfaces (all OS)
-\change_inserted 193492759 1517808704
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517808705
-, the 
-\change_unchanged
 TCP host cache is disabled (Linux) or configured with a very short timeout
  and purged (FreeBSD)
-\change_inserted 193492759 1517808710
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517808712
-, and 
-\change_unchanged
 TCP receive and send buffers are set to 2
 \begin_inset space \thinspace{}
 \end_inset
@@ -4401,94 +3196,36 @@ MB or more (FreeBSD, Linux).
 \end_layout
 
 \begin_layout Standard
-Next
-\change_inserted 193492759 1517723712
-:
+Next:
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517723712
- 
-\change_unchanged
 ECN is enabled or disabled depending on the configuration
-\change_inserted 193492759 1517723728
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517723732
-.
- Then the 
-\change_unchanged
 TCP congestion control algorithm is configured for FreeBSD and Linux (including
  loading any necessary kernel modules)
-\change_deleted 193492759 1517723738
-.
- Then the p
-\change_inserted 193492759 1517723740
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 193492759 1517723739
-P
-\change_unchanged
-arameters for the current TCP congestion control algorithm are configured
+Parameters for the current TCP congestion control algorithm are configured
  if specified by the user (FreeBSD, Linux).
-\change_inserted 193492759 1517723717
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517723716
- 
-\change_unchanged
-Finally,
-\change_deleted 193492759 1517723782
- custom
-\change_unchanged
- user-specified
-\change_inserted 193492759 1517723786
- custom
-\change_unchanged
- commands are executed on hosts as specified in the configuration (these
- can overrule the general setup).
+Finally, user-specified custom commands are executed on hosts as specified
+ in the configuration (these can overrule the general setup).
 \end_layout
 
 \begin_layout Subsection
-Linux
-\change_inserted 193492759 1517808748
--based bottleneck
-\change_unchanged
- router setup
-\change_inserted 193492759 1517724070
-
+Linux-based bottleneck router setup
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Linux-router-setup"
 
 \end_inset
 
-
-\change_unchanged
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 193492759 1493287264
-The router setup differs between FreeBSD (where ipfw and Dummynet is used)
- and Linux (where tc and netem is used).
- 
-\change_deleted 1685850735 1491955771
-Our main focus is Linux, because Linux supports more AQM mechanisms than
- FreeBSD and some of the required AQM mechanisms are only implemented on
- Linux.
-\change_unchanged
 
 \end_layout
 
@@ -4506,11 +3243,6 @@ Approach
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1493287398
-We use the following approach.
- 
-\change_unchanged
 Shaping, AQM and delay/loss emulation is done on the egress NIC (as usual).
  To filter packets and direct them into the `pipes' we use netfilter 
 \begin_inset CommandInset citation
@@ -5078,12 +3810,8 @@ reference "fig:queue-disc-pseudo"
 \end_inset
 
 Mbps.
- Here 
-\change_inserted 1685850735 1489016841
-t
-\change_unchanged
-he leaf queuing discipline is a bfifo (byte FIFO) with a buffer size of
- 18.75
+ Here the leaf queuing discipline is a bfifo (byte FIFO) with a buffer size
+ of 18.75
 \begin_inset space \thinspace{}
 \end_inset
 
@@ -5533,13 +4261,7 @@ key "bufferbloat-bcp"
 \end_layout
 
 \begin_layout Subsection
-FreeBSD
-\change_inserted 193492759 1517808761
--based bottleneck
-\change_unchanged
- router setup
-\change_inserted 193492759 1517724081
-
+FreeBSD-based bottleneck router setup
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:FreeBSD-router-setup"
@@ -5547,20 +4269,9 @@ name "subsec:FreeBSD-router-setup"
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 1685850735 1491956158
-While a Linux router is our main focus, we also implemented a basic router
- queue setup for FreeBSD.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 193492759 1517724168
 TEACUP can utilise AQM capabilities built into ipfw/dummynet for bottleneck
  routers based on FreeBSD 10.3 or later (as documented in CAIA-TR-160708A
 \begin_inset space ~
@@ -5578,29 +4289,8 @@ key "FreeBSD_dummynet"
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1493287647
-On FreeBSD e
-\change_inserted 193492759 1493287647
-E
-\change_unchanged
-ach pipe is realised as one 
-\change_deleted 193492759 1493287678
-D
-\change_inserted 193492759 1493287678
-d
-\change_unchanged
-ummynet pipe, which does the rate shaping, 
-\change_inserted 193492759 1493287662
-queuing, and 
-\change_unchanged
-loss/delay emulation
-\change_deleted 193492759 1493287666
- and queuing
-\change_deleted 1685850735 1491956195
- (FIFO or RED only)
-\change_unchanged
-.
+Each pipe is realised as one dummynet pipe, which does the rate shaping,
+ queuing, and loss/delay emulation.
  ipfw rules are used to redirect packets to the pipes based on the specified
  source and destination IP parameters.
  If a pipe is unidirectional then there is a single "
@@ -5618,139 +4308,68 @@ pipe <num> ip from <dest> to <source> out
 \size default
 " rule.
  The pipe number 
-\change_deleted 193492759 1494481297
-<num>
-\change_inserted 193492759 1494481297
-
 \family typewriter
 \size small
 <num>
-\change_unchanged
-
 \family default
 \size default
  is automatically determined by TEACUP.
-
-\change_deleted 1685850735 1491956145
- A more sophisticated setup for FreeBSD remains future work.
- 
-\change_inserted 1685850735 1491956648
-
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1491956712
 Setting up ipfw/dummynet for AQM experiments
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1491957101
 The three main object types (link, queue and scheduler) are required for
- 
-\change_inserted 1870295737 1517871164
-d
-\change_deleted 1870295737 1517871164
-D
-\change_inserted 1685850735 1491957101
-ummynet to setup a functional pipe.
+ dummynet to setup a functional pipe.
  These object provide the following: 
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1491956877
 Link object - provides traffic shaping, network delay and loss emulation
  functions.
  
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1491956960
 Queue object - configurable-size buffer that is used to store packets temporaril
 y to absorb network bursts, and managed by a queue management scheme (Droptail,
  RED, CoDel or PIE).
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1491956974
 Scheduler object - responsible for fetching packets from queues and send
  them through the connected link.
  
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1493287765
-TEACUP directs 
-\change_deleted 193492759 1493287737
-D
-\change_inserted 193492759 1493287737
-d
-\change_inserted 1685850735 1491958062
-ummynet
-\change_inserted 193492759 1493287749
- to
-\change_inserted 1685850735 1491958062
- create
-\change_deleted 193492759 1493287750
-s
-\change_inserted 1685850735 1491958062
- all three objects and connect
-\change_deleted 193492759 1493287753
-s
-\change_inserted 1685850735 1491958062
- them together to form a new pipe, which can then be added to ipfw rules.
+TEACUP directs dummynet to create all three objects and connect them together
+ to form a new pipe, which can then be added to ipfw rules.
  For a multi-queue scheduler, such as QFQ and RR, they can serve multiple
  queues depending on the scheduling algorithm.
- Each 
-\change_deleted 193492759 1493287789
-one of these 
-\change_inserted 1685850735 1491958062
-queue
-\change_deleted 193492759 1493287791
-s
-\change_inserted 1685850735 1491958062
- can be configured with different size and AQM.
+ Each queue can be configured with different size and AQM.
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1491960927
 For more complex AQM schemes such as FQ-CoDel, the scheduler implements
  as a single-queue scheduler with multiple internal sub-queue managed by
  a non FQ AQM (CoDel for FQ-CoDel).
- To configure a pipe for FQ-CoDel
-\change_inserted 193492759 1494481345
- or FQ-
-\change_deleted 193492759 1494481346
-/
-\change_inserted 1685850735 1491960927
-PIE, a queue, scheduler and link should be created separately and be connected
- together, then the created queue should be added to ipfw rules.
+ To configure a pipe for FQ-CoDel or FQ-PIE, a queue, scheduler and link
+ should be created separately and be connected together, then the created
+ queue should be added to ipfw rules.
 \end_layout
 
 \begin_layout Subsubsection
-
-\change_inserted 1685850735 1491961170
 Ensuring same delays for all flows in Dummynet pipe
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1491961782
 TEACUP generates and runs ipfw commands based on router queues configurations
  in config.py.
- For each tuple in a queues configuration, TEACUP creates a 
-\change_inserted 1870295737 1517871175
-d
-\change_deleted 1870295737 1517871174
-D
-\change_inserted 1685850735 1491961782
-ummynet pipe with a specific amount of rate limiting, delay and loss emulation.
+ For each tuple in a queues configuration, TEACUP creates a dummynet pipe
+ with a specific amount of rate limiting, delay and loss emulation.
  If 
 \family typewriter
 \size small
@@ -5763,18 +4382,10 @@ queue_disc
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1685850735 1491962318
 If 
-\change_deleted 193492759 1494481386
-queue_disc
-\change_inserted 193492759 1494481386
-
 \family typewriter
 \size small
 queue_disc
-\change_inserted 1685850735 1491962318
-
 \family default
 \size default
  argument is set to an fq variant (‘fq_codel’ or ‘fq_pie’), TEACUP creates
@@ -5784,20 +4395,7 @@ queue_disc
  fq scheduler.
  The created queue is then added to ipfw rules.
  For a detailed example and more in depth explanation of how FreeBSD router
- is setup for TEACUP, 
-\change_inserted 193492759 1493289470
-see 
-\change_deleted 193492759 1494481386
-the technical report 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "FreeBSD_dummynet"
-
-\end_inset
-
- can be viewed
-\change_inserted 193492759 1493289481
-CAIA-TR-160708A
+ is setup for TEACUP, see CAIA-TR-160708A
 \begin_inset space ~
 \end_inset
 
@@ -5808,18 +4406,12 @@ key "FreeBSD_dummynet"
 
 \end_inset
 
-
-\change_inserted 1685850735 1491962318
 .
  
 \end_layout
 
 \begin_layout Section
-Config File
-\change_inserted 193492759 1517895427
- – format and functionality 
-\change_unchanged
-
+Config File – format and functionality 
 \end_layout
 
 \begin_layout Standard
@@ -5837,21 +4429,8 @@ This section describes TEACUP's top-level
 \series bold
 config.py
 \series default
- file that 
-\change_deleted 193492759 1517787139
-controls
-\change_inserted 193492759 1517787154
-defines the parameters and conditions of
-\change_unchanged
- 
-\change_deleted 193492759 1517787158
-the
-\change_inserted 193492759 1517787164
-an experiment or group of
-\change_unchanged
- experiments.
-
-\change_inserted 193492759 1517894462
+ file that defines the parameters and conditions of an experiment or group
+ of experiments.
  Available traffic generators are summarised in section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5860,22 +4439,10 @@ reference "subsec:Config-traffic-generators"
 \end_inset
 
 .
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
-
-\change_deleted 193492759 1517894494
-Config file l
-\change_inserted 193492759 1517894494
-L
-\change_unchanged
-ocation
-\change_inserted 193492759 1517894501
- of config.py
-\change_unchanged
-
+Location of config.py
 \end_layout
 
 \begin_layout Standard
@@ -5958,20 +4525,12 @@ V_variables
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517894570
-To iterate over parameter settings for each experiment 
-\change_unchanged
 TEACUP uses 
 \emph on
 V_variables
-\change_inserted 193492759 1517894565
-
 \emph default
  to support iteratation over a range of parameter values for groups of experimen
-ts
-\change_unchanged
-.
+ts.
  These are identifiers of the form V_<name>, where <name> must consist of
  only letters, numbers, hyphens (-) or underscores (_).
  V_variables can be used in router queue settings (see Section 
@@ -6156,39 +4715,13 @@ env.password = 'testroot'
 \end_layout
 
 \begin_layout Standard
+Use env.shell to specify the shell used to execute commands.
 
-\change_deleted 193492759 1494481597
-The
-\change_inserted 193492759 1494481619
-Use env.shell to specify the
-\change_unchanged
- shell used to execute commands
-\change_deleted 193492759 1494481622
- is specified with env.shell
-\change_unchanged
-.
+\change_deleted 193492759 1518046343
  
-\change_deleted 193492759 1494481646
-By default
 \change_unchanged
- Fabric
-\change_inserted 193492759 1494481674
-'s default, 
-\change_deleted 193492759 1494481677
- uses 
-\change_unchanged
-Bash, 
-\change_deleted 193492759 1494481684
-but Bash 
-\change_unchanged
-is not standard on FreeBSD
-\change_inserted 193492759 1494481689
- so
-\change_deleted 193492759 1494481664
-.
- So
-\change_unchanged
- TEACUP's default setting is:
+ Fabric's default, Bash, is not standard on FreeBSD so TEACUP's default
+ setting is:
 \end_layout
 
 \begin_layout Standard
@@ -6310,32 +4843,14 @@ Testbed configuration
 \end_layout
 
 \begin_layout Standard
-All TEACUP 
-\change_inserted 193492759 1517787246
-config file 
-\change_unchanged
-settings start with the 
+All TEACUP config file settings start with the 
 \size small
 \emph on
 TPCONF_
 \size default
 \emph default
- prefix
-\change_inserted 193492759 1517787255
-.
- They
-\change_deleted 193492759 1517787258
- and
-\change_unchanged
- are Python variables 
-\change_deleted 193492759 1517787262
-(
-\change_unchanged
-and must adhere to the Python syntax
-\change_deleted 193492759 1517787265
-)
-\change_unchanged
-.
+ prefix.
+ They are Python variables and must adhere to the Python syntax.
 \end_layout
 
 \begin_layout Standard
@@ -6378,69 +4893,19 @@ TPCONF_script_path = '/home/test/src/teacup'
 \end_layout
 
 \begin_layout Standard
-Two lists specify the 
-\change_inserted 193492759 1517787569
-roles of each 
-\change_unchanged
-testbed host
-\change_inserted 193492759 1517787785
- machine
-\change_deleted 193492759 1517787572
-s
-\change_unchanged
-.
- TPCONF_router specifies the list of
-\change_inserted 193492759 1517787790
- machines to be configured as software
-\change_unchanged
- routers
-\change_inserted 193492759 1517787799
- (typically only one in a dumbbell configuration)
-\change_unchanged
-.
-
-\change_deleted 193492759 1517787477
- Note that prior to TEACUP version 0.9 the 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mbox{
-\end_layout
-
-\end_inset
-
-TPCONF_router
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- list was limited to only one router
-\change_inserted 193492759 1517787477
-
+Two lists specify the roles of each testbed host machine.
+ TPCONF_router specifies the list of machines to be configured as software
+ routers (typically only one in a dumbbell configuration).
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517787496
 Prior to TEACUP version 0.9 the 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517787477
-
 
 \backslash
 mbox{
@@ -6453,8 +4918,6 @@ TPCONF_router
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517787477
 
 }
 \end_layout
@@ -6462,18 +4925,10 @@ status open
 \end_inset
 
  list was limited to only one router, but this limitation has been relaxed.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_deleted 193492759 1517787510
-.
- Since version 0.9 a list of routers can be specified.
-
-\change_unchanged
  
 \begin_inset ERT
 status open
@@ -6498,26 +4953,11 @@ status open
 
 \end_inset
 
- specifies the list of 
-\change_deleted 193492759 1517787815
-hosts
-\change_inserted 193492759 1517787815
-machines to be configured as traffic sources and/or sinks (end hosts)
-\change_unchanged
-.
- Router
-\change_inserted 193492759 1517787833
-(s)
-\change_unchanged
- and 
-\change_inserted 193492759 1517787740
-end 
-\change_unchanged
-hosts can be specified as IP addresses or 
-\change_inserted 193492759 1517787852
-human-readable 
-\change_unchanged
-host names (typically for convenience just the name without the domain part).
+ specifies the list of machines to be configured as traffic sources and/or
+ sinks (end hosts).
+ Router(s) and end hosts can be specified as IP addresses or human-readable
+ host names (typically for convenience just the name without the domain
+ part).
 \end_layout
 
 \begin_layout Standard
@@ -6645,11 +5085,7 @@ prefix
 .
  Note that if the test ID prefix is specified on the command line, the command
  line overrules this setting.
-
-\change_inserted 193492759 1517895511
  For example, TEACUP's default test ID prefix can be set by:
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -6666,17 +5102,11 @@ now = datetime.datetime.today()
 \begin_layout Plain Layout
 
 TPCONF_test_id = 
-\change_inserted 193492759 1517737418
-
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517737429
-
-   'exp_'
-\change_unchanged
-now.strftime("%Y%m%d-%H%M%S")
+   'exp_'now.strftime("%Y%m%d-%H%M%S")
 \end_layout
 
 \end_inset
@@ -6685,62 +5115,22 @@ now.strftime("%Y%m%d-%H%M%S")
 \end_layout
 
 \begin_layout Standard
-TPCONF_remote_dir specifies the directory on the remote host
-\change_inserted 193492759 1517895579
-(s)
-\change_unchanged
- where the log files (e.g.
- tcpdump, SIFTR) are 
-\change_inserted 193492759 1517895546
-temporarily 
-\change_unchanged
-stored during an experiment.
- 
-\change_inserted 193492759 1517895556
-These 
-\change_deleted 193492759 1517895556
-F
-\change_inserted 193492759 1517895559
-f
-\change_unchanged
-iles are 
-\change_inserted 193492759 1517895567
-copied back to the control host and 
-\change_unchanged
-deleted 
-\change_inserted 193492759 1517895575
-from the remote host(s) 
-\change_unchanged
-automatically at the end of an experiment
-\change_inserted 193492759 1493289762
-.
-\change_deleted 193492759 1517895627
-, however if an experiment is interrupted files can remain.
- Currently, there is no automatic cleanup of the directory to remove left-over
- files.
-\change_inserted 193492759 1517895627
-
+TPCONF_remote_dir specifies the directory on the remote host(s) where the
+ log files (e.g.
+ tcpdump, SIFTR) are temporarily stored during an experiment.
+ These files are copied back to the control host and deleted from the remote
+ host(s) automatically at the end of an experiment.
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517895681
 Files can remain if an experiment is interrupted.
  There is currently no automatic cleanup of left-over files in the remote
  directory.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_deleted 1685850735 1489017744
-, but if an experiment is interrupted files can remain.
- Currently, there is no automatic cleanup of the directory to remove left-over
- files.
-\change_unchanged
 
 \end_layout
 
@@ -6797,13 +5187,7 @@ status open
 
 \begin_layout Plain Layout
 
-\change_deleted 193492759 1517895771
-
-TPCONF_max_time_diff = 1
-\change_inserted 193492759 1517895771
 TPCONF_max_time_diff = 2
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -6812,44 +5196,16 @@ TPCONF_max_time_diff = 2
 \end_layout
 
 \begin_layout Standard
-TPCONF_debug_level specifies the debug level for experiments
-\change_inserted 193492759 1494481996
- and later analysis
-\change_unchanged
-.
+TPCONF_debug_level specifies the debug level for experiments and later analysis.
  At the default level of 0, no debug information is generated.
- If 
-\change_deleted 193492759 1493289886
-the variable is 
-\change_unchanged
-set to a higher value debug information is generated
-\change_inserted 193492759 1493289896
-.
- 
-\change_deleted 193492759 1493289896
-, f
-\change_inserted 193492759 1494482022
-(F
-\change_unchanged
-or example at a debug level of 1
-\change_inserted 193492759 1494482001
-,
-\change_unchanged
- 
+ If set to a higher value debug information is generated.
+ (For example at a debug level of 1, 
 \family typewriter
 \size small
 .Rout
 \family default
 \size default
- files are generated when plotting graphs
-\change_inserted 193492759 1494482015
- during later analysis
-\change_unchanged
-.
-\change_inserted 193492759 1494482019
-)
-\change_unchanged
-
+ files are generated when plotting graphs during later analysis.)
 \end_layout
 
 \begin_layout Standard
@@ -6869,21 +5225,8 @@ TPCONF_debug_level = 0
 \end_layout
 
 \begin_layout Standard
-The parameter TPCONF_web10g_poll_interval allows
-\change_deleted 193492759 1491907794
- the
-\change_deleted 1685850735 1489018408
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1489018412
-ication
-\change_deleted 1685850735 1489018411
-y
-\change_inserted 1685850735 1489018448
- of
-\change_unchanged
- the poll interval in milliseconds for web10g loggers on Linux or Windows.
+The parameter TPCONF_web10g_poll_interval allows specification of the poll
+ interval in milliseconds for web10g loggers on Linux or Windows.
  The minimum value is 1
 \begin_inset space \thinspace{}
 \end_inset
@@ -6923,11 +5266,7 @@ TPCONF_web10g_poll_interval = 10
 \end_layout
 
 \begin_layout Subsection
-tcpdump/pcap 
-\change_inserted 193492759 1517895801
-snaplen 
-\change_unchanged
-configuration
+tcpdump/pcap snaplen configuration
 \end_layout
 
 \begin_layout Standard
@@ -6970,62 +5309,26 @@ name "subsec:topology_config"
 
 \begin_layout Standard
 Since version 0.8 TEACUP can automate the assignment of each host into one
- of the two subnets
-\change_inserted 193492759 1494482109
-, given a testbed where the hosts and router are connected via a single
- VLAN-capable switch
-\change_unchanged
-.
- 
-\change_deleted 193492759 1494482063
-The
-\change_inserted 193492759 1494482064
-Automatic
-\change_unchanged
- topology configuration is 
-\change_inserted 193492759 1493289950
-
+ of the two subnets, given a testbed where the hosts and router are connected
+ via a single VLAN-capable switch.
+ Automatic topology configuration is 
 \bar under
 experimental
-\change_deleted 193492759 1493289947
-
-\emph on
 \bar default
-EXPERIMENTAL
-\change_unchanged
-
-\emph default
  and based on a number of assumptions around the network setup.
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-The most critical 
-\change_inserted 193492759 1517734573
-current 
-\change_unchanged
-restriction is that switch reconfiguration has only been tested with Dell
- 5324 and Dell N3000 series switches.
+The most critical current restriction is that switch reconfiguration has
+ only been tested with Dell 5324 and Dell N3000 series switches.
 \end_layout
 
 \end_inset
 
- For an experiment 
-\change_inserted 193492759 1493289983
-(
-\change_unchanged
-or a 
-\change_deleted 193492759 1517734591
-series
-\change_inserted 193492759 1517734591
-group
-\change_unchanged
- of experiment
-\change_inserted 193492759 1493289990
-s)
-\change_unchanged
- the topology (re)configuration is (optionally) carried out after the machines
- haven been rebooted and before any sanity checks are done.
+ For an experiment (or a group of experiments) the topology (re)configuration
+ is (optionally) carried out after the machines haven been rebooted and
+ before any sanity checks are done.
 \end_layout
 
 \begin_layout Standard
@@ -7194,19 +5497,8 @@ Note that the network interfaces on the hosts are currently hard-coded inside
  TEACUP.
  For example, for FreeBSD hosts the topology setup method assumes that em1
  is the testbed interface.
- 
-\change_inserted 193492759 1493290105
-Currently 
-\change_deleted 193492759 1493290107
-T
-\change_inserted 193492759 1493290107
-t
-\change_unchanged
-he
-\change_inserted 193492759 1493290108
-se
-\change_unchanged
- interface names can only be changed by modifying the Python code.
+ Currently these interface names can only be changed by modifying the Python
+ code.
 \end_layout
 
 \begin_layout Subsubsection
@@ -7229,23 +5521,9 @@ Mpbs, 100baseT), `1000' (1000
 \end_inset
 
 Mbps, 1000baseT), and `auto' (default, which should result in 1000baseT
-\change_inserted 193492759 1493290204
- if all links use Gigabit Ethernet NICs
-\change_unchanged
-).
- The variable TPCONF_linkspeed allows t
-\change_inserted 1685850735 1494304859
-he
-\change_deleted 1685850735 1494304858
-o
-\change_unchanged
- configur
-\change_inserted 1685850735 1494304864
-ation of
-\change_deleted 1685850735 1494304861
-e
-\change_unchanged
- the link speed for all hosts.
+ if all links use Gigabit Ethernet NICs).
+ The variable TPCONF_linkspeed allows the configuration of the link speed
+ for all hosts.
  For example, if all hosts should use a link speed of 100 Mbps (100baseT)
  we can specify
 \begin_inset listings
@@ -7303,11 +5581,7 @@ TPCONF_host_linkspeed = {
 
 \begin_layout Standard
 TPCONF_host_linkspeed entries always overrule TPCONF_linkspeed.
- If neither variable is specified the default link speed setting is `auto'
-\change_deleted 193492759 1493290216
-, which should result in 1000baseT assuming Gigabit Ethernet NICs
-\change_unchanged
-.
+ If neither variable is specified the default link speed setting is `auto'.
 \end_layout
 
 \begin_layout Standard
@@ -7322,18 +5596,9 @@ Rebooting, OS selection and power cycling
 \end_layout
 
 \begin_layout Standard
-With suitable external 
-\change_inserted 193492759 1494482198
-hardware 
-\change_unchanged
-support, TEACUP 
-\change_deleted 193492759 1494482217
-enables
-\change_inserted 193492759 1494482217
-supports
-\change_unchanged
- automated rebooting of testbed hosts into different operating systems and
- forced power cycling of hosts that have become unresponsive.
+With suitable external hardware support, TEACUP supports automated rebooting
+ of testbed hosts into different operating systems and forced power cycling
+ of hosts that have become unresponsive.
 \end_layout
 
 \begin_layout Subsubsection
@@ -7904,11 +6169,7 @@ All the participating machines should have synchronised clocks (for example
  hosts.
  However, clocks on consumer-grade PC hardware drift even while using NTP.
  TEACUP provides an additional mechanism to evaluate the quality of the
- time synchronisation and 
-\change_deleted 193492759 1493290266
-(optionally) 
-\change_unchanged
-correct for clock offsets in the post-analysis.
+ time synchronisation and correct for clock offsets in the post-analysis.
 \end_layout
 
 \begin_layout Standard
@@ -8041,65 +6302,20 @@ name "subsec:Config-custom-host-setup"
 \end_layout
 
 \begin_layout Standard
-TPCONF_host_init_custom_cmds allows t
-\change_inserted 1685850735 1494304528
-he
-\change_deleted 1685850735 1494304527
-o
-\change_unchanged
- execut
-\change_inserted 1685850735 1494304532
-ion of
-\change_deleted 1685850735 1494304530
-e
-\change_unchanged
- custom per-host init commands.
- This allows 
-\change_deleted 193492759 1491908201
-the
-\change_deleted 1685850735 1489020148
-o
-\change_deleted 193492759 1491908201
- 
-\change_unchanged
-chang
-\change_inserted 1685850735 1489020152
-ing of
-\change_deleted 1685850735 1489020151
-e
-\change_unchanged
- the host configuration, for example with sysctls.
+TPCONF_host_init_custom_cmds allows the execution of custom per-host init
+ commands.
+ This allows changing of the host configuration, for example with sysctls.
  TPCONF_host_init_custom_cmds is a dictionary, where the key specifies the
  host name and the value is a list of commands.
  The commands are executed in exactly the order specified, after all default
  build-in host initialisation has been carried out.
- This means TPCONF_host_init_custom_cmds makes it possible to overr
-\change_deleted 193492759 1517734709
-ule
-\change_inserted 193492759 1517734709
-ide
-\change_unchanged
- default initialisation.
+ This means TPCONF_host_init_custom_cmds makes it possible to override default
+ initialisation.
  The commands are specified as strings and are executed on the host exactly
  as specified (with the exception that V_variables, if present, are substituted
  with values).
- V_variables can be used in commands, 
-\change_deleted 193492759 1517734728
-but
-\change_inserted 193492759 1517734729
-with
-\change_unchanged
- the current limitation 
-\change_deleted 193492759 1517734738
-is there can 
-\change_inserted 193492759 1517734739
-of 
-\change_unchanged
-only 
-\change_deleted 193492759 1517734742
-be 
-\change_unchanged
-
+ V_variables can be used in commands, with the current limitation of only
+ 
 \emph on
 one
 \emph default
@@ -8107,68 +6323,26 @@ one
 \end_layout
 
 \begin_layout Standard
-The custom commands are executed before 
-\change_deleted 193492759 1517734778
-the 
-\change_unchanged
-router
-\change_inserted 193492759 1517734781
--specific
-\change_unchanged
- configuration.
- So when using
-\change_inserted 193492759 1517734788
-,
-\change_unchanged
- for example
-\change_inserted 193492759 1517734790
-,
-\change_unchanged
- a FreeBSD
-\change_inserted 193492759 1517734797
- host as the
-\change_unchanged
- router we can use TPCONF_host_init_custom_cmds to increase the maximum
- allowable Dummynet queue length (using sysctl) 
-\change_inserted 193492759 1517734814
-on the router (as a host) 
-\change_unchanged
-before Dummynet is actually configured
-\change_inserted 193492759 1517734849
- (when configuring this particular host as the router)
-\change_unchanged
-.
+The custom commands are executed before router-specific configuration.
+ So when using, for example, a FreeBSD host as the router we can use TPCONF_host
+_init_custom_cmds to increase the maximum allowable Dummynet queue length
+ (using sysctl) on the router (as a host) before Dummynet is actually configured
+ (when configuring this particular host as the router).
  
 \end_layout
 
 \begin_layout Standard
-Note that the
-\change_inserted 193492759 1517734861
- custom
-\change_unchanged
- commands are executed in the foreground, which means that for each command
- TEACUP will wait until it has been executed on the remote host before executing
- the next command for the 
+Note that the custom commands are executed in the foreground, which means
+ that for each command TEACUP will wait until it has been executed on the
+ remote host before executing the next command for the 
 \emph on
 same
 \emph default
  host.
  It is currently not possible to execute background commands.
- However, commands on different hosts are executed in parallel
-\change_inserted 193492759 1517734880
- (
-\change_deleted 193492759 1517734882
-, i.e.
- 
-\change_inserted 193492759 1517734908
-so 
-\change_unchanged
-waiting for a command to finish on host testhost1 does not block executing
- the next command on host testhost2
-\change_inserted 193492759 1517734894
- or other hosts)
-\change_unchanged
-.
+ However, commands on different hosts are executed in parallel (so waiting
+ for a command to finish on host testhost1 does not block executing the
+ next command on host testhost2 or other hosts).
  In summary, commands on different host are executed in parallel, but commands
  on the same host are executed sequentially.
  
@@ -8328,19 +6502,8 @@ queue_size_mult
 \series default
 : The actual queue size is the queue size multiplied with this factor.
  This should only be used if queue_size if set to `bdp'.
- This allows t
-\change_inserted 1685850735 1494304541
-he
-\change_deleted 1685850735 1494304540
-o
-\change_unchanged
- var
-\change_inserted 1685850735 1494304546
-iation of
-\change_deleted 1685850735 1494304543
-y
-\change_unchanged
- the queue size in multiples of the nominal BDP.
+ This allows the variation of the queue size in multiples of the nominal
+ BDP.
 \end_layout
 
 \begin_layout Itemize
@@ -8351,40 +6514,13 @@ queue_disc
 : Specifies the queuing discipline.
  This can be the name of any of the queuing disciplines supported by Linux,
  such as `fq_codel', `codel', `red', `choke', `pfifo', `pie' etc.
- On FreeBSD 
-\change_inserted 193492759 1491908001
-10.3 and later 
-\change_unchanged
-the 
-\change_deleted 1685850735 1489020651
-only 
-\change_unchanged
-queuing disciplines available are `fifo'
-\change_inserted 1685850735 1489020668
-, `fq_codel', `codel', `fq_pie', `pie'
-\change_unchanged
- and `red'.
- For example, queue_disc=`fq_codel' sets the queuing discipline to the 
-\change_deleted 193492759 1494485334
-fair-queuing+codel
-\change_inserted 193492759 1494485369
-FQ-CoDel (FlowQueuing+CoDel)
-\change_unchanged
- model.
- For compatibility
-\change_deleted 193492759 1517734957
-,
-\change_unchanged
- with FreeBSD
-\change_inserted 193492759 1517734960
-,
-\change_unchanged
- one can specify `fifo' on Linux
-\change_deleted 193492759 1517734972
-,
-\change_unchanged
- which is mapped to `pfifo' (`pfifo' is the default for HTB classes, which
- we use for rate limiting).
+ On FreeBSD 10.3 and later the queuing disciplines available are `fifo',
+ `fq_codel', `codel', `fq_pie', `pie' and `red'.
+ For example, queue_disc=`fq_codel' sets the queuing discipline to the FQ-CoDel
+ (FlowQueuing+CoDel) model.
+ For compatibility with FreeBSD, one can specify `fifo' on Linux which is
+ mapped to `pfifo' (`pfifo' is the default for HTB classes, which we use
+ for rate limiting).
  The queue_disc parameter must be specified explicitly.
  
 \end_layout
@@ -8394,19 +6530,7 @@ FQ-CoDel (FlowQueuing+CoDel)
 \series bold
 queue_disc_params
 \series default
-: This parameter allows 
-\change_deleted 193492759 1491908035
-the
-\change_deleted 1685850735 1489020797
-o
-\change_deleted 193492759 1491908036
- 
-\change_unchanged
-pass
-\change_inserted 1685850735 1489020802
-ing of
-\change_unchanged
- parameters to queuing disciplines.
+: This parameter allows passing of parameters to queuing disciplines.
  For example, if we wanted to turn ECN on for fq_codel we would specify
  queue_disc_params=`ecn' (c.f.
  fq_codel man page).
@@ -8417,27 +6541,10 @@ ing of
 \series bold
 bidir
 \series default
-: This allows 
-\change_deleted 193492759 1491908043
-the
-\change_deleted 1685850735 1489020814
-o
-\change_deleted 193492759 1491908044
- 
-\change_unchanged
-specif
-\change_inserted 1685850735 1489020820
-ication of
-\change_deleted 1685850735 1489020817
-y
-\change_unchanged
- whether a queue is unidirectional (set to `0') or bidirectional (set to
- `1').
+: This allows specification of whether a queue is unidirectional (set to
+ `0') or bidirectional (set to `1').
  A unidirectional queue will only get the traffic from source to destination,
- whereas a bidirectional queue will get the traffic from source to dest
-\change_inserted 1685850735 1489020843
-ination
-\change_unchanged
+ whereas a bidirectional queue will get the traffic from source to destination
  
 \emph on
 and
@@ -8455,21 +6562,9 @@ attach_to_queue
 only.
 
 \emph default
- It allows 
-\change_deleted 193492759 1491908052
-the
-\change_deleted 1685850735 1489020873
-o
-\change_deleted 193492759 1491908053
- 
-\change_unchanged
-direct matching 
-\change_inserted 1685850735 1489020877
-of 
-\change_unchanged
-packets into an existing queue referenced by the specified queue ID, but
- to emulate flow-specific delay/loss (different from the delay and loss
- of other traffic).
+ It allows direct matching of packets into an existing queue referenced
+ by the specified queue ID, but to emulate flow-specific delay/loss (different
+ from the delay and loss of other traffic).
  If attach_to_queue is specified the matching traffic will go through the
  already existing queue, but the emulated delay or loss is set according
  to the current queue specification.
@@ -8482,23 +6577,8 @@ packets into an existing queue referenced by the specified queue ID, but
 \series bold
 rtt
 \series default
-: This parameter allows t
-\change_inserted 1685850735 1494304561
-he
-\change_deleted 1685850735 1494304561
-o
-\change_unchanged
- explicit
-\change_deleted 1685850735 1494304563
-ly
-\change_unchanged
- specif
-\change_inserted 1685850735 1494304568
-ication of
-\change_deleted 1685850735 1494304565
-y
-\change_unchanged
- the emulated RTT in milliseconds.
+: This parameter allows the explicit specification of the emulated RTT in
+ milliseconds.
  This parameter only needs to be specified if queue_size is set to `bdp'
  and the RTT is not twice the delay of the current TEACUP queue (e.g.
  if we set up asymmetric delay with attach_to_queue).
@@ -8776,16 +6856,12 @@ TPCONF_router_queues['testrouter2'] =
 
 \begin_layout Subsection
 Traffic generator setup
-\change_inserted 193492759 1517894700
-
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Traffic-generator-setup"
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -8839,40 +6915,14 @@ Client and server parameters can be external (control network) addresses
  An external address or host name is replaced by the first internal address
  specified for a host in TPCONF_host_internal_ip.
  Client and server parameters can also be internal (testbed network) addresses,
- which allows 
-\change_deleted 193492759 1491908062
-the
-\change_deleted 1685850735 1489021230
-o
-\change_deleted 193492759 1491908062
- 
-\change_unchanged
-specif
-\change_inserted 1685850735 1489021237
-ication of
-\change_deleted 1685850735 1489021234
-y
-\change_unchanged
- any internal address.
+ which allows specification of any internal address.
 \end_layout
 
 \begin_layout Standard
-Each parameter is defined as
-\change_inserted 193492759 1517809043
-:
+Each parameter is defined as:
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517809075
- <parameter_name>=<parameter_value>
-\change_inserted 193492759 1517809070
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 193492759 1517809070
 \begin_inset listings
 lstparams "basicstyle={\footnotesize\ttfamily}"
 inline false
@@ -8880,25 +6930,15 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 193492759 1517809096
-
    <parameter_name>=<parameter_value>
 \end_layout
 
 \end_inset
 
 
-\change_deleted 193492759 1517809048
-.
-\change_inserted 193492759 1517809048
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517809048
- 
-\change_unchanged
 Parameter names must be the parameter names of traffic generator functions
  (and as such be valid Python variable names).
  Parameter values can be either constants (string or numeric) or TEACUP
@@ -9141,16 +7181,8 @@ Enabling ECN on hosts
 \begin_layout Standard
 TPCONF_ECN specifies whether ECN is used on the hosts that are the traffic
  sources/sinks.
- If set to `1'
-\change_inserted 1685850735 1489024052
-,
-\change_unchanged
- ECN is enabled for all hosts.
- If set to `0'
-\change_inserted 1685850735 1489024055
-,
-\change_unchanged
- ECN is disabled for all hosts.
+ If set to `1', ECN is enabled for all hosts.
+ If set to `0', ECN is disabled for all hosts.
  Currently per-host configuration is only possible with custom commands.
 \end_layout
 
@@ -9510,15 +7542,7 @@ TPCONF_aqms specifies the list of AQM/queuing techniques.
  Linux supports `fifo' (mapped to `pfifo'), `pfifo', `bfifo', `fq_codel',
  `codel', `pie', `red' etc.
  (refer to the tc man page for the full list).
- FreeBSD support
-\change_deleted 1685850735 1489024500
- only
-\change_unchanged
- `fifo'
-\change_inserted 1685850735 1489024522
-, `fq_codel', `codel', `fq_pie', `pie'
-\change_unchanged
- and `red'.
+ FreeBSD support `fifo', `fq_codel', `codel', `fq_pie', `pie' and `red'.
  Default on Linux and FreeBSD are FIFOs (with size in packets).
  The following shows an example:
 \end_layout
@@ -9780,44 +7804,16 @@ TPCONF_inc_periods = [ 10 ]
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1870295737 1491804325
-TPCONF_chunksize_mpd is 
-\change_deleted 193492759 1491908783
-only 
-\change_inserted 1870295737 1491804325
-used with 
+TPCONF_chunksize_mpd is used with 
 \shape italic
 start_dash_streaming_dashjs
 \shape default
- traffic generator
-\change_deleted 193492759 1491908788
-, it specifies
-\change_inserted 193492759 1491908789
- to specify
-\change_inserted 1870295737 1491804325
- 
-\change_deleted 193492759 1491908794
-the 
-\change_inserted 193492759 1491908813
-a list of one or more 
-\change_inserted 1870295737 1491804325
-DASH video chunk size and MPD filename pair
-\change_inserted 193492759 1491908797
-s
-\change_inserted 1870295737 1491804325
-.
- 
-\change_deleted 193492759 1491908818
-A list of chunk size and MPD pairs can be included in TPCONF_chunksize_mpd.
- 
-\change_inserted 1870295737 1491804325
-The following shows an example:
+ traffic generator to specify a list of one or more DASH video chunk size
+ and MPD filename pairs.
+ The following shows an example:
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1870295737 1491539591
 \begin_inset listings
 lstparams "basicstyle={\footnotesize\ttfamily}"
 inline false
@@ -9825,28 +7821,20 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1870295737 1491539632
-
 TPCONF_chunksize_mpd = [
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1870295737 1491804421
 
   ('2','BigBuckBunny_2s.mpd'),
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1870295737 1491804425
-
   ('10','BigBuckBunny_10s.mpd')
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1870295737 1491539632
 
 ]
 \end_layout
@@ -9872,18 +7860,10 @@ name "subsec:Config-defining-vars"
 
 \begin_layout Standard
 TEACUP provides a flexible mechanism for defining what parameters are varied
- during 
-\change_inserted 193492759 1517736529
-groups of 
-\change_unchanged
-experiments
-\change_inserted 193492759 1517736679
- under a given 
+ during groups of experiments under a given 
 \family typewriter
 \size footnotesize
 <testIDprefix>
-\change_unchanged
-
 \family default
 \size default
 , what values (or ranges of values) those parameters may take, and how those
@@ -9902,15 +7882,11 @@ TPCONF_parameter_list
 The 
 \emph on
 keys
-\change_inserted 193492759 1517809317
-
 \emph default
  in 
 \family typewriter
 \size small
 TPCONF_parameter_list
-\change_unchanged
-
 \family default
 \size default
  are names that can be used in 
@@ -9923,167 +7899,68 @@ TPCONF_vary_parameters
  The 
 \emph on
 values
-\change_inserted 193492759 1517809324
-
 \emph default
  in 
 \family typewriter
 \size small
 TPCONF_parameter_list
-\change_unchanged
-
 \family default
 \size default
- are 4-tuples
-\change_inserted 193492759 1517809369
-:
-\change_deleted 193492759 1517809371
-.
-\change_inserted 193492759 1517809371
-
+ are 4-tuples:
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517809377
- The first
-\change_inserted 193492759 1517809377
-1st
-\change_unchanged
- parameter of each tuple is a list of V_variables that can be used, for
- example
-\change_inserted 193492759 1517809458
-,
-\change_unchanged
- in the queue configuration or traffic generator configuration
-\change_deleted 193492759 1517809384
-.
- 
-\change_inserted 193492759 1517809384
-
+1st parameter of each tuple is a list of V_variables that can be used, for
+ example, in the queue configuration or traffic generator configuration
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517809393
-The second
-\change_inserted 193492759 1517809393
-2nd
-\change_unchanged
- parameter of each tuple is a list of `short names' used in 
-\change_inserted 193492759 1517809300
-the 
+2nd parameter of each tuple is a list of `short names' used in the 
 \family typewriter
 \size footnotesize
 <testID>
 \family default
 \size default
- (and hence 
-\change_unchanged
-the file names
-\change_inserted 193492759 1517809300
-)
-\change_unchanged
- of created log files
-\change_deleted 193492759 1517809401
-.
- The third
-\change_inserted 193492759 1517809401
-
+ (and hence the file names) of created log files
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 193492759 1517809402
-3rd
-\change_unchanged
- parameter of each tuple is the list of parameter values, these are usually
+3rd parameter of each tuple is the list of parameter values, these are usually
  references to the lists defined in the previous section
-\change_inserted 193492759 1517809407
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted 193492759 1517809410
-.
- 
-\change_unchanged
 The last parameter is a dictionary of extra V_variables to set (this can
  be empty), where the keys are variable names and the values are the variable
  values.
-\change_inserted 193492759 1517809414
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517809414
- 
-\change_unchanged
 The length of the first three tuple parameters (V_variable identifiers,
  short names and V_variable values) must be equal.
 \end_layout
 
 \begin_layout Standard
-When a 
-\change_deleted 193492759 1517736634
-series
-\change_inserted 193492759 1517736634
-group
-\change_unchanged
- of experiments is started with `
+When a group of experiments is started with `
 \family typewriter
 \size small
 fab run_experiment_multiple
 \family default
 \size default
 ' the following happens: For each parameter combination of the parameters
- defined in TPCONF_vary_parameters
-\change_inserted 193492759 1517737074
-,
-\change_unchanged
- one experiment is run where the parameter
-\change_inserted 193492759 1517737092
- name-value pairs (using each parameter's short name) are used to
-\change_unchanged
- 
-\change_deleted 193492759 1517737025
-settings are logged
-\change_inserted 193492759 1517737028
-construct the
-\change_deleted 193492759 1517737034
- 
-\change_inserted 193492759 1517809514
- 
+ defined in TPCONF_vary_parameters, one experiment is run where the parameter
+ name-value pairs (using each parameter's short name) are used to construct
+ the 
 \family typewriter
 \size footnotesize
 <testID>
 \family default
 \size default
- (and hence
-\change_deleted 193492759 1517737042
-in
-\change_unchanged
- 
-\change_deleted 193492759 1517737125
-the
-\change_inserted 193492759 1517737125
-various
-\change_unchanged
- 
-\change_inserted 193492759 1517737113
-log 
-\change_unchanged
-file name
-\change_inserted 193492759 1517809546
-s)
+ (and hence various log file names)
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517893929
 The parameters appear in the 
 \family typewriter
 \size footnotesize
@@ -10091,16 +7968,10 @@ The parameters appear in the
 \family default
 \size default
  in the same (user-defined) order they are listed in TPCONF_vary_parameters.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_deleted 193492759 1517737057
- using the short names
-\change_unchanged
 , and the V_ variables are set to the parameter combination given by the
  value lists.
  
@@ -10110,24 +7981,10 @@ The parameters appear in the
 TPCONF_parameter_list can handle grouped V_variables, where in each experiment
  a specific combination of the grouped V_variables is used.
  An example of this is the 
-\change_inserted 193492759 1517737158
-
 \emph on
 bandwidths
 \emph default
- 
-\change_unchanged
-parameter 
-\change_deleted 193492759 1517737161
-bandwidths 
-\change_unchanged
-which uses TPCONF_bandwidths 
-\change_inserted 193492759 1517737177
-for its
-\change_deleted 193492759 1517737176
-as
-\change_unchanged
- values.
+ parameter which uses TPCONF_bandwidths for its values.
 \end_layout
 
 \begin_layout Standard
@@ -10272,17 +8129,8 @@ Specifying the parameters to be varied
 V_delay can then be used in the router queue settings.
  V_tcp_cc_algo is passed to the host setup function.
  When we run `fab run_experiment_multiple' this will run the following experimen
-ts, 
-\change_deleted 193492759 1517737238
-here 
-\change_unchanged
-represented by the 
-\change_deleted 193492759 1517737242
-start of the log file names
-\change_inserted 193492759 1517737245
-following test IDs
-\change_unchanged
- (we assume the test ID prefix is the default from Section 
+ts, represented by the following test IDs (we assume the test ID prefix
+ is the default from Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Experiment-general-settings"
@@ -10300,38 +8148,22 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502423224
-
-exp_
-\change_unchanged
-20131206-170846_del_0_tcp_newreno 
+exp_20131206-170846_del_0_tcp_newreno 
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502423227
-
-exp_
-\change_unchanged
-20131206-170846_del_0_tcp_cubic 
+exp_20131206-170846_del_0_tcp_cubic 
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502423229
-
-exp_
-\change_unchanged
-20131206-170846_del_50_tcp_newreno 
+exp_20131206-170846_del_50_tcp_newreno 
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1685850735 1502423231
-
-exp_
-\change_unchanged
-20131206-170846_del_50_tcp_cubic
+exp_20131206-170846_del_50_tcp_cubic
 \end_layout
 
 \end_inset
@@ -10417,31 +8249,18 @@ name "subsec:Config-traffic-generators"
 This section describes the traffic generators (listed by their 
 \family typewriter
 \size small
-start
-\change_inserted 193492759 1517894395
-_*
-\change_unchanged
-
+start_*
 \family default
 \size default
- function names) that can be 
-\change_deleted 193492759 1517894675
-used
-\change_inserted 193492759 1517894676
-configured
-\change_unchanged
- in TPCONF_traffic_gens
-\change_inserted 193492759 1517894720
- (section 
+ function names) that can be configured in TPCONF_traffic_gens (section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Traffic-generator-setup"
 
 \end_inset
 
-)
-\change_unchanged
-.
+).
 \end_layout
 
 \begin_layout Subsection
@@ -10598,24 +8417,14 @@ client
 dest
 \series default
 : IP or name of machine to ping 
-\change_inserted 1685850735 1489021612
-
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted 1685850735 1489021642
-
 \series bold
 duration
 \series default
-: 
-\change_inserted 193492759 1491908437
-Emit pings for this many seconds
-\change_deleted 193492759 1491908439
-time in seconds the pings will occur for
-\change_unchanged
-
+: Emit pings for this many seconds
 \end_layout
 
 \begin_layout Itemize
@@ -10640,22 +8449,11 @@ start_http_server
 \end_layout
 
 \begin_layout Standard
-This starts a
-\change_inserted 193492759 1517894089
- lighttpd-based
-\change_deleted 193492759 1517894090
-n
-\change_unchanged
- HTTP server 
-\change_deleted 193492759 1517894107
-(lighttpd) 
-\change_unchanged
-and has the following parameters: 
+This starts a lighttpd-based HTTP server and has the following parameters:
+ 
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1489021790
 
 \series bold
 server
@@ -10718,59 +8516,28 @@ status open
 \end_inset
 
 )
-\change_inserted 1870295737 1517868826
-
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1870295737 1517870673
 start_nginx_server
-\change_inserted 193492759 1517894788
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517894795
- 
-\change_inserted 193492759 1517894795
 [
-\change_deleted 193492759 1517894809
-
 \series bold
 \shape italic
-(
-\change_inserted 193492759 1517894810
-N
-\change_deleted 193492759 1517894809
-n
-\change_inserted 1870295737 1517870673
-ew in TEACUP 1.1
-\change_inserted 193492759 1517894799
-
+New in TEACUP 1.1
 \series default
 \shape default
-] 
-\change_deleted 193492759 1517894802
-)
-\change_inserted 193492759 1517894807
+]
+\change_deleted 193492759 1518046343
  
-\change_inserted 1870295737 1517868874
-This starts an 
-\change_inserted 193492759 1517894099
-nginx-based 
-\change_inserted 1870295737 1517868874
-HTTP server 
-\change_deleted 193492759 1517894103
-(nginx) 
-\change_inserted 1870295737 1517868874
-and has the following parameters: 
+\change_unchanged
+ This starts an nginx-based HTTP server and has the following parameters:
+ 
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1870295737 1517868826
 
 \series bold
 server
@@ -10780,8 +8547,6 @@ server
 
 \begin_layout Itemize
 
-\change_inserted 1870295737 1517868826
-
 \series bold
 port
 \series default
@@ -10789,8 +8554,6 @@ port
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1870295737 1517868952
 
 \series bold
 config_dir
@@ -10800,8 +8563,6 @@ config_dir
 
 \begin_layout Itemize
 
-\change_inserted 1870295737 1517868826
-
 \series bold
 config_in
 \series default
@@ -10809,8 +8570,6 @@ config_in
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1870295737 1517869598
 
 \series bold
 docroot
@@ -10821,8 +8580,6 @@ docroot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 1870295737 1517868826
 
 
 \backslash
@@ -10837,16 +8594,12 @@ status open
 
 \begin_layout Plain Layout
 
-\change_inserted 1870295737 1517868826
-
 }
 \end_layout
 
 \end_inset
 
 )
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
@@ -10854,21 +8607,13 @@ create_http_dash_content
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517894893
 [
 \series bold
 \emph on
 Deprecated in TEACUP 1.1, but still available
 \series default
 \emph default
-] 
-\change_unchanged
-This creates fake content for the DASH-like 
-\change_inserted 193492759 1517894860
-httperf_dash 
-\change_unchanged
-client.
+] This creates fake content for the DASH-like httperf_dash client.
  It has the following parameters: 
 \end_layout
 
@@ -10958,13 +8703,9 @@ rates
 cycles
 \series default
 : comma-separated list of cycle lengths in seconds
-\change_inserted 193492759 1493290580
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1493290804
 NOTE: This generator is deprecated in TEACUP 1.1, along with 
 \emph on
 start_httperf_dash
@@ -10976,8 +8717,6 @@ start_httperf_dash
 start_dash_streaming_dashjs
 \emph default
  to launch a genuine DASH client.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
@@ -11051,20 +8790,14 @@ status open
 \end_inset
 
 , Linux/CYGWIN default: /srv/www/htdocs) 
-\change_inserted 1685850735 1489021908
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1489021908
 
 \series bold
 duration
 \series default
 : number of seconds of fake content
-\change_unchanged
-
 \end_layout
 
 \begin_layout Itemize
@@ -11326,21 +9059,13 @@ start_httperf_dash
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517894948
 [
 \series bold
 \emph on
 Deprecated in TEACUP 1.1, but still available
 \series default
 \emph default
-] 
-\change_unchanged
-This starts a 
-\change_inserted 193492759 1517735196
-simplistic, 
-\change_unchanged
-DASH-like httperf client.
+] This starts a simplistic, DASH-like httperf client.
  It has the following parameters: 
 \end_layout
 
@@ -11470,27 +9195,9 @@ If prefetch is > 0.0 the client will fetch the specified number of seconds
 The client will request a block of content, wait for some time (cycle minus
  download time) and then request the next block.
  The size of one block is 
-\change_deleted 193492759 1517735237
-cycle
-\begin_inset Formula $\cdot$
-\end_inset
-
-rate
-\begin_inset Formula $\cdot$
-\end_inset
-
-1000
-\begin_inset Formula $/$
-\end_inset
-
-8 bytes
-\change_inserted 193492759 1517735237
-
 \begin_inset Formula $cycle\cdot rate\cdot1000/8bytes$
 \end_inset
 
-
-\change_unchanged
 .
  
 \end_layout
@@ -11511,44 +9218,24 @@ Note that the number of chunks requested by the httperf client is set to
  However, this also means that if the prefetch is much faster than prefetch_time
 out and/or the download of the last chunk is much faster than cycle seconds,
  httperf will finish well before duration seconds.
-\change_inserted 193492759 1493290740
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1493290798
 
 \series bold
 NOTE:
 \series default
  This generator is deprecated in TEACUP 1.1.
- Users are recommended to launch lighttpd 
-\change_inserted 1870295737 1517869912
-or nginx 
-\change_inserted 193492759 1493290798
-server with genuine DASH content instead, and use 
+ Users are recommended to launch lighttpd or nginx server with genuine DASH
+ content instead, and use 
 \emph on
 start_dash_streaming_dashjs
 \emph default
  to launch a genuine DASH client.
-\change_inserted 1685850735 1489639177
-
 \end_layout
 
 \begin_layout Subsection
-
-\change_inserted 1685850735 1489708934
 start_dash_streaming_dashjs
-\change_deleted 193492759 1517894917
- 
-\change_deleted 1870295737 1491538822
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 1685850735 1489708947
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:start_dashjs"
@@ -11559,87 +9246,38 @@ name "subsec:start_dashjs"
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517894913
 [
 \series bold
 \shape italic
 New in TEACUP 1.1
 \series default
 \shape default
-]  
-\change_inserted 1685850735 1489641609
-This starts 
+]
+\change_deleted 193492759 1518046343
+ 
 \change_unchanged
-a 
-\change_inserted 193492759 1491908505
-genuine 
-\change_inserted 1685850735 1489641609
-DASH 
-\change_deleted 1870295737 1491802593
-video 
-\change_inserted 1685850735 1489641609
-streaming client
-\change_inserted 193492759 1491908271
- (
-\change_deleted 193492759 1491908272
-, 
-\change_deleted 1870295737 1491802595
-via 
-\change_inserted 1685850735 1489641609
-dash.js
-\change_inserted 193492759 1491908276
-)
-\change_inserted 1870295737 1491802604
- inside a web browser
-\change_inserted 193492759 1494485516
+ This starts a genuine DASH streaming client (dash.js) inside a web browser
  on an end host.
-\change_deleted 1870295737 1491802585
-, to retrieve video content off a lighttpd server dynamically
-\change_deleted 193492759 1494485510
-.
-
-\change_inserted 1685850735 1489641609
  It has the following parameters:
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted 1685850735 1489639179
-
 \series bold
 client
 \series default
-: IP or name of 
-\change_inserted 1870295737 1491539069
-DASH 
-\change_inserted 1685850735 1489639179
-client
+: IP or name of DASH client
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted 1685850735 1489639179
-
 \series bold
 server
 \series default
-: IP
-\change_deleted 1870295737 1517870048
- 
-\change_inserted 1870295737 1491538980
- 
-\change_inserted 1685850735 1489639179
-or name of 
-\change_inserted 1870295737 1491539072
-DASH 
-\change_inserted 1685850735 1489639179
-server
+: IP or name of DASH server
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1489639502
 
 \series bold
 serv_port
@@ -11649,295 +9287,95 @@ serv_port
 
 \begin_layout Itemize
 
-\change_inserted 1685850735 1489639179
-
 \series bold
 duration
 \series default
-: duration
-\change_inserted 1870295737 1491539088
- of DASH flow
-\change_inserted 1685850735 1489639179
- in seconds
-\change_inserted 1870295737 1491804195
- (since version 2.3.0, dash.js supports playback looping, so the specified
- duration can be longer than the video time)
-\change_inserted 1685850735 1489639179
-
+: duration of DASH flow in seconds (since version 2.3.0, dash.js supports playback
+ looping, so the specified duration can be longer than the video time)
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1489640684
 
 \series bold
 browser
 \series default
-: cho
-\change_inserted 1870295737 1491802626
-o
-\change_inserted 1685850735 1489640684
-se between a 
-\change_inserted 1870295737 1491802629
-C
-\change_deleted 1870295737 1491802629
-c
-\change_inserted 1685850735 1489640684
-hrome or 
-\change_inserted 1870295737 1491802632
-F
-\change_deleted 1870295737 1491802632
-f
-\change_inserted 1685850735 1489640684
-irefox browser
-\change_deleted 1870295737 1491802640
- (chrome by default)
-\change_inserted 1685850735 1489640684
-
+: choose between a Chrome or Firefox browser
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1489640989
 
 \series bold
 chunk_size
 \series default
-: 
-\change_inserted 1870295737 1491539103
-s
-\change_deleted 1870295737 1491539103
-S
-\change_inserted 1685850735 1489640989
-pecify the video chunk size 
-\change_inserted 1870295737 1491539116
-(availability depends on the dataset)
-\change_inserted 1685850735 1489640989
-
+: specify the video chunk size (availability depends on the dataset)
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1489641043
 
 \series bold
 mpd
 \series default
-: 
-\change_inserted 1870295737 1491539126
-s
-\change_deleted 1870295737 1491539126
-S
-\change_inserted 1685850735 1489641043
-pecify the 
-\change_inserted 1870295737 1491539132
-file
-\change_inserted 1685850735 1489641043
-name of 
-\change_deleted 1870295737 1491539138
-the 
-\change_inserted 1685850735 1489641043
-Media Presentation Description (MPD) 
-\change_inserted 1870295737 1491802765
-(availability depends on the dataset)
+: specify the filename of Media Presentation Description (MPD) (availability
+ depends on the dataset)
 \end_layout
 
 \begin_layout Itemize
 
-\change_inserted 1870295737 1491802817
-
 \series bold
 player_path: 
 \series default
-specify the path to dash.js player
-\change_inserted 193492759 1491908629
- source
-\change_inserted 1870295737 1491802817
- (
-\change_deleted 193492759 1491908642
-dash.js source files
-\change_inserted 193492759 1491908642
-which
-\change_inserted 1870295737 1491802817
- can be located on other hosts)
-\change_unchanged
-
+specify the path to dash.js player source (which can be located on other
+ hosts)
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 1870295737 1491538960
-
-\series bold
-extra_params
-\series default
-: Command line parameters passed to start_dash_streaming_dashjs
-\change_inserted 1870295737 1491539913
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 1870295737 1517870790
 Note that some additional setup are required for 
 \emph on
 start_dash_streaming_dashjs
 \emph default
- to run successfully:
-\change_deleted 193492759 1491908547
- (See
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "CAIA-TR-161216A"
-
-\end_inset
-
- for more details and configuration examples)
-\change_inserted 1870295737 1491804564
-:
+ to run successfully::
 \end_layout
 
 \begin_layout Enumerate
-
-\change_deleted 193492759 1517735650
-
-\series bold
-client: 
-\series default
-a
-\change_inserted 193492759 1517735650
-A
-\change_inserted 1870295737 1491803124
-dditional packages such as Xorg and Chrome
-\change_inserted 193492759 1517894253
- (or
-\change_deleted 193492759 1517894254
-/
-\change_inserted 193492759 1517894255
- 
-\change_inserted 1870295737 1491803124
-Firefox
-\change_inserted 193492759 1517894258
-)
-\change_inserted 1870295737 1491803124
- need to be installed
-\change_inserted 193492759 1517735660
- on client host(s)
-\change_inserted 1870295737 1491803124
-.
-\change_inserted 193492759 1517997540
-
+Additional packages such as Xorg and Chrome (or Firefox) need to be installed
+ on client host(s).
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-
-\change_inserted 193492759 1517997547
 These client host(s) must also have a functional video card (not an emulated
  X server) for proper browser-based DASH client behaviour.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_inserted 1870295737 1491803124
-
 \end_layout
 
 \begin_layout Enumerate
-
-\change_deleted 193492759 1517735664
-
-\series bold
-server:
-\series default
+A DASH-compliant dataset needed to be present and served by the web server
+\change_deleted 193492759 1518046343
  
-\change_inserted 193492759 1517735666
-A 
-\change_inserted 1870295737 1491803151
-DASH
-\change_inserted 193492759 1517735724
--compliant
-\change_inserted 1870295737 1491803151
- dataset needed to be present and served by the web server 
-\change_deleted 193492759 1517735675
-accordingly
-\change_inserted 193492759 1517735682
- host(s)
-\change_inserted 1870295737 1491803151
-.
+\change_unchanged
+ host(s).
 \end_layout
 
 \begin_layout Enumerate
-
-\change_deleted 193492759 1517735702
-
-\series bold
-dash.js player:
-\series default
+The dash.js player's source files need to be available (served) from
+\change_deleted 193492759 1518046343
  
-\change_inserted 193492759 1517735698
-The 
-\change_inserted 1870295737 1491804672
-dash.js 
-\change_inserted 193492759 1517735696
-player's 
-\change_inserted 1870295737 1491804672
-source files need to be 
-\change_deleted 193492759 1517997580
-do
-\change_inserted 193492759 1517997585
-available (served) from 
-\change_deleted 193492759 1517997588
-wnloaded and placed/served on
-\change_inserted 1870295737 1491804672
- either the control host or on
-\change_inserted 193492759 1517997591
-e
-\change_inserted 1870295737 1491804672
- 
-\change_deleted 193492759 1517997593
-any
-\change_inserted 193492759 1517997594
-of the
-\change_inserted 1870295737 1491804672
- experiment hosts
-\change_inserted 193492759 1491908592
-.
- The 
-\change_deleted 193492759 1491908593
- (
-\change_inserted 1870295737 1491804672
-location 
-\change_inserted 193492759 1491908616
-of dash.js source files 
-\change_deleted 193492759 1517997621
-should be
-\change_inserted 193492759 1517997621
-is
-\change_inserted 1870295737 1491804672
- supplied via 
+\change_unchanged
+ either the control host or one of the experiment hosts.
+ The location of dash.js source files is supplied via 
 \family typewriter
 \size small
 player_path
-\change_deleted 193492759 1491908601
-
 \family default
 \size default
-)
-\change_inserted 1870295737 1491804672
 .
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1491908555
 See
 \begin_inset space ~
 \end_inset
@@ -11950,275 +9388,34 @@ key "CAIA-TR-161216A"
 \end_inset
 
  for more details and configuration examples.
-\change_deleted 1870295737 1491803274
-In order for the dashjs traffic generator to work, it is important that
- the lighttpd server has been setup, and is able to deliver out DASH video
- content.
- The processes required are described in technical detail in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "CAIA-TR-161216A"
-
-\end_inset
-
-, but essentially a DASH video dataset needs to exist on the lighttpd server,
- so that the dash.js software can retrieve it dynamically, emulating a user
- watching a video.
- Additionally a browser interface must be setup on the Client, in order
- for the video content to actually be played.
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 1870295737 1491803274
-Two essential parameters that are required in order for this to happen are
- the chunk_size, and the mpd.
- The MPD is the main file that the client requests from the lighttpd server
- in order to start receiving the DASH content.
- This file essentially describes the main structure of all the DASH dataset
- it currently contains.
- 
-\change_inserted 1685850735 1489706948
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 1870295737 1491546880
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-
-\change_inserted 1870295737 1491546880
 The three main processes it describes are:
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1870295737 1491546880
 Period: The specific duration of the video content.
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1870295737 1491546880
 Representation: From the Period specified, there are different representations
  of the video content (different bit rates).
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted 1870295737 1491546880
 Chunks: For the different Representations, there are different video chunks,
  all of which lineup to ensure that they can be dynamically changed between
  without stalling.
  
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
-
-\change_deleted 1870295737 1491546880
-The three main processes it describes are:
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491546880
-Period: The specific duration of the video content.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491546880
-Representation: From the Period specified, there are different representations
- of the video content (different bit rates).
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491546880
-Chucks: For the different Representations, there are different video chunks,
- all of which lineup to ensure that they can be dynamically changed between
- without stalling.
- 
-\change_inserted 1685850735 1489708809
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491802935
-The chunk_size parameter is important in conjunction with the MPD file,
- to allow the specification of the chunk sizes to be retrieved (2, 4, 6
- second chunk sizes ...).
- This in turn will define how the on-off cycles are formed, in relation
- to the amount downloaded (ON), and when DASH content is not being downloaded
- (OFF).
- 
-\change_inserted 1685850735 1489708858
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-start_dash_streaming_vlc 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted 1685850735 1489708874
-Potentially be removed
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-This starts a DASH video streaming client via VLC, to retrieve video content
- off a lighttpd server dynamically.
- It has the following parameters:
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-client
-\series default
-: IP or name of client
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-server
-\series default
-: IP or name of server
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-serv_port
-\series default
-: port server is listening on
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-duration
-\series default
-: duration in seconds
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-browser
-\series default
-: chose between a chrome or firefox browser (chrome by default)
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-chunk_size
-\series default
-: Specify the video chunk size 
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-mpd
-\series default
-: Specify the name of the Media Presentation Description (MPD)
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-verbosity
-\series default
-: Specify the logging verbosity of the VLC client (between 1 and 10, default
- is 2)
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-vlc_location
-\series default
-: Indicates where the VLC source code directory is located
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-base_url
-\series default
-: Location of where the video files are relative to the docroot of the server
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-
-\series bold
-extra_params
-\series default
-: Command line parameters passed to start_dash_streaming_vlc
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 1870295737 1491538806
-Its retrieval of video is very similar to how dash.js does it, described
- in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:start_dashjs"
-
-\end_inset
-
-.
- The extra parameters vlc_location and base_url are used to specify where
- the vlc application is located, and the DASH dataset is located respectively.
- The verbosity parameter can also be set to adjust how much logging VLC
- is doing.
-\change_unchanged
 
 \end_layout
 
@@ -12294,22 +9491,10 @@ extra_params
 \end_layout
 
 \begin_layout Standard
-Note
-\change_inserted 193492759 1517735786
-: 
-\change_deleted 193492759 1517735787
- that i
-\change_inserted 193492759 1517735788
-I
-\change_unchanged
-f httperf can not complete a request within period time, if will close the
- connection and terminate the session with the responder (sessions with
- other responders are unaffected).
-
-\change_inserted 193492759 1493290838
+Note: If httperf can not complete a request within period time, if will
+ close the connection and terminate the session with the responder (sessions
+ with other responders are unaffected).
  This may or may not be desirable behaviour.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsection
@@ -12583,28 +9768,11 @@ start_fps_game
 This starts an emulated FPS game traffic session.
  From a logical viewpoint this starts several game clients and one game
  server.
+
+\change_deleted 193492759 1518046343
  
-\change_deleted 1685850735 1489014869
-However, since the pktgen tool from 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bitss-web"
-
-\end_inset
-
- we use to generate the game traffic can only generate a single unidirectional
- traffic flow, this task starts pktgen twice as many times as there are
- clients (half of these processes generate the client-to-server traffic
- and half of these processes generate the server-to-client traffic).
-
 \change_unchanged
- Th
-\change_deleted 1685850735 1489726305
-e task
-\change_inserted 1685850735 1489726305
-is task
-\change_unchanged
- has the following parameters:
+ This task has the following parameters:
 \end_layout
 
 \begin_layout Itemize
@@ -12692,13 +9860,9 @@ extra_params_client
 extra_params_server
 \series default
 : extra parameters passed to server pktgen processes 
-\change_inserted 1685850735 1489023104
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted 1685850735 1494307238
 
 \series bold
 noclients_games
@@ -12707,8 +9871,6 @@ noclients_games
  many clients to be setup, to emulate server behaviour for the specified
  number of clients.
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -12730,67 +9892,31 @@ Note that a pktgen server process will wait for packets from its corresponding
 \end_layout
 
 \begin_layout Standard
-Note that pktgen 
-\change_deleted 193492759 1494485748
-does 
-\change_unchanged
-only support
-\change_inserted 193492759 1494485751
-s emulating
-\change_unchanged
- games with 4–32 clients.
- 
-\change_deleted 1685850735 1489023683
-The smallest allowed number of clients is 4 and the largest allowed number
- of clients is 32.
-\change_inserted 193492759 1494485802
-Fewer actual clients may be specified i
-\change_deleted 193492759 1494485803
-I
-\change_inserted 1685850735 1489023855
-f 
-\change_deleted 193492759 1494485860
-noclients_game
-\change_inserted 193492759 1494485860
-
-\family typewriter
-\size small
-noclients_game
-\change_inserted 1685850735 1489023855
-
-\family default
-\size default
- is specified to be between 4 and 32, 
-\change_deleted 193492759 1494485860
-then o
-\change_inserted 193492759 1494485940
-in which case fewer instances of pktgen will be launched and the server-to-clien
-t traffic will emulate that of a game with 
+Note that pktgen only supports emulating games with 4–32 clients.
+ Fewer actual clients may be specified if 
 \family typewriter
 \size small
 noclients_game
 \family default
 \size default
- clients.
-\change_deleted 193492759 1494485860
-nly 1 actual client can be setup
-\change_inserted 1685850735 1489023855
-.
+ is specified to be between 4 and 32, in which case fewer instances of pktgen
+ will be launched and the server-to-client traffic will emulate that of
+ a game with 
+\family typewriter
+\size small
+noclients_game
+\family default
+\size default
+ clients..
  If 
-\change_inserted 193492759 1494485893
-
 \family typewriter
 \size small
 noclients_game
 \family default
 \size default
- is 
-\change_inserted 1685850735 1489023855
-not specified, then the number of separate clients must be at least 4, and
- no larger than 32.
+ is not specified, then the number of separate clients must be at least
+ 4, and no larger than 32.
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -12978,15 +10104,7 @@ now = datetime.datetime.today()
 
 \begin_layout Plain Layout
 
-TPCONF_test_id = 
-\change_inserted 193492759 1517652017
-'exp_' + 
-\change_unchanged
-now.strftime("%Y%m%d-%H%M%S")
-\change_deleted 193492759 1517652022
- + '_experiment'
-\change_unchanged
- 
+TPCONF_test_id = 'exp_' + now.strftime("%Y%m%d-%H%M%S") 
 \end_layout
 
 \begin_layout Plain Layout
@@ -13051,13 +10169,7 @@ TPCONF_power_admin_pw = ''
 
 \begin_layout Plain Layout
 
-\change_deleted 193492759 1517895767
-
-TPCONF_max_time_diff = 1
-\change_inserted 193492759 1517895767
 TPCONF_max_time_diff = 2
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -13269,16 +10381,6 @@ TPCONF_variable_defaults = {
 
 \begin_layout Plain Layout
 
-\change_deleted 193492759 1517652587
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_deleted 193492759 1517652587
-
-TPCONF_variable_defaults 
-\change_unchanged
 TPCONF_vary_parameters = [ 'tcpalgos', 'delays', 'loss', 'bandwidths', 'aqms',
  'bsizes', 'runs', ] 
 \end_layout
@@ -13324,15 +10426,8 @@ run_experiment_multiple
 \end_layout
 
 \begin_layout Standard
-To run a single experiment with the default test ID prefix 
-\change_inserted 193492759 1517737513
-(
-\change_unchanged
-TPCONF_test_id
-\change_inserted 193492759 1517737516
-)
-\change_unchanged
-, type:
+To run a single experiment with the default test ID prefix (TPCONF_test_id),
+ type:
 \end_layout
 
 \begin_layout Standard
@@ -13396,22 +10491,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-To run a 
-\change_deleted 193492759 1517737526
-series
-\change_inserted 193492759 1517737527
-group
-\change_unchanged
- of experiment based on the TPCONF_vary_parameters settings with the default
- test ID prefix 
-\change_inserted 193492759 1517737537
-(
-\change_unchanged
-TPCONF_test_id
-\change_inserted 193492759 1517737540
-)
-\change_unchanged
-, type:
+To run a group of experiment based on the TPCONF_vary_parameters settings
+ with the default test ID prefix (TPCONF_test_id), type:
 \end_layout
 
 \begin_layout Standard
@@ -13524,11 +10605,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab run_experiment_multiple:test_id=
-\change_inserted 193492759 1517652073
-exp_
-\change_unchanged
-`date +"%Y%m%d-%H%M%S"`
+> fab run_experiment_multiple:test_id=exp_`date +"%Y%m%d-%H%M%S"`
 \end_layout
 
 \end_inset
@@ -13549,44 +10626,16 @@ status open
 
 \begin_layout Standard
 The last command will run a series of experiments where the test ID prefix
- is 
-\change_inserted 193492759 1517688059
-exp_
-\change_unchanged
-YYYYMMDD-HHMMSS
-\change_inserted 193492759 1517737564
- (
-\change_deleted 193492759 1517737564
-, 
-\change_unchanged
-using the actual date 
-\change_inserted 193492759 1517737560
-and time 
-\change_unchanged
-when the fab command is run
-\change_inserted 193492759 1517737567
-)
-\change_unchanged
-.
+ is exp_YYYYMMDD-HHMMSS (using the actual date and time when the fab command
+ is run).
  For convenience TEACUP provides a shell script (
 \family typewriter
 \size small
 run.sh
 \family default
 \size default
-) that logs the Fabric output in a <
-\change_deleted 193492759 1517651874
-test_ID_prefix
-\change_inserted 193492759 1517651874
-testIDprefix
-\change_unchanged
->.log file inside the <
-\change_deleted 193492759 1517651876
-test_ID_prefix
-\change_inserted 193492759 1517651876
-testIDprefix
-\change_unchanged
-> sub directory, and is started with:
+) that logs the Fabric output in a <testIDprefix>.log file inside the <testIDpref
+ix> sub directory, and is started with:
 \begin_inset Separator latexpar
 \end_inset
 
@@ -13704,19 +10753,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab run_experiment_multiple:test_id= <
-\change_deleted 193492759 1517651738
-test_ID_pfx
-\change_inserted 193492759 1517651738
-testIDprefix
-\change_unchanged
-> > <
-\change_deleted 193492759 1517651747
-test_ID_pfx
-\change_inserted 193492759 1517651747
-testIDprefix
-\change_unchanged
->.log 2>&1
+> fab run_experiment_multiple:test_id= <testIDprefix> > <testIDprefix>.log
+ 2>&1
 \end_layout
 
 \end_inset
@@ -13737,17 +10775,9 @@ status open
 
 \begin_layout Standard
 The test ID prefix is set to 
-\change_inserted 193492759 1517601442
-
 \family typewriter
 \size small
-exp_
-\change_unchanged
-`date +"%Y%m%d-%H%M%S"`
-\change_deleted 193492759 1517601447
-_experiment
-\change_unchanged
-
+exp_`date +"%Y%m%d-%H%M%S"`
 \family default
 \size default
 .
@@ -13758,15 +10788,9 @@ tail -f
 \family default
 \size default
  on the 
-\change_deleted 193492759 1517737622
-log
-\change_inserted 193492759 1517737622
-
 \family typewriter
 \size footnotesize
 <testIDprefix>.log
-\change_unchanged
-
 \family default
 \size default
  file and get timely output.
@@ -13918,17 +10942,9 @@ experiments_completed.txt
 \begin_layout Standard
 For example, the following command resumes a series of experiments with
  test ID prefix 
-\change_inserted 1685850735 1502423337
-
 \family typewriter
 \size small
-exp_
-\change_unchanged
-20131218-113431
-\change_deleted 1685850735 1502423334
-_windows
-\change_unchanged
-
+exp_20131218-113431
 \family default
 \size default
  (and appends the log output to the existing log file):
@@ -13980,29 +10996,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab run_experiment_multiple:
-\change_inserted 1685850735 1494307534
- 
-\change_deleted 1685850735 1489542812
- 
-\change_unchanged
-test_id=
-\change_inserted 1685850735 1502423325
-exp_
-\change_unchanged
-20131218-113431
-\change_deleted 1685850735 1502423341
-_windows
-\change_unchanged
-,resume=1 >> 
-\change_inserted 1685850735 1502423359
-exp_
-\change_unchanged
-20131218-113431
-\change_deleted 1685850735 1502423362
-_windows
-\change_unchanged
-.log 2>&1
+> fab run_experiment_multiple: test_id=exp_20131218-113431,resume=1 >> exp_20131
+218-113431.log 2>&1
 \end_layout
 
 \end_inset
@@ -14137,27 +11132,10 @@ name "subsec:variables_logged"
 
 \begin_layout Standard
 TEACUP logs configuration information for conducted experiments in two files.
- In the following <
-\change_deleted 193492759 1517652156
-test_id
-\change_inserted 193492759 1517652156
-testID
-\change_unchanged
-> is a test ID and <
-\change_deleted 193492759 1517651807
-test_id_pfx
-\change_inserted 193492759 1517651807
-testIDprefix
-\change_unchanged
-> is the corresponding test ID prefix.
+ In the following <testID> is a test ID and <testIDprefix> is the corresponding
+ test ID prefix.
  For each experiment, TEACUP logs all V_ variables and their values (in
- alphabetical order of variable names) in a file <
-\change_deleted 193492759 1517652158
-test_id
-\change_inserted 193492759 1517652158
-testID
-\change_unchanged
->_config_vars.log.gz.
+ alphabetical order of variable names) in a file <testID>_config_vars.log.gz.
  The following is an example (with header and legend lines omitted for brevity):
 \begin_inset listings
 lstparams "basicstyle={\footnotesize\ttfamily}"
@@ -14193,13 +11171,7 @@ Each line starts with an `U' or an `N' indicating whether a variable is
 
 \begin_layout Standard
 TEACUP also logs all varying parameters for a series of experiments in a
- file named <
-\change_deleted 193492759 1517651812
-test_id_pfx
-\change_inserted 193492759 1517651812
-testIDprefix
-\change_unchanged
->_varying_params.log.gz.
+ file named <testIDprefix>_varying_params.log.gz.
  The following shows a file as example (excluding the header line):
 \begin_inset listings
 lstparams "basicstyle={\footnotesize\ttfamily}"
@@ -14371,17 +11343,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab -H 
-\change_deleted 1685850735 1489542718
-
-\size small
-testhost
-\size footnotesize
-1
-\change_inserted 1685850735 1489542720
-testhost1
-\change_unchanged
-,testhost2,testhost3 exec_cmd:cmd="uname -s"
+> fab -H testhost1,testhost2,testhost3 exec_cmd:cmd="uname -s"
 \end_layout
 
 \end_inset
@@ -14521,12 +11483,7 @@ status open
 \family typewriter
 \size footnotesize
 > fab -H testhost2,testhost3 copy_file:file_name=/usr/bin/web10g-logger,
-\change_inserted 1685850735 1494307561
- 
-\change_deleted 1685850735 1489542828
- 
-\change_unchanged
-remote_path=/usr/bin
+ remote_path=/usr/bin
 \end_layout
 
 \end_inset
@@ -14593,13 +11550,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab copy_file:file_name=
-\change_inserted 1685850735 1494307578
- 
-\change_deleted 1685850735 1489542833
- 
-\change_unchanged
-/usr/bin/web10g-logger,remote_path=/usr/bin
+> fab copy_file:file_name= /usr/bin/web10g-logger,remote_path=/usr/bin
 \end_layout
 
 \end_inset
@@ -14698,17 +11649,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab -H 
-\change_deleted 1685850735 1489542740
-
-\size small
-testhost
-\size footnotesize
-1
-\change_inserted 1685850735 1489542742
-testhost1
-\change_unchanged
-,testhost2,testhost3 authorize_key
+> fab -H testhost1,testhost2,testhost3 authorize_key
 \end_layout
 
 \end_inset
@@ -14737,15 +11678,10 @@ ssh-keygen -t rsa.
 
 \family default
 \size default
- Also note that th
-\change_deleted 1685850735 1489726320
-e task
-\change_inserted 1685850735 1489726320
-is task
-\change_unchanged
- does not check if the public key is already in the remote user's authorized_key
-s file, so executing this task multiple times may lead to duplicate entries
- in the remote user's authorized_keys file.
+ Also note that this task does not check if the public key is already in
+ the remote user's authorized_keys file, so executing this task multiple
+ times may lead to duplicate entries in the remote user's authorized_keys
+ file.
 \end_layout
 
 \begin_layout Subsection
@@ -14771,14 +11707,8 @@ move
  hosts from one test subnet to the other by configuring the VLAN membership
  of the switch ports in conjunction with IP addresses and static routes
  on each host.
- Th
-\change_deleted 1685850735 1489726323
-e task
-\change_inserted 1685850735 1489726323
-is task
-\change_unchanged
- uses the config.py file to get the testbed IP addresses of the hosts to
- be configured (from TPCONF_host_internal_ip).
+ This task uses the config.py file to get the testbed IP addresses of the
+ hosts to be configured (from TPCONF_host_internal_ip).
  It also uses the values of TPCONF_topology_switch, TPCONF_topology_switch_port_
 prefix, and TPCONF_topology_switch_port_offset specified in config.py to
  reconfigure the switch.
@@ -14858,13 +11788,8 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab -H testhost1,testhost2 init_topology:switch="switch2",
-\change_inserted 1685850735 1494307594
- 
-\change_deleted 1685850735 1489542846
- 
-\change_unchanged
-port_prefix="Gi1/0/",port_offset="5"
+> fab -H testhost1,testhost2 init_topology:switch="switch2", port_prefix="Gi1/0/
+",port_offset="5"
 \end_layout
 
 \end_inset
@@ -14937,13 +11862,7 @@ status open
 \size footnotesize
 > fab -H testhost1,testhost2 init_os:os_list="Linux
 \backslash
-,FreeBSD",
-\change_inserted 1685850735 1494307606
- 
-\change_deleted 1685850735 1489542852
- 
-\change_unchanged
-force_reboot=1
+,FreeBSD", force_reboot=1
 \end_layout
 
 \end_inset
@@ -14981,17 +11900,8 @@ os_list
  can be shorter than the number of specified hosts, in which case it will
  be padded to the length of the number of hosts by duplicating the last
  entry.
- This allows t
-\change_inserted 1685850735 1494304575
-he
-\change_deleted 1685850735 1494304574
-o
-\change_unchanged
- reboot
-\change_inserted 1685850735 1494304582
-ing of
-\change_unchanged
- a large number of hosts into the same OS while specifying an
+ This allows the rebooting of a large number of hosts into the same OS while
+ specifying an
 \family typewriter
 \size small
  os_list
@@ -15143,13 +12053,7 @@ status open
 \size footnotesize
 > fab -H testhost1,testhost2 init_os:os_list="Linux
 \backslash
-,FreeBSD",
-\change_inserted 1685850735 1494307643
- 
-\change_deleted 1685850735 1489542862
- 
-\change_unchanged
-force_reboot=1,do_power_cycle=1
+,FreeBSD", force_reboot=1,do_power_cycle=1
 \end_layout
 
 \end_inset
@@ -15230,13 +12134,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab -H testhost1 init_os:os_list="Linux",
-\change_inserted 1685850735 1494307652
- 
-\change_deleted 1685850735 1489542870
- 
-\change_unchanged
-mac_list="01:02:03:04:05:06"
+> fab -H testhost1 init_os:os_list="Linux", mac_list="01:02:03:04:05:06"
 \end_layout
 
 \end_inset
@@ -15335,14 +12233,8 @@ Check software installations on testbed hosts
 \begin_layout Standard
 The check_host command can be used to check if the required software is
  installed on the hosts.
- Th
-\change_deleted 1685850735 1489726333
-e task
-\change_inserted 1685850735 1489726333
-is task
-\change_unchanged
- only checks for the presence of necessary tools, but it does not check
- if the tools actually work.
+ This task only checks for the presence of necessary tools, but it does
+ not check if the tools actually work.
  For example, the following command checks all testbed hosts:
 \end_layout
 
@@ -15387,17 +12279,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab -H 
-\change_deleted 1685850735 1489542883
-
-\size small
-testhost
-\size footnotesize
-1
-\change_inserted 1685850735 1489542885
-testhost1
-\change_unchanged
-,testhost2,testhost3 check_host 
+> fab -H testhost1,testhost2,testhost3 check_host 
 \end_layout
 
 \end_inset
@@ -15476,17 +12358,7 @@ status open
 
 \family typewriter
 \size footnotesize
-> fab -H 
-\change_deleted 1685850735 1489542894
-
-\size small
-testhost
-\size footnotesize
-1
-\change_inserted 1685850735 1489542895
-testhost1
-\change_unchanged
-,testhost2,testhost3 check_connectivity
+> fab -H testhost1,testhost2,testhost3 check_connectivity
 \end_layout
 
 \end_inset
@@ -15749,52 +12621,15 @@ Scenario 5: We have three staggered bulk-transfer flows going through the
 \end_layout
 
 \begin_layout Itemize
-Scenario 6: We have t
-\change_deleted 1685850735 1502428269
-hree
-\change_inserted 1685850735 1502428266
-wo
-\change_unchanged
- hosts plus the router.
- One host 
-\change_deleted 1685850735 1502428291
-in subnet A
+Scenario 6: We have two hosts plus the router.
+ One host
+\change_deleted 193492759 1518046343
+ 
 \change_unchanged
  acts as web server.
- The 
-\change_deleted 1685850735 1502428346
-two 
-\change_unchanged
-other host
-\change_deleted 1685850735 1502428352
-s in subnet B
-\change_unchanged
- act
-\change_inserted 1685850735 1502428441
-s as a client to retrieve video content from the web server.
-
-\change_deleted 1685850735 1502428440
- as clients that both use DASH-like video streaming over HTTP.
-
-\change_unchanged
+ The other host acts as a client to retrieve video content from the web
+ server.
  We emulate different network delays and AQM mechanisms.
-
-\change_deleted 1685850735 1502427603
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted 193492759 1494486233
-**** THIS NEEDS UPDATING TO USE REAL DASH ***
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Itemize
@@ -15873,38 +12708,11 @@ key "teacup-examples-web"
 \begin_layout Standard
 Note that TEACUP configuration files can be split across multiple files
  (using Python's execfile()).
- This allows t
-\change_inserted 1685850735 1494304593
-he
-\change_deleted 1685850735 1494304592
-o
-\change_unchanged
- split
-\change_inserted 1685850735 1494304596
-ting of
-\change_unchanged
- a large config file into multiple files for better readability.
- It also allows t
-\change_inserted 1685850735 1494304605
-he
-\change_deleted 1685850735 1494304605
-o
-\change_unchanged
- inclu
-\change_deleted 1685850735 1494304612
-d
-\change_inserted 1685850735 1494304664
-sion of
-\change_deleted 1685850735 1494304607
-e
-\change_unchanged
- part
-\change_inserted 1685850735 1494304691
-s
-\change_unchanged
- of configuration files into multiple different config files, which makes
- it possible to reuse parts of the config that is not changed across multiple
- experiments.
+ This allows the splitting of a large config file into multiple files for
+ better readability.
+ It also allows the inclusion of parts of configuration files into multiple
+ different config files, which makes it possible to reuse parts of the config
+ that is not changed across multiple experiments.
  An example of a this is this config file, which is functionally identical
  to the above config file.
  Only here the main config file includes separate files to specify the testbed
@@ -16015,13 +12823,7 @@ status open
 
 \begin_layout Plain Layout
 
-TPCONF_script_path = '
-\change_deleted 1870295737 1517870961
-/home/teacup/teacup-0.8
-\change_inserted 1870295737 1517870962
-/home/test/src/teacup
-\change_unchanged
-' 
+TPCONF_script_path = '/home/test/src/teacup' 
 \end_layout
 
 \begin_layout Plain Layout
@@ -16123,52 +12925,18 @@ reference "lis:Scenario1-Test-ID-prefix"
 \end_inset
 
 ).
- TEACUP_max_time_diff specifies 
-\change_inserted 193492759 1517737797
-(in seconds) 
-\change_unchanged
-the maximum clock offset
-\change_deleted 193492759 1517737801
- in seconds
-\change_unchanged
- allowed
-\change_inserted 193492759 1517737813
- between all participating hosts
-\change_unchanged
-.
+ TEACUP_max_time_diff specifies (in seconds) the maximum clock offset allowed
+ between all participating hosts.
  This is a very coarse threshold as the offset estimation performed by TEACUP
  is not very accurate.
  Currently, TEACUP simply attempts to find out if the synchronisation is
- very bad and if yes it will abort; it does 
-\change_inserted 193492759 1517737826
-not 
-\change_unchanged
-try to enforce high accuracy for the time synchronisation.
- 
-\change_inserted 193492759 1517737898
-Despite the historical name, 
-\change_unchanged
-TPCONF_test_id defines the 
-\change_deleted 193492759 1517737833
-name
-\change_inserted 193492759 1517737834
-test ID
-\change_unchanged
- 
+ very bad and if yes it will abort; it does not try to enforce high accuracy
+ for the time synchronisation.
+ Despite the historical name, TPCONF_test_id defines the test ID 
 \bar under
 prefix
 \bar default
- for 
-\change_deleted 193492759 1517737870
-the output files for 
-\change_unchanged
-an experiment or a 
-\change_deleted 193492759 1517737842
-series
-\change_inserted 193492759 1517737845
-group
-\change_unchanged
- of experiments.
+ for an experiment or a group of experiments.
  TPCONF_remote_dir specifies where on the hosts the log files are stored
  until they are moved to the control host running TEACUP after each experiment.
 \end_layout
@@ -16191,13 +12959,7 @@ status open
 
 \begin_layout Plain Layout
 
-\change_deleted 193492759 1517895768
-
-TPCONF_max_time_diff = 1
-\change_inserted 193492759 1517895768
 TPCONF_max_time_diff = 2
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -16217,15 +12979,7 @@ now = datetime.datetime.today()
 
 \begin_layout Plain Layout
 
-TPCONF_test_id = 
-\change_inserted 193492759 1517652196
-'exp_' + 
-\change_unchanged
-now.strftime("%Y%m%d-%H%M%S")
-\change_deleted 193492759 1517652199
- + 'experiment'
-\change_unchanged
-
+TPCONF_test_id = 'exp_' + now.strftime("%Y%m%d-%H%M%S")
 \end_layout
 
 \begin_layout Plain Layout
@@ -16365,15 +13119,12 @@ reference "lis:Scenario1-Traffic"
  TEACUP implements a number of traffic generators.
  In this example we use iperf to generate TCP bulk transfer flows.
  TPCONF_traffic_gens defines the traffic generator, but here we use a temporary
- variable as well, which allows 
-\change_deleted 1685850735 1494304789
-to have
+ variable as well, which allows
+\change_deleted 193492759 1518046343
+ 
 \change_unchanged
- multiple traffic generator definitions and 
-\change_inserted 1685850735 1494304800
-being able to 
-\change_unchanged
-switch between them by changing the variable assigned to TPCONF_traffic_gens.
+ multiple traffic generator definitions and being able to switch between
+ them by changing the variable assigned to TPCONF_traffic_gens.
 \end_layout
 
 \begin_layout Standard
@@ -16394,17 +13145,7 @@ first
 \emph default
  internal address (according to TPCONF_host_internal_ip).
  Alternatively, client and server can be specified as internal addresses,
- which allows t
-\change_inserted 1685850735 1494304815
-he
-\change_deleted 1685850735 1494304815
-o
-\change_unchanged
- use
-\change_inserted 1685850735 1494304817
- of
-\change_unchanged
- any internal interfaces configured.
+ which allows the use of any internal interfaces configured.
  
 \end_layout
 
@@ -16524,19 +13265,8 @@ n of parameters.
 
 \begin_layout Standard
 In this simple case all hosts use the same TCP congestion control algorithm,
- but TEACUP allows t
-\change_inserted 1685850735 1494304829
-he
-\change_deleted 1685850735 1494304828
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1494304835
-ication of
-\change_deleted 1685850735 1494304831
-y
-\change_unchanged
- per-host algorithms with TPCONF_host_TCP_algos.
+ but TEACUP allows the specification of per-host algorithms with TPCONF_host_TCP
+_algos.
  Parameter settings for TCP congestion control algorithms can be specified
  with TPCONF_host_TCP_algo_params (assuming parameters can be controlled
  with sysctl), but here we do not make use of that and simply use the default
@@ -16963,17 +13693,7 @@ key "zander2018_teacup_v1.1_analysis"
 \end_layout
 
 \begin_layout Standard
-TEACUP will create a 
-\change_deleted 193492759 1517737955
-file names 
-\change_unchanged
-<
-\change_deleted 193492759 1517651878
-test_id_prefix
-\change_inserted 193492759 1517651878
-testIDprefix
-\change_unchanged
->.log file in the experiment data sub directory.
+TEACUP will create a <testIDprefix>.log file in the experiment data sub directory.
  It will also create a file experiments_started.txt and experiments_completed.txt
  in the parent directory.
  The file experiments_started.txt contains the names of all experiments started
@@ -17034,11 +13754,7 @@ status open
 
 \family typewriter
 \size small
-> fab analyse_all:out_dir=".
-\change_inserted 1685850735 1489542915
-.
-\change_unchanged
-/results"
+> fab analyse_all:out_dir="../results"
 \end_layout
 
 \end_inset
@@ -17262,19 +13978,7 @@ reference "lis:Scenario2-Reboot"
  that GRUB will read (after loaded via PXE) which specify from which hard
  disk partition to boot from.
  TPCONF_host_os specifies the operating for each host and router.
- For Linux TEACUP allows t
-\change_inserted 1685850735 1494304844
-he
-\change_deleted 1685850735 1494304844
-o
-\change_unchanged
- specif
-\change_inserted 1685850735 1494304849
-ication of
-\change_deleted 1685850735 1494304846
-y
-\change_unchanged
- the kernel that is booted.
+ For Linux TEACUP allows the specification of the kernel that is booted.
  TPCONF_linux_kern_router specifies the kernel booted on the router and
  TPCONF_linux_kern_hosts specifies the kernel booted on the other hosts.
  If TPCONF_force_reboot is not set to `0', TEACUP will only reboot a host
@@ -17549,14 +14253,8 @@ key "teacup-examples-web"
 \begin_layout Standard
 Most of the configuration is identical to the configuration used in scenario
  2.
- The only differen
-\change_inserted 1685850735 1489035341
-ce
-\change_deleted 1685850735 1489035340
-t
-\change_unchanged
- is that now TEACUP will automatically power cycle machines that to not
- come up within the reboot timeout.
+ The only difference is that now TEACUP will automatically power cycle machines
+ that to not come up within the reboot timeout.
  TEACUP will only power cycle machines once.
  If after a power cycle and reboot the machines are still unresponsive TEACUP
  will give up.
@@ -18654,37 +15352,7 @@ See scenario 1.
 \end_layout
 
 \begin_layout Subsection
-Scenario 6: 
-\change_deleted 1870295737 1494550947
-Two
-\change_inserted 1870295737 1494550947
-One
-\change_unchanged
- HTTP-based
-\change_inserted 1870295737 1494550951
- (DASH)
-\change_unchanged
- video streaming client
-\change_deleted 1870295737 1494550954
-s
-\change_deleted 1685850735 1502428561
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted 193492759 1494486216
-**** THIS NEEDS UPDATING TO USE REAL DASH ***
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
+Scenario 6: One HTTP-based (DASH) video streaming client
 \end_layout
 
 \begin_layout Subsubsection
@@ -18692,21 +15360,8 @@ Topology
 \end_layout
 
 \begin_layout Standard
-We now have host
-\change_deleted 1870295737 1494555039
-s
-\change_unchanged
- newtcp20
-\change_deleted 1870295737 1494550957
-, newtcp21
-\change_unchanged
- connected to the 172.16.10.0/24 network and host newtcp
-\change_inserted 1870295737 1494550960
-33
-\change_deleted 1870295737 1494550959
-27
-\change_unchanged
- connected to the 172.16.11.0/24 network.
+We now have host newtcp20 connected to the 172.16.10.0/24 network and host
+ newtcp33 connected to the 172.16.11.0/24 network.
  The machine newtcprt3 connects the two experiment subnets.
  All three machines also have a second network interface that is used to
  control the experiment via TEACUP.
@@ -18726,55 +15381,14 @@ Test Traffic
 \end_layout
 
 \begin_layout Standard
-In this scenario we
-\change_inserted 1870295737 1494555072
- generate DASH video streaming traffic
-\change_deleted 1870295737 1494551249
- simulate DASH-like HTTP video streaming
-\change_unchanged
-.
- Host newtcp
-\change_inserted 1870295737 1494551259
-33
-\change_deleted 1870295737 1494551258
-27
-\change_unchanged
- runs a web server.
- Host newtcp20 
-\change_deleted 1870295737 1494551268
-and newtcp21 are
-\change_inserted 1870295737 1494551269
-is a
-\change_unchanged
- client
-\change_inserted 1870295737 1494555085
+In this scenario we generate DASH video streaming traffic.
+ Host newtcp33 runs a web server.
+ Host newtcp20 is a client that uses dash.js player inside Firefox browser
+ to retrieve video content – there is one DASH flow between the client and
+ the server.
+ In this scenario we use 10-sec chunks with a MPD that supplies 20 different
+ video encoding rates (representation rates).
  
-\change_deleted 1870295737 1494551275
-s and use httperf to emulate DASH-like streaming
-\change_inserted 1870295737 1494551304
-that uses dash.js player inside Firefox browser to retrieve video content
-\change_unchanged
- – there is one DASH
-\change_deleted 1870295737 1494551307
--like
-\change_unchanged
- flow between 
-\change_deleted 1870295737 1494551310
-each
-\change_inserted 1870295737 1494551310
-the
-\change_unchanged
- client and the server.
- In this scenario
-\change_inserted 1870295737 1494551349
- we use 10-sec chunks with a MPD that supplies 20 different video encoding
- rates (representation rates).
- 
-\change_deleted 1870295737 1494551315
- we have fixed the video rates and on/off cycle times, but the rate and
- cycle time differs for both streams.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -18782,11 +15396,8 @@ Variable Parameters
 \end_layout
 
 \begin_layout Standard
-Like in scenario 1 we emulate three different delays 
-\change_deleted 1870295737 1494551395
-(same delays for all flows) 
-\change_unchanged
-and two different bandwidth settings.
+Like in scenario 1 we emulate three different delays and two different bandwidth
+ settings.
  We now also vary the AQM mechanism used on the router between FIFO, CoDel
  and FQ CoDel.
  This means we have 18 experiments in total.
@@ -18797,35 +15408,6 @@ TEACUP Config File
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1517724562
-You can download the configuration file from 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "teacup-examples-web"
-
-\end_inset
-
-.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted 1870295737 1494557722
-*** jkua: This link doesn't have the updated Scenario 6 with real DASH experimen
-t setup.
- Either we update the webpage or remove the previous sentence.
- However, I've updated config-scenario6.py in ./example_configs.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 To use the configuration rename it to config.py.
  In the following we explain the parts of the configuration file that have
  changed compared to scenario 1.
@@ -18871,17 +15453,11 @@ TPCONF_host_internal_ip = {
 \begin_layout Plain Layout
 
 	'newtcp20': ['172.16.10.60'], 	
-\change_inserted 1870295737 1494557194
-
 \end_layout
 
 \begin_layout Plain Layout
 
-\change_inserted 1870295737 1494557196
-
-	
-\change_unchanged
-'newtcp33': ['172.16.11.73'], 
+	'newtcp33': ['172.16.11.73'], 
 \end_layout
 
 \begin_layout Plain Layout
@@ -18914,25 +15490,8 @@ Scenario 6, host configuration
 \end_layout
 
 \begin_layout Standard
-The traffic generator setup now starts a web server 
-\change_deleted 1870295737 1494555163
-and generates fake streaming content 
-\change_unchanged
-on newtcp
-\change_inserted 1870295737 1494555166
-33
-\change_deleted 1870295737 1494555165
-27
-\change_unchanged
- before starting the DASH
-\change_deleted 1870295737 1494555168
--like
-\change_unchanged
- flow
-\change_deleted 1870295737 1494555174
-s
-\change_unchanged
- as shown in Listing 
+The traffic generator setup now starts a web server on newtcp33 before starting
+ the DASH flow as shown in Listing 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lis:Scenario6-Traffic"
@@ -19043,8 +15602,6 @@ Scenario 6, traffic configuration
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 1870295737 1494557932
 We need to add one additional DASH-specific parameter to TPCONF_chunksize_mpd
  and TPCONF_parameter_list, and two variables to TPCONF_variable_defaults
  as shown in Listing 
@@ -19066,25 +15623,9 @@ reference "lis:Scenario6-Parameters"
 
 \end_inset
 
-)
-\change_deleted 1870295737 1494551921
-.
- TPCONF_vary_parameters already included the `aqms' parameters in scenario
- 1, so TPCONF_parameter_list and TPCONF_variable_defaults look like in scenario
- 1.
- We only have to change
-\change_unchanged
- 
-\change_inserted 1870295737 1494551925
-with 
-\change_unchanged
-TPCONF_aqms.
-
-\change_inserted 1870295737 1494557143
+) with TPCONF_aqms.
  In order to permutate across different video chunk sizes and MPDs, the
  variable `chunksize_mpd' needs to be added to TPCONF_vary_parameters.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -20226,31 +16767,8 @@ name "sec:Conclusions"
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted 193492759 1491909238
-In t
-\change_inserted 193492759 1491909238
-T
-\change_unchanged
-his report 
-\change_deleted 193492759 1491909241
-we 
-\change_unchanged
-describe
-\change_deleted 193492759 1491909242
-d
-\change_inserted 193492759 1491909242
-s
-\change_unchanged
- TEACUP
-\change_inserted 193492759 1491909245
- version 1.1
-\change_unchanged
-, a Python-based software 
-\change_deleted 193492759 1491909248
-we 
-\change_unchanged
-developed to run automated TCP performance tests in a controlled testbed.
+This report describes TEACUP version 1.1, a Python-based software developed
+ to run automated TCP performance tests in a controlled testbed.
  In the future we will continue to extend TEACUP with more features.
 \end_layout
 
@@ -20263,19 +16781,7 @@ TEACUP versions prior to 1.0 were developed as part of a project funded by
  Cisco Systems and titled "Study in TCP Congestion Control Performance In
  A Data Centre".
  This was a collaborative effort between Swinburne University of Technology's
- 
-\change_deleted 1685850735 1489036292
-Center
-\change_inserted 1685850735 1489036292
-Centre
-\change_unchanged
- for Advanced Internet 
-\change_deleted 1685850735 1489036294
-Archectures
-\change_inserted 1685850735 1489036294
-Architectures
-\change_unchanged
- and Fred Baker of Cisco Systems.
+ Centre for Advanced Internet Architectures and Fred Baker of Cisco Systems.
  These may be found at 
 \begin_inset Flex URL
 status collapsed
@@ -20304,17 +16810,11 @@ http://sourceforge.net/projects/teacup/
 \end_inset
 
 .
-\change_inserted 193492759 1517561599
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted 193492759 1517562027
 Russell Collom and Jonathan Kua contributed additional text in 2017 for
  version 1.1 of this document.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Section*
@@ -20329,13 +16829,7 @@ name "sec:Copying"
 \end_layout
 
 \begin_layout Standard
-This document
-\change_inserted 193492759 1491909077
- is based on 
-\change_deleted 193492759 1491909079
-, 
-\change_unchanged
-
+This document is based on 
 \begin_inset Quotes eld
 \end_inset
 
@@ -20344,10 +16838,6 @@ TEACUP v1.0 – A System for Automated TCP Testbed Experiments
 \end_inset
 
  by Sebastian Zander and Grenville Armitage, 
-\change_deleted 193492759 1491909087
-is 
-\change_unchanged
-
 \begin_inset ERT
 status open
 
@@ -20364,22 +16854,9 @@ copyright
 \begin_inset space ~
 \end_inset
 
-2015 – 2016 CAIA, Swinburne University of Technology
-\change_inserted 193492759 1491909197
-.
- The original was released 
-\change_deleted 193492759 1491909096
-.
- As of 
-\change_inserted 193492759 1491909096
-in 
-\change_unchanged
-June 2016 
-\change_deleted 193492759 1491909102
-this document has been licensed 
-\change_unchanged
-under a Creative Commons Attribution-ShareAlike 4.0 International License
- (CC BY-SA 4.0, 
+2015 – 2016 CAIA, Swinburne University of Technology.
+ The original was released in June 2016 under a Creative Commons Attribution-Sha
+reAlike 4.0 International License (CC BY-SA 4.0, 
 \begin_inset Flex URL
 status collapsed
 

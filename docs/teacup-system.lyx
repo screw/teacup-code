@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass IEEEtran
 \begin_preamble
 \usepackage{fixltx2e}
@@ -70,16 +68,16 @@
 \language_package default
 \inputencoding default
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -127,7 +125,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author 193492759 "gja"
+\author 193492759 "gja" 
 \end_header
 
 \begin_body
@@ -876,7 +874,7 @@ If the networks are implemented as VLANs on a suitable Ethernet switch,
  network and associated VLAN (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:topology_config"
+reference "sub:topology_config"
 
 \end_inset
 
@@ -1033,7 +1031,7 @@ key "fabric-1.8"
  (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:FABRIC----Overview"
+reference "sub:FABRIC----Overview"
 
 \end_inset
 
@@ -1134,7 +1132,7 @@ TEACUP main functional blocks
 Experiment naming and process flow
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Experiment-naming-and"
+name "sub:Experiment-naming-and"
 
 \end_inset
 
@@ -1161,7 +1159,7 @@ test ID prefix
 s (see section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Log-file-naming"
+reference "sub:Log-file-naming"
 
 \end_inset
 
@@ -1246,10 +1244,6 @@ Get parameter combination for next experiment
 
 \begin_layout Enumerate
 Start experiment based on config and parameter configuration 
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1282,10 +1276,6 @@ Get host information again: OS, NIC names, NIC MAC addresses
 
 \begin_layout Enumerate
 Run sanity checks 
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1304,10 +1294,6 @@ Kill any leftover processes on hosts
 \end_deeper
 \begin_layout Enumerate
 Initialise hosts 
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1337,7 +1323,7 @@ Configure router queues: set router queues based on config
 Log host state: log host information (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Host-info"
+reference "sub:Host-info"
 
 \end_inset
 
@@ -1397,7 +1383,7 @@ egroup{}
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:FABRIC----Overview"
+name "sub:FABRIC----Overview"
 
 \end_inset
 
@@ -1541,11 +1527,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1612,11 +1593,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1676,11 +1652,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1741,11 +1712,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1820,7 +1786,7 @@ We now describe TEACUP's available traffic generator functions that control
  Use of these generators is described in more detail in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-traffic-generators"
+reference "sub:Config-traffic-generators"
 
 \end_inset
 
@@ -2335,7 +2301,7 @@ key "web10g-stats"
 Log file naming – syntax and structure
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Log-file-naming"
+name "sub:Log-file-naming"
 
 \end_inset
 
@@ -2350,7 +2316,7 @@ test IDs and test ID prefixes
 As noted in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Experiment-naming-and"
+reference "sub:Experiment-naming-and"
 
 \end_inset
 
@@ -2384,11 +2350,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2575,7 +2536,7 @@ TPCONF_vary_parameters
  (see section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-defining-vars"
+reference "sub:Config-defining-vars"
 
 \end_inset
 
@@ -2700,11 +2661,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2908,7 +2864,7 @@ Host and router information logging
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Host-info"
+name "sub:Host-info"
 
 \end_inset
 
@@ -3099,7 +3055,7 @@ before
  for each experiment (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:variables_logged"
+reference "sub:variables_logged"
 
 \end_inset
 
@@ -3123,7 +3079,7 @@ reference "subsec:variables_logged"
  file names (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:variables_logged"
+reference "sub:variables_logged"
 
 \end_inset
 
@@ -3148,7 +3104,7 @@ This section provides a general description of how the hosts and router
  A Linux-based bottleneck router uses tc and netem (section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Linux-router-setup"
+reference "sub:Linux-router-setup"
 
 \end_inset
 
@@ -3156,7 +3112,7 @@ reference "subsec:Linux-router-setup"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:FreeBSD-router-setup"
+reference "sub:FreeBSD-router-setup"
 
 \end_inset
 
@@ -3222,7 +3178,7 @@ Finally, user-specified custom commands are executed on hosts as specified
 Linux-based bottleneck router setup
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Linux-router-setup"
+name "sub:Linux-router-setup"
 
 \end_inset
 
@@ -3455,11 +3411,6 @@ width "98text%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3585,11 +3536,6 @@ width "98text%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3732,11 +3678,6 @@ width "98text%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3859,11 +3800,6 @@ width "98text%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4043,11 +3979,6 @@ width "98text%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4264,7 +4195,7 @@ key "bufferbloat-bcp"
 FreeBSD-based bottleneck router setup
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:FreeBSD-router-setup"
+name "sub:FreeBSD-router-setup"
 
 \end_inset
 
@@ -4434,7 +4365,7 @@ config.py
  Available traffic generators are summarised in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-traffic-generators"
+reference "sub:Config-traffic-generators"
 
 \end_inset
 
@@ -4490,11 +4421,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4536,28 +4462,28 @@ ts.
  V_variables can be used in router queue settings (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-router-queues"
+reference "sub:Config-router-queues"
 
 \end_inset
 
 ), traffic generator settings (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-traffic-generators"
+reference "sub:Config-traffic-generators"
 
 \end_inset
 
 ), TCP algorithm settings (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-mandatory-vars"
+reference "sub:Config-mandatory-vars"
 
 \end_inset
 
 ) or host setup commands (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-custom-host-setup"
+reference "sub:Config-custom-host-setup"
 
 \end_inset
 
@@ -4565,7 +4491,7 @@ reference "subsec:Config-custom-host-setup"
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-defining-vars"
+reference "sub:Config-defining-vars"
 
 \end_inset
 
@@ -4616,11 +4542,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4695,11 +4616,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4739,11 +4655,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4777,11 +4688,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4819,11 +4725,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4873,11 +4774,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5070,7 +4966,7 @@ General experiment settings
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Experiment-general-settings"
+name "sub:Experiment-general-settings"
 
 \end_inset
 
@@ -5149,11 +5045,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5300,7 +5191,7 @@ Topology configuration
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:topology_config"
+name "sub:topology_config"
 
 \end_inset
 
@@ -5660,11 +5551,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5692,7 +5578,7 @@ OS and kernel selection
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:os_kernel_selection"
+name "sub:os_kernel_selection"
 
 \end_inset
 
@@ -5875,11 +5761,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5917,11 +5798,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5962,11 +5838,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6089,11 +5960,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6130,11 +5996,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6156,7 +6017,7 @@ Clock offset measurement (broadcast pings)
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:broadcast-pings"
+name "sub:broadcast-pings"
 
 \end_inset
 
@@ -6242,11 +6103,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status collapsed
 
 \begin_layout Plain Layout
@@ -6294,7 +6150,7 @@ Custom host init commands
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Config-custom-host-setup"
+name "sub:Config-custom-host-setup"
 
 \end_inset
 
@@ -6386,7 +6242,7 @@ Router queue setup
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Config-router-queues"
+name "sub:Config-router-queues"
 
 \end_inset
 
@@ -6858,7 +6714,7 @@ TPCONF_router_queues['testrouter2'] =
 Traffic generator setup
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Traffic-generator-setup"
+name "sub:Traffic-generator-setup"
 
 \end_inset
 
@@ -6902,7 +6758,7 @@ status open
  in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-traffic-generators"
+reference "sub:Config-traffic-generators"
 
 \end_inset
 
@@ -7064,7 +6920,7 @@ Mandatory experiment variables
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Config-mandatory-vars"
+name "sub:Config-mandatory-vars"
 
 \end_inset
 
@@ -7112,11 +6968,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7155,11 +7006,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7201,11 +7047,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7252,11 +7093,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7431,11 +7267,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7471,11 +7302,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7562,11 +7388,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7614,11 +7435,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7672,7 +7488,7 @@ status open
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Config-defining-vars"
+reference "sub:Config-defining-vars"
 
 \end_inset
 
@@ -7851,7 +7667,7 @@ Defining parameters to vary
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Config-defining-vars"
+name "sub:Config-defining-vars"
 
 \end_inset
 
@@ -8133,7 +7949,7 @@ ts, represented by the following test IDs (we assume the test ID prefix
  is the default from Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Experiment-general-settings"
+reference "sub:Experiment-general-settings"
 
 \end_inset
 
@@ -8238,7 +8054,7 @@ Available traffic generators
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Config-traffic-generators"
+name "sub:Config-traffic-generators"
 
 \end_inset
 
@@ -8256,7 +8072,7 @@ start_*
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Traffic-generator-setup"
+reference "sub:Traffic-generator-setup"
 
 \end_inset
 
@@ -9238,7 +9054,7 @@ start_dash_streaming_dashjs
 start_dash_streaming_dashjs
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:start_dashjs"
+name "sub:start_dashjs"
 
 \end_inset
 
@@ -10460,11 +10276,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10525,11 +10336,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10594,11 +10400,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10636,10 +10437,6 @@ run.sh
 \size default
 ) that logs the Fabric output in a <testIDprefix>.log file inside the <testIDpref
 ix> sub directory, and is started with:
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -10673,11 +10470,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10705,10 +10497,6 @@ status open
 
 \begin_layout Standard
 The shell script generates a test ID prefix and then executes the command:
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -10742,11 +10530,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10808,10 +10591,6 @@ fabfile.py
 \family default
 \size default
  run:
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -10845,11 +10624,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10948,10 +10722,6 @@ exp_20131218-113431
 \family default
 \size default
  (and appends the log output to the existing log file):
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -10985,11 +10755,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11049,10 +10814,6 @@ run_resume.sh
  option to automatically restart and continue each time an experiment was
  not successfully completed.
  The script is used by executing:
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -11086,11 +10847,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11123,7 +10879,7 @@ TEACUP variable information logged
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:variables_logged"
+name "sub:variables_logged"
 
 \end_inset
 
@@ -11256,11 +11012,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11332,11 +11083,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11399,11 +11145,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11471,11 +11212,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11539,11 +11275,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11638,11 +11369,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11692,7 +11418,7 @@ Topology configuration
 Where the testbed meets the requirements described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:topology_config"
+reference "sub:topology_config"
 
 \end_inset
 
@@ -11735,7 +11461,7 @@ port_offset
  Limitations of the current implementation are described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:topology_config"
+reference "sub:topology_config"
 
 \end_inset
 
@@ -11777,11 +11503,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11849,11 +11570,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11940,7 +11656,7 @@ linux_kern_router
  Please refer to the description in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:os_kernel_selection"
+reference "sub:os_kernel_selection"
 
 \end_inset
 
@@ -12040,11 +11756,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12123,11 +11834,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12196,11 +11902,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12268,11 +11969,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12347,11 +12043,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12419,11 +12110,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12488,11 +12174,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13640,11 +13321,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13743,11 +13419,6 @@ width "97col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -16292,7 +15963,7 @@ reference "lis:Scenario7-Vary-parameters"
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "basicstyle={\footnotesize\ttfamily},captionpos=b,float={*t}"
+lstparams "float={*t},basicstyle={\scriptsize\ttfamily},captionpos=b"
 inline false
 status open
 

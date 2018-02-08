@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass IEEEtran
 \begin_preamble
 \usepackage{fixltx2e}
@@ -76,16 +74,16 @@
 \language_package default
 \inputencoding default
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -133,7 +131,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author 193492759 "gja"
+\author 193492759 "gja" 
 \end_header
 
 \begin_body
@@ -864,7 +862,7 @@ test ID
  (section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Specifying-experiments-TestIDs"
+reference "sub:Specifying-experiments-TestIDs"
 
 \end_inset
 
@@ -912,7 +910,7 @@ reference "lis:Example-interim-file"
  by the extract_incast task (section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_incast"
+reference "sub:extract_incast"
 
 \end_inset
 
@@ -1179,7 +1177,7 @@ This section describes the common parameters.
 Specifying experiments to process (test IDs)
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Specifying-experiments-TestIDs"
+name "sub:Specifying-experiments-TestIDs"
 
 \end_inset
 
@@ -1229,11 +1227,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1361,7 +1354,7 @@ Data series selection
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Data-series-selection"
+name "sub:Data-series-selection"
 
 \end_inset
 
@@ -1397,10 +1390,6 @@ Desired flows may be specified using combinations of patterns matching source
 
 \begin_layout Standard
 The filter string format is:
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1419,11 +1408,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1476,11 +1460,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1545,11 +1524,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1615,11 +1589,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1687,11 +1656,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -1735,7 +1699,7 @@ Filtering SIFTR log lines
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:filtering_siftr"
+name "sub:filtering_siftr"
 
 \end_inset
 
@@ -1777,7 +1741,7 @@ Burst-separation (incast and similar experiments)
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:burst_separation"
+name "sub:burst_separation"
 
 \end_inset
 
@@ -1838,7 +1802,7 @@ Clock offset analysis and correction
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:clock-offset-analysis"
+name "sub:clock-offset-analysis"
 
 \end_inset
 
@@ -1947,11 +1911,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2089,7 +2048,7 @@ extract_pktsizes – Extract packet sizes for throughput computation
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:extract_pktsizes"
+name "sub:extract_pktsizes"
 
 \end_inset
 
@@ -2202,11 +2161,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2240,7 +2194,7 @@ extract_rtt – RTT estimates (based on SPP)
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:extract_rtt"
+name "sub:extract_rtt"
 
 \end_inset
 
@@ -2410,11 +2364,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2480,11 +2429,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2530,7 +2474,7 @@ extract_cwnd – TCP CWND
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:extract_cwnd"
+name "sub:extract_cwnd"
 
 \end_inset
 
@@ -2553,7 +2497,7 @@ io_filter
  outgoing or incoming and outgoing packets (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:filtering_siftr_analysis"
+reference "sub:filtering_siftr_analysis"
 
 \end_inset
 
@@ -2608,11 +2552,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2659,7 +2598,7 @@ io_filter
  (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:filtering_siftr_analysis"
+reference "sub:filtering_siftr_analysis"
 
 \end_inset
 
@@ -2714,11 +2653,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2752,7 +2686,7 @@ extract_tcp_stat – Extract any TCP statistic
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:extract_tcp_stat"
+name "sub:extract_tcp_stat"
 
 \end_inset
 
@@ -2779,7 +2713,7 @@ io_filter
  (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:filtering_siftr_analysis"
+reference "sub:filtering_siftr_analysis"
 
 \end_inset
 
@@ -2887,11 +2821,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -2969,11 +2898,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3011,7 +2935,7 @@ This task extracts TCP acknowledgement data.
  (with burst separation, section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:burst_separation"
+reference "sub:burst_separation"
 
 \end_inset
 
@@ -3045,7 +2969,7 @@ eburst
  described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:burst_separation"
+reference "sub:burst_separation"
 
 \end_inset
 
@@ -3167,11 +3091,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3293,11 +3212,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3331,7 +3245,7 @@ extract_incast – Extract response times for incast experiments (from httperf
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:extract_incast"
+name "sub:extract_incast"
 
 \end_inset
 
@@ -3476,11 +3390,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3517,7 +3426,7 @@ This task extracts response times for incast experiments.
  The difference between the extract_incast task (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_incast"
+reference "sub:extract_incast"
 
 \end_inset
 
@@ -3641,11 +3550,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3700,7 +3604,7 @@ burst_sep
  parameter used to detect the bursts (section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:burst_separation"
+reference "sub:burst_separation"
 
 \end_inset
 
@@ -3823,11 +3727,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -3861,7 +3760,7 @@ extract_owd – Extract OWD information
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:extract_owd"
+name "sub:extract_owd"
 
 \end_inset
 
@@ -3897,7 +3796,7 @@ eburst
  described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:burst_separation"
+reference "sub:burst_separation"
 
 \end_inset
 
@@ -3987,11 +3886,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4025,7 +3919,7 @@ extract_pktloss – Extract packet loss information
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:extract_pktloss"
+name "sub:extract_pktloss"
 
 \end_inset
 
@@ -4054,7 +3948,7 @@ eburst
  described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:burst_separation"
+reference "sub:burst_separation"
 
 \end_inset
 
@@ -4160,11 +4054,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4223,7 +4112,7 @@ Analysis tasks overview
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:analysis_functions"
+name "sub:analysis_functions"
 
 \end_inset
 
@@ -4401,11 +4290,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4500,7 +4384,7 @@ source_filter
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Data-series-selection"
+reference "sub:Data-series-selection"
 
 \end_inset
 
@@ -4565,11 +4449,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4663,11 +4542,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4792,11 +4666,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4871,11 +4740,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -4950,11 +4814,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5050,11 +4909,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5125,7 +4979,7 @@ source_filter
  to filter out the the unwanted flows (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Data-series-selection"
+reference "sub:Data-series-selection"
 
 \end_inset
 
@@ -5164,11 +5018,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5245,11 +5094,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5335,11 +5179,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5373,7 +5212,7 @@ Filtering SIFTR log lines
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:filtering_siftr_analysis"
+name "sub:filtering_siftr_analysis"
 
 \end_inset
 
@@ -5439,11 +5278,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5487,7 +5321,7 @@ ts_correct
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:clock-offset-analysis"
+reference "sub:clock-offset-analysis"
 
 \end_inset
 
@@ -5495,7 +5329,7 @@ reference "subsec:clock-offset-analysis"
  This parameter is passed to the extract task(s) and Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:clock-offset-analysis"
+reference "sub:clock-offset-analysis"
 
 \end_inset
 
@@ -5589,11 +5423,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5682,11 +5511,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -5720,7 +5544,7 @@ Common plotting environment variables
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:plot-env-vars"
+name "sub:plot-env-vars"
 
 \end_inset
 
@@ -5764,7 +5588,7 @@ Throughput always needs to be computed over some time interval.
  plots for throughput using the task described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:plot-metric-comparison"
+reference "sub:plot-metric-comparison"
 
 \end_inset
 
@@ -5975,11 +5799,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6162,11 +5981,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6227,11 +6041,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6376,7 +6185,7 @@ udp_map
 parameter (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_rtt"
+reference "sub:extract_rtt"
 
 \end_inset
 
@@ -6425,11 +6234,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6568,7 +6372,7 @@ io_filter
 parameter described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:filtering_siftr_analysis"
+reference "sub:filtering_siftr_analysis"
 
 \end_inset
 
@@ -6617,11 +6421,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6655,7 +6454,7 @@ analyse_tcp_rtt – Plot TCP RTT over time
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:analyse_tcp_rtt"
+name "sub:analyse_tcp_rtt"
 
 \end_inset
 
@@ -6759,7 +6558,7 @@ io_filter
 parameter described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:filtering_siftr_analysis"
+reference "sub:filtering_siftr_analysis"
 
 \end_inset
 
@@ -6830,11 +6629,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -6874,7 +6668,7 @@ _rtt and has the superset of all the parameters of these tasks.
 The easiest way to generate the four basic graphs (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:analysis_functions"
+reference "sub:analysis_functions"
 
 \end_inset
 
@@ -6912,11 +6706,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7013,11 +6802,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7102,11 +6886,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7233,7 +7012,7 @@ io_filter
 parameter described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:filtering_siftr_analysis"
+reference "sub:filtering_siftr_analysis"
 
 \end_inset
 
@@ -7360,11 +7139,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7398,7 +7172,7 @@ analyse_ackseq – Plot acknowledged bytes or dupACKSs over time
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:analyse_ackseq"
+name "sub:analyse_ackseq"
 
 \end_inset
 
@@ -7681,11 +7455,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -7719,7 +7488,7 @@ analyse_dash_goodput – Plot DASH-like client goodput over time
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:plot-dash-goodput"
+name "sub:plot-dash-goodput"
 
 \end_inset
 
@@ -7921,11 +7690,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -8067,7 +7831,7 @@ source_filter
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:analyse_ackseq"
+reference "sub:analyse_ackseq"
 
 \end_inset
 
@@ -8126,11 +7890,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -8284,7 +8043,7 @@ sburst
  (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_rtt"
+reference "sub:extract_rtt"
 
 \end_inset
 
@@ -8486,11 +8245,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -8552,11 +8306,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -8815,11 +8564,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -8881,11 +8625,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -9024,7 +8763,7 @@ and
  (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_rtt"
+reference "sub:extract_rtt"
 
 \end_inset
 
@@ -9044,7 +8783,7 @@ seek_window
  can also be used (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_owd"
+reference "sub:extract_owd"
 
 \end_inset
 
@@ -9090,11 +8829,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -9242,7 +8976,7 @@ and
  (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_rtt"
+reference "sub:extract_rtt"
 
 \end_inset
 
@@ -9267,7 +9001,7 @@ log_loss=2
  time (explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_pktloss"
+reference "sub:extract_pktloss"
 
 \end_inset
 
@@ -9313,11 +9047,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -9359,7 +9088,7 @@ analyse_cmpexp – Plot metric depending on experiment variables
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:plot-metric-comparison"
+name "sub:plot-metric-comparison"
 
 \end_inset
 
@@ -9560,11 +9289,10 @@ res_dir
 \size default
  is set and points to the existing intermediate files
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-E.g.
- The location given by the 
+For example, the location given by the 
 \family typewriter
 \size footnotesize
 out_dir
@@ -9641,7 +9369,7 @@ source_filter
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Data-series-selection"
+reference "sub:Data-series-selection"
 
 \end_inset
 
@@ -9828,7 +9556,7 @@ link_len
  for metric `throughput' (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_pktsizes"
+reference "sub:extract_pktsizes"
 
 \end_inset
 
@@ -9842,7 +9570,7 @@ smoothed
  defines the type of RTT for metric `tcprtt' (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:analyse_tcp_rtt"
+reference "sub:analyse_tcp_rtt"
 
 \end_inset
 
@@ -9857,7 +9585,7 @@ defines the statistic to be extracted and plotted for metric `tcpstat' (see
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_tcp_stat"
+reference "sub:extract_tcp_stat"
 
 \end_inset
 
@@ -9872,7 +9600,7 @@ defines whether to plot acknowledged bytes or dupACKs for metric `ackseq'
  (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:analyse_ackseq"
+reference "sub:analyse_ackseq"
 
 \end_inset
 
@@ -9919,7 +9647,7 @@ slowest_only
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:extract_incast"
+reference "sub:extract_incast"
 
 \end_inset
 
@@ -10023,7 +9751,7 @@ Setting TC_NICER_XLABS=1 will modify the plotting of x-axis labels so that
  can also be used and work as explained in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:plot-env-vars"
+reference "sub:plot-env-vars"
 
 \end_inset
 
@@ -10087,11 +9815,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10303,7 +10026,7 @@ source_filter
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Data-series-selection"
+reference "sub:Data-series-selection"
 
 \end_inset
 
@@ -10616,11 +10339,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10693,11 +10411,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -10885,11 +10598,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -11043,11 +10751,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12307,11 +12010,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12525,11 +12223,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12640,11 +12333,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12763,11 +12451,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -12888,7 +12571,7 @@ Analysing throughput and RTT
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Incast-basic-analysis"
+name "sub:Incast-basic-analysis"
 
 \end_inset
 
@@ -12942,11 +12625,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13014,11 +12692,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13229,11 +12902,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13371,11 +13039,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13478,7 +13141,7 @@ s using source_filter.
  filters from Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Incast-basic-analysis"
+reference "sub:Incast-basic-analysis"
 
 \end_inset
 
@@ -13523,11 +13186,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13779,11 +13437,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
@@ -13917,11 +13570,6 @@ width "98col%"
 special "none"
 height "1in"
 height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout

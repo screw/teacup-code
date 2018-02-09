@@ -4,6 +4,11 @@
 #
 # Author: Sebastian Zander (sebastian.zander@gmx.de)
 #
+# Copyright (c) 2018 Internet For Things (I4T) Research Group,
+# Swinburne University of Technology. All rights reserved.
+#
+# Author: Grenville Armitage (garmitage@swin.edu.au)
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
 # are met:
@@ -25,8 +30,12 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# generate a tar file for the source code
-# usage: make_tar.sh
+# Task: Generate a tar file from the local mercurial repository's working
+# 	directory and currently selected branch.
+# Usage: make_tar.sh
+# Requires: Assumes mercurial is installed locally, and that the current working
+#	directory's .hg/hgrc suitably enables the keywords= extension to
+#	operate on .py, .R and .sh files.
 #
 # $Id$
 
@@ -38,18 +47,28 @@ fi
 VERSION=`cat VERSION | head -1`
 NAME=teacup-${VERSION}.tar.gz
 
-echo "Generating $NAME"
-mkdir -p teacup-${VERSION} 
-cp -rd --preserve=all * teacup-${VERSION}/ 
-# add SVN info to version file
-cat teacup-${VERSION}/VERSION | head -1 > teacup-${VERSION}/VERSION.tmp && mv teacup-${VERSION}/VERSION.tmp teacup-${VERSION}/VERSION
-./get_hg_info.sh >> teacup-${VERSION}/VERSION
-# substitute Id tags
-hg kwexpand || { echo "MUST commit changes first" ; rm -rf teacup-${VERSION}/ ; exit 1 ; }
-# tar everything
-tar -H gnu -cvzf $NAME --hard-dereference \
-        teacup-${VERSION}/*.py teacup-${VERSION}/INSTALL teacup-${VERSION}/TODO teacup-${VERSION}/README \
-        teacup-${VERSION}/AUTHORS teacup-${VERSION}/COPYING teacup-${VERSION}/VERSION teacup-${VERSION}/ChangeLog \
-        teacup-${VERSION}/*.in teacup-${VERSION}/*.R teacup-${VERSION}/*.sh teacup-${VERSION}/tools \
-        teacup-${VERSION}/example_configs teacup-${VERSION}/ACKNOWLEDGMENTS 
+echo "Generating $NAME" from `hg branch` branch of local repository
+rm -rf teacup-${VERSION}/
+
+# Create a staging area containing only change-tracked files and directories
+# (avoiding any other crud potentially currently sitting in this working directory)
+
+hg clone . teacup-${VERSION}
+
+# substitute Id tags INSIDE the staging area
+# (Copy the local hgrc to ensure kwexpand works in the staging area's cloned repo)
+cp .hg/hgrc teacup-${VERSION}/.hg/
+hg kwexpand --cwd teacup-${VERSION}/ || { echo "MUST commit changes first" ; rm -rf teacup-${VERSION}/ ; exit 1 ; }
+
+# Construct a VERSION file in staging area with latest hg revision info
+echo ${VERSION} > teacup-${VERSION}/VERSION
+hg log -r tip --template "changeset: {node}\ndate:      {date|rfc822date}\n" >> teacup-${VERSION}/VERSION
+
+# Eliminate any hg-related metadata from the staging area prior to tarball construction
+rm -rf teacup-${VERSION}/.hg*
+
+# tar everything remaining in the staging area
+tar -cvzf $NAME teacup-${VERSION}/
+
+# Clean up the staging area
 rm -rf teacup-${VERSION}/

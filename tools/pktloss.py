@@ -35,7 +35,7 @@
 # a packet was NOT lost and a 1 means a packet was lost, with one entry for 
 # each packet that was sent by the sender/source.
 #
-# $Id: pktloss.py 1413 2017-02-07 03:08:09Z cvsup $
+# $Id$
 
 import os
 import sys

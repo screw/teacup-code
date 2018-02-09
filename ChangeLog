@@ -1,4 +1,4 @@
-Version 1.1 (XXX)
+Version 1.1 (9th Feb 2018)
 -----------------
 - Fixed error in comment (TCP send buffer setup related)
 - Turn off socket receive buffer tuning by default on FreeBSD now (was already

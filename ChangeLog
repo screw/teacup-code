@@ -15,7 +15,7 @@ Version 1.1 (9th Feb 2018)
   write access: 
   - oldconfig.py files are now created in /tmp
   - don't crash when trying to write to a cache file that is read-only
-- Detect location of experiment files based on uname file
+- Detect directory location of raw experiment files based on uname file
 - Prepended a TC_ to all evironment variables used to communicate the
   plotting parameters. This should avoid clashes with existing variables
   such as bash's GROUPS (GROUPS cannot be overriden without prior unset).
@@ -25,12 +25,12 @@ Version 1.1 (9th Feb 2018)
 - Prevent adding empty entries in flow cache (could happen if analysis
   was run with tcpdump not in path)
 - Added pktgen-0.3.1.tgz from http://caia.swin.edu.au/bitss/tools/pktgen-0.3.1.tgz
-- Imported CAIA Technical Report source under CC-BY-SA-4.0 for TEACUP
+- Imported CAIA Technical Report source under CC-BY-SA-4.0 for TEACUP docs
 - Imported CAIA Technical Report source under CC-BY-SA-4.0 for TEAPLOT
 - Imported TEAPLOT 0.1.1 source for 2D and 3D animation
 - Imported http://caia.swin.edu.au/tools/teacup/downloads/teacup-dash-patch-0.2.tgz
   to enable generation of DASH traffic using dash.js inside a browser
-- Updated teaplot ('fab animate') to version 0.2 (see ./animate/ChangeLog.teaplot)
+- Updated TEAPLOT ('fab animate') to version 0.2 (see ./animate/ChangeLog.teaplot)
 - Added support for launching an nginx web server (as an alternative traffic source)
 - Updated plot code so that points are not plotted twice (note that only
   code using plot() has been updated but not code that uses boxplot() or
@@ -39,7 +39,8 @@ Version 1.1 (9th Feb 2018)
   max(V_duration, TrafficGen_wait_time[i] +TrafficGen_duration[i])
   for i = 1 to number of traffic generators
 - Merged updated {extract,analyse}_pktloss tasks and new {extract,analyse}_owd tasks
-- Updated main docs to reflect key changes for version 1.1
+- Updated main docs to reflect key changes for version 1.1, saved copies of
+  built .pdf under ./docs for users who do not have LyX installed
 
 Version 1.0 (26th May 2015)
 ---------------------------

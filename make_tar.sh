@@ -46,14 +46,15 @@ fi
 
 VERSION=`cat VERSION | head -1`
 NAME=teacup-${VERSION}.tar.gz
+BRANCH=`hg branch`
 
-echo "Generating $NAME" from `hg branch` branch of local repository
+echo "Generating ${NAME} from ${BRANCH} branch of local repository"
 rm -rf teacup-${VERSION}/
 
 # Create a staging area containing only change-tracked files and directories
 # (avoiding any other crud potentially currently sitting in this working directory)
 
-hg clone . teacup-${VERSION}
+hg clone -b ${BRANCH} . teacup-${VERSION}
 
 # substitute Id tags INSIDE the staging area
 # (Copy the local hgrc to ensure kwexpand works in the staging area's cloned repo)

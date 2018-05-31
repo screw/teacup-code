@@ -933,22 +933,32 @@ def start_loggers(file_prefix='', remote_dir='', local_dir='.'):
     #    hosts=config.TPCONF_hosts)
 
     # start tcpdumps on testbed interfaces
-    execute(
-        start_tcpdump,
-        file_prefix,
-        remote_dir,
-        local_dir,
-        snap_len=snap_len,
-        hosts=config.TPCONF_router +
-        config.TPCONF_hosts)
+    try:
+        tcpdump_logger = config.TPCONF_tcpdump_logger
+    except AttributeError:
+        tcpdump_logger = '1'
+    if tcpdump_logger == '1':    
+	execute(
+	    start_tcpdump,
+	    file_prefix,
+	    remote_dir,
+	    local_dir,
+	    snap_len=snap_len,
+	    hosts=config.TPCONF_router +
+	    config.TPCONF_hosts)
 
     # start TCP loggers
-    execute(
-        start_tcp_logger,
-        file_prefix,
-        remote_dir,
-        local_dir,
-        hosts=config.TPCONF_hosts)
+    try:
+        tcpstats_logger = config.TPCONF_tcpstats_logger
+    except AttributeError:
+        tcpstats_logger = '1'
+    if tcpstats_logger == '1':    
+	execute(
+	    start_tcp_logger,
+	    file_prefix,
+	    remote_dir,
+	    local_dir,
+	    hosts=config.TPCONF_hosts)
 
     # register logger processes started in parallel
     bgproc.register_deferred_procs(local_dir)
